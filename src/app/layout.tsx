@@ -1,8 +1,9 @@
+import { Header } from '@/components/header'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Signika } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const signika = Signika({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Runway Bystrc',
@@ -15,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="cz">
+      <body className={`${signika.className} text-slate-600 flex flex-col items-center justify-center`}>
+        <Header />
+        {children}</body>
     </html>
   )
 }
