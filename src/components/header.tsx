@@ -5,15 +5,29 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { List, ListItem } from "@mui/material";
 
 export const Header = () => {
 
   const pathname = usePathname();  
   const [expanded, setExpanded] = useState("hidden");
+
+  const onHover = (link: any) => {
+    if (link.nested) {
+      console.log(link)
+      return (
+        <List className="m-auto text-black mt-100">
+          <ListItem>
+            {link.nested[0].name}
+          </ListItem>
+        </List>
+      )
+    }
+  }
   
   return (
     <>
-      <nav className="bg-white fixed w-screen z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+      <nav className="bg-white fixed w-screen z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 shadow-lg">
         <div className="flex flex-wrap mx-auto items-center justify-between pl-6 py-4 w-5/6">
           <Link 
             className="flex items-center" 
@@ -39,7 +53,8 @@ export const Header = () => {
                   <Link 
                     href={link.href} 
                     className={`${pathname == link.href ? "active" : ""} block py-2 pl-3 pr-4 tracking-wider text-rose-800 bg-blue-700 rounded md:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500`} 
-                    aria-current="page"                
+                    aria-current="page"
+                    onMouseOver={()=> onHover(link)}                               
                   >
                     {link.name}
                   </Link>
