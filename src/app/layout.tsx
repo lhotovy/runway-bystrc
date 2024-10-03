@@ -1,4 +1,4 @@
-import { Header } from '@/components/header'
+import { Header } from '@/components/header/header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Signika } from 'next/font/google'
@@ -17,9 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="cz">
-      <body className={`${signika.className} text-slate-600 flex flex-col items-center justify-center`}>
+      <body className={`${signika.className} text-slate-600`}>
         <Header />
-        {children}</body>
+        {children}
+      </body>
     </html>
   )
 }

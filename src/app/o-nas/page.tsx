@@ -1,5 +1,7 @@
 export default function oNas() {
   return (
-    <div>O nás</div>
-  )
+    <div style={{ backgroundImage: 'url(beach.jpg)', backgroundSize: 'cover', height: '100vh', width: "200vh" }}>
+      O nás
+    </div>
+  );
 }
