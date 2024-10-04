@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="cz">
+    <html lang="cz" className='scroll-smooth'>
       <body className={`${signika.className} text-slate-600`}>
         <Header />
         {children}
