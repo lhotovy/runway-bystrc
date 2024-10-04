@@ -1,14 +1,8 @@
 import { Header } from '@/components/header/header'
 import './globals.css'
-import type { Metadata } from 'next'
 import { Signika } from 'next/font/google'
 
-const signika = Signika({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'Runway Bystrc',
-  description: 'Runway Bystrc - otevřená a moderní církev pro Brno-Bystrc. Pořádáme letní tábory, setkání mládeže, dětský klub, klub maminek, kurzy a mnoho dalšího.',
-}
+const signika = Signika({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -16,10 +10,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="cz" className='scroll-smooth'>
+    <html lang="cz" className='scroll-smooth '>
       <body className={`${signika.className} text-slate-600`}>
         <Header />
-        {children}
+        <main>
+          {children}
+        </main>        
       </body>
     </html>
   )

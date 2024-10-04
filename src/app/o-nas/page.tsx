@@ -1,6 +1,11 @@
-export default function oNas() {
+export const metadata = {
+  title: 'O Nás | Runway Bystrc',
+  description: 'Runway Bystrc | Otevřená a moderní církev v Bystrci',
+};
+
+export default function oNas() {  
   return (
-    <div style={{ backgroundImage: 'url(beach.jpg)', backgroundSize: 'cover', height: '100vh', width: "200vh" }}>
+    <div className="flex flex-col items-center bg-black h-screen">
       O nás
     </div>
   );
