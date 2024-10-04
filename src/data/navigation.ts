@@ -2,7 +2,7 @@ export const navigation = [
     {
         name: "O nás",
         id: 1,
-        href: "/aktivity",       
+        href: "/info",       
     },
     {
         name: "Kalendář",
@@ -12,7 +12,7 @@ export const navigation = [
     {
         name: "Co děláme",
         id: 3,
-        href: "/co-delame",
+        href: "/aktivity",
     },      
     {
         name: "Runway Online",
