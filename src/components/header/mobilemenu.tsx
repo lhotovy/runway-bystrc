@@ -51,7 +51,7 @@ export function MobileMenu({ sidebarOpen, setSidebarOpen }: MobileMenuProps) {
       >
         <div className="flex h-full flex-col">
           {/* Header */}
-          <div className="flex h-12 min-h-[3rem] w-full flex-row items-center justify-center bg-primary font-inter text-primary-content shadow-sm">
+          <div className="flex h-12 min-h-[3rem] w-full flex-row items-center justify-center bg-primary font-inter text-primary-content shadow-xs">
             <a
               href={"/"}
               id="logo" className="flex h-full w-[65px] min-w-[3rem] items-center justify-center bg-secondary p-4">
