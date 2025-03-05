@@ -2,10 +2,10 @@
 
 import  Header from '@/components/header/index'
 import './globals.css'
-import { Signika } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 import { useState } from 'react';
 
-const signika = Signika({ subsets: ['latin'] });
+const openSans = Open_Sans({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -15,7 +15,7 @@ export default function RootLayout({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <html lang="cz" className='scroll-smooth '>
-      <body className={`${signika.className} text-slate-600`}>
+      <body className={`${openSans.className} text-slate-600`}>
         <Header onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)} />
         <main>
           {children}
