@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { SiFacebook, SiInstagram, SiYoutube } from "@icons-pack/react-simple-icons";
+import { SocialIcons } from "./socialIcons";
 
 export const Welcome = () => {
     return (
@@ -11,11 +11,7 @@ export const Welcome = () => {
                     <span className="absolute -bottom-1 left-0 w-[450px] h-4 -z-1 bg-teal-accent blur-xs rounded-2xl" />
                 </h1>
                 <p>Jsme otevřená komunita křesťanů v Brně - Bystrci</p>
-                <div className="flex items-center gap-x-6 mt-8 text-gray-5">
-                    <SiInstagram className="w-8 h-8 cursor-pointer" />
-                    <SiFacebook className="w-8 h-8 cursor-pointer" />
-                    <SiYoutube className="w-8 h-8 cursor-pointer" />
-                </div>
+               <SocialIcons     />
             </div>
             <div className="relative w-3/5 flex items-center">
                 <div className="relative">

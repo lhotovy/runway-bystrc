@@ -4,6 +4,7 @@ import  Header from '@/components/header/index'
 import './globals.css'
 import { Open_Sans } from 'next/font/google'
 import { useState } from 'react';
+import { Footer } from '@/components/footer/footer';
 
 const openSans = Open_Sans({ subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
         <main className="max-w-[1280px] mx-auto">
           {children}
         </main> 
+        <Footer />
       </body>
     </html>
   )
