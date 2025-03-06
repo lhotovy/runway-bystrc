@@ -15,32 +15,34 @@ export default function Header({ onMobileMenuToggle }: { onMobileMenuToggle: () 
     <>
       <header
         id="header"
-        className="flex h-12 min-h-[3rem] w-full items-center justify-end border-b border-neutral bg-white font-inter text-primary-content shadow-xs"
+        className="h-12 min-h-[4rem] w-full border-b border-neutral bg-white font-inter text-primary-content shadow-xs"
       >
-        <Link
-          href={"/"}
-          id="logo" className="flex h-full w-[300px] min-w-[3rem] items-center justify-center bg-white p-4">
-          <Image
-            src="/logo.jpeg"
-            alt="Runway Logo"
-            height={100}
-            width={100}
-          />
-        </Link>
-        <div className="flex h-full w-full items-center justify-end">       
-          <HeaderTabs />          
-        </div>
-        <div className="sticky top-0 z-10 flex h-12 shrink-0">
-          <button
-            type="button"
-            className="px-4 text-base-100 focus:outline-hidden md:hidden"
-            onClick={onMobileMenuToggle}
-          >
-            <Bars3BottomLeftIcon
-              className="h-6 w-6 text-primary-content"
-              aria-hidden="true"
+        <div className="flex max-w-[1280px] mx-auto items-center justify-end">
+          <Link
+            href={"/"}
+            id="logo" className="flex h-full w-[300px] min-w-[3rem] items-center justify-center bg-white ">
+            <Image
+              src="/logo.jpeg"
+              alt="Runway Logo"
+              height={100}
+              width={100}
             />
-          </button>
+          </Link>
+          <div className="flex h-full w-full items-center justify-end">       
+            <HeaderTabs />          
+          </div>
+          <div className="sticky top-0 z-10 flex h-12 shrink-0">
+            <button
+              type="button"
+              className="px-4 text-base-100 focus:outline-hidden md:hidden"
+              onClick={onMobileMenuToggle}
+            >
+              <Bars3BottomLeftIcon
+                className="h-6 w-6 text-primary-content"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
         </div>
       </header>
       <MobileMenu

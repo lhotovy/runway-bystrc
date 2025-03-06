@@ -21,3 +21,10 @@ export type Nest = {
     id: number;
     href: string;
 }
+
+export type Activity = {
+    name: string;
+    description: string;
+    icon: string;
+    href: string;
+}

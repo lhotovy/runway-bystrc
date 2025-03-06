@@ -1,18 +1,33 @@
 import React from "react";
+import Image from 'next/image';
 import { lpActivities } from '@/data/lpActivities';
+import { Activity } from "@/types";
+import { SectionTitle } from "./common/sectionTitle";
 
 export const Activities = () => {
   return ( 
-    <div className='py-8 px-24 h-[400px] w-full flex flex-col justify-center gap-y-10'>
-        <h2 className="text-3xl font-bold">Co děláme</h2>
+    <div className='py-8 h-[400px] w-full flex flex-col justify-center gap-y-10'>
+        <SectionTitle title="Co děláme" />
         <div className='grid grid-cols-3 gap-x-6 gap-y-6'>
           {
-            lpActivities.map((activity, index) => <div key={index} className="flex flex-col py-4 border border-gray-300 rounded-lg p-4 cursor-pointer hover:bg-slate-100">
-                <h3 className="text-xl font-semibold">{activity.name}</h3>
-                <p className="text-md text-slate-500">{activity.description}</p>
-              </div>
-            )
-        }
+            lpActivities.map((activity: Activity, index: number) => {
+              return (
+                  <div key={index} className="flex items-center gap-x-4 rounded-xl px-5 py-6 cursor-pointer bg-gray-1 hover:bg-gray-2">
+                    <Image 
+                      src={activity.icon}
+                      alt="Neděle na Runwayi" 
+                      width={52} 
+                      height={52} 
+                      className=" cursor-pointer" 
+                    />
+                    <div className="flex flex-col gap-y-1.5">
+                      <h3 className="text-lg font-bold text-gray-9">{activity.name}</h3>
+                      <p className="text-base text-gray-7">{activity.description}</p>
+                    </div>
+                  </div>
+              )
+            })
+          }
         </div>
     </div>
   );

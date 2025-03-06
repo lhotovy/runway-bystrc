@@ -5,16 +5,16 @@ import { SiFacebook, SiInstagram, SiYoutube } from "@icons-pack/react-simple-ico
 export const Welcome = () => {
     return (
         <div className="flex h-[400px] w-full">
-            <div className="flex flex-col justify-center w-2/5 pl-24 gap-y-6">
+            <div className="flex flex-col justify-center w-2/5 gap-y-6">
                 <h1 className="md:text-5xl text-3xl brightness-100 font-bold text-gray-900 relative">
                     Vítejte na Runwayi
                     <span className="absolute -bottom-1 left-0 w-[450px] h-4 -z-1 bg-teal-accent blur-xs rounded-2xl" />
                 </h1>
                 <p>Jsme otevřená komunita křesťanů v Brně - Bystrci</p>
-                <div className="flex items-center gap-x-6 opacity-70 mt-8">
-                    <SiInstagram className="w-7 h-7 cursor-pointer" />
-                    <SiFacebook className="w-7 h-7 cursor-pointer" />
-                    <SiYoutube className="w-7 h-7 cursor-pointer" />
+                <div className="flex items-center gap-x-6 mt-8 text-gray-5">
+                    <SiInstagram className="w-8 h-8 cursor-pointer" />
+                    <SiFacebook className="w-8 h-8 cursor-pointer" />
+                    <SiYoutube className="w-8 h-8 cursor-pointer" />
                 </div>
             </div>
             <div className="relative w-3/5 flex items-center">

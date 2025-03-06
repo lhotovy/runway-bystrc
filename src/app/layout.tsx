@@ -15,11 +15,11 @@ export default function RootLayout({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <html lang="cz" className='scroll-smooth '>
-      <body className={`${openSans.className} text-slate-600`}>
+      <body className={`${openSans.className} text-slate-600 w-full`}>       
         <Header onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)} />
-        <main>
+        <main className="max-w-[1280px] mx-auto">
           {children}
-        </main>        
+        </main> 
       </body>
     </html>
   )

@@ -1,30 +1,44 @@
 export const lpActivities = [
     {
         name: "Neděle na Runwayi",
-        description: "Vítejte na Runwayi",
+        description: "Každou 1. a 3. neděli v měsíci",
+        icon: "/icons/book.png",
+        href: ""
     },
     {
         name: "Sport Challenge",
-        description: "Vyzkoušejte si sportovní výzvy",
+        description: "Klub pro děti 9 - 13 let",
+        icon: "/icons/ball.png",
+        href: ""
     },
     {
         name: "Runway Youth",
-        description: "Zapojte se do Runway Youth",
+        description: "Klub pro mládež 13 - 18 let",
+        icon: "/icons/person.png",
+        href: ""
     },
     {
         name: "Klub pro maminky s dětmi",
-        description: "Přijďte do klubu pro maminky s dětmi",
+        description: "Možnost navázat přátelství",
+        icon: "/icons/stroller.png",
+        href: ""
     },
     {
         name: "English Evenings",
-        description: "Přijďte na English Evenings",
+        description: "Večery s rodilým mluvčím",
+        icon: "/icons/flag.png",
+        href: ""
     },
     {
         name: "Manželské večery",
-        description: "Přijďte na manželské večery",
+        description: "Čas pro váš vztah",
+        icon: "/icons/heart.png",
+        href: ""
     },    
     {
         name: "Tábory",
-        description: "Přijďte na tábory",
+        description: "Letní tábory pro dětí",
+        icon: "/icons/sun.png",
+        href: ""
     },
 ];
