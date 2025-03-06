@@ -1,86 +1,101 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
+import * as React from "react"
+import Link from "next/link"
+import { cn } from "@/lib/utils"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/menu";
 
-export const HeaderTabs = () => { 
-  
-    const navLinkGroupsOwner = [
-        { name: "O nás", url: "/planning", icon: "Calendar", key: "key1" },
-        { name: "Co děláme", url: "/overview", icon: "Home", key: "key2" },
-        { name: "Akce", url: "/times", icon: "Clock", key: "key4" },
-        { name: "Kontakt", url: "/users", icon: "Settings", key: "key5" }
-    ];  
- 
-  // determine the index of pathname in menuItems
-  const pathname = usePathname();
-  const currentIndex = navLinkGroupsOwner
-    .map((item) => item.url)
-    .indexOf(pathname as string);
-
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(
-    currentIndex <= navLinkGroupsOwner.length && currentIndex >= 0
-      ? currentIndex
-      : null,
-  );
-
-  const handleMenuItemHover = (index: number | null) => {
-    setHoveredIndex(index);
-  };
-
-  const calculateMovingHrMargin = () => {
-    if (hoveredIndex !== null) {
-      return `calc(${(100 * hoveredIndex) / navLinkGroupsOwner.length}%)`;
-    } else if (currentIndex === -1) {
-      return `calc(${(100 * 0) / navLinkGroupsOwner.length}%)`;
-    } else {
-      return `calc(${(100 * currentIndex) / navLinkGroupsOwner.length}%)`;
-    }
-  };
+export const HeaderTabs = () => {
+  const activities = [
+    { name: "Neděle na Runwayi", url: "/planning"},
+    { name: "Sport Challenge", url: "/overview"},
+    { name: "Runway Youth", url: "/times"},
+    { name: "Klub pro maminky s dětmi", url: "/users"},
+    { name: "English Evenings", url: "/users"},
+    { name: "Manželské večery", url: "/users"},
+    { name: "Tábory", url: "/users"}    
+  ]; 
 
   return (
-    <div
-      id="header-tabs"
-      className="mx-4 h-full min-w-[500px] items-center justify-left transition-all ease-in-out hidden md:flex md:flex-row"
-    >
-      <ul
-        id="header-links"
-        className="relative flex h-full w-fit flex-row items-center justify-center"
-      >
-        {navLinkGroupsOwner.map((tab, index) => {
-        return (
-            <Link                
-                href={tab.url}
-                key={tab.key}             
-            >                
-            <li 
-                key={tab.key} 
-                id={tab.key} 
-                className={`flex h-full min-h-full w-24 py-4 flex-1 cursor-pointer items-center justify-center whitespace-nowrap text-center text-primary-content no-underline ${
-                    pathname === tab.url ? `opacity-100` : `opacity-50`
-                }  transition-all duration-300 hover:opacity-100`}
-                onMouseEnter={() => handleMenuItemHover(index)}
-                onMouseLeave={() => handleMenuItemHover(null)}
-            >
-                    <p className="text-sm uppercase">{tab.name}</p>
-                </li>
-            </Link>
-        );
-        })}
-        <span
-          id="moving-hr"
-          className={`absolute bottom-0 left-0 h-1 border-none bg-white transition-all duration-300 ease-in-out ${
-            currentIndex === -1 && hoveredIndex === null
-              ? `opacity-0`
-              : `opacity-100`
-          }`}
-          style={{
-            marginLeft: calculateMovingHrMargin(),
-            width: `calc(${100 / navLinkGroupsOwner.length}%)`,             
-          }}
-        />
-      </ul>
-    </div>
-  );
+    <NavigationMenu>
+      <NavigationMenuList>
+      <NavigationMenuItem>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              O nás
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger className="cursor-pointer">Co děláme</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="w-[250px] gap-3">
+              {activities.map((component) => (
+                <ListItem
+                  key={component.name}
+                  title={component.name}
+                  href={component.url}
+                />          
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Speciální akce
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Kontakt
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              CZ/EN
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  )
 }
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 text-gray-9 text-base rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-gray-1",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  )
+})
+ListItem.displayName = "ListItem"

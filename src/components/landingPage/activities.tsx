@@ -6,7 +6,7 @@ import { SectionTitle } from "./common/sectionTitle";
 
 export const Activities = () => {
   return ( 
-    <div className='py-8 h-[400px] w-full flex flex-col justify-center gap-y-10'>
+    <div className='h-[400px] w-full flex flex-col justify-center gap-y-10'>
         <SectionTitle title="Co děláme" />
         <div className='grid grid-cols-3 gap-x-6 gap-y-6'>
           {

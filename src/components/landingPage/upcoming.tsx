@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Upcoming = () => {
   return ( 
-    <div className='py-8 h-[400px] w-full flex flex-col justify-center gap-y-10'>
+    <div className='h-[400px] w-full flex flex-col justify-center gap-y-10'>
         <SectionTitle title="Speciální akce" />
         <div className="flex items-center w-full">
             <div className='flex justify-between w-full'>

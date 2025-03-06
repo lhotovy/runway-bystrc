@@ -15,9 +15,9 @@ export default function Header({ onMobileMenuToggle }: { onMobileMenuToggle: () 
     <>
       <header
         id="header"
-        className="h-12 min-h-[4rem] w-full border-b border-neutral bg-white font-inter text-primary-content shadow-xs"
+        className="flex items-center h-[64px] min-h-[3rem] w-full border-b border-neutral bg-white text-primary-content shadow-xs"
       >
-        <div className="flex max-w-[1280px] mx-auto items-center justify-end">
+        <div className="flex max-w-[1280px] xl:min-w-[1280px] mx-auto items-center justify-end">
           <Link
             href={"/"}
             id="logo" className="flex h-full w-[300px] min-w-[3rem] items-center justify-center bg-white ">

@@ -4,7 +4,7 @@ import { SocialIcons } from "./socialIcons";
 
 export const Welcome = () => {
     return (
-        <div className="flex h-[400px] w-full">
+        <div className="flex h-[500px] w-full">
             <div className="flex flex-col justify-center w-2/5 gap-y-6">
                 <h1 className="md:text-5xl text-3xl brightness-100 font-bold text-gray-900 relative">
                     Vítejte na Runwayi
@@ -16,24 +16,24 @@ export const Welcome = () => {
             <div className="relative w-3/5 flex items-center">
                 <div className="relative">
                     <Image
-                        src="/beach.jpg"
+                        src="/socialEmbed/social7.png"
                         alt="Image 1"
-                        width={400}
-                        height={400}
+                        width={300}
+                        height={300}
                         className="rounded-3xl border-8 border-white"
                     />
                     <Image
-                        src="/beach.jpg"
+                        src="/socialEmbed/social8.png"
                         alt="Image 2"
-                        width={400}
-                        height={400}
+                        width={300}
+                        height={300}
                         className="rounded-3xl border-8 border-white absolute top-24 left-64 -z-1"
                     />
                     <Image
-                        src="/beach.jpg"
+                        src="/socialEmbed/social9.png"
                         alt="Image 3"
-                        width={400}
-                        height={400}
+                        width={300}
+                        height={300}
                         className="rounded-3xl border-8 border-white absolute -top-12 left-120 -z-2"
                     />
                 </div>
