@@ -4,8 +4,8 @@ import { SocialIcons } from "./socialIcons";
 
 export const Welcome = () => {
     return (
-        <div className="flex h-[500px] w-full">
-            <div className="flex flex-col justify-center w-2/5 gap-y-6">
+        <div className="flex lg:flex-row flex-col w-full my-10 lg:mt-24">
+            <div className="flex flex-col justify-center w-full lg:w-2/5 gap-y-6">
                 <h1 className="md:text-5xl text-3xl brightness-100 font-bold text-gray-900 relative">
                     Vítejte na Runwayi
                     <span className="absolute -bottom-1 left-0 w-[450px] h-4 -z-1 bg-teal-accent blur-xs rounded-2xl" />

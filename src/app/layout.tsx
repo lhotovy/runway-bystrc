@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="cz" className='scroll-smooth '>
       <body className={`${openSans.className} text-slate-600 w-full`}>       
         <Header onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)} />
-        <main className="max-w-[1280px] mx-auto">
+        <main className="max-w-[1280px] mx-auto px-6 xl:px-0">
           {children}
         </main> 
         <Footer />

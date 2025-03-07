@@ -5,7 +5,7 @@ import { SocialIcons } from "../landingPage/socialIcons";
 export const Footer = () => {
     return (
         <div className="mt-12 flex flex-col items-center bg-gray-3 text-base w-full">
-            <div className="flex items-center w-full max-w-[1280px] h-[200px] mx-auto">
+            <div className="flex items-center w-full max-w-[1280px] lg:px-0 px-6 h-[200px] mx-auto">
                 <div className="flex justify-between items-center w-full h-5/6">
                     <div 
                         id="column1"

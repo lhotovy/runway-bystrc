@@ -5,14 +5,14 @@ import Link from "next/link";
 
 export const Upcoming = () => {
   return ( 
-    <div className='h-[400px] w-full flex flex-col justify-center gap-y-10'>
+    <div className=' w-full flex flex-col justify-center gap-y-10'>
         <SectionTitle title="Speciální akce" />
         <div className="flex items-center w-full">
-            <div className='flex justify-between w-full'>
+            <div className='grid lg:grid-cols-4 grid-cols-2 w-full gap-4'>
                 {
                     lpUpcoming.map((activity, index) => {
                         return (
-                            <Link key={index} href={activity.href} className="flex flex-col justify-center w-[350px] py-5 px-6 rounded-xl cursor-pointer bg-blue-1 hover:bg-blue-2">
+                            <Link key={index} href={activity.href} className="flex flex-col justify-center py-5 px-6 rounded-xl cursor-pointer bg-blue-1 hover:bg-blue-2">
                                 <div className="flex items-center gap-x-2 text-sm text-blue-5 uppercase">
                                     {
                                         activity.date && 
@@ -36,12 +36,11 @@ export const Upcoming = () => {
                     })
                 }
                 <div 
-                    className="flex justify-center items-center text-blue-5 py-4 px-6  font-semibold text-base"
+                    className="flex justify-center items-center text-blue-5 py-4 px-6 font-semibold text-base"
                 >
                     <p className="flex justify-center items-center w-36 h-14 bg-white hover:bg-gray-1 cursor-pointer rounded-xl">
                         Zobrazit vše
-                    </p>
-                    
+                    </p>                    
                 </div>
             </div>           
         </div>

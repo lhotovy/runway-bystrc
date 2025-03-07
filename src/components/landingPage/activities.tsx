@@ -6,9 +6,9 @@ import { SectionTitle } from "./common/sectionTitle";
 
 export const Activities = () => {
   return ( 
-    <div className='h-[400px] w-full flex flex-col justify-center gap-y-10'>
+    <div className=' w-full flex flex-col justify-center gap-y-10'>
         <SectionTitle title="Co děláme" />
-        <div className='grid grid-cols-3 gap-x-6 gap-y-6'>
+        <div className='grid grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6'>
           {
             lpActivities.map((activity: Activity, index: number) => {
               return (

@@ -6,10 +6,10 @@ import Image from "next/image";
 
 export const Social = () => {
   return ( 
-    <div className='py-8 h-[400px] w-full flex flex-col justify-center gap-y-10'>
+    <div className='py-8 w-full flex flex-col justify-center gap-y-10'>
         <SectionTitle title="Ze sociálních sítí" />
         <div className="flex items-center w-full">
-            <div className='grid grid-cols-5 gap-x-3 gap-y-3 w-full'>
+            <div className='grid lg:grid-cols-5 grid-cols-3 gap-x-3 gap-y-3 w-full'>
                 {
                     socialEmbed.map((embed, index) => {
                         return (
