@@ -15,7 +15,7 @@ export const lpActivities = [
         name: "Runway Youth",
         description: "Klub pro mládež 13 - 18 let",
         icon: "/icons/person.png",
-        href: ""
+        href: "runway-youth"
     },
     {
         name: "Klub pro maminky s dětmi",

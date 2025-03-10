@@ -1,8 +1,9 @@
 import React from "react";
 import Image from 'next/image';
 import { lpActivities } from '@/data/lpActivities';
-import { Activity } from "@/types";
+import { LPActivity } from "@/types";
 import { SectionTitle } from "./common/sectionTitle";
+import Link from 'next/link';
 
 export const Activities = () => {
   return ( 
@@ -10,9 +11,9 @@ export const Activities = () => {
         <SectionTitle title="Co děláme" />
         <div className='grid grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6'>
           {
-            lpActivities.map((activity: Activity, index: number) => {
+            lpActivities.map((activity: LPActivity, index: number) => {
               return (
-                  <div key={index} className="flex items-center gap-x-4 rounded-xl px-5 py-6 cursor-pointer bg-gray-1 hover:bg-gray-2">
+                  <Link key={index} href={activity.href} className="flex items-center gap-x-4 rounded-xl px-5 py-6 cursor-pointer bg-gray-1 hover:bg-gray-2">
                     <Image 
                       src={activity.icon}
                       alt="Neděle na Runwayi" 
@@ -24,7 +25,7 @@ export const Activities = () => {
                       <h3 className="text-lg font-bold text-gray-9">{activity.name}</h3>
                       <p className="text-base text-gray-7">{activity.description}</p>
                     </div>
-                  </div>
+                  </Link>
               )
             })
           }
