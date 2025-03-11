@@ -1,6 +1,6 @@
 import React from "react";
 import { lpUpcoming } from '@/data/lpUpcoming';
-import { SectionTitle } from "./common/sectionTitle";
+import { SectionTitle } from "../common/sectionTitle";
 import Link from "next/link";
 
 export const Upcoming = () => {

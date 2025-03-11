@@ -1,5 +1,8 @@
 import { Clock4, MapPin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { AnotherActivities } from "../anotherActivities";
+import { Activity } from "@/types";
 
 export const ActivityTemplate1 = ({
   name,
@@ -8,9 +11,11 @@ export const ActivityTemplate1 = ({
   place,
   image,
   contactTitle,
+  contactIcon,
   contactPerson,
   contactLinkText,
-  contactLink
+  contactLink,
+  anotherActivities
 }: {
   name: string,
   description: string,
@@ -18,12 +23,14 @@ export const ActivityTemplate1 = ({
   place: string,
   image: string,
   contactTitle: string,
+  contactIcon: JSX.Element | null,
   contactPerson: string,
   contactLinkText: string,
-  contactLink: string
+  contactLink: string,
+  anotherActivities: Activity[]
 }) => {
   return (
-    <div>
+    <div className="flex flex-col items-center w-full my-10 lg:mt-12">
       <div className="flex items-center w-full">
         <div className="w-2/3 flex flex-col justify-start gap-y-10">
           <h1 className="text-5xl text-gray-9 font-semibold">{name}</h1>
@@ -39,10 +46,19 @@ export const ActivityTemplate1 = ({
           </div>
           <p className="text-gray-9 text-base">{description}</p>
         </div>
-        <div className="w-1/3">
-          <Image src="/beach.jpg" alt={name} width={300} height={300}/>
+        <div className="w-1/3 flex justify-center">
+          <Image src={`/${image}`} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl" />
         </div>
       </div>
+      <div className="w-[calc(100vw-15px)] flex justify-center bg-gray-1 py-7.5 mt-10">
+        <div className="flex flex-col items-center gap-y-4 w-full max-w-screen-xl px-4">
+          <p className="text-xl text-gray-9 font-bold">{contactTitle}</p>
+          {contactIcon && contactIcon}
+          <p className="text-gray-8 text-base font-bold">{contactPerson}</p>
+          <Link className="text-blue-5 font-semibold text-base" href={contactLink}>{contactLinkText}</Link>
+        </div>
+      </div>
+      <AnotherActivities activities={anotherActivities} />
     </div>
   )
 }

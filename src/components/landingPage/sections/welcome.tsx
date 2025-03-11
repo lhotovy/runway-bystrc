@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { SocialIcons } from "./socialIcons";
+import { SocialIcons } from "../socialIcons";
 
 export const Welcome = () => {
     return (

@@ -1,8 +1,8 @@
 "use client"
-import { Activities } from '@/components/landingPage/activities';
-import { Social } from '@/components/landingPage/social';
-import { Upcoming } from '@/components/landingPage/upcoming';
-import { Welcome } from '@/components/landingPage/welcome';
+import { Activities } from '@/components/landingPage/sections/activities';
+import { Social } from '@/components/landingPage/sections/social';
+import { Upcoming } from '@/components/landingPage/sections/upcoming';
+import { Welcome } from '@/components/landingPage/sections/welcome';
 import React from "react";
 
 export default function HomePageDisplay() {

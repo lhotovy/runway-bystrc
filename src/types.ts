@@ -22,24 +22,21 @@ export type Nest = {
     href: string;
 }
 
-export type TemplateActivity = {
+export type Activity = {
     name: string;
-    slug: string;
+    slug: string;  
+    cardDescription: string;
+    cardIcon: string;
     description: string;
     time: string;
     place: string;
     image: string;
     contactTitle: string;
+    contactIcon: JSX.Element | null;
     contactPerson: string;
     contactLinkText: string;
     contactLink: string;
     template: string;
 }
 
-export type LPActivity = {
-    name: string;
-    href: string;
-    description: string;
-    icon: string;
-}
    

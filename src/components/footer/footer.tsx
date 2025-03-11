@@ -12,7 +12,7 @@ export const Footer = () => {
                         className="flex flex-col"
                     >
                         <Image src="/logo.jpeg" alt="Logo" width={120} height={80} className="mb-2" />
-                        <div className="flex flex-col gap-y-1.5">
+                        <div className="flex flex-col gap-y-1.5 text-gray-8">
                             <p>Runway Bystrc</p>
                             <p>Smetanova 20</p>
                             <p>602 00 Brno</p>
@@ -29,7 +29,7 @@ export const Footer = () => {
                     </div>
                     <div
                         id="column3"
-                        className="flex flex-col items-end"
+                        className="flex flex-col items-end text-gray-8"
                     >
                         <p className="uppercase text-base font-semibold mb-2">Odkazy</p>
                         <div className="flex flex-col items-end gap-y-1.5">

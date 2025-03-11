@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionTitle } from "./common/sectionTitle";
+import { SectionTitle } from "../common/sectionTitle";
 import Link from "next/link";
 import { socialEmbed } from "@/data/socialEmbed";
 import Image from "next/image";
