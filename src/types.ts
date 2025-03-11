@@ -27,7 +27,7 @@ export type Activity = {
     slug: string;  
     cardDescription: string;
     cardIcon: string;
-    description: string;
+    description: string[];
     time: string;
     place: string;
     image: string;

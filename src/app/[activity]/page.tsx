@@ -19,7 +19,7 @@ export async function generateMetadata(
 
     return {
         title: `${activityData.name} | Runway Bystrc`,
-        description: activityData.description
+        description: activityData.description[0]
     };
 };
 

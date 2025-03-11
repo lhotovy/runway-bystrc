@@ -1,13 +1,13 @@
-import { SiInstagram } from "@icons-pack/react-simple-icons";
+import { SiFacebook, SiInstagram } from "@icons-pack/react-simple-icons";
 import { Mail, Phone } from "lucide-react";
 
 export const activities = [
     {
         name: "Neděle na Runwayi",
-        slug: "nedele-na-runwayi",
+        slug: "nedele",
         cardDescription: "Každou 1. a 3. neděli v měsíci",
         cardIcon: "/icons/book.png",
-        description: "Každou 1. a 3. neděli v měsíci",
+        description: ["Každou 1. a 3. neděli v měsíci"],
         time: "",
         place: "",
         image: "",
@@ -23,7 +23,7 @@ export const activities = [
         slug: "sport-challenge",
         cardDescription: "Klub pro děti 9 - 13 let",
         cardIcon: "/icons/ball.png",
-        description: "Přijď si vyzkoušet sporty pro radost ze hry a posuň své hranice s novými kamarády. Nová výzva, pohyb, kamarádi. Pro všechny děti ve věku od 8 do 12 let.",
+        description: ["Přijď si vyzkoušet sporty pro radost ze hry a posuň své hranice s novými kamarády. Nová výzva, pohyb, kamarádi. Pro všechny děti ve věku od 8 do 12 let."],       
         time: "každé úterý od 17:00",
         place: "centrum runway bystrc + přilehlé sportoviště kamechy",
         image: "challenge.png",
@@ -36,10 +36,10 @@ export const activities = [
     },
     {
         name: "Runway Youth",
-        slug: "runway-youth",
+        slug: "runway_youth",
         cardDescription: "Klub pro mládež 13 - 18 let",
         cardIcon: "/icons/person.png",
-        description: "Jsme klub pro všechny ve věku 13-20 let. Potkáváme se každou středu v 18-20 hodin. Hrajeme společně hry, jíme občerstvení a užíváme si zábavy. Těšíme se na Tebe!",
+        description: ["Jsme klub pro všechny ve věku 13-20 let. Potkáváme se každou středu v 18-20 hodin. Hrajeme společně hry, jíme občerstvení a užíváme si zábavy. Těšíme se na Tebe!"],
         time: "každou středu od 18:00",
         place: "centrum runway bystrc",
         image: "youth.jpg",
@@ -55,23 +55,23 @@ export const activities = [
         slug: "klub-pro-maminky-s-detmi",
         cardDescription: "Možnost navázat přátelství",
         cardIcon: "/icons/stroller.png",
-        description: "Možnost navázat přátelství",
-        time: "",
-        place: "",
-        image: "",
-        contactTitle: "",
-        contactIcon: null,
-        contactPerson: "",
-        contactLinkText: "",
+        description: ["Jsi maminka s dítětem a chceš si na chvíli oddechnout a strávit příjemné dopoledne s dalšími maminkami? Tak se připoj k nám na anglický klub pro maminky! Čeká Tě posezení u čaje nebo kávy, rozhovory či tvoření.", "V případě většího počtu starších dětí lze program orientovat na jejich procvičování angličtiny."],          
+        time: "každý čtvrtek od 9:30",
+        place: "centrum runway bystrc",
+        image: "maminky.png",
+        contactTitle: "Kontakt a více informací",
+        contactIcon: <SiFacebook className="h-10 w-10 text-gray-3" />,
+        contactPerson: "Facebook",
+        contactLinkText: "Maminky Runway Bystrc",
         contactLink: "",
-        template: ""
+        template: "template1"
     },
     {
         name: "English Evenings",
-        slug: "english-evenings",
+        slug: "english",
         cardDescription: "Večery s rodilým mluvčím",
         cardIcon: "/icons/flag.png",
-        description: "Přijďte si popovídat s rodilým mluvčím a v příjemné atmosféře zlepšete své konverzační schopnosti. Konverzace probíhají v malé skupině.",
+        description: ["Přijďte si popovídat s rodilým mluvčím a v příjemné atmosféře zlepšete své konverzační schopnosti. Konverzace probíhají v malé skupině."],
         time: "každý čtvrtek 18:00-19:30",
         place: "centrum runway bystrc",
         image: "flag.png",
@@ -87,7 +87,7 @@ export const activities = [
         slug: "manzelske-vecery",
         cardDescription: "Čas pro váš vztah",
         cardIcon: "/icons/heart.png",
-        description: "Čas pro váš vztah",
+        description: ["Čas pro váš vztah"],
         time: "",
         place: "",
         image: "",
@@ -103,7 +103,7 @@ export const activities = [
         slug: "tabory",
         cardDescription: "Letní tábory pro dětí",
         cardIcon: "/icons/sun.png",
-        description: "Letní tábory pro dětí",
+        description: ["Letní tábory pro dětí"],
         time: "",
         place: "",
         image: "",
@@ -112,7 +112,7 @@ export const activities = [
         contactPerson: "",
         contactLinkText: "",
         contactLink: "",
-        template: ""
+        template: "template1"
     },
 ];
 
@@ -121,7 +121,7 @@ export const specialActivitiesCard = {
     slug: "speciální-akce",
     cardDescription: "Náš kalendář událostí",
     cardIcon: "/icons/calendar.png",
-    description: "Letní tábory pro dětí",
+    description: ["Letní tábory pro dětí"],
     time: "",
     place: "",
     image: "",

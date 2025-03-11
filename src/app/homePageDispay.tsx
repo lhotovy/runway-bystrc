@@ -7,7 +7,7 @@ import React from "react";
 
 export default function HomePageDisplay() {
   return (  
-    <div className="flex flex-col items-center justify-center gap-y-24 pb-32">
+    <div className="flex flex-col items-center justify-center gap-y-24 pb-32 min-h-screen">
       <Welcome />
       <Activities />
       <Upcoming />
