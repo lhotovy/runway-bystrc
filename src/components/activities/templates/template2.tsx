@@ -1,10 +1,13 @@
+"use client";
+
 import { Clock4, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnotherActivities } from "../anotherActivities";
 import { Activity } from "@/types";
+import { useRouter } from "next/navigation";
 
-export const ActivityTemplate1 = ({
+export const ActivityTemplate2 = ({
   name,
   description,
   time,
@@ -29,6 +32,7 @@ export const ActivityTemplate1 = ({
   contactLink: string,
   anotherActivities: Activity[]
 }) => {
+    const router = useRouter();
   return (
     <div className="flex flex-col items-center w-full my-10 lg:mt-12 min-h-screen">
       <div className="flex items-center w-full">
@@ -58,12 +62,37 @@ export const ActivityTemplate1 = ({
           <Image src={`/${image}`} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl" />
         </div>
       </div>
-      <div className="w-[calc(100vw-15px)] flex justify-center bg-gray-1 py-7.5 mt-10">
-        <div className="flex flex-col items-center gap-y-4 w-full max-w-screen-xl px-4">
-          <p className="text-xl text-gray-9 font-bold">{contactTitle}</p>
-          {contactIcon && contactIcon}
-          <p className="text-gray-8 text-base font-bold">{contactPerson}</p>
-          <Link className="text-blue-5 font-semibold text-base" href={contactLink}>{contactLinkText}</Link>
+      <div className="flex flex-col justify-center items-center w-[calc(100vw-15px)] bg-gray-1 py-7.5 mt-10 gap-y-8">
+        <p className="text-xl text-gray-9 font-bold">{contactTitle}</p>
+        <div className="flex items-center gap-x-12">
+            <div className="flex flex-col items-center gap-y-4 w-full max-w-screen-xl px-4">           
+                {contactIcon && contactIcon}
+                <p className="text-gray-8 text-base font-bold">{contactPerson}</p>
+                <Link className="text-blue-5 font-semibold text-base" href={contactLink}>{contactLinkText}</Link>
+                </div>
+            <div className="w-92">
+                <button 
+                    className="w-full p-4 text-blue-5 bg-white rounded-xl font-bold text-base cursor-pointer"
+                    onClick={()=> router.push("/kontakt")}
+                >
+                    Další kontakty
+                </button>
+            </div>
+        </div>      
+      </div>
+      <div className="flex flex-col items-center w-full">
+        <h2 className="text-gray-9 font-bold text-[32px] py-24">Bohoslužby jinde v Brně</h2>
+        <div className="flex gap-x-48 items-end">
+            <div className="flex flex-col items-center">
+                <Image src="/smetanka.png" alt="BJB Smetanova" width={150} height={90} className="mb-6" />
+                <p>Bratská jednota baptistů</p>
+                <p>Smetanova 20</p>
+            </div>
+            <div className="flex flex-col items-center">
+                <Image src="/kytnerova.png" alt="BJB Medlánky" width={90} height={50} className="mb-6" />
+                <p>Společenství K12</p>
+                <p>Kytnerova 12, Medlánky</p>
+            </div>
         </div>
       </div>
       <AnotherActivities activities={anotherActivities} />

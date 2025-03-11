@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { activities, specialActivitiesCard } from "@/data/activities";
 import { ActivityTemplate1 } from "@/components/activities/templates/template1";
+import { ActivityTemplate2 } from "@/components/activities/templates/template2";
 
 type Props = {
    params: Promise<{ activity: string }>   
@@ -40,6 +41,22 @@ export default async function Activity({ params }: Props) {
             {
                 activityData?.template === "template1" && 
                 <ActivityTemplate1 
+                    name={activityData.name}
+                    description={activityData.description}
+                    time={activityData.time}
+                    place={activityData.place}
+                    image={activityData.image}
+                    contactTitle={activityData.contactTitle}
+                    contactIcon={activityData.contactIcon}
+                    contactPerson={activityData.contactPerson}
+                    contactLinkText={activityData.contactLinkText}
+                    contactLink={activityData.contactLink}
+                    anotherActivities={anotherActivities}
+                />
+            }
+            {
+                activityData?.template === "template2" && 
+                <ActivityTemplate2 
                     name={activityData.name}
                     description={activityData.description}
                     time={activityData.time}
