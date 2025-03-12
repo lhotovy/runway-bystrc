@@ -1,9 +1,14 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import { activities } from './data/activities';
+import { activities, events } from './data/activities';
  
 export function middleware(request: NextRequest) {  
-    const appPaths = [...activities.map((activity) => `/${activity.slug}`), "/", "/kontakt"];  
+    const appPaths = [
+        ...activities.map((activity) => `/${activity.slug}`),
+        ...events.map((event) => `/${event.slug}`),
+        "/", 
+        "/kontakt"
+                      ];  
     
     // Only apply the redirect logic if the path is not in appPaths
     if (!appPaths.includes(request.nextUrl.pathname)) {

@@ -4,8 +4,8 @@ import Link from "next/link";
 import { AnotherActivities } from "../anotherActivities";
 import { Activity } from "@/types";
 
-// Základní template pro aktivity
-export const ActivityTemplate1 = ({
+// Template pro akci s přihlašováním
+export const ActivityTemplate3 = ({
   name,
   description,
   time,

@@ -132,3 +132,18 @@ export const specialActivitiesCard = {
     contactLink: "",
     template: ""
 };
+
+export const events = [
+    {
+        name: "Runway jede na hory",
+        slug: "hory",
+        cardDescription: "",
+        cardIcon: "",
+        description: ["Letní tábory pro dětí"],
+        time: ["21. - 23. 2. 2025", "začínáme v 19:00"],
+        place: "hotel na trojce",
+        image: "",
+        registrationText: "Přihlašování do 12. 2.",       
+        template: "template1"
+    }
+];

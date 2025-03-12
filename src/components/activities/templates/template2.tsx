@@ -7,6 +7,7 @@ import { AnotherActivities } from "../anotherActivities";
 import { Activity } from "@/types";
 import { useRouter } from "next/navigation";
 
+// Template pro Neděle na Runwayi s odkazy na jiné sbory
 export const ActivityTemplate2 = ({
   name,
   description,
