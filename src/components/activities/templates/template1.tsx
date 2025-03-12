@@ -31,7 +31,8 @@ export const ActivityTemplate1 = ({
 }) => {
   return (
     <div className="flex flex-col items-center w-full my-10 lg:mt-12 min-h-screen">
-      <div className="flex items-center w-full">
+      {/* big screen view */}
+      <div className="hidden sm:flex items-center w-full">
         <div className="w-2/3 flex flex-col justify-start gap-y-10">
           <h1 className="text-5xl text-gray-9 font-semibold">{name}</h1>
           <div className="flex gap-x-10 text-blue-5 uppercase text-sm">
@@ -57,6 +58,35 @@ export const ActivityTemplate1 = ({
         <div className="w-1/3 flex justify-center">
           <Image src={`/${image}`} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl" />
         </div>
+      </div>
+      {/* mobile screen view */}
+      <div className="flex sm:hidden items-center w-full">
+        <div className="w-full flex flex-col justify-center item-center gap-y-10">
+          <h1 className="text-5xl text-gray-9 font-semibold">{name}</h1>
+          <div className="flex justify-center">
+            <Image src={`/${image}`} alt={name} width={300} height={300} className="w-full aspect-square rounded-4xl" />
+          </div>
+          <div className="flex flex-col gap-y-8 text-blue-5 uppercase text-sm">
+            <p className="flex items-center gap-x-2">
+              <Clock4 size={24} />
+              {time}
+            </p>
+            <p className="flex items-center gap-x-2">
+              <MapPin size={24} />
+              {place}
+            </p>
+          </div>
+          <div className="text-gray-9 text-base flex flex-col items-start gap-y-8">
+            {
+              description.map((paragraph, index) => {
+                return (
+                  <p key={index}>{paragraph}</p>
+                )
+              })
+            }
+          </div>          
+        </div>
+        
       </div>
       <div className="w-[calc(100vw-15px)] flex justify-center bg-gray-1 py-7.5 mt-10">
         <div className="flex flex-col items-center gap-y-4 w-full max-w-screen-xl px-4">
