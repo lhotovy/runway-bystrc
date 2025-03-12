@@ -82,17 +82,18 @@ export const ActivityTemplate2 = ({
       </div>
       <div className="flex flex-col items-center w-full">
         <h2 className="text-gray-9 font-bold text-[32px] py-24">Bohoslužby jinde v Brně</h2>
-        <div className="flex gap-x-48 items-end">
-            <div className="flex flex-col items-center">
-                <Image src="/smetanka.png" alt="BJB Smetanova" width={150} height={90} className="mb-6" />
-                <p>Bratská jednota baptistů</p>
-                <p>Smetanova 20</p>
-            </div>
-            <div className="flex flex-col items-center">
-                <Image src="/kytnerova.png" alt="BJB Medlánky" width={90} height={50} className="mb-6" />
-                <p>Společenství K12</p>
-                <p>Kytnerova 12, Medlánky</p>
-            </div>
+        <div className="flex gap-x-48 items-end">            
+            <Link href="https://www.baptistebrno.cz/" target="blank" className="flex flex-col items-center">
+              <Image src="/smetanka.png" alt="BJB Smetanova" width={150} height={90} className="mb-6" />
+              <p>Bratská jednota baptistů</p>
+              <p>Smetanova 20</p>
+            </Link>
+  
+            <Link href="https://www.k12medlanky.cz/" target="blank" className="flex flex-col items-center">
+              <Image src="/kytnerova.png" alt="BJB Medlánky" width={90} height={50} className="mb-6" />
+              <p>Společenství K12</p>
+              <p>Kytnerova 12, Medlánky</p>
+            </Link>          
         </div>
       </div>
       <AnotherActivities activities={anotherActivities} />
