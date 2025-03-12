@@ -34,7 +34,7 @@ export const ActivityTemplate1 = ({
       {/* big screen view */}
       <div className="hidden sm:flex items-center w-full">
         <div className="w-2/3 flex flex-col justify-start gap-y-10">
-          <h1 className="text-5xl text-gray-9 font-semibold">{name}</h1>
+          <h1 className="text-5xl text-gray-9 font-bold">{name}</h1>
           <div className="flex gap-x-10 text-blue-5 uppercase text-sm">
             <p className="flex items-center gap-x-2">
               <Clock4 size={24} />
@@ -62,7 +62,7 @@ export const ActivityTemplate1 = ({
       {/* mobile screen view */}
       <div className="flex sm:hidden items-center w-full">
         <div className="w-full flex flex-col justify-center item-center gap-y-10">
-          <h1 className="text-5xl text-gray-9 font-semibold">{name}</h1>
+          <h1 className="text-4xl text-gray-9 font-bold">{name}</h1>
           <div className="flex justify-center">
             <Image src={`/${image}`} alt={name} width={300} height={300} className="w-full aspect-square rounded-4xl" />
           </div>

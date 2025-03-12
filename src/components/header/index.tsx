@@ -15,12 +15,12 @@ export default function Header({ onMobileMenuToggle }: { onMobileMenuToggle: () 
     <>
       <header
         id="header"
-        className="flex items-center h-[64px] min-h-[3rem] w-full border-b border-neutral bg-white text-primary-content shadow-xs"
+        className="flex justify-center items-center w-full border-b border-neutral bg-white text-primary-content shadow-xs p-4"
       >
-        <div className="flex max-w-[1280px] xl:min-w-[1280px] mx-auto items-center justify-end">
+        <div className="flex max-w-[1280px] w-full xl:min-w-[1280px] items-center justify-between">
           <Link
             href={"/"}
-            id="logo" className="flex h-full w-[300px] min-w-[3rem] items-center justify-center bg-white ">
+            id="logo" className="flex h-full w-[300px] min-w-[3rem] items-center justify-start bg-white ">
             <Image
               src="/logo.jpeg"
               alt="Runway Logo"
