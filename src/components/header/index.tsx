@@ -28,13 +28,13 @@ export default function Header({ onMobileMenuToggle }: { onMobileMenuToggle: () 
               width={100}
             />
           </Link>
-          <div className="flex h-full w-full items-center justify-end">       
+          <div className="hidden sm:flex h-full w-full items-center justify-end">       
             <HeaderTabs />          
           </div>
           <div className="sticky top-0 z-10 flex h-12 shrink-0">
             <button
               type="button"
-              className="px-4 text-base-100 focus:outline-hidden md:hidden"
+              className="px-4 text-base-100 focus:outline-hidden sm:hidden"
               onClick={onMobileMenuToggle}
             >
               <Bars3BottomLeftIcon
@@ -44,11 +44,12 @@ export default function Header({ onMobileMenuToggle }: { onMobileMenuToggle: () 
             </button>
           </div>
         </div>
+        <MobileMenu
+          sidebarOpen={sidebarOpen}
+          setSidebarOpen={setSidebarOpen}
+        />
       </header>
-      <MobileMenu
-        sidebarOpen={sidebarOpen}
-        setSidebarOpen={setSidebarOpen}
-      />
+     
     </>
   );
 }

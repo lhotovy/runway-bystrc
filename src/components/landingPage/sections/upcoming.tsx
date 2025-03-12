@@ -8,7 +8,7 @@ export const Upcoming = () => {
     <div className=' w-full flex flex-col justify-center gap-y-10'>
         <SectionTitle title="Speciální akce" />
         <div className="flex items-center w-full">
-            <div className='grid lg:grid-cols-4 grid-cols-2 w-full gap-4'>
+            <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4'>
                 {
                     lpUpcoming.map((activity, index) => {
                         return (
