@@ -1,7 +1,7 @@
 export const links = [
     {
         name: "O nás",
-        href: "/about",
+        href: "/o-nas",
     },
     {
         name: "Speciální akce",
@@ -9,6 +9,6 @@ export const links = [
     },
     {
         name: "Kontakt",
-        href: "/contact",
+        href: "/kontakt",
     },
 ];

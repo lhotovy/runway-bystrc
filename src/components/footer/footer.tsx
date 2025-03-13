@@ -4,7 +4,7 @@ import { SocialIcons } from "../landingPage/socialIcons";
 
 export const Footer = () => {
     return (
-        <div className="mt-12 flex flex-col items-center bg-gray-3 text-base w-full h-fit">
+        <div className="flex flex-col items-center bg-gray-3 text-base w-full h-fit">
             {/* lg view */}
             <div className="hidden lg:flex items-center w-full max-w-[1280px] mx-auto">
                 <div className="flex flex-col lg:flex-row justify-between items-center w-full h-5/6">

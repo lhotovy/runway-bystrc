@@ -8,6 +8,7 @@ export function middleware(request: NextRequest) {
         ...events.map((event) => `/${event.slug}`),
         "/", 
         "/kontakt",
+        "/o-nas",
         "/prihlaska/hory"
     ];  
     

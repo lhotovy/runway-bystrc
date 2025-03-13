@@ -8,7 +8,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        blue: "bg-blue-5 text-white font-bold text-base rounded-2xl px-6 py-4 cursor-pointer",     
+        blue: "bg-blue-5 text-white font-bold text-base rounded-2xl px-6 py-4 cursor-pointer",  
+        white: "bg-white text-blue-5 font-bold text-base rounded-2xl px-6 py-4 cursor-pointer",   
         default: "text-primary underline-offset-4 hover:underline",
       },
       // size: {
@@ -35,6 +36,7 @@ export interface ButtonProps
   variant?:
     | "default"
     | "blue"  
+    | "white"
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -56,8 +58,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     switch (variant) {
       case "blue":   
+      case "white": 
         displayText = text || "Action";
-        break;     
+        break;       
       default:       
         displayText = text || "Default Button";
     }

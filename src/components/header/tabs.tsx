@@ -28,7 +28,7 @@ export const HeaderTabs = () => {
     <NavigationMenu>
       <NavigationMenuList>
       <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/o-nas" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               O nás
             </NavigationMenuLink>
