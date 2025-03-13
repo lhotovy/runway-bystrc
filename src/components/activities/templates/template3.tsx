@@ -97,7 +97,7 @@ export const ActivityTemplate3 = ({
       <div className="w-[calc(100vw-15px)] flex justify-center bg-gray-1 py-7.5 mt-10">
         <div className="flex flex-col items-center gap-y-8 w-full max-w-screen-xl px-4">
           <p className="text-xl text-gray-9 font-bold">{registrationText}</p>         
-            <button className="bg-blue-5 text-white font-bold text-base rounded-2xl px-16 py-5 cursor-pointer">
+            <button className="">
               <Link className="" href={registrationLink}>
                 Přihlásit se
               </Link>

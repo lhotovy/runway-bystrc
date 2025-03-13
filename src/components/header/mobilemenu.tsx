@@ -7,7 +7,7 @@ import { Plus, X } from 'lucide-react'
 import Image from "next/image"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
 import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select"
-import { Button } from "@/components/button"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 interface MobileMenuProps {
@@ -71,7 +71,7 @@ export function MobileMenu({ sidebarOpen, setSidebarOpen }: MobileMenuProps) {
               </h1>
             </div>
             <Button
-              variant="navigate"
+              variant="default"
               className="ml-auto px-4 hover:bg-transparent"
               onClick={() => setSidebarOpen(false)}
             >
@@ -152,7 +152,7 @@ export function MobileMenu({ sidebarOpen, setSidebarOpen }: MobileMenuProps) {
           {/* Footer */}
           <div className="mt-auto flex items-center justify-between border-t border-[#ffffff1a] p-4">          
             <Button
-              variant="navigate"
+              variant="default"
               className="h-8 px-3 text-sm text-white/60 hover:text-white"
               onClick={() => {
                 // Add logout logic here

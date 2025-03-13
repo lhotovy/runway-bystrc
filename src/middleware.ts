@@ -7,8 +7,9 @@ export function middleware(request: NextRequest) {
         ...activities.map((activity) => `/${activity.slug}`),
         ...events.map((event) => `/${event.slug}`),
         "/", 
-        "/kontakt"
-                      ];  
+        "/kontakt",
+        "/prihlaska/hory"
+    ];  
     
     // Only apply the redirect logic if the path is not in appPaths
     if (!appPaths.includes(request.nextUrl.pathname)) {

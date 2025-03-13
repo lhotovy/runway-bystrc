@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@headlessui/react": "^2.2.0",
@@ -22,6 +23,7 @@
     "@tailwindcss/postcss": "^4.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "emailjs": "^4.0.3",
     "eslint": "8.49.0",
     "eslint-config-next": "15.2.1",
     "lucide-react": "^0.475.0",
