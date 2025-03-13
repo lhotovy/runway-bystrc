@@ -31,7 +31,7 @@ export const ActivityTemplate2 = ({
   contactPerson: string,
   contactLinkText: string,
   contactLink: string,
-  anotherActivities: Activity[]
+  anotherActivities: any[]
 }) => {
     const router = useRouter();
   return (

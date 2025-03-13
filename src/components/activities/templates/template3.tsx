@@ -2,7 +2,6 @@ import { Clock4, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnotherActivities } from "../anotherActivities";
-import { Activity } from "@/types";
 
 // Template pro akci s přihlašováním
 export const ActivityTemplate3 = ({
@@ -11,24 +10,18 @@ export const ActivityTemplate3 = ({
   time,
   place,
   image,
-  contactTitle,
-  contactIcon,
-  contactPerson,
-  contactLinkText,
-  contactLink,
+  registrationText,
+  registrationLink,
   anotherActivities
 }: {
   name: string,
   description: string[],
-  time: string,
+  time: string[],
   place: string,
   image: string,
-  contactTitle: string,
-  contactIcon: JSX.Element | null,
-  contactPerson: string,
-  contactLinkText: string,
-  contactLink: string,
-  anotherActivities: Activity[]
+  registrationText: string,
+  registrationLink: string,
+  anotherActivities: any[]
 }) => {
   return (
     <div className="flex flex-col items-center w-full my-10 lg:mt-12 min-h-screen">
@@ -36,11 +29,17 @@ export const ActivityTemplate3 = ({
       <div className="hidden sm:flex items-center w-full">
         <div className="w-2/3 flex flex-col justify-start gap-y-10">
           <h1 className="text-5xl text-gray-9 font-bold">{name}</h1>
-          <div className="flex gap-x-10 text-blue-5 uppercase text-sm">
-            <p className="flex items-center gap-x-2">
-              <Clock4 size={24} />
-              {time}
-            </p>
+          <div className="flex gap-x-10 text-blue-5 uppercase text-sm font-semibold">
+            {
+              time.map((time, index) => {
+                return (
+                  <p key={index} className="flex items-center gap-x-2">
+                    <Clock4 size={24} />
+                    {time}
+                  </p>
+                )
+              })
+            }        
             <p className="flex items-center gap-x-2">
               <MapPin size={24} />
               {place}
@@ -67,11 +66,17 @@ export const ActivityTemplate3 = ({
           <div className="flex justify-center">
             <Image src={`/${image}`} alt={name} width={300} height={300} className="w-full aspect-square rounded-4xl" />
           </div>
-          <div className="flex flex-col gap-y-8 text-blue-5 uppercase text-sm">
-            <p className="flex items-center gap-x-2">
-              <Clock4 size={24} />
-              {time}
-            </p>
+          <div className="flex flex-col gap-y-8 text-blue-5 uppercase text-sm font-semibold">
+            {
+              time.map((time, index) => {
+                return (
+                  <p key={index} className="flex items-center gap-x-2">
+                    <Clock4 size={24} />
+                    {time}
+                  </p>
+                )
+              })
+            }
             <p className="flex items-center gap-x-2">
               <MapPin size={24} />
               {place}
@@ -90,11 +95,13 @@ export const ActivityTemplate3 = ({
         
       </div>
       <div className="w-[calc(100vw-15px)] flex justify-center bg-gray-1 py-7.5 mt-10">
-        <div className="flex flex-col items-center gap-y-4 w-full max-w-screen-xl px-4">
-          <p className="text-xl text-gray-9 font-bold">{contactTitle}</p>
-          {contactIcon && contactIcon}
-          <p className="text-gray-8 text-base font-bold">{contactPerson}</p>
-          <Link className="text-blue-5 font-semibold text-base" href={contactLink}>{contactLinkText}</Link>
+        <div className="flex flex-col items-center gap-y-8 w-full max-w-screen-xl px-4">
+          <p className="text-xl text-gray-9 font-bold">{registrationText}</p>         
+            <button className="bg-blue-5 text-white font-bold text-base rounded-2xl px-16 py-5 cursor-pointer">
+              <Link className="" href={registrationLink}>
+                Přihlásit se
+              </Link>
+            </button>       
         </div>
       </div>
       <AnotherActivities activities={anotherActivities} />

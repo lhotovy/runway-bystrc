@@ -35,6 +35,7 @@ export async function generateStaticParams() {
 export default async function Activity({ params }: Props) {    
     const { activity } = await params;
     const activityData = activities.find((activityData) => activityData.slug === activity);
+    const eventData = events.find((eventData) => eventData.slug === activity);
     const anotherActivities = [...activities.filter((activityData) => activityData.slug !== activity), specialActivitiesCard];
         
     return (
@@ -44,10 +45,10 @@ export default async function Activity({ params }: Props) {
                 <ActivityTemplate1 
                     name={activityData.name}
                     description={activityData.description}
-                    time={activityData.time}
+                    time={activityData.time as string}
                     place={activityData.place}
                     image={activityData.image}
-                    contactTitle={activityData.contactTitle}
+                    contactTitle={activityData.contactTitle || ""}
                     contactIcon={activityData.contactIcon}
                     contactPerson={activityData.contactPerson}
                     contactLinkText={activityData.contactLinkText}
@@ -72,18 +73,15 @@ export default async function Activity({ params }: Props) {
                 />
             }
             {
-                activityData?.template === "template3" && 
+                eventData?.template === "template3" && 
                 <ActivityTemplate3
-                    name={activityData.name}
-                    description={activityData.description}
-                    time={activityData.time}
-                    place={activityData.place}
-                    image={activityData.image}
-                    contactTitle={activityData.contactTitle}
-                    contactIcon={activityData.contactIcon}
-                    contactPerson={activityData.contactPerson}
-                    contactLinkText={activityData.contactLinkText}
-                    contactLink={activityData.contactLink}
+                    name={eventData.name}
+                    description={eventData.description}
+                    time={eventData.time}
+                    place={eventData.place}
+                    image={eventData.image}
+                    registrationText={eventData.registrationText}
+                    registrationLink={eventData.registrationLink}
                     anotherActivities={anotherActivities}
                 />
             }

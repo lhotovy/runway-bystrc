@@ -28,15 +28,17 @@ export type Activity = {
     cardDescription: string;
     cardIcon: string;
     description: string[];
-    time: string;
+    time: string | string[];
     place: string;
     image: string;
-    contactTitle: string;
-    contactIcon: JSX.Element | null;
-    contactPerson: string;
-    contactLinkText: string;
-    contactLink: string;
-    template: string;
+    contactTitle: string | undefined;
+    contactIcon: JSX.Element | null | undefined;
+    contactPerson: string | undefined;
+    contactLinkText: string | undefined;
+    contactLink: string | undefined;
+    template: string | undefined;
+    registrationText: string | undefined;
+    registrationLink: string | undefined;
 }
 
    

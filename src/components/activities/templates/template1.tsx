@@ -28,7 +28,7 @@ export const ActivityTemplate1 = ({
   contactPerson: string,
   contactLinkText: string,
   contactLink: string,
-  anotherActivities: Activity[]
+  anotherActivities: any[]
 }) => {
   return (
     <div className="flex flex-col items-center w-full my-10 lg:mt-12 min-h-screen">
