@@ -9,6 +9,7 @@ export function middleware(request: NextRequest) {
         "/", 
         "/kontakt",
         "/o-nas",
+        "/gdpr",
         "/prihlaska/hory"
     ];  
     
