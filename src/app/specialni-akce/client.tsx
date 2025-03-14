@@ -18,13 +18,13 @@ export const SpecialEventsClient = () => {
                     <Button 
                         variant="badge" 
                         text="Nadcházející" 
-                        className={`${selectedBadge === "Nadcházející" ? "text-blue-5" : "text-gray-7"}`}  
+                        className={`${selectedBadge === "Nadcházející" ? "text-blue-5 border-blue-5" : "text-gray-7 border-transparent"}`}  
                         onClick={() => setSelectedBadge("Nadcházející")}
                     />                
                     <Button 
                         variant="badge" 
                         text="Minulé" 
-                        className={`${selectedBadge === "Minulé" ? "text-blue-5" : "text-gray-7"}`} 
+                        className={`${selectedBadge === "Minulé" ? "text-blue-5 border-blue-5" : "text-gray-7 border-transparent"}`}  
                         onClick={() => setSelectedBadge("Minulé")}
                     />
                 </div>
