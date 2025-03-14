@@ -11,15 +11,16 @@ export function middleware(request: NextRequest) {
         "/o-nas",
         "/gdpr",
         "/specialni-akce",
-        "/prihlaska/hory"
+        "/prihlaska/hory",
+        "/potvrzeni?activity=hory"
     ];  
     
     // Only apply the redirect logic if the path is not in appPaths
-    if (!appPaths.includes(request.nextUrl.pathname)) {
-        return NextResponse.redirect(new URL("/", request.url));
-    };
+    // if (!appPaths.includes(request.nextUrl.pathname)) {
+    //     return NextResponse.redirect(new URL("/", request.url));
+    // };
     
-    return NextResponse.next();
+    // return NextResponse.next();
 }
  
 // Improved matcher that properly excludes all static assets

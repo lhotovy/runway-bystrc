@@ -3,12 +3,12 @@
 import { sendEmail } from "@/components/actions/sendEmail";
 import { Button } from "@/components/ui/button";
 import { generateFormElements } from "@/lib/functions";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export const RegistrationPageClient = ({ data }: any) => {
     const [formData, setFormData] = useState([]);
-
-    console.log(formData);    
+    const router = useRouter();  
  
     return (
         <div className="flex flex-col gap-y-8 items-start">
@@ -20,7 +20,15 @@ export const RegistrationPageClient = ({ data }: any) => {
                 {generateFormElements(data.elements, formData, setFormData)}
             </form>
             <div className="flex justify-center w-full">
-                <Button variant="blue" text="Odeslat přihlášku" onClick={async() => await sendEmail(formData)} />
+                <Button 
+                    variant="blue" 
+                    text="Odeslat přihlášku" 
+                    onClick={() => {
+                        router.push(`/potvrzeni?activity=${data.slug}`);
+                        //await sendEmail(formData)
+                        }
+                    } 
+                />
             </div>
         </div>
     );
