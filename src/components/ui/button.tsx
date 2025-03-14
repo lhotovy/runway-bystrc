@@ -10,6 +10,7 @@ const buttonVariants = cva(
       variant: {
         blue: "bg-blue-5 text-white font-bold text-base rounded-2xl px-6 py-4 cursor-pointer",  
         white: "bg-white text-blue-5 font-bold text-base rounded-2xl px-6 py-4 cursor-pointer",   
+        badge: "bg-gray-1 py-[10px] px-[20px] rounded-full text-base font-bold active:text-blue-5 cursor-pointer",
         default: "text-primary underline-offset-4 hover:underline",
       },
       // size: {
@@ -37,6 +38,7 @@ export interface ButtonProps
     | "default"
     | "blue"  
     | "white"
+    | "badge";
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -59,6 +61,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     switch (variant) {
       case "blue":   
       case "white": 
+      case "badge":
         displayText = text || "Action";
         break;       
       default:       

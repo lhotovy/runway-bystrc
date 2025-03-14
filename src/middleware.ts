@@ -10,6 +10,7 @@ export function middleware(request: NextRequest) {
         "/kontakt",
         "/o-nas",
         "/gdpr",
+        "/specialni-akce",
         "/prihlaska/hory"
     ];  
     
