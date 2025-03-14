@@ -5,6 +5,10 @@ export const metadata = {
 
 export default function Kalendar() {
   return (
-    <div className="flex flex-col items-center bg-black h-screen">Kalendar</div>
+    <div className="flex flex-col">
+      <div>
+        <h1 className="text-4xl font-bold">Kontakt</h1>
+      </div>
+    </div>
   )
 }
