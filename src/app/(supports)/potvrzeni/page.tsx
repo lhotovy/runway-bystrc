@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ConfirmClient } from "./client";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
     title: "Potvrzení přihlášky | Runway Bystrc",
@@ -8,6 +9,8 @@ export const metadata: Metadata = {
 
 export default function Confirm() {
     return (
-       <ConfirmClient />
+        <Suspense fallback={<div>Loading...</div>}>
+            <ConfirmClient />
+        </Suspense>
     )
 }

@@ -1,7 +1,7 @@
 import { SpecialEventCard } from '../specialEventCard';
 import React from "react";
-import { lpUpcoming } from '@/data/lpUpcoming';
 import { SectionTitle } from "../common/sectionTitle";
+import { specialEvents } from '@/data/specialEventsPage';
 
 export const SpecialEvents = () => {
   return ( 
@@ -10,7 +10,7 @@ export const SpecialEvents = () => {
         <div className="flex items-center w-full">
             <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4'>
                 {
-                    lpUpcoming.map((activity, index) => {
+                    specialEvents.map((activity, index) => {
                         return (
                            <SpecialEventCard 
                                 key={index}   

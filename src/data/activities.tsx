@@ -153,7 +153,29 @@ export const events = [
         place: "hotel na trojce",
         image: "",
         registrationText: "Přihlašování do 12. 2.", 
-        registrationLink: "https://www.runway-bystrc.cz/akce/hory",      
+        registrationLink: "prihlaska/hory",      
+        template: "template3"
+    },
+    {
+        name: "Jarní swap oblečení",
+        slug: "swap",
+        cardDescription: "",
+        cardIcon: "",
+        description: [
+            "Pojeď s námi na zimní pobyt v Jeseníkách v termínu 21. - 23. 2 2025. Společný čas, zábava, lyžování, procházky…", 
+            "Letos již potřetí vyrazíme s Runway na hory, tentokrát do Hotelu na Trojce v Jeseníkách. Na místo se dopravíme auty, kdo bude mít zájem o spolujízdu s někým, prosím napište to do přihlášky a budete k někomu do auta přiděleni. Program začne v pátek večeří v 19:00. O víkendu bude možné lyžovat nebo jít na organizovaný výlet (permanentka na lyžování není v ceně pobytu). Co se týče jídla, v ceně je zahrnuta páteční večeře, sobotní snídaně a večeře a dále nedělní snídaně. Bližší informace k dopravě i programu budou zaslány na mail v průběhu února. Informace k platbě Vám budou zaslány v mailu do 24 hodin po vyplnění registračního formuláře. Přihláška se stává závaznou ve chvíli jejího zaplacení.",
+            `Ubytování: Hotel na Trojce, Jindřichov, Jeseníky
+            Cena za víkend (ubytování + polopenze):
+            osoby od 10 let: 1540,- Kč
+            děti do 10 let: 1240,- Kč
+            děti do 3 let bez nároku na lůžko a stravu: zdarma
+            členové Challenge a Runway Youth: 1240,- Kč`
+        ],
+        time: ["12. 4. 2025", "13:00 - 17:00"],
+        place: "centrum runway bystrc",
+        image: "",
+        registrationText: "Přihlašování do 12. 2.", 
+        registrationLink: "prihlaska/hory",      
         template: "template3"
     }
 ];

@@ -1,7 +1,10 @@
+"use client";
+
 import { Clock4, MapPin } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { AnotherActivities } from "../anotherActivities";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 // Template pro akci s přihlašováním
 export const ActivityTemplate3 = ({
@@ -23,6 +26,8 @@ export const ActivityTemplate3 = ({
   registrationLink: string,
   anotherActivities: any[]
 }) => {
+  const router = useRouter();
+
   return (
     <div className="flex flex-col items-center w-full my-10 lg:mt-12 min-h-screen">
       {/* big screen view */}
@@ -97,11 +102,7 @@ export const ActivityTemplate3 = ({
       <div className="w-[calc(100vw-15px)] flex justify-center bg-gray-1 py-7.5 mt-10">
         <div className="flex flex-col items-center gap-y-8 w-full max-w-screen-xl px-4">
           <p className="text-xl text-gray-9 font-bold">{registrationText}</p>         
-            <button className="">
-              <Link className="" href={registrationLink}>
-                Přihlásit se
-              </Link>
-            </button>       
+            <Button variant="blue" text="Přihlásit se" onClick={() => {router.push(`/${registrationLink}`)}} />     
         </div>
       </div>
       <AnotherActivities activities={anotherActivities} />
