@@ -16,21 +16,21 @@ export const Welcome = () => {
             <div className="relative w-3/5 flex items-center">
                 <div className="relative">
                     <Image
-                        src="/socialEmbed/social7.png"
+                        src="/socialEmbed/social7.webp"
                         alt="Image 1"
                         width={300}
                         height={300}
                         className="rounded-3xl border-8 border-white"
                     />
                     <Image
-                        src="/socialEmbed/social8.png"
+                        src="/socialEmbed/social8.webp"
                         alt="Image 2"
                         width={300}
                         height={300}
                         className="rounded-3xl border-8 border-white absolute top-24 left-64 -z-1"
                     />
                     <Image
-                        src="/socialEmbed/social9.png"
+                        src="/socialEmbed/social9.webp"
                         alt="Image 3"
                         width={300}
                         height={300}
