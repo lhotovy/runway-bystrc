@@ -1,51 +1,51 @@
 export const socialEmbed = [
     {
-        image: "/socialEmbed/social1.png",
+        image: "/socialEmbed/social1.webp",
         alt: "Social 1",
         href: "/"
     },
     {
-        image: "/socialEmbed/social2.png",
+        image: "/socialEmbed/social2.webp",
         alt: "Social 2",
         href: "/"
     },
     {
-        image: "/socialEmbed/social3.png",
+        image: "/socialEmbed/social3.webp",
         alt: "Social 3",
         href: "/"
     },
     {
-        image: "/socialEmbed/social4.png",
+        image: "/socialEmbed/social4.webp",
         alt: "Social 4",
         href: "/"
     },
     {
-        image: "/socialEmbed/social5.png",
+        image: "/socialEmbed/social5.webp",
         alt: "Social 5",
         href: "/"
     },
     {
-        image: "/socialEmbed/social6.png",
+        image: "/socialEmbed/social6.webp",
         alt: "Social 6",
         href: "/"
     },
     {
-        image: "/socialEmbed/social7.png",
+        image: "/socialEmbed/social7.webp",
         alt: "Social 7",
         href: "/"
     },
     {
-        image: "/socialEmbed/social8.png",
+        image: "/socialEmbed/social8.webp",
         alt: "Social 8",
         href: "/"
     },
     {
-        image: "/socialEmbed/social9.png",
+        image: "/socialEmbed/social9.webp",
         alt: "Social 9",
         href: "/"
     },
     {
-        image: "/socialEmbed/social10.png",
+        image: "/socialEmbed/social10.webp",
         alt: "Social 10",
         href: "/"
     }

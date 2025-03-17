@@ -8,14 +8,15 @@ export const ONasClient = () => {
   return (
     <div className="flex flex-col items-center mt-12">
       {/* big screen */}
-      <div className="hidden lg:flex gap-x-8">
+      <h1 className="hidden lg:flex font-bold text-[40px] text-gray-9 self-start mb-12">O nás</h1>
+      <div className="hidden lg:flex gap-x-8 items-center">
         <div className="flex flex-col gap-y-8 w-2/3">
-          <h1 className="font-bold text-[40px] text-gray-9">O nás</h1>
+        
           <p>Runway Bystrc je skupina lidí, kteří rádi dělají něco přínosného pro své okolí. Většina z nás žije nebo žila v Bystrci a proto nám tato velká a pěkná městská část není lhostejná. Jsme součástí křesťanské církve Bratrské jednoty baptistů, která v Brně působí již více než 120 let, a chtěli bychom být přínosem i v Bystrci v různých oblastech společenského i duchovního života. Důležité jsou pro nás naše vzájemné vztahy i vztah s Bohem, které chceme společně rozvíjet.</p>
           <p>A proč Runway? Runway je pro nás symbolem nového startu i očekávání něčeho nového a dobrodružného. Runway je pro nás obrazem svobody, kterou nám dal Bůh. Má ji každý člověk, ale záleží na něm, jak ji využije. Chceme být bezpečným místem pro starty do života v různých oblastech a chceme pomoci předejít nebezpečím, která číhají především na mladou generaci v podobě různých závislostí, gangů a s tím související kriminalitou. Přidáte se k nám na palubu?</p>
         </div>
         <div className="w-1/3">
-          <Image src="/oNas.jpg" alt="O Runwayi" width={400} height={150} className="rounded-xl" />    
+          <Image src="/oNas.webp" alt="O Runwayi" width={400} height={150} className="rounded-xl" />    
         </div>
       </div>
       <div className="hidden lg:flex flex-col items-center mt-24">
@@ -43,7 +44,7 @@ export const ONasClient = () => {
         <div className="flex flex-col gap-y-8 w-full">
           <h1 className="font-bold text-[40px] text-gray-9">O nás</h1>
           <div className="w-full">
-            <Image src="/oNas.jpg" alt="O Runwayi" width={400} height={150} className="rounded-xl" />    
+            <Image src="/oNas.webp" alt="O Runwayi" width={400} height={150} className="rounded-xl" />    
           </div>
           <p className="w-">Runway Bystrc je skupina lidí, kteří rádi dělají něco přínosného pro své okolí. Většina z nás žije nebo žila v Bystrci a proto nám tato velká a pěkná městská část není lhostejná. Jsme součástí křesťanské církve Bratrské jednoty baptistů, která v Brně působí již více než 120 let, a chtěli bychom být přínosem i v Bystrci v různých oblastech společenského i duchovního života. Důležité jsou pro nás naše vzájemné vztahy i vztah s Bohem, které chceme společně rozvíjet.</p>
           <p>A proč Runway? Runway je pro nás symbolem nového startu i očekávání něčeho nového a dobrodružného. Runway je pro nás obrazem svobody, kterou nám dal Bůh. Má ji každý člověk, ale záleží na něm, jak ji využije. Chceme být bezpečným místem pro starty do života v různých oblastech a chceme pomoci předejít nebezpečím, která číhají především na mladou generaci v podobě různých závislostí, gangů a s tím související kriminalitou. Přidáte se k nám na palubu?</p>

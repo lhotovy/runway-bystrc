@@ -57,7 +57,7 @@ export const ActivityTemplate1 = ({
           </div>          
         </div>
         <div className="w-1/3 flex justify-center">
-          <Image src={`/${image}`} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl" />
+          <Image src={`/${image}`} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl object-cover" />
         </div>
       </div>
       {/* mobile screen view */}
