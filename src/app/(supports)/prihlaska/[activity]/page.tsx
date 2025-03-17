@@ -23,6 +23,12 @@ export async function generateMetadata(
     };
 };
 
+export async function generateStaticParams() {    
+    return registrations.map((activity) => ({
+      slug: `/prihlaska/${activity.slug}`,
+    }));
+};
+
 export default async function Registration(
     {
     params

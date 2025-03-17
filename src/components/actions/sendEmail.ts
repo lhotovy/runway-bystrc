@@ -1,17 +1,13 @@
+import emailjs from "emailjs-com";
 
-import emailjs from "@emailjs/browser";
- 
-export async function sendEmail(data: any) {
-   //e.preventDefault();
-   console.log("d",data);
-   
- try {
-        await emailjs.sendForm('service_4f8z9dq', 'template_ioei8ib', data, {
-            publicKey: process.env.EMAIL_JS_PUBLIC_KEY,
-        });
-        console.log("hfdkshg");
-        
-    } catch (error: any) {
-        console.log('FAILED...', error.text);
-    }  
+export async function sendEmail(e: any, formData: any) { 
+    e.preventDefault();   
+
+    emailjs.send('service_4f8z9dq', 'template_ioei8ib', formData, "KwTzFCyd2YuMwJvT-")
+      .then(() => {
+        console.log('Message Sent Successfully')
+      }, (error) => {
+        console.log(error.text);      
+      });
+    e.target.reset()
 };

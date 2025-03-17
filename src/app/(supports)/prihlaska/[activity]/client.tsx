@@ -7,29 +7,32 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export const RegistrationPageClient = ({ data }: any) => {
-    const [formData, setFormData] = useState([]);
+    const [formData, setFormData] = useState({});
     const router = useRouter();  
+
+    const handleSubmit = async (e: any) => {        
+        await sendEmail(e, formData);
+        router.push(`/potvrzeni?activity=${data.slug}`);
+    };
+
+    const elements = generateFormElements(data.elements, formData, setFormData);    
  
     return (
-        <div className="flex flex-col gap-y-8 items-start">
+        <div className="flex flex-col gap-y-8 items-start py-20">
             <div className="flex flex-col gap-y-8">
                 <h1 className="font-bold text-[40px]">{data?.name}</h1>
                 <p>{data?.description}</p>
             </div>
-            <form className="flex gap-x-6 gap-y-4 flex-wrap w-1/3">
-                {generateFormElements(data.elements, formData, setFormData)}
+            <form className="flex gap-x-6 gap-y-4 flex-wrap w-1/2 items-between" onSubmit={handleSubmit}>
+                {elements}
+                <div className="flex justify-center w-full">
+                    <Button 
+                        variant="blue" 
+                        text="Odeslat přihlášku" 
+                        type="submit"
+                    />
+                </div>
             </form>
-            <div className="flex justify-center w-full">
-                <Button 
-                    variant="blue" 
-                    text="Odeslat přihlášku" 
-                    onClick={() => {
-                        router.push(`/potvrzeni?activity=${data.slug}`);
-                        //await sendEmail(formData)
-                        }
-                    } 
-                />
-            </div>
         </div>
     );
 };
