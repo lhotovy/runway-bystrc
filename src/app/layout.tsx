@@ -16,7 +16,7 @@ export default function RootLayout({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <html lang="cz" className='scroll-smooth '>
-      <body className={`${openSans.className} text-slate-600 w-full`}>       
+      <body className={`${openSans.className} text-gray-9 w-full`}>       
         <Header onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)} />
         <main className="max-w-[1280px] mx-auto px-6 xl:px-0">
           {children}
