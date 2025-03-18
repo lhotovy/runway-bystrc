@@ -14,6 +14,15 @@ export async function generateMetadata(
     { params }: Props
 ): Promise<Metadata> {
     const { activity } = await params;
+
+    // Exclude /mockServiceWorker.js
+    if (activity === 'mockServiceWorker.js') {
+        return {
+            title: 'Service Worker',
+            description: 'Service Worker for the application'
+        };
+    };
+    
     const activityData = activities.find((activityData) => activityData.slug === activity) || events.find((eventData) => eventData.slug === activity);
 
     if (!activityData) {

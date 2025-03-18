@@ -151,7 +151,7 @@ export const events = [
         ],
         time: ["21. - 23. 2. 2025", "začínáme v 19:00"],
         place: "hotel na trojce",
-        image: "",
+        image: "placeholder.webp",
         registrationText: "Přihlašování do 12. 2.", 
         registrationLink: "prihlaska/hory",      
         template: "template3"

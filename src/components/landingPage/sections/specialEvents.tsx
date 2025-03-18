@@ -2,6 +2,7 @@ import { SpecialEventCard } from '../specialEventCard';
 import React from "react";
 import { SectionTitle } from "../common/sectionTitle";
 import { specialEvents } from '@/data/specialEventsPage';
+import Link from 'next/link';
 
 export const SpecialEvents = () => {
   return ( 
@@ -22,9 +23,12 @@ export const SpecialEvents = () => {
                 <div 
                     className="flex justify-center items-center text-blue-5 py-4 px-6 font-semibold text-base"
                 >
-                    <p className="flex justify-center items-center w-36 h-14 bg-white hover:bg-gray-1 cursor-pointer rounded-xl">
+                    <Link 
+                        href="/specialni-akce" 
+                        className="flex justify-center items-center w-36 h-14 bg-white hover:bg-gray-1 cursor-pointer rounded-xl"
+                    >
                         Zobrazit vše
-                    </p>                    
+                    </Link>                    
                 </div>
             </div>           
         </div>

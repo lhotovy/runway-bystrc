@@ -69,7 +69,7 @@ export const ActivityTemplate3 = ({
         <div className="w-full flex flex-col justify-center item-center gap-y-10">
           <h1 className="text-4xl text-gray-9 font-bold">{name}</h1>
           <div className="flex justify-center">
-            <Image src={`/${image}`} alt={name} width={300} height={300} className="w-full aspect-square rounded-4xl" />
+            <Image src={`/${image}`} alt={name} width={300} height={300} className="w-2/3 aspect-square rounded-4xl" />
           </div>
           <div className="flex flex-col gap-y-8 text-blue-5 uppercase text-sm font-semibold">
             {

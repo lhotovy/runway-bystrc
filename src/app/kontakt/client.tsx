@@ -20,7 +20,7 @@ export default function KontaktClient() {
       <div className="hidden md:flex flex-col mt-24 mb-12 gap-y-12">
         <h1 className="text-4xl font-bold">Kontakt</h1>
         <div className="flex gap-x-8 items-center">
-          <Image src="/centrumrb.webp" alt="Centrum Runway Bystrc" width={170} height={170} />
+          <Image src="/centrumrb.webp" alt="Centrum Runway Bystrc" width={170} height={170} className="rounded-4xl" />
           <div className="flex flex-col gap-y-4">
             <p className="text-xl font-bold">Centrum Runway Bystrc (Klubovna)</p>
             <p className="text-base">Zde se setkáváme pro naprostou většinu našich aktivit. Stačí přijít k paneláku na Teyschlově 20. Nejbližší zastávky jsou Ruda či Kavčí. </p>
@@ -34,7 +34,7 @@ export default function KontaktClient() {
           </div>
         </div>
         <div className="flex gap-x-8 items-center">
-          <Image src="/placeholder.webp" alt="Modlitebna Runway Bystrc" width={170} height={170} />
+          <Image src="/placeholder.webp" alt="Modlitebna Runway Bystrc" width={170} height={170} className="rounded-4xl" />
           <div className="flex flex-col gap-y-4">
             <p className="text-xl font-bold">Modlitebna</p>
             <p className="text-base">Připravujeme nové a větší prostory pro naše setkávání! Těšíme se, že vás brzy přivítáme v naší nové modlitebně, kterou se stane právě rekonstruovaná bývalá restaurace Don Papa. </p>
@@ -86,8 +86,8 @@ export default function KontaktClient() {
       <div className="flex md:hidden flex-col mt-16 mb-12 gap-y-12">
         <h1 className="text-4xl font-bold">Kontakt</h1>              
           <div className="flex flex-col gap-y-6">
-            <p className="text-xl font-bold text-center">Centrum Runway Bystrc (Klubovna)</p>
-            <Image src="/centrumrb.webp" alt="Centrum Runway Bystrc" width={170} height={170} className="self-center" />
+            <p className="text-xl font-bold text-center">Centrum Runway Bystrc (Klubovna)</p>        
+            <Image src="/centrumrb.webp" alt="Centrum Runway Bystrc" width={600} height={600} className="self-center rounded-4xl" />            
             <p className="text-base">Zde se setkáváme pro naprostou většinu našich aktivit. Stačí přijít k paneláku na Teyschlově 20. Nejbližší zastávky jsou Ruda či Kavčí. </p>
             <div className="flex items-center">
               <Image src="/icons/place.png" alt="place icon" width={30} height={30} className="h-10 w-10 mr-4" />
@@ -99,7 +99,7 @@ export default function KontaktClient() {
           </div>         
           <div className="flex flex-col gap-y-6 mt-12">
             <p className="text-xl font-bold self-center">Modlitebna</p>
-            <Image src="/placeholder.webp" alt="Modlitebna Runway Bystrc" width={170} height={170} className="self-center" />
+            <Image src="/placeholder.webp" alt="Modlitebna Runway Bystrc" width={600} height={600} className="self-center rounded-4xl" />
             <p className="text-base">Připravujeme nové a větší prostory pro naše setkávání! Těšíme se, že vás brzy přivítáme v naší nové modlitebně, kterou se stane právě rekonstruovaná bývalá restaurace Don Papa. </p>
             <div className="flex items-center">
               <Image src="/icons/place.png" alt="place icon" width={30} height={30} className="h-10 w-10 mr-4" />
