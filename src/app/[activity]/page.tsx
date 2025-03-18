@@ -3,6 +3,7 @@ import { activities, events, specialActivitiesCard } from "@/data/activities";
 import { ActivityTemplate1 } from "@/components/activities/templates/template1";
 import { ActivityTemplate2 } from "@/components/activities/templates/template2";
 import { ActivityTemplate3 } from "@/components/activities/templates/template3";
+import { ActivityTemplate4 } from "@/components/activities/templates/template4";
 
 type Props = {
    params: Promise<{ activity: string }>   
@@ -82,6 +83,17 @@ export default async function Activity({ params }: Props) {
                     image={eventData.image}
                     registrationText={eventData.registrationText}
                     registrationLink={eventData.registrationLink}
+                    anotherActivities={anotherActivities}
+                />
+            }
+              {
+                eventData?.template === "template4" && 
+                <ActivityTemplate4
+                    name={eventData.name}
+                    description={eventData.description}
+                    time={eventData.time}
+                    place={eventData.place}
+                    image={eventData.image}             
                     anotherActivities={anotherActivities}
                 />
             }

@@ -1,5 +1,6 @@
 "use client";
 
+import { sendKontaktEmail } from "@/components/actions/sendEmail";
 import { Button } from "@/components/ui/button";
 import { Building2, Mail, Phone } from "lucide-react";
 import Image from "next/image";
@@ -8,6 +9,10 @@ import { useState } from "react";
 
 export default function KontaktClient() {
   const [formData, setFormData] = useState({name: "", email: "", message: ""});
+
+  const handleSubmit = async (e: any) => {      
+      await sendKontaktEmail(e, formData);            
+  };
 
   return (
     <div className="flex flex-col items-center">
@@ -141,13 +146,13 @@ export default function KontaktClient() {
       </div>
       <div className="flex flex-col py-16">
         <h2 className="text-[32px] font-bold">Kontaktovat nás můžete i zde</h2>
-        <div className="flex flex-col gap-y-10 mt-12 mb-6">
+        <form className="flex flex-col gap-y-10 mt-12 mb-6" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-y-1">
             <label htmlFor="name" className="text-base font-bold">Jméno a příjmení</label>
             <input 
               id="name" 
               type="text"
-              className="border border-gray-3 rounded-lg h-10" 
+              className="border border-gray-3 rounded-lg h-10 px-2" 
               value={formData.name}
               onChange={(e) => setFormData({...formData, name: e.target.value})}
             />
@@ -157,7 +162,7 @@ export default function KontaktClient() {
             <input 
               id="email" 
               type="text" 
-              className="border border-gray-3 rounded-lg h-10" 
+              className="border border-gray-3 rounded-lg h-10 px-2" 
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})}
             />
@@ -166,7 +171,7 @@ export default function KontaktClient() {
             <label htmlFor="name" className="text-base font-bold">Zpráva</label>
             <textarea 
               id="message"    
-              className="border border-gray-3 rounded-lg h-10"  
+              className="border border-gray-3 rounded-lg h-10 p-2"  
               value={formData.message}
               onChange={(e) => setFormData({...formData, message: e.target.value})}      
             />
@@ -175,8 +180,9 @@ export default function KontaktClient() {
             variant="blue" 
             text="Odeslat" 
             className="px-6 py-4 self-center" 
+            type="submit"
           />
-        </div>        
+        </form>        
       </div>
     </div>
   )
