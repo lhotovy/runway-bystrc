@@ -6,6 +6,8 @@ import Link from "next/link";
 import { AnotherActivities } from "../anotherActivities";
 import { Activity } from "@/types";
 import { useRouter } from "next/navigation";
+import { JSX } from "react";
+
 
 // Template pro Neděle na Runwayi s odkazy na jiné sbory
 export const ActivityTemplate2 = ({

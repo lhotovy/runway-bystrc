@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnotherActivities } from "../anotherActivities";
 import { Activity } from "@/types";
+import { JSX } from "react";
 
 // Základní template pro aktivity
 export const ActivityTemplate1 = ({

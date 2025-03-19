@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { JSX } from "react";
 
 export type NavLink = {
     name: string;

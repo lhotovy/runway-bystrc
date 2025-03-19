@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 export const generateFormElements = (definitions: { type: string, name: string, text: string, width: number, required: boolean }[], formData: any, setFormData: any) => {
   type ElementFunction = (name: string, text: string, required: boolean, width: number) => JSX.Element;
 

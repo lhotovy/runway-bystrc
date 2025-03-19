@@ -1,4 +1,4 @@
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 export async function sendRegistrationEmail(e: any, formData: any) { 
     e.preventDefault();   
