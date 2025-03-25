@@ -8,7 +8,8 @@ export const activities = [
         cardDescription: "Každou 1. a 3. neděli v měsíci",
         cardIcon: "/icons/book.png",
         description: ["Chceš se dozvědět více o tom, čemu věříme, máš otázky nebo v Bystrci hledáš společenství? Pak Tě zveme na naše Neděle na Runwayi.", "Těšit se můžeš na duchovní písně, zamyšlení a v neposlední řadě na společenství s lidmi, kteří znají Boha nebo jej hledají."],
-        time: "každou 1. a 3. neděli v měsíci v 17:00",
+        time: ["každou 1. a 3. neděli v měsíci v 17:00"],
+        cardTime: null,
         place: "centrum runway bystrc",
         image: "nedele.webp",
         contactTitle: "Kontakt a více informací",
@@ -16,7 +17,8 @@ export const activities = [
         contactPerson: "Instagram",
         contactLinkText: "runway.bystrc",
         contactLink: "",
-        template: "template2"
+        template: "template2",
+        type: "regular"
     },
     {
         name: "Sport Challenge",
@@ -24,7 +26,8 @@ export const activities = [
         cardDescription: "Klub pro děti 9 - 13 let",
         cardIcon: "/icons/ball.png",
         description: ["Přijď si vyzkoušet sporty pro radost ze hry a posuň své hranice s novými kamarády. Nová výzva, pohyb, kamarádi. Pro všechny děti ve věku od 8 do 12 let."],       
-        time: "každé úterý od 17:00",
+        time: ["každé úterý od 17:00"],
+        cardTime: null,
         place: "centrum runway bystrc + přilehlé sportoviště kamechy",
         image: "challenge.webp",
         contactTitle: "Kontakt",
@@ -32,7 +35,8 @@ export const activities = [
         contactPerson: "Ivo Drábek",
         contactLinkText: "i.drabek@seznam.cz",
         contactLink: "",
-        template: "template1"
+        template: "template1",
+        type: "regular"
     },
     {
         name: "Runway Youth",
@@ -40,7 +44,8 @@ export const activities = [
         cardDescription: "Klub pro mládež 13 - 18 let",
         cardIcon: "/icons/person.png",
         description: ["Jsme klub pro všechny ve věku 13-20 let. Potkáváme se každou středu v 18-20 hodin. Hrajeme společně hry, jíme občerstvení a užíváme si zábavy. Těšíme se na Tebe!"],
-        time: "každou středu od 18:00",
+        time: ["každou středu od 18:00"],
+        cardTime: null,
         place: "centrum runway bystrc",
         image: "youth.webp",
         contactTitle: "Kontakt a více informací",
@@ -48,7 +53,8 @@ export const activities = [
         contactPerson: "Instagram",
         contactLinkText: "runway_youth",
         contactLink: "https://www.instagram.com/runway_youth/",
-        template: "template1"
+        template: "template1",
+        type: "regular"
     },
     {
         name: "Klub pro maminky s dětmi",
@@ -56,7 +62,8 @@ export const activities = [
         cardDescription: "Možnost navázat přátelství",
         cardIcon: "/icons/stroller.png",
         description: ["Jsi maminka s dítětem a chceš si na chvíli oddechnout a strávit příjemné dopoledne s dalšími maminkami? Tak se připoj k nám na anglický klub pro maminky! Čeká Tě posezení u čaje nebo kávy, rozhovory či tvoření.", "V případě většího počtu starších dětí lze program orientovat na jejich procvičování angličtiny."],          
-        time: "každý čtvrtek od 9:30",
+        time: ["každý čtvrtek od 9:30"],
+        cardTime: null,
         place: "centrum runway bystrc",
         image: "maminky.webp",
         contactTitle: "Kontakt a více informací",
@@ -64,7 +71,8 @@ export const activities = [
         contactPerson: "Facebook",
         contactLinkText: "Maminky Runway Bystrc",
         contactLink: "",
-        template: "template1"
+        template: "template1",
+        type: "regular"
     },
     {
         name: "English Evenings",
@@ -72,7 +80,8 @@ export const activities = [
         cardDescription: "Večery s rodilým mluvčím",
         cardIcon: "/icons/flag.png",
         description: ["Přijďte si popovídat s rodilým mluvčím a v příjemné atmosféře zlepšete své konverzační schopnosti. Konverzace probíhají v malé skupině."],
-        time: "každý čtvrtek 18:00-19:30",
+        time: ["každý čtvrtek 18:00-19:30"],
+        cardTime: null,
         place: "centrum runway bystrc",
         image: "flag.webp",
         contactTitle: "Kontakt",
@@ -80,7 +89,8 @@ export const activities = [
         contactPerson: "Tereza Parks",
         contactLinkText: "info@runway-bystrc.cz",
         contactLink: "mailto:info@runway-bystrc.cz",
-        template: "template1"
+        template: "template1",
+        type: "regular"
     },
     {
         name: "Manželské večery",
@@ -88,7 +98,8 @@ export const activities = [
         cardDescription: "Čas pro váš vztah",
         cardIcon: "/icons/heart.png",
         description: ["Čas pro váš vztah"],
-        time: "",
+        time: null,
+        cardTime: null,
         place: "",
         image: "",
         contactTitle: "",
@@ -96,7 +107,8 @@ export const activities = [
         contactPerson: "",
         contactLinkText: "",
         contactLink: "",
-        template: ""
+        template: "",
+        type: "regular"
     },    
     {
         name: "Tábory",
@@ -104,7 +116,8 @@ export const activities = [
         cardDescription: "Letní tábory pro dětí",
         cardIcon: "/icons/sun.png",
         description: ["Letní tábory pro dětí"],
-        time: "",
+        time: null,
+        cardTime: null,
         place: "",
         image: "",
         contactTitle: "",
@@ -112,28 +125,9 @@ export const activities = [
         contactPerson: "",
         contactLinkText: "",
         contactLink: "",
-        template: "template1"
+        template: "template1",
+        type: "regular"
     },
-];
-
-export const specialActivitiesCard = {
-    name: "Speciální akce",
-    slug: "speciální-akce",
-    cardDescription: "Náš kalendář událostí",
-    cardIcon: "/icons/calendar.png",
-    description: ["Letní tábory pro dětí"],
-    time: "",
-    place: "",
-    image: "",
-    contactTitle: "",
-    contactIcon: null,
-    contactPerson: "",
-    contactLinkText: "",
-    contactLink: "",    
-    template: ""
-};
-
-export const events = [
     {
         name: "Runway jede na hory",
         slug: "hory",
@@ -150,11 +144,47 @@ export const events = [
             členové Challenge a Runway Youth: 1240,- Kč`
         ],
         time: ["21. - 23. 2. 2025", "začínáme v 19:00"],
+        cardDate: "21. - 23. února",
+        cardTime: null,
         place: "hotel na trojce",
         image: "placeholder.webp",
         registrationText: "Přihlašování do 12. 2.", 
         registrationLink: "prihlaska/hory",      
-        template: "template3"
+        contactIcon: null,
+        contactPerson: "",
+        contactLinkText: "",
+        contactLink: "",
+        template: "template3",
+        type: "special"
+    },
+    {
+        name: "Den dětí",
+        slug: "den-deti",
+        cardDescription: "Jako každý rok se bude za klubovnou konat den plný zábavy!",
+        cardIcon: "",
+        description: [
+            "Pojeď s námi na zimní pobyt v Jeseníkách v termínu 21. - 23. 2 2025. Společný čas, zábava, lyžování, procházky…", 
+            "Letos již potřetí vyrazíme s Runway na hory, tentokrát do Hotelu na Trojce v Jeseníkách. Na místo se dopravíme auty, kdo bude mít zájem o spolujízdu s někým, prosím napište to do přihlášky a budete k někomu do auta přiděleni. Program začne v pátek večeří v 19:00. O víkendu bude možné lyžovat nebo jít na organizovaný výlet (permanentka na lyžování není v ceně pobytu). Co se týče jídla, v ceně je zahrnuta páteční večeře, sobotní snídaně a večeře a dále nedělní snídaně. Bližší informace k dopravě i programu budou zaslány na mail v průběhu února. Informace k platbě Vám budou zaslány v mailu do 24 hodin po vyplnění registračního formuláře. Přihláška se stává závaznou ve chvíli jejího zaplacení.",
+            `Ubytování: Hotel na Trojce, Jindřichov, Jeseníky
+            Cena za víkend (ubytování + polopenze):
+            osoby od 10 let: 1540,- Kč
+            děti do 10 let: 1240,- Kč
+            děti do 3 let bez nároku na lůžko a stravu: zdarma
+            členové Challenge a Runway Youth: 1240,- Kč`
+        ],
+        time: ["21. - 23. 2. 2025", "začínáme v 19:00"],
+        cardDate: "1. června",
+        cardTime: "od 14:30",
+        place: "hotel na trojce",
+        image: "placeholder.webp",
+        registrationText: "Přihlašování do 12. 2.", 
+        registrationLink: "prihlaska/hory",   
+        contactIcon: null,
+        contactPerson: "",
+        contactLinkText: "",
+        contactLink: "",
+        template: "template4",
+        type: "special"
     },
     {
         name: "Jarní swap oblečení",
@@ -163,10 +193,34 @@ export const events = [
         cardIcon: "",
         description: ["Přijďte předat své kousky dál a vybrat si jiné (dámské, dětské)"],
         time: ["12. 4. 2025", "13:00 - 17:00"],
+        cardDate: "12. dubna",
+        cardTime: "13:00 - 17:00",
         place: "centrum runway bystrc",
         image: "",
         registrationText: "", 
-        registrationLink: "",      
-        template: "template4"
-    }
+        registrationLink: "",     
+        contactIcon: null, 
+        contactPerson: "",
+        contactLinkText: "",
+        contactLink: "",
+        template: "template4",
+        type: "special"
+    }   
 ];
+
+export const specialActivitiesCard = {
+    name: "Speciální akce",
+    slug: "specialni-akce",
+    cardDescription: "Náš kalendář událostí",
+    cardIcon: "/icons/calendar.png",
+    description: ["Letní tábory pro dětí"],
+    time: null,
+    place: "",
+    image: "",
+    contactTitle: "",
+    contactIcon: null,
+    contactPerson: "",
+    contactLinkText: "",
+    contactLink: "",    
+    template: ""
+};

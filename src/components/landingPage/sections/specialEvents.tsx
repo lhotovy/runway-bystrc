@@ -1,8 +1,8 @@
 import { SpecialEventCard } from '../specialEventCard';
 import React from "react";
 import { SectionTitle } from "../common/sectionTitle";
-import { specialEvents } from '@/data/specialEventsPage';
 import Link from 'next/link';
+import { activities } from '@/data/activities';
 
 export const SpecialEvents = () => {
   return ( 
@@ -11,7 +11,9 @@ export const SpecialEvents = () => {
         <div className="flex items-center w-full">
             <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4'>
                 {
-                    specialEvents.map((activity, index) => {
+                    activities
+                    .filter((activity) => activity.type === 'special')
+                    .map((activity, index) => {
                         return (
                            <SpecialEventCard 
                                 key={index}   

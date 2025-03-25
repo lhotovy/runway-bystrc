@@ -3,6 +3,7 @@
 import { Activities } from "@/components/landingPage/sections/activities";
 import { SpecialEventCard } from "@/components/landingPage/specialEventCard";
 import { Button } from "@/components/ui/button";
+import { activities } from "@/data/activities";
 import { specialEvents } from "@/data/specialEventsPage";
 import { useState } from "react";
 
@@ -30,7 +31,9 @@ export const SpecialEventsClient = () => {
                 </div>
             </div>            
             <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4 mb-24'>                {
-                    specialEvents.map((event, index) => {
+                    activities
+                    .filter((activity) => activity.type === 'special')
+                    .map((event, index) => {
                         return (
                             <SpecialEventCard key={index} activity={event} />
                         )

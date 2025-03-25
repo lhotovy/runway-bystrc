@@ -19,11 +19,11 @@ export const ActivityTemplate3 = ({
 }: {
   name: string,
   description: string[],
-  time: string[],
+  time: string[] | null,
   place: string,
   image: string,
-  registrationText: string,
-  registrationLink: string,
+  registrationText: string | undefined,
+  registrationLink: string | undefined,
   anotherActivities: any[]
 }) => {
   const router = useRouter();
@@ -36,7 +36,7 @@ export const ActivityTemplate3 = ({
           <h1 className="text-5xl text-gray-9 font-bold">{name}</h1>
           <div className="flex gap-x-10 text-blue-5 uppercase text-sm font-semibold">
             {
-              time.map((time, index) => {
+              time?.map((time, index) => {
                 return (
                   <p key={index} className="flex items-center gap-x-2">
                     <Clock4 size={24} />
@@ -73,7 +73,7 @@ export const ActivityTemplate3 = ({
           </div>
           <div className="flex flex-col gap-y-8 text-blue-5 uppercase text-sm font-semibold">
             {
-              time.map((time, index) => {
+              time?.map((time, index) => {
                 return (
                   <p key={index} className="flex items-center gap-x-2">
                     <Clock4 size={24} />

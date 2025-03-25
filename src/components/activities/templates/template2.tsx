@@ -25,10 +25,10 @@ export const ActivityTemplate2 = ({
 }: {
   name: string,
   description: string[],
-  time: string,
+  time: string[] | null,
   place: string,
   image: string,
-  contactTitle: string,
+  contactTitle: string | undefined,
   contactIcon: JSX.Element | null,
   contactPerson: string,
   contactLinkText: string,
@@ -41,11 +41,16 @@ export const ActivityTemplate2 = ({
       <div className="flex items-center w-full">
         <div className="w-2/3 flex flex-col justify-start gap-y-10">
           <h1 className="text-5xl text-gray-9 font-semibold">{name}</h1>
-          <div className="flex gap-x-10 text-blue-5 uppercase text-sm">
-            <p className="flex items-center gap-x-2">
-              <Clock4 size={24} />
-              {time}
-            </p>
+          <div className="flex gap-x-10 text-blue-5 uppercase text-sm">     
+            {
+              time?.map((timeItem, index) => {
+                return (
+                  <p className="flex items-center gap-x-2" key={index}>
+                    <Clock4 size={24} />
+                    {timeItem}
+                  </p>
+                )}     
+            )}      
             <p className="flex items-center gap-x-2">
               <MapPin size={24} />
               {place}

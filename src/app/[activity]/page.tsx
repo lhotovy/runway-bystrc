@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { activities, events, specialActivitiesCard } from "@/data/activities";
+import { activities, specialActivitiesCard } from "@/data/activities";
 import { ActivityTemplate1 } from "@/components/activities/templates/template1";
 import { ActivityTemplate2 } from "@/components/activities/templates/template2";
 import { ActivityTemplate3 } from "@/components/activities/templates/template3";
@@ -23,7 +23,7 @@ export async function generateMetadata(
         };
     };
     
-    const activityData = activities.find((activityData) => activityData.slug === activity) || events.find((eventData) => eventData.slug === activity);
+    const activityData = activities.find((activityData) => activityData.slug === activity);
 
     if (!activityData) {
         throw new Error(`Activity with slug ${activity} not found`);
@@ -45,8 +45,7 @@ export async function generateStaticParams() {
 export default async function Activity({ params }: Props) {    
     const { activity } = await params;
     const activityData = activities.find((activityData) => activityData.slug === activity);
-    const eventData = events.find((eventData) => eventData.slug === activity);
-    const anotherActivities = [...activities.filter((activityData) => activityData.slug !== activity), specialActivitiesCard];
+    const anotherActivities = [...activities.filter((activityData) => activityData.slug !== activity && activityData.type === "regular"), specialActivitiesCard];
         
     return (
         <div>
@@ -55,7 +54,7 @@ export default async function Activity({ params }: Props) {
                 <ActivityTemplate1 
                     name={activityData.name}
                     description={activityData.description}
-                    time={activityData.time as string}
+                    time={activityData.time}
                     place={activityData.place}
                     image={activityData.image}
                     contactTitle={activityData.contactTitle || ""}
@@ -83,26 +82,26 @@ export default async function Activity({ params }: Props) {
                 />
             }
             {
-                eventData?.template === "template3" && 
+                activityData?.template === "template3" && 
                 <ActivityTemplate3
-                    name={eventData.name}
-                    description={eventData.description}
-                    time={eventData.time}
-                    place={eventData.place}
-                    image={eventData.image}
-                    registrationText={eventData.registrationText}
-                    registrationLink={eventData.registrationLink}
+                    name={activityData.name}
+                    description={activityData.description}
+                    time={activityData.time}
+                    place={activityData.place}
+                    image={activityData.image}
+                    registrationText={activityData.registrationText}
+                    registrationLink={activityData.registrationLink}
                     anotherActivities={anotherActivities}
                 />
             }
               {
-                eventData?.template === "template4" && 
+                activityData?.template === "template4" && 
                 <ActivityTemplate4
-                    name={eventData.name}
-                    description={eventData.description}
-                    time={eventData.time}
-                    place={eventData.place}
-                    image={eventData.image}             
+                    name={activityData.name}
+                    description={activityData.description}
+                    time={activityData.time}
+                    place={activityData.place}
+                    image={activityData.image}             
                     anotherActivities={anotherActivities}
                 />
             }

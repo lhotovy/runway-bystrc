@@ -21,7 +21,7 @@ export const ActivityTemplate1 = ({
 }: {
   name: string,
   description: string[],
-  time: string,
+  time: string[] | null,
   place: string,
   image: string,
   contactTitle: string,
@@ -38,10 +38,16 @@ export const ActivityTemplate1 = ({
         <div className="w-2/3 flex flex-col justify-start gap-y-10">
           <h1 className="text-5xl text-gray-9 font-bold">{name}</h1>
           <div className="flex gap-x-10 text-blue-5 uppercase text-sm">
-            <p className="flex items-center gap-x-2">
-              <Clock4 size={24} />
-              {time}
-            </p>
+            {
+              time?.map((time, index) => {
+                return (
+                  <p key={index} className="flex items-center gap-x-2">
+                    <Clock4 size={24} />
+                    {time}
+                  </p>
+                )
+              })
+            }
             <p className="flex items-center gap-x-2">
               <MapPin size={24} />
               {place}
@@ -69,10 +75,15 @@ export const ActivityTemplate1 = ({
             <Image src={`/${image}`} alt={name} width={300} height={300} className="w-full aspect-square rounded-4xl" />
           </div>
           <div className="flex flex-col gap-y-8 text-blue-5 uppercase text-sm">
-            <p className="flex items-center gap-x-2">
-              <Clock4 size={24} />
-              {time}
-            </p>
+            { 
+            time?.map((time, index) => {
+              return (
+                <p key={index} className="flex items-center gap-x-2">
+                  <Clock4 size={24} />
+                  {time}
+                </p>
+            )}
+            )}           
             <p className="flex items-center gap-x-2">
               <MapPin size={24} />
               {place}

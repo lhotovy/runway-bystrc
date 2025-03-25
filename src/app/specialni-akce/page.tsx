@@ -1,7 +1,7 @@
 import { SpecialEventsClient } from "./client";
 
 export const metadata = {
-  title: 'Kalendář | Runway Bystrc',
+  title: 'Speciální akce | Runway Bystrc',
   description: 'Runway Bystrc | Otevřená a moderní církev v Bystrci',
 };
 

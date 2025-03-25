@@ -10,7 +10,9 @@ export const Activities = ({title}: {title: string}) => {
         <SectionTitle title={title} />
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6'>
           {
-            activities.map((activity: any, index: number) => {
+            activities
+            .filter((activity: Activity) => activity.type === 'regular')
+            .map((activity: any, index: number) => {
               return (
                 <ActivityCard
                     key={index} 
