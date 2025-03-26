@@ -20,9 +20,9 @@ export const ActivityTemplate4 = ({
 }) => {
 
   return (
-    <div className="flex flex-col items-center w-full my-10 lg:mt-12 min-h-screen">
+    <div className="flex flex-col items-center w-full my-4 lg:mt-12 min-h-screen">
       {/* big screen view */}
-      <div className="hidden sm:flex items-center w-full">
+      <div className="hidden sm:flex items-center w-full mb-12">
         <div className="w-2/3 flex flex-col justify-start gap-y-10">
           <h1 className="text-5xl text-gray-9 font-bold">{name}</h1>
           <div className="flex gap-x-10 text-blue-5 uppercase text-sm font-semibold">

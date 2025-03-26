@@ -1,11 +1,16 @@
-import { SiFacebook, SiInstagram, SiYoutube } from "@icons-pack/react-simple-icons";
+import { socialLinks } from "@/data/socialLinks";
+import Link from "next/link";
 
 export const SocialIcons = () => {
     return (
         <div className="flex items-center gap-x-6 mt-8 text-gray-5 ">
-            <SiInstagram className="w-8 h-8 cursor-pointer hover:text-gray-7" />
-            <SiFacebook className="w-8 h-8 cursor-pointer hover:text-gray-7" />
-            <SiYoutube className="w-8 h-8 cursor-pointer hover:text-gray-7" />
+            {
+                socialLinks.map((social, index) => (
+                    <Link href={social.href} key={index} target="blank">
+                        {social.icon}
+                    </Link>
+                ))
+            }              
         </div>
     );
   }

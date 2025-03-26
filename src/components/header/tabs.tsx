@@ -15,13 +15,13 @@ import {
 
 export const HeaderTabs = () => {
   const activities = [
-    { name: "Neděle na Runwayi", url: "/planning"},
-    { name: "Sport Challenge", url: "/overview"},
-    { name: "Runway Youth", url: "/times"},
-    { name: "Klub pro maminky s dětmi", url: "/users"},
-    { name: "English Evenings", url: "/users"},
-    { name: "Manželské večery", url: "/users"},
-    { name: "Tábory", url: "/users"}    
+    { name: "Neděle na Runwayi", url: "/nedele"},
+    { name: "Sport Challenge", url: "/sport-challenge"},
+    { name: "Runway Youth", url: "/runway_youth"},
+    { name: "Klub pro maminky s dětmi", url: "/klub-pro-maminky-s-detmi"},
+    { name: "English Evenings", url: "/english"},
+    { name: "Manželské večery", url: "/manzelske-vecery"},
+    { name: "Tábory", url: "/tabory"}    
   ]; 
 
   return (

@@ -11,26 +11,26 @@ export const Welcome = () => {
                     <span className="absolute -bottom-1 left-0 w-[450px] h-4 -z-1 bg-teal-accent blur-xs rounded-2xl" />
                 </h1>
                 <p>Jsme otevřená komunita křesťanů v Brně - Bystrci</p>
-               <SocialIcons     />
+               <SocialIcons />
             </div>
             <div className="relative w-3/5 flex items-center">
                 <div className="relative">
                     <Image
-                        src="/socialEmbed/social7.webp"
+                        src="/welcome1.webp"
                         alt="Image 1"
                         width={300}
                         height={300}
                         className="rounded-3xl border-8 border-white"
                     />
                     <Image
-                        src="/socialEmbed/social8.webp"
+                        src="/welcome2.webp"
                         alt="Image 2"
                         width={300}
                         height={300}
                         className="rounded-3xl border-8 border-white absolute top-24 left-64 -z-1"
                     />
                     <Image
-                        src="/socialEmbed/social9.webp"
+                        src="/welcome3.webp"
                         alt="Image 3"
                         width={300}
                         height={300}
