@@ -4,7 +4,6 @@ import { Activities } from "@/components/landingPage/sections/activities";
 import { SpecialEventCard } from "@/components/landingPage/specialEventCard";
 import { Button } from "@/components/ui/button";
 import { activities } from "@/data/activities";
-import { specialEvents } from "@/data/specialEventsPage";
 import { useState } from "react";
 
 export const SpecialEventsClient = () => {

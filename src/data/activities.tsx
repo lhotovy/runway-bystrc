@@ -222,5 +222,25 @@ export const specialActivitiesCard = {
     contactPerson: "",
     contactLinkText: "",
     contactLink: "",    
-    template: ""
+    template: "",
+    type: ""
 };
+
+export const challengeCamp = {   
+    name: "Challenge Camp 2025",
+    slug: "callenge-camp",
+    cardDescription: "Čas pro váš vztah",
+    cardIcon: "/icons/heart.png",
+    description: ["Hledáte příměstský tábor v Bystrci s angličtinou? Pak je Challenge camp právě pro Vás. Letos pořádáme již sedmý ročník kempu plného angličtiny a spousty zábavy. Na táboře budou přítomni rodilí mluvčí z USA, se kterými budou účastníci mít příležitost každý den konverzovat a prohlubovat své znalosti angličtiny - ať už během připravených lekcí nebo přirozeně v průběhu tábora."],
+    time: ["21. - 25. 7. 2025"],
+    cardTime: null,
+    place: "centrum runway bystrc a přilehlá sportoviště",
+    image: "",
+    contactTitle: "Kontakt",
+    contactIcon: <Phone className="h-10 w-10 text-gray-3" />,
+    contactPerson: "Marek Žitný",
+    contactLinkText: "info@runway-bystrc.cz",
+    contactLink: "mailto:info@runway-bystrc.cz",
+    template: "",
+    type: "regular"    
+}
