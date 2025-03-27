@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Runway Bystrc | Otevřená a moderní církev v Bystrci',
 };
 
-export default function ONas() {  
+export default function ChallengeCamp() {  
   return (
     <ChallengeCampClient />
   );
