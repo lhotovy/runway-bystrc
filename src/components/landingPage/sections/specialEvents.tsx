@@ -7,7 +7,7 @@ import { activities } from '@/data/activities';
 export const SpecialEvents = () => {
   return ( 
     <div className="w-[calc(100vw-15px)] flex flex-col justify-center bg-gray-1 py-10 mt-10">
-        <div className="flex flex-col w-full max-w-[1280px] mx-auto gap-y-8">
+        <div className="flex flex-col w-full max-w-[1280px] mx-auto gap-y-8 px-3 md:px-0">
             <SectionTitle title="Speciální akce" />
             <div className="flex items-center w-full">
                 <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-5'>
