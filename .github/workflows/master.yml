@@ -27,10 +27,7 @@ jobs:
         pnpm install
     - name: Run Linter
       run: |
-        pnpm lint
-    - name: Run formatter
-      run: |
-        pnpm format
+        pnpm lint  
     - name: Run build
       run: |
         pnpm build
