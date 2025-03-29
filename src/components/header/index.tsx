@@ -35,7 +35,7 @@ export default function Header({ onMobileMenuToggle }: { onMobileMenuToggle: () 
             <button
               type="button"
               className="px-4 text-base-100 focus:outline-hidden sm:hidden"
-              onClick={onMobileMenuToggle}
+              onClick={() => setSidebarOpen(!sidebarOpen)}
             >
               <Bars3BottomLeftIcon
                 className="h-6 w-6 text-primary-content"

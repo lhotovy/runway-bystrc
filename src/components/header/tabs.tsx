@@ -12,17 +12,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/menu";
+import { menuActivities } from "@/data/navigation";
 
 export const HeaderTabs = () => {
-  const activities = [
-    { name: "Neděle na Runwayi", url: "/nedele"},
-    { name: "Sport Challenge", url: "/sport-challenge"},
-    { name: "Runway Youth", url: "/runway_youth"},
-    { name: "Klub pro maminky s dětmi", url: "/klub-pro-maminky-s-detmi"},
-    { name: "English Evenings", url: "/english"},
-    { name: "Manželské večery", url: "/manzelske-vecery"},
-    { name: "Tábory", url: "/tabory"}    
-  ]; 
 
   return (
     <NavigationMenu>
@@ -38,11 +30,11 @@ export const HeaderTabs = () => {
           <NavigationMenuTrigger className="cursor-pointer">Co děláme</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="w-[250px] gap-3">
-              {activities.map((component) => (
+              {menuActivities.map((activity) => (
                 <ListItem
-                  key={component.name}
-                  title={component.name}
-                  href={component.url}
+                  key={activity.name}
+                  title={activity.name}
+                  href={activity.url}
                 />          
               ))}
             </ul>
