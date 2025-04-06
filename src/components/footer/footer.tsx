@@ -48,7 +48,7 @@ export const Footer = () => {
             </div>     
         
             {/* small screen view */}
-            <div className="flex lg:hidden items-center w-full max-w-[1280px] mx-auto px-4">
+            <div className="flex lg:hidden items-center w-full max-w-[1280px] mx-auto px-4 pb-4">
                 <div className="flex flex-col items-center w-full h-fit">
                     <div
                         id="column1" 
@@ -88,7 +88,7 @@ export const Footer = () => {
                 </div>
             </div>
             <hr className="w-full border-gray-5" />
-            <div className="w-full max-w-[1280px] mx-auto">
+            <div className="w-full max-w-[1280px] mx-auto py-4">
                 <div className="flex flex-col lg:flex-row gap-y-2 items-center justify-center mt-auto h-1/6 py-2 text-sm text-gray-9">
                 <p>Copyright © 2025 Runway Bystrc</p>
                     <p className="text-gray-5 text-2xl mx-4 hidden lg:flex">•</p>
