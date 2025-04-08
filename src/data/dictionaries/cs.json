@@ -1,0 +1,18 @@
+{
+    "common": {
+      "home": "Domů",
+      "about": "O nás",
+      "services": "Služby",
+      "contact": "Kontakt"
+    },
+    "pages": {
+      "about-us": {
+        "title": "O nás",
+        "content": "Jsme skvělá společnost..."
+      },
+      "services": {
+        "title": "Naše služby",
+        "content": "Nabízíme mnoho služeb..."
+      }
+    }
+  }

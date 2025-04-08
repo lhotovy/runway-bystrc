@@ -4,7 +4,7 @@ import { SocialIcons } from "../socialIcons";
 
 export const Welcome = () => {
     return (
-        <div className="flex lg:flex-row flex-col w-full my-10 lg:mt-24 overflow-x-hidden">
+        <div className="flex lg:flex-row flex-col w-full my-10 lg:mt-18 overflow-x-hidden">
             <div className="flex flex-col items-center justify-center w-full lg:w-2/5 gap-y-6">
                 <h1 className="md:text-5xl text-3xl brightness-100 font-bold text-gray-900 relative">
                     Vítejte na Runwayi
@@ -16,7 +16,7 @@ export const Welcome = () => {
                 </div>
            
             </div>
-            <div className="relative w-full lg:w-3/5 flex items-center">
+            <div className="relative w-full lg:w-3/5 flex items-center mt-12">
                 {/* Slider for mobile screens */}
                 <div className="sm:hidden w-full overflow-x-scroll flex snap-x snap-mandatory px-4 scrollbar-hide">
                     <div className="snap-center flex-shrink-0 w-[90%] flex justify-center">

@@ -13,14 +13,20 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/menu";
 import { menuActivities } from "@/data/navigation";
+import { useRouter } from "next/navigation";
+import CompleteLanguageSwitcher from "../langSwitcher";
+import { defaultLocale } from "@/middleware";
 
-export const HeaderTabs = () => {
+export const HeaderTabs = ({ lang }: { lang: string | null }) => {
+  const router = useRouter();
 
+  const isDefaultLocale = lang === defaultLocale;
+  
   return (
     <NavigationMenu>
       <NavigationMenuList>
       <NavigationMenuItem>
-          <Link href="/o-nas" legacyBehavior passHref>
+          <Link href={isDefaultLocale ? '/o-nas' : `/${lang}/o-nas`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               O nás
             </NavigationMenuLink>
@@ -41,25 +47,21 @@ export const HeaderTabs = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/specialni-akce" legacyBehavior passHref>
+          <Link href={isDefaultLocale ? '/specialni-akce' : `/${lang}/specialni-akce`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Speciální akce
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/kontakt" legacyBehavior passHref>
+          <Link href={isDefaultLocale ? '/kontakt' : `/${lang}/kontakt`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Kontakt
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              CZ/EN
-            </NavigationMenuLink>
-          </Link>
+          <CompleteLanguageSwitcher currentLang={lang || ''} />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

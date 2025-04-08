@@ -1,0 +1,88 @@
+export const challengeCampData = {
+  translations: {
+    cs: {
+      name: "Challenge Camp 2025",
+      time: ["21. - 25. 7. 2025"],
+      place: "centrum runway bystrc a přilehlá sportoviště",
+      description: [
+        "Hledáte příměstský tábor v Bystrci s angličtinou? Pak je Challenge camp právě pro Vás. Letos pořádáme již sedmý ročník kempu plného angličtiny a spousty zábavy. Na táboře budou přítomni rodilí mluvčí z USA, se kterými budou účastníci mít příležitost každý den konverzovat a prohlubovat své znalosti angličtiny - ať už během připravených lekcí nebo přirozeně v průběhu tábora."
+      ],
+      contactTitle: "Kontakt",
+      contactIcon: null,
+      contactLink: "mailto:info@runway-bystrc.cz",
+      contactLinkText: "info@runway-bystrc.cz",
+      contactPerson: "Marek Žitný",
+      program: [
+        { time: "7:30 - 8:00", activity: "registrace" },
+        { time: "8:00 - 9:00", activity: "ranní úvodní program" },
+        { time: "9:10 - 10:10", activity: "angličtina/vyrábění" },
+        { time: "10:15 - 10:30", activity: "svačina" },
+        { time: "10:45 - 11:45", activity: "hry" },
+        { time: "12:00", activity: "oběd" },
+        { time: "13:30 - 14:45", activity: "angličtina/vyrábění" },
+        { time: "14:45 - 15:00", activity: "svačina" },
+        { time: "15:00 - 16:25", activity: "hry" },
+        { time: "16:25 - 16:45", activity: "rozloučení a předání rodičům" },
+      ],
+      registrationDeadline: "Přihlašování do 30. 4. 2025",
+      registrationButton: "Přihlaš se",
+      imageGallery: Array(24).fill("/placeholder.webp"), // Replace with actual image URLs if available
+      highlights: [
+        "Spousta zábavy",
+        "angličtina s rodilými mluvčími",
+        "skvělá dostupnost z celého Brna a okolí",
+      ],
+      pricing: [
+        "Věk: od 9 do 16 let",
+        "Cena: 3.200,- Kč při přihlášení a zaplacení zálohy do 30. 4. 2024, poté 3.900,- Kč",
+        "Pokud se na tábor na tvé pozvání přihlásí kamarád, který na našich táborech ještě nebyl, dostaneš slevu 200,- Kč.",
+        "Letos nově si navíc účastníci mohou vybrat mezi workshopem vyrábění a sportů.",
+      ],
+      testimonial: "Chtěla bych poděkovat všem, kteří se podíleli na organizaci tábora. Perfect camp.",
+      pastCampsTitle: "Minulé tábory",
+      youtubeVideo: "https://www.youtube.com/embed/e2rDH-fJ7iU?si=ZhvXXOsCmWOfrvFO",
+    },
+        en: {
+          name: "Challenge Camp 2025",
+          time: ["21. - 25. 7. 2025"],
+          place: "centre runway bystrc and nearby sportsfields",
+          description: [
+            "Are you looking for a day camp in Bystrc with English? Then Challenge Camp is just for you. This year we are organizing the seventh edition of a camp full of English and lots of fun. Native speakers from the USA will be present at the camp, giving participants the opportunity to converse and deepen their knowledge of English every day - whether during prepared lessons or naturally throughout the camp."
+          ],
+          contactTitle: "Contact",
+          contactIcon: null,
+          contactLink: "mailto:info@runway-bystrc.cz",
+          contactLinkText: "info@runway-bystrc.cz",
+          contactPerson: "Marek Žitný",
+          program: [
+            { time: "7:30 - 8:00", activity: "registration" },
+            { time: "8:00 - 9:00", activity: "morning opening program" },
+            { time: "9:10 - 10:10", activity: "English/crafting" },
+            { time: "10:15 - 10:30", activity: "snack" },
+            { time: "10:45 - 11:45", activity: "games" },
+            { time: "12:00", activity: "lunch" },
+            { time: "13:30 - 14:45", activity: "English/crafting" },
+            { time: "14:45 - 15:00", activity: "snack" },
+            { time: "15:00 - 16:25", activity: "games" },
+            { time: "16:25 - 16:45", activity: "farewell and handover to parents" },
+          ],
+          registrationDeadline: "Registration until April 30, 2025",
+          registrationButton: "Register",
+          imageGallery: Array(24).fill("/placeholder.webp"), 
+          highlights: [
+            "Lots of fun",
+            "engllish with native speakers",
+            "accessible from entire Brno",
+          ],
+          pricing: [
+            "Age:  9 to 16 years",
+            "Price: 3,200 CZK when registering and paying the deposit by 30 April 2024, then 3,900 CZK",
+            "If a friend who has not been to our camps before signs up for the camp at your invitation, you will receive a discount of 200 CZK.",
+            "This year, participants can also choose between a manufacturing and sports workshop.",
+          ],
+          testimonial: "I would like to thank everyone who participated in organizing the camp. Perfect camp.",
+          pastCampsTitle: "Past Camps",
+          youtubeVideo: "https://www.youtube.com/embed/e2rDH-fJ7iU?si=ZhvXXOsCmWOfrvFO",
+    },
+  },
+};

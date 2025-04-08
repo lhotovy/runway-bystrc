@@ -4,7 +4,6 @@ import { Clock4, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnotherActivities } from "../anotherActivities";
-import { Activity } from "@/types";
 import { useRouter } from "next/navigation";
 import { JSX } from "react";
 

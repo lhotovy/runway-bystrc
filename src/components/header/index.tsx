@@ -8,7 +8,7 @@ import { HeaderTabs } from "./tabs";
 import { MobileMenu } from "./mobilemenu";
 import Link from "next/link";
 
-export default function Header({ onMobileMenuToggle }: { onMobileMenuToggle: () => void }) {
+export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggle: () => void, lang: string | null }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -29,7 +29,7 @@ export default function Header({ onMobileMenuToggle }: { onMobileMenuToggle: () 
             />
           </Link>
           <div className="hidden sm:flex h-full w-full items-center justify-end">       
-            <HeaderTabs />          
+            <HeaderTabs lang={lang} />          
           </div>
           <div className="sticky top-0 z-10 flex h-12 shrink-0">
             <button

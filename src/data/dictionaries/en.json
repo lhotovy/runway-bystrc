@@ -1,0 +1,18 @@
+{
+    "common": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "pages": {
+      "about-us": {
+        "title": "About Us",
+        "content": "We are a great company..."
+      },
+      "services": {
+        "title": "Our Services",
+        "content": "We offer many services..."
+      }
+    }
+  }
