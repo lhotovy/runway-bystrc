@@ -1,8 +1,22 @@
+import { specialniAkce } from "@/data/staticPages/specialniAkce";
 import { SpecialEventsClient } from "./client";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: 'Speciální akce | Runway Bystrc',
-  description: 'Runway Bystrc | Otevřená a moderní církev v Bystrci',
+export async function generateMetadata(
+    { params }: { params: Promise<{ lang: keyof typeof specialniAkce.translations }> }
+): Promise<Metadata> {
+    const { lang } = await params;
+
+    const data = specialniAkce.translations[lang];   
+
+    return {
+        title: `${data.title} | Runway Bystrc`,
+        description: data.otherActivities
+    };
+};
+
+export async function generateStaticParams() {
+    return [{ lang: "cs" }, { lang: "en" }];
 };
 
 export default async function SpecialEventsPage({ params }: { params: Promise<{ lang: string }> }) {

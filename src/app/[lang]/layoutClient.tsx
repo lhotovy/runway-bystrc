@@ -17,8 +17,6 @@ export default function RootLayoutClient({
   lang: string | null
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  console.log("lango", lang);
   
   return (
     <html className='scroll-smooth' lang={lang || undefined}>

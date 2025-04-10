@@ -11,8 +11,7 @@ export const Activities = (
   }: {
     title: string
     lang: string
-  }) => {
-    console.log(activities);
+  }) => {    
     
   return ( 
     <div className=' w-full flex flex-col justify-center gap-y-10'>

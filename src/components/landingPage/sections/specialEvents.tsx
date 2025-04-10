@@ -4,7 +4,8 @@ import { SectionTitle } from "../common/sectionTitle";
 import Link from 'next/link';
 import { activities } from '@/data/activities';
 
-export const SpecialEvents = ({lang}: {lang: string}) => {
+export const SpecialEvents = ({lang}: {lang: string}) => {    
+    
   return ( 
     <div className="w-[calc(100vw-15px)] flex flex-col justify-center bg-gray-1 py-10 mt-10">
         <div className="flex flex-col w-full max-w-[1280px] mx-auto gap-y-8 px-3 md:px-0">
@@ -18,8 +19,9 @@ export const SpecialEvents = ({lang}: {lang: string}) => {
                             return (
                             <SpecialEventCard 
                                     key={index}   
-                                    activity={activity?.translations[lang as keyof typeof activity.translations]} 
+                                    activity={activity} 
                                     type="landing"
+                                    lang={lang}
                                 />
                             )
                         })
