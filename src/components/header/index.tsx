@@ -19,7 +19,7 @@ export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggl
       >
         <div className="flex max-w-[1280px] w-full xl:min-w-[1280px] items-center justify-between">
           <Link
-            href={"/"}
+            href={lang === "en" ? "/en" : "/"}
             id="logo" className="flex h-full w-[300px] min-w-[3rem] items-center justify-start bg-white ">
             <Image
               src="/logo.jpeg"
@@ -47,6 +47,7 @@ export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggl
         <MobileMenu
           sidebarOpen={sidebarOpen}
           setSidebarOpen={setSidebarOpen}
+          lang={lang}
         />
       </header>
      

@@ -2,15 +2,15 @@ import Image from "next/image";
 import React from "react";
 import { SocialIcons } from "../socialIcons";
 
-export const Welcome = () => {
+export const Welcome = ({data}: {data: any}) => {
     return (
         <div className="flex lg:flex-row flex-col w-full my-10 lg:mt-18 overflow-x-hidden">
             <div className="flex flex-col items-center justify-center w-full lg:w-2/5 gap-y-6">
                 <h1 className="md:text-5xl text-3xl brightness-100 font-bold text-gray-900 relative">
-                    Vítejte na Runwayi
+                    {data.title}
                     <span className="absolute -bottom-1 left-0 w-[450px] h-4 -z-1 bg-teal-accent blur-xs rounded-2xl" />
                 </h1>
-                <p>Jsme otevřená komunita křesťanů v Brně - Bystrci</p>
+                <p>{data.description}</p>
                 <div className="text-center mb-8">
                     <SocialIcons />
                 </div>

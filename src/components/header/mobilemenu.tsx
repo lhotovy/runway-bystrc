@@ -9,26 +9,27 @@ import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet"
 import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { menuActivities } from "@/data/navigation";
+import { menuTexts } from "@/data/staticPages/menu";
 
 interface MobileMenuProps {
   sidebarOpen: boolean
   // eslint-disable-next-line no-unused-vars
   setSidebarOpen: (open: boolean) => void
+  lang: string | null
 }
 
-export function MobileMenu({ sidebarOpen, setSidebarOpen }: MobileMenuProps) {
-
+export function MobileMenu({ sidebarOpen, setSidebarOpen, lang }: MobileMenuProps) {
+  const data = menuTexts[lang as keyof typeof menuTexts];
 
   // determine the index of pathname in menuItems
   const pathname = usePathname();
-  const currentIndex = menuActivities
+  const currentIndex = data.activitiesDropdown
     .map((item) => item.url)
     .indexOf(pathname as string);
   
   // eslint-disable-next-line no-unused-vars
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(
-    currentIndex <= menuActivities.length && currentIndex >= 0
+    currentIndex <= data.activitiesDropdown.length && currentIndex >= 0
       ? currentIndex
       : null,
   );
@@ -114,7 +115,7 @@ export function MobileMenu({ sidebarOpen, setSidebarOpen }: MobileMenuProps) {
             <ul
               className="w-full flex h-full flex-col items-center pt-4"
             >
-              {menuActivities.map((tab, index) => {
+              {data.activitiesDropdown.map((tab, index) => {
                 return (
                   <Link
                     href={tab.url}

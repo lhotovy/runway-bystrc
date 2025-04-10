@@ -12,14 +12,13 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/menu";
-import { menuActivities } from "@/data/navigation";
 import { useRouter } from "next/navigation";
 import CompleteLanguageSwitcher from "../langSwitcher";
 import { defaultLocale } from "@/middleware";
+import { menuTexts } from "@/data/staticPages/menu";
 
 export const HeaderTabs = ({ lang }: { lang: string | null }) => {
-  const router = useRouter();
-
+  const data = menuTexts[lang as keyof typeof menuTexts];
   const isDefaultLocale = lang === defaultLocale;
   
   return (
@@ -28,15 +27,15 @@ export const HeaderTabs = ({ lang }: { lang: string | null }) => {
       <NavigationMenuItem>
           <Link href={isDefaultLocale ? '/o-nas' : `/${lang}/o-nas`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              O nás
+              {data.aboutUs}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="cursor-pointer">Co děláme</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="cursor-pointer">{data.activities}</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="w-[250px] gap-3">
-              {menuActivities.map((activity) => (
+              {data.activitiesDropdown?.map((activity) => (
                 <ListItem
                   key={activity.name}
                   title={activity.name}
@@ -49,14 +48,14 @@ export const HeaderTabs = ({ lang }: { lang: string | null }) => {
         <NavigationMenuItem>
           <Link href={isDefaultLocale ? '/specialni-akce' : `/${lang}/specialni-akce`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Speciální akce
+              {data.specialEvents}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href={isDefaultLocale ? '/kontakt' : `/${lang}/kontakt`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Kontakt
+              {data.contact}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

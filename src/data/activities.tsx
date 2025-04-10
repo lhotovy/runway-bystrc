@@ -45,7 +45,7 @@ export const activities = [
         type: "regular",
         translations: {
             cs: {
-                name: "Sportovní výzva",
+                name: "Sport Challenge",
                 slug: "sport-challenge",
                 cardDescription: "Klub pro děti 9 - 13 let",
                 cardIcon: "/icons/ball.png",
