@@ -11,7 +11,7 @@ export function SpecialEventCard({
     return (
         <Link
             href={data?.slug}
-            className={`flex flex-col justify-center py-5 px-6 rounded-2xl cursor-pointer ${type === "landing" ? "bg-white" :  "bg-blue-1"} hover:bg-blue-2`}
+            className={`flex flex-col items-start  py-5 px-6 rounded-2xl cursor-pointer ${type === "landing" ? "bg-white" :  "bg-blue-1"} hover:bg-blue-2`}
         >
             <div className="flex items-center gap-x-2 text-sm text-blue-5 uppercase">
                 {data?.cardDate && <p className={`font-semibold ${type === "landing" ? "bg-blue-1" : "bg-white"} py-[5px] px-[15px] rounded-xl`}>

@@ -73,7 +73,10 @@ export default async function Camps({ params }: { params: Promise<{ lang: string
                 <p>{texts.challengeCamp.date}</p>
             </Link>
         </div>             
-        <AnotherActivities activities={anotherActivities} />
+        <AnotherActivities 
+            activities={anotherActivities}
+            lang={lang}
+        />
         </div>
     )
 }

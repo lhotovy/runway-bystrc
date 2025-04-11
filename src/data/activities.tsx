@@ -23,11 +23,11 @@ export const activities = [
                 contactLink: ""
             },
             en: {
-                name: "Sunday at Runway",
-                slug: "sunday-at-runway",
+                name: "Sunday Services",
+                slug: "nedele",
                 cardDescription: "Every 1st and 3rd Sunday of the month",
                 cardIcon: "/icons/book.png",
-                description: ["Want to learn more about what we believe, have questions, or are looking for a community in Bystrc? Then we invite you to our Sunday at Runway.", "You can look forward to spiritual songs, reflections, and, last but not least, fellowship with people who know God or are searching for Him."],
+                description: ["Want to learn more about what we believe, have questions, or are looking for a community in Bystrc? Then we invite you to our Sunday Services.", "You can look forward to worship, sermon, and, last but not least, fellowship with people who know God or are searching for Him."],
                 time: ["every 1st and 3rd Sunday of the month at 5:00 PM"],
                 cardTime: null,
                 place: "Runway Bystrc Center",
@@ -100,7 +100,7 @@ export const activities = [
             },
             en: {
                 name: "Runway Youth",
-                slug: "runway-youth",
+                slug: "runway_youth",
                 cardDescription: "Club for youth aged 13 - 18",
                 cardIcon: "/icons/person.png",
                 description: ["We are a club for everyone aged 13-20. We meet every Wednesday from 6-8 PM. We play games together, enjoy refreshments, and have fun. We look forward to seeing you!"],
@@ -138,7 +138,7 @@ export const activities = [
             },
             en: {
                 name: "Club for Moms with Kids",
-                slug: "club-for-moms-with-kids",
+                slug: "klub-pro-maminky-s-detmi",
                 cardDescription: "Opportunity to make friends",
                 cardIcon: "/icons/stroller.png",
                 description: ["Are you a mom with a child and want to take a break and spend a pleasant morning with other moms? Then join us for the English club for moms! You can look forward to sitting over tea or coffee, conversations, or crafting.", "If there are more older children, the program can be oriented towards their English practice."],
@@ -176,7 +176,7 @@ export const activities = [
             },
             en: {
                 name: "English Evenings",
-                slug: "english-evenings",
+                slug: "english",
                 cardDescription: "Evenings with a native speaker",
                 cardIcon: "/icons/flag.png",
                 description: ["Come and chat with a native speaker and improve your conversational skills in a pleasant atmosphere. Conversations take place in a small group."],
@@ -252,7 +252,7 @@ export const activities = [
             },
             en: {
                 name: "Camps",
-                slug: "camps",
+                slug: "tabory",
                 cardDescription: "Summer camps for kids",
                 cardIcon: "/icons/sun.png",
                 description: ["Summer camps for kids"],
@@ -301,7 +301,7 @@ export const activities = [
             },
             en: {
                 name: "Runway Goes to the Mountains",
-                slug: "runway-goes-to-the-mountains",
+                slug: "hory",
                 cardDescription: "Traditional winter stay in the mountains, this time in the heart of Jeseníky",
                 cardIcon: "",
                 description: [
@@ -354,7 +354,7 @@ export const activities = [
             },
             en: {
                 name: "Children's Day",
-                slug: "childrens-day",
+                slug: "den-deti",
                 cardDescription: "As every year, a day full of fun will take place behind the clubhouse!",
                 cardIcon: "",
                 description: [
@@ -388,7 +388,7 @@ export const activities = [
                 cardDate: "12. dubna",
                 cardTime: "13:00 - 17:00",
                 place: "centrum runway bystrc",
-                image: "",
+                image: "swap.webp",
                 registrationText: "", 
                 registrationLink: "",     
                 contactIcon: null, 
@@ -398,15 +398,15 @@ export const activities = [
             },
             en: {
                 name: "Spring Clothing Swap",
-                slug: "spring-clothing-swap",
+                slug: "swap",
                 cardDescription: "Come and pass on your pieces and pick others (women's, children's)",
                 cardIcon: "",
                 description: ["Come and pass on your pieces and pick others (women's, children's)"],
                 time: ["April 12th, 2025", "1:00 PM - 5:00 PM"],
                 cardDate: "April 12th",
-                cardTime: "1:00 PM - 5:00 PM",
+                cardTime: "1 PM - 5 PM",
                 place: "Runway Bystrc Center",
-                image: "",
+                image: "swap.webp",
                 registrationText: "", 
                 registrationLink: "",     
                 contactIcon: null, 
@@ -439,7 +439,7 @@ export const specialActivitiesCard = {
         },
         en: {
             name: "Special Events",
-            slug: "special-events",
+            slug: "specialni-akce",
             cardDescription: "Our event calendar",
             cardIcon: "/icons/calendar.png",
             description: ["Summer camps for kids"],

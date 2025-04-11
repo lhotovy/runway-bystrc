@@ -9,7 +9,8 @@ export const ActivityTemplate4 = ({
   time,
   place,
   image,
-  anotherActivities
+  anotherActivities,
+  lang
 }: {
   name: string,
   description: string[],
@@ -17,6 +18,7 @@ export const ActivityTemplate4 = ({
   place: string,
   image: string,
   anotherActivities: any[]
+  lang: string
 }) => {
 
   return (
@@ -90,7 +92,10 @@ export const ActivityTemplate4 = ({
         </div>
         
       </div>     
-      <AnotherActivities activities={anotherActivities} />
+      <AnotherActivities 
+        activities={anotherActivities} 
+        lang={lang} 
+      />
     </div>
   )
 }

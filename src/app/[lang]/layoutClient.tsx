@@ -26,7 +26,7 @@ export default function RootLayoutClient({
           {children}
           <Analytics />
         </main> 
-        <Footer />
+        <Footer lang={lang} />
       </body>
     </html>
   )

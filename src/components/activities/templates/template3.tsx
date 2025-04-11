@@ -15,7 +15,8 @@ export const ActivityTemplate3 = ({
   image,
   registrationText,
   registrationLink,
-  anotherActivities
+  anotherActivities,
+  lang
 }: {
   name: string,
   description: string[],
@@ -25,6 +26,7 @@ export const ActivityTemplate3 = ({
   registrationText: string | undefined,
   registrationLink: string | undefined,
   anotherActivities: any[]
+  lang: string
 }) => {
   const router = useRouter();
 
@@ -105,7 +107,10 @@ export const ActivityTemplate3 = ({
             <Button variant="blue" text="Přihlásit se" onClick={() => {router.push(`/${registrationLink}`)}} />     
         </div>
       </div>
-      <AnotherActivities activities={anotherActivities} />
+      <AnotherActivities 
+        activities={anotherActivities}
+        lang={lang} 
+      />
     </div>
   )
 }

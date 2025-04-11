@@ -17,7 +17,8 @@ export const ActivityTemplate1 = ({
   contactPerson,
   contactLinkText,
   contactLink,
-  anotherActivities
+  anotherActivities,
+  lang
 }: {
   name: string,
   description: string[],
@@ -30,6 +31,7 @@ export const ActivityTemplate1 = ({
   contactLinkText: string,
   contactLink: string,
   anotherActivities: any[]
+  lang: string
 }) => {
   return (
     <div className="flex flex-col items-center w-full my-10 lg:mt-12 min-h-screen">
@@ -109,7 +111,10 @@ export const ActivityTemplate1 = ({
           <Link className="text-blue-5 font-semibold text-base" href={contactLink}>{contactLinkText}</Link>
         </div>
       </div>
-      <AnotherActivities activities={anotherActivities} />
+      <AnotherActivities 
+        activities={anotherActivities} 
+        lang={lang}
+      />
     </div>
   )
 }

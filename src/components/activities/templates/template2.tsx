@@ -6,7 +6,7 @@ import Link from "next/link";
 import { AnotherActivities } from "../anotherActivities";
 import { useRouter } from "next/navigation";
 import { JSX } from "react";
-
+import { template2Data } from "@/data/templates/template2Data";
 
 // Template pro Neděle na Runwayi s odkazy na jiné sbory
 export const ActivityTemplate2 = ({
@@ -20,7 +20,8 @@ export const ActivityTemplate2 = ({
   contactPerson,
   contactLinkText,
   contactLink,
-  anotherActivities
+  anotherActivities,
+  lang
 }: {
   name: string,
   description: string[],
@@ -33,8 +34,10 @@ export const ActivityTemplate2 = ({
   contactLinkText: string,
   contactLink: string,
   anotherActivities: any[]
+  lang: string
 }) => {
     const router = useRouter();
+    const staticData = template2Data.translations[lang as keyof typeof template2Data.translations];
   return (
     <div className="flex flex-col items-center w-full my-10 lg:mt-12 min-h-screen">
       {/* big screen view */}
@@ -116,15 +119,15 @@ export const ActivityTemplate2 = ({
             <div className="w-92 text-center">
               <button 
                   className="w-1/2 sm:w-full p-4 text-blue-5 bg-white rounded-xl font-bold text-base cursor-pointer"
-                  onClick={()=> router.push("/kontakt")}
+                  onClick={()=> router.push(staticData.anotherContacts.href)}
               >
-                  Další kontakty
+                  {staticData.anotherContacts.text}
               </button>
             </div>
         </div>      
       </div>
       <div className="flex flex-col items-center w-full">
-        <h2 className="text-gray-9 font-bold text-[32px] py-24">Bohoslužby jinde v Brně</h2>
+        <h2 className="text-gray-9 font-bold text-[32px] py-24">{staticData.anotherServices}</h2>
         <div className="flex flex-col sm:flex-row gap-y-16 sm:gap-x-48 items-end">            
             <Link href="https://www.baptistebrno.cz/" target="blank" className="flex flex-col items-center">
               <Image src="/smetanka.png" alt="BJB Smetanova" width={150} height={90} className="mb-6" />
@@ -139,7 +142,10 @@ export const ActivityTemplate2 = ({
             </Link>          
         </div>
       </div>
-      <AnotherActivities activities={anotherActivities} />
+      <AnotherActivities 
+        activities={anotherActivities} 
+        lang={lang}
+      />
     </div>
   )
 }

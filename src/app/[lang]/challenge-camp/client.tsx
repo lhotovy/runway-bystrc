@@ -125,7 +125,10 @@ export const ChallengeCampClient = ({ lang }: { lang: string }) => {
           />
         ))}
       </div>
-      <AnotherActivities activities={anotherActivities} />
+      <AnotherActivities 
+        activities={anotherActivities} 
+        lang={lang} 
+      />
     </div>
   );
 };
