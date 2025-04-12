@@ -27,9 +27,12 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         className="flex flex-col items-center gap-y-6 mb-8"
                     >
                         <SocialIcons />
-                        <p className="cursor-pointer text-blue-5 font-semibold bg-white hover:bg-gray-1 py-4 px-6 rounded-xl">
+                        <Link 
+                            href={lang === "cs" ? "/newsletter" : "/en/newsletter"}
+                            className="cursor-pointer text-blue-5 font-semibold bg-white hover:bg-gray-1 py-4 px-6 rounded-xl"
+                        >
                             {data.newsletter}
-                        </p>
+                        </Link>
                         <Image src="/logo.webp" alt="Logo" width={400} height={200} className="flex lg:hidden mb-2" />
                     </div>
                     <div
@@ -58,9 +61,12 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         className="flex flex-col items-center gap-y-6 mb-8"
                     >
                         <SocialIcons />
-                        <p className="cursor-pointer text-blue-5 font-semibold bg-white hover:bg-gray-1 py-4 px-6 rounded-xl">
+                        <Link 
+                            href={lang === "cs" ? "/newsletter" : "/en/newsletter"}
+                            className="cursor-pointer text-blue-5 font-semibold bg-white hover:bg-gray-1 py-4 px-6 rounded-xl"
+                        >
                             {data.newsletter}
-                        </p>
+                        </Link>
                         <Image src="/logo.webp" alt="Logo" width={400} height={200} className="flex mb-2" />
                     </div>
                     <div 
