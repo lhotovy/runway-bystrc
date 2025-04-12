@@ -15,7 +15,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         id="column1"
                         className="flex flex-col"
                     >
-                        <Image src="/logo.jpeg" alt="Logo" width={120} height={80} className="hidden lg:flex mb-2" />
+                        <Image src="/logo.webp" alt="Logo" width={200} height={100} className="hidden lg:flex mb-2 w-32" />
                         <div className="flex flex-col gap-y-1.5 text-gray-8">
                             <p>{data.address.name}</p>
                             <p>{data.address.street}</p>
@@ -30,7 +30,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         <p className="cursor-pointer text-blue-5 font-semibold bg-white hover:bg-gray-1 py-4 px-6 rounded-xl">
                             {data.newsletter}
                         </p>
-                        <Image src="/logo.jpeg" alt="Logo" width={120} height={80} className="flex lg:hidden mb-2" />
+                        <Image src="/logo.webp" alt="Logo" width={400} height={200} className="flex lg:hidden mb-2" />
                     </div>
                     <div
                         id="column3"
@@ -61,23 +61,23 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         <p className="cursor-pointer text-blue-5 font-semibold bg-white hover:bg-gray-1 py-4 px-6 rounded-xl">
                             {data.newsletter}
                         </p>
-                        <Image src="/logo.jpeg" alt="Logo" width={120} height={80} className="flex mb-2" />
+                        <Image src="/logo.webp" alt="Logo" width={400} height={200} className="flex mb-2" />
                     </div>
                     <div 
                         id="column2"
-                        className="flex justify-between w-full"
+                        className="flex flex-col gap-y-8 item-center w-full"
                     >
-                        <div className="flex flex-col gap-y-1.5 text-gray-8">
+                        <div className="flex flex-col items-center gap-y-1.5 text-gray-8">
                             <p className="uppercase text-base font-semibold mb-2">{data.address.title}</p>                      
                             <p>{data.address.name}</p>
                             <p>{data.address.street}</p>
                             <p>{data.address.city}</p>
                         </div>
                         <div
-                            className="flex flex-col items-end text-gray-8"
+                            className="flex flex-col items-center text-gray-8"
                         >
                             <p className="uppercase text-base font-semibold mb-2">{data.linksTitle}</p>
-                            <div className="flex flex-col items-end gap-y-1.5">
+                            <div className="flex flex-col items-center gap-y-1.5">
                                 {
                                     data.links.map((link, index) => {
                                         return (

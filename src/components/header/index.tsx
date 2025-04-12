@@ -22,10 +22,11 @@ export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggl
             href={lang === "en" ? "/en" : "/"}
             id="logo" className="flex h-full w-[300px] min-w-[3rem] items-center justify-start bg-white ">
             <Image
-              src="/logo.jpeg"
+              src="/logo.webp"
               alt="Runway Logo"
+              className="w-24"
               height={100}
-              width={100}
+              width={200}
             />
           </Link>
           <div className="hidden sm:flex h-full w-full items-center justify-end">       

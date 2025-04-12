@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import * as React from "react";
-import { Plus, X, ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import Link from "next/link";
@@ -35,11 +35,11 @@ export function MobileMenu({ sidebarOpen, setSidebarOpen, lang }: MobileMenuProp
           {/* Header */}
           <div className="flex w-full flex-row items-center justify-start bg-white shadow-xs">
             <a
-              href={"/"}
+              href={lang === "en" ? "/en" : "/"}
               id="logo"
-              className="flex h-12 w-[65px] min-w-[3rem] items-center justify-center bg-secondary p-4"
+              className="flex h-12 w-[65px] min-w-[3rem] items-center justify-center ml-4"
             >
-              <Image src="/logo.jpeg" alt="Runway Logo" height={100} width={50} />
+              <Image src="/logo.webp" alt="Runway Logo" height={100} width={200} className="w-16" />
             </a>
           </div>
 
