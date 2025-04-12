@@ -1,4 +1,5 @@
 "use client"
+
 import { Activities } from '@/components/landingPage/sections/activities';
 import { Social } from '@/components/landingPage/sections/social';
 import { SpecialEvents } from '@/components/landingPage/sections/specialEvents';

@@ -31,12 +31,17 @@ export const SpecialEventsClient = ({lang}: {lang: string}) => {
                     />
                 </div>
             </div>            
-            <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4 mb-24'>                {
+            <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4 mb-24'>                
+                {
                     activities
                     .filter((activity) => activity.type === 'special')
                     .map((event, index) => {
                         return (
-                            <SpecialEventCard key={index} activity={event} lang={lang} />
+                            <SpecialEventCard 
+                                key={index} 
+                                activity={event} 
+                                lang={lang} 
+                            />
                         )
                     })
                 }

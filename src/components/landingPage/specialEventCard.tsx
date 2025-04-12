@@ -10,7 +10,7 @@ export function SpecialEventCard({
     
     return (
         <Link
-            href={data?.slug ?? "/"}
+            href={lang === "en" && !data?.slug.startsWith("/en") ? `/en/${data?.slug}` : data?.slug ?? "/"}
             className={`flex flex-col items-start  py-5 px-6 rounded-2xl cursor-pointer ${type === "landing" ? "bg-white" :  "bg-blue-1"} hover:bg-blue-2`}
         >
             <div className="flex items-center gap-x-2 text-sm text-blue-5 uppercase">
