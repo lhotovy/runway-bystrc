@@ -7,6 +7,7 @@ export const tabory = {
       challengeCamp: {
         title: "Challenge Camp 2025",
         date: "21. - 25. 7. 2025",
+        link: "/challenge-camp",
       },
     },
     en: {
@@ -16,6 +17,7 @@ export const tabory = {
       challengeCamp: {
         title: "Challenge Camp 2025",
         date: "July 21st - 25th, 2025",
+        link: "/en/challenge-camp",
       },
     },
   },

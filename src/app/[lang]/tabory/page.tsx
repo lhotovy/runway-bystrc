@@ -67,7 +67,7 @@ export default async function Camps({ params }: { params: Promise<{ lang: string
 
         <div className="flex flex-col items-center w-full my-10 lg:mt-12">
             <h2 className="font-bold text-[32px] mb-8 mt-16">{texts.upcomingCamps}</h2>
-            <Link className="bg-blue-1 rounded-xl p-4 flex flex-col items-center gap-y-2" href="/challenge-camp">
+            <Link className="bg-blue-1 rounded-xl p-4 flex flex-col items-center gap-y-2" href={texts.challengeCamp.link ?? "/"}>
                 <Image src="/challengeCamp.webp" alt="Challenge camp" width={300} height={300} className="w-80 h-60 rounded-xl" />
                 <p className="text-xl font-bold">{texts.challengeCamp.title}</p>
                 <p>{texts.challengeCamp.date}</p>

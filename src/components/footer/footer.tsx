@@ -41,7 +41,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                             {
                                 data.links.map((link, index) => {
                                     return (
-                                        <Link key={index} href={link.href}>{link.name}</Link>                                       
+                                        <Link key={index} href={link.href || "/"}>{link.name}</Link>                                       
                                     )
                                 })
                             }  
@@ -81,7 +81,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                                 {
                                     data.links.map((link, index) => {
                                         return (
-                                            <Link key={index} href={link.href}>{link.name}</Link>  
+                                            <Link key={index} href={link.href || "/"}>{link.name}</Link>  
                                         )
                                     })
                                 }  

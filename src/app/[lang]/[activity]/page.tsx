@@ -75,7 +75,7 @@ export default async function ActivityPage({ params }: {params: Promise<{ lang: 
                 contactIcon={activityData?.contactIcon || null}
                 contactPerson={activityData?.contactPerson || ""}
                 contactLinkText={activityData?.contactLinkText || ""}
-                contactLink={activityData?.contactLink || ""}
+                contactLink={activityData?.contactLink || "/"}
                 anotherActivities={anotherActivities}
                 lang={lang}
             />
@@ -92,7 +92,7 @@ export default async function ActivityPage({ params }: {params: Promise<{ lang: 
                 contactIcon={activityData?.contactIcon || null}
                 contactPerson={activityData?.contactPerson || ""}
                 contactLinkText={activityData?.contactLinkText || ""}
-                contactLink={activityData?.contactLink || ""}
+                contactLink={activityData?.contactLink || "/"}
                 anotherActivities={anotherActivities}
                 lang={lang}
             />
@@ -106,7 +106,7 @@ export default async function ActivityPage({ params }: {params: Promise<{ lang: 
                 place={activityData?.place || ""}
                 image={activityData?.image || ""}
                 registrationText={activityData?.registrationText || ""}
-                registrationLink={activityData?.registrationLink || ""}
+                registrationLink={activityData?.registrationLink || "/"}
                 anotherActivities={anotherActivities}
                 lang={lang}
             />

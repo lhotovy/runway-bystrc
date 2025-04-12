@@ -55,7 +55,7 @@ export const NewsletterClient = ({ lang }: { lang: string }) => {
           <Checkbox />
           <label className="text-gray-8 text-base">
             {data.consent.text}{" "}
-            <Link href={data.consent.gdprLink} target="blank" className="text-blue-5 font-bold">
+            <Link href={data.consent.gdprLink ?? "/"} target="blank" className="text-blue-5 font-bold">
               {data.consent.linkText}
             </Link>
           </label>

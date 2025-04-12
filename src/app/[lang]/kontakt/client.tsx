@@ -32,8 +32,8 @@ export default function KontaktClient({ lang }: { lang: 'en' | 'cs' }) {
                 <div className="flex flex-col">
                   <p>
                     {location.address}{" "}
-                    <Link href={location.mapLink} target="blank">
-                      <span className="text-blue-5 font-bold">{location.address}</span>
+                    <Link href={location.mapLink || "/"} target="blank">
+                      <span className="text-blue-5 font-bold">{location.address ?? "/"}</span>
                     </Link>
                   </p>
                 </div>
@@ -70,7 +70,7 @@ export default function KontaktClient({ lang }: { lang: 'en' | 'cs' }) {
               <Mail className="h-8 text-gray-3 font-bold" />
               <p className="text-lg font-bold">{data.contactDetails.email.title}</p>
             </div>
-            <Link href={`mailto:${data.contactDetails.email.address}`}>
+            <Link href={`mailto:${data.contactDetails.email.address ?? "/"}`} target="blank">
               <p className="text-blue-5 font-semibold">{data.contactDetails.email.address}</p>
             </Link>
           </div>

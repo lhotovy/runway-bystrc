@@ -108,7 +108,7 @@ export const ActivityTemplate1 = ({
           <p className="text-xl text-gray-9 font-bold">{contactTitle}</p>
           {contactIcon && contactIcon}
           <p className="text-gray-8 text-base font-bold">{contactPerson}</p>
-          <Link className="text-blue-5 font-semibold text-base" href={contactLink}>{contactLinkText}</Link>
+          <Link className="text-blue-5 font-semibold text-base" href={contactLink ?? "/"}>{contactLinkText}</Link>
         </div>
       </div>
       <AnotherActivities 

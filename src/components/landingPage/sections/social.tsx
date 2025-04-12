@@ -7,7 +7,7 @@ import Image from "next/image";
 export const Social = ({data}: {data: any}) => {
   return ( 
     <div className='py-8 w-full flex flex-col justify-center gap-y-10'>
-        <SectionTitle title={data.socialText} />
+        <SectionTitle title={data?.socialText} />
         <div className="flex items-center w-full">
             <div className='grid lg:grid-cols-5 grid-cols-3 gap-x-3 gap-y-3 w-full'>
                 {

@@ -69,7 +69,7 @@ export const ChallengeCampClient = ({ lang }: { lang: string }) => {
             <p className="text-xl text-gray-9 font-bold">{campData.contactTitle}</p>
             {campData.contactIcon && campData.contactIcon}
             <p className="text-gray-8 text-base font-bold">{campData.contactPerson}</p>
-            <Link className="text-blue-5 font-semibold text-base" href={campData.contactLink}>
+            <Link className="text-blue-5 font-semibold text-base" href={campData.contactLink ?? "/"}>
               {campData.contactLinkText}
             </Link>
           </div>
