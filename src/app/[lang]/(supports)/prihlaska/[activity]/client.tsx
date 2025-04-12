@@ -24,14 +24,17 @@ export const RegistrationPageClient = ({ data, lang }: { data: any, lang: string
         <h1 className="font-bold text-[40px]">{data.name}</h1>
         <p>{data.description}</p>
       </div>
-      <form className="flex gap-x-6 gap-y-4 flex-wrap w-1/2 items-between" onSubmit={handleSubmit}>
+      <form
+        className="flex flex-wrap gap-x-6 gap-y-4 w-full lg:w-2/3"
+        onSubmit={handleSubmit}
+      >
         {elements}
-        <div className="flex justify-center w-full">
-            <Button 
-                variant="blue" 
-                text={lang === "en" ? "Submit" : "Odeslat přihlášku"} 
-                type="submit"
-            />
+        <div className="flex justify-center w-full lg:w-[600px]">
+          <Button
+            variant="blue"
+            text={lang === "en" ? "Submit" : "Odeslat přihlášku"}
+            type="submit"
+          />
         </div>
       </form>
     </div>

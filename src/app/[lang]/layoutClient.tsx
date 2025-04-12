@@ -20,6 +20,13 @@ export default function RootLayoutClient({
   
   return (
     <html className='scroll-smooth' lang={lang || undefined}>
+    <head>
+        <script
+          crossOrigin="anonymous"
+          src="//unpkg.com/react-scan/dist/auto.global.js"
+          async
+        />
+    </head>
       <body className={`${openSans.className} text-gray-9 w-full`}>       
         <Header onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)} lang={lang} />
         <main className="max-w-[1280px] mx-auto px-6 xl:px-0">

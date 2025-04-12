@@ -79,7 +79,7 @@ export const ChallengeCampClient = ({ lang }: { lang: string }) => {
               variant="blue"
               text={campData.registrationButton}
               className="w-48"
-              onClick={() => router.push("/prihlaska/challenge-camp")}
+              onClick={() => router.push(lang === "cs" ? "/prihlaska/challenge-camp" : "/en/prihlaska/challenge-camp")}
             />
           </div>
         </div>
