@@ -7,9 +7,9 @@ import { activities } from "@/data/activities";
 import { useState } from "react";
 import { specialniAkce } from "@/data/staticPages/specialniAkce";
 
-export const SpecialEventsClient = ({lang}: {lang: string}) => {
-    const [selectedBadge, setSelectedBadge] = useState("Nadcházející");
+export const SpecialEventsClient = ({lang}: {lang: string}) => { 
     const texts = specialniAkce.translations[lang as keyof typeof specialniAkce.translations];    
+    const [selectedBadge, setSelectedBadge] = useState(texts.upcoming);
 
     return (
         <div className="flex flex-col py-18">
@@ -34,7 +34,13 @@ export const SpecialEventsClient = ({lang}: {lang: string}) => {
             <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4 mb-24'>                
                 {
                     activities
-                    .filter((activity) => activity.type === 'special')
+                    .filter((activity) => {
+                        const translation = activity.translations[lang as keyof typeof activity.translations];
+                        
+                        return activity.type === 'special' && (selectedBadge === texts.upcoming
+                            ? translation.filterDate && new Date(translation.filterDate) >= new Date() 
+                            : translation.filterDate && new Date(translation.filterDate) < new Date());
+                    })
                     .map((event, index) => {
                         return (
                             <SpecialEventCard 

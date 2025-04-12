@@ -288,6 +288,7 @@ export const activities = [
                     členové Challenge a Runway Youth: 1240,- Kč`
                 ],
                 time: ["21. - 23. 2. 2025", "začínáme v 19:00"],
+                filterDate: "2025-02-23",
                 cardDate: "21. - 23. února",
                 cardTime: null,
                 place: "hotel na trojce",
@@ -316,6 +317,7 @@ export const activities = [
                 ],
                 time: ["February 21st - 23rd, 2025", "starting at 7:00 PM"],
                 cardDate: "February 21st - 23rd",
+                filterDate: "2025-02-23",
                 cardTime: null,
                 place: "Hotel na Trojce",
                 image: "placeholder.webp",
@@ -342,6 +344,7 @@ export const activities = [
                 ],
                 time: ["1. června od 14:30"],
                 cardDate: "1. června",
+                filterDate: "2025-06-01",
                 cardTime: "od 14:30",
                 place: "hřiště kamechy za centrem runway bystrc",
                 image: "kidsDay.webp",
@@ -362,6 +365,7 @@ export const activities = [
                 ],
                 time: ["June 1st from 2:30 PM"],
                 cardDate: "June 1st",
+                filterDate: "2025-06-01",
                 cardTime: "from 2:30 PM",
                 place: "Kamechy playground behind Runway Bystrc Center",
                 image: "kidsDay.webp",
@@ -374,49 +378,51 @@ export const activities = [
             }
         }
     },
-    {
-        template: "template4",
-        type: "special",
-        translations: {
-            cs: {
-                name: "Jarní swap oblečení",
-                slug: "swap",
-                cardDescription: "Přijďte předat své kousky dál a vybrat si jiné (dámské, dětské)",
-                cardIcon: "",
-                description: ["Přijďte předat své kousky dál a vybrat si jiné (dámské, dětské)"],
-                time: ["12. 4. 2025", "13:00 - 17:00"],
-                cardDate: "12. dubna",
-                cardTime: "13:00 - 17:00",
-                place: "centrum runway bystrc",
-                image: "swap.webp",
-                registrationText: "", 
-                registrationLink: "",     
-                contactIcon: null, 
-                contactPerson: "",
-                contactLinkText: "",
-                contactLink: ""
-            },
-            en: {
-                name: "Spring Clothing Swap",
-                slug: "swap",
-                cardDescription: "Come and pass on your pieces and pick others (women's, children's)",
-                cardIcon: "",
-                description: ["Come and pass on your pieces and pick others (women's, children's)"],
-                time: ["April 12th, 2025", "1:00 PM - 5:00 PM"],
-                cardDate: "April 12th",
-                cardTime: "1 PM - 5 PM",
-                place: "Runway Bystrc Center",
-                image: "swap.webp",
-                registrationText: "", 
-                registrationLink: "",     
-                contactIcon: null, 
-                contactPerson: "",
-                contactLinkText: "",
-                contactLink: ""
-            }
-        }
-    }   
-];
+//     {
+//         template: "template4",
+//         type: "special",
+//         translations: {
+//             cs: {
+//                 name: "Jarní swap oblečení",
+//                 slug: "swap",
+//                 cardDescription: "Přijďte předat své kousky dál a vybrat si jiné (dámské, dětské)",
+//                 cardIcon: "",
+//                 description: ["Přijďte předat své kousky dál a vybrat si jiné (dámské, dětské)"],
+//                 time: ["12. 4. 2025", "13:00 - 17:00"],
+//                 cardDate: "12. dubna",
+//                 cardTime: "13:00 - 17:00",
+//                 filterDate: "1. 6. 2025",
+//                 place: "centrum runway bystrc",
+//                 image: "swap.webp",
+//                 registrationText: "", 
+//                 registrationLink: "",     
+//                 contactIcon: null, 
+//                 contactPerson: "",
+//                 contactLinkText: "",
+//                 contactLink: ""
+//             },
+//             en: {
+//                 name: "Spring Clothing Swap",
+//                 slug: "swap",
+//                 cardDescription: "Come and pass on your pieces and pick others (women's, children's)",
+//                 cardIcon: "",
+//                 description: ["Come and pass on your pieces and pick others (women's, children's)"],
+//                 time: ["April 12th, 2025", "1:00 PM - 5:00 PM"],
+//                 cardDate: "April 12th",
+//                 cardTime: "1 PM - 5 PM",
+//                 filterDate: "1. 6. 2025",
+//                 place: "Runway Bystrc Center",
+//                 image: "swap.webp",
+//                 registrationText: "", 
+//                 registrationLink: "",     
+//                 contactIcon: null, 
+//                 contactPerson: "",
+//                 contactLinkText: "",
+//                 contactLink: ""
+//             }
+//         }
+//     }   
+ ];
 
 export const specialActivitiesCard = {
     template: "",

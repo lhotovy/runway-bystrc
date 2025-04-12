@@ -41,6 +41,7 @@ export type Activity = {
     registrationText?: string | undefined;
     registrationLink?: string | undefined;
     type: string;
+    filterDate?: string;
 }
 
    
