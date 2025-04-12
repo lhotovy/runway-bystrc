@@ -114,7 +114,7 @@ export const ActivityTemplate2 = ({
             <div className="flex flex-col items-center gap-y-4 w-full max-w-screen-xl px-4">           
                 {contactIcon && contactIcon}
                 <p className="text-gray-8 text-base font-bold">{contactPerson}</p>
-                <Link className="text-blue-5 font-semibold text-base" href={contactLink ?? "/"}>{contactLinkText}</Link>
+                <Link className="text-blue-5 font-semibold text-base" target="blank" href={contactLink ?? "/"}>{contactLinkText}</Link>
                 </div>
             <div className="w-92 text-center">
               <button 

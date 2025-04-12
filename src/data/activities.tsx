@@ -20,7 +20,7 @@ export const activities = [
                 contactIcon: <SiInstagram className="h-10 w-10 text-gray-3" />,
                 contactPerson: "Instagram",
                 contactLinkText: "runway.bystrc",
-                contactLink: ""
+                contactLink: "https://www.instagram.com/runway.bystrc/"
             },
             en: {
                 name: "Sunday Services",
@@ -36,7 +36,7 @@ export const activities = [
                 contactIcon: <SiInstagram className="h-10 w-10 text-gray-3" />,
                 contactPerson: "Instagram",
                 contactLinkText: "runway.bystrc",
-                contactLink: ""
+                contactLink: "https://www.instagram.com/runway.bystrc/"
             }
         }
     },
@@ -58,7 +58,7 @@ export const activities = [
                 contactIcon: <Phone className="h-10 w-10 text-gray-3" />,
                 contactPerson: "Ivo Drábek",
                 contactLinkText: "i.drabek@seznam.cz",
-                contactLink: ""
+                contactLink: "mailto:i.drabek@seznam.cz"
             },
             en: {
                 name: "Sport Challenge",
@@ -74,7 +74,7 @@ export const activities = [
                 contactIcon: <Phone className="h-10 w-10 text-gray-3" />,
                 contactPerson: "Ivo Drábek",
                 contactLinkText: "i.drabek@seznam.cz",
-                contactLink: ""
+                contactLink: "mailto:i.drabek@seznam.cz"
             }
         }
     },
@@ -134,7 +134,7 @@ export const activities = [
                 contactIcon: <SiFacebook className="h-10 w-10 text-gray-3" />,
                 contactPerson: "Facebook",
                 contactLinkText: "Maminky Runway Bystrc",
-                contactLink: ""
+                contactLink: "https://www.facebook.com/profile.php?id=100076218601052"
             },
             en: {
                 name: "Club for Moms with Kids",
@@ -150,7 +150,7 @@ export const activities = [
                 contactIcon: <SiFacebook className="h-10 w-10 text-gray-3" />,
                 contactPerson: "Facebook",
                 contactLinkText: "Maminky Runway Bystrc",
-                contactLink: ""
+                contactLink: "https://www.facebook.com/profile.php?id=100076218601052"
             }
         }
     },
