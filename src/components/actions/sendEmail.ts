@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
 
 export async function sendRegistrationEmail(e: any, formData: any) { 
-    e.preventDefault();   
+    e.preventDefault();
 
     emailjs.send('service_4f8z9dq', 'template_ioei8ib', formData, "KwTzFCyd2YuMwJvT-")
       .then(() => {

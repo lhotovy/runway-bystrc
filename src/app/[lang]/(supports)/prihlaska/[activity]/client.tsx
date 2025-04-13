@@ -16,7 +16,7 @@ export const RegistrationPageClient = ({ data, lang }: { data: any, lang: string
     router.push(`/${lang}/potvrzeni?activity=${data.slug}`);
   };
 
-  const elements = generateFormElements(data.elements, formData, setFormData);
+  const elements = generateFormElements(data.elements, formData, setFormData);  
 
   return (
     <div className="flex flex-col gap-y-8 items-start py-20">

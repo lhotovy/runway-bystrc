@@ -207,7 +207,7 @@ export const generateFormElements = (definitions: { type: string, name: string, 
           name={name}
           required={required}
           value={formData[name] || ""}
-          onChange={(value: any) => setFormData({ ...formData, [name]: value })}
+          onChange={(e: any) => setFormData({ ...formData, [name]: e.target.value })}          
           className="shadow appearance-none border border-gray-3 rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full bg-white bg-no-repeat bg-right"
           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='gray'%3E%3Cpath fill-rule='evenodd' d='M6.293 7.293a1 1 0 011.414 0L10 9.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E")`, backgroundSize: "24px", backgroundPosition: "calc(100% - 8px) center" }}
         >
@@ -242,7 +242,7 @@ export const generateFormElements = (definitions: { type: string, name: string, 
           name={name}
           required={required}
           value={formData[name] || ""}
-          onChange={(value: any) => setFormData({ ...formData, [name]: value })}
+          onChange={(e: any) => setFormData({ ...formData, [name]: e.target.value })}
           className="shadow appearance-none border border-gray-3 rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full bg-white bg-no-repeat bg-right"
           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='gray'%3E%3Cpath fill-rule='evenodd' d='M6.293 7.293a1 1 0 011.414 0L10 9.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E")`, backgroundSize: "24px", backgroundPosition: "calc(100% - 8px) center" }}
         >
@@ -280,7 +280,7 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         name={name}
         required={required}
         value={formData[name] || ""}
-        onChange={(value: any) => setFormData({ ...formData, [name]: value })}
+        onChange={(e: any) => setFormData({ ...formData, [name]: e.target.value })}
         className="shadow appearance-none border border-gray-3 rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full bg-white bg-no-repeat bg-right"
         style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='gray'%3E%3Cpath fill-rule='evenodd' d='M6.293 7.293a1 1 0 011.414 0L10 9.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E")`, backgroundSize: "24px", backgroundPosition: "calc(100% - 8px) center" }}
       >
