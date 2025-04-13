@@ -247,11 +247,11 @@ export const generateFormElements = (definitions: { type: string, name: string, 
           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='gray'%3E%3Cpath fill-rule='evenodd' d='M6.293 7.293a1 1 0 011.414 0L10 9.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E")`, backgroundSize: "24px", backgroundPosition: "calc(100% - 8px) center" }}
         >
           <option value="" disabled>Vyber možnost</option>
-          <option value="sporty">Z doporučení</option>
-          <option value="crafts">Z tištěných médií</option>
-          <option value="crafts">Facebook</option>
-          <option value="crafts">Instagram</option>
-          <option value="crafts">Jinde</option>
+          <option value="Z doporučení">Z doporučení</option>
+          <option value="Z tištěných médií">Z tištěných médií</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Jinde">Jinde</option>
         </select>
       </div>
     ),
@@ -285,10 +285,10 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='gray'%3E%3Cpath fill-rule='evenodd' d='M6.293 7.293a1 1 0 011.414 0L10 9.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E")`, backgroundSize: "24px", backgroundPosition: "calc(100% - 8px) center" }}
       >
         <option value="" disabled>Vyber možnost</option>
-        <option value="sporty">Neovládá</option>
-        <option value="crafts">Základní</option>
-        <option value="crafts">Pokročilá</option>
-        <option value="crafts">Výborná</option>
+        <option value="Neovládá">Neovládá</option>
+        <option value="Základní">Základní</option>
+        <option value="Pokročilá">Pokročilá</option>
+        <option value="Výborná">Výborná</option>
       </select>
     </div>
     ),
