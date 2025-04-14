@@ -76,6 +76,66 @@ export default function KontaktClient({ lang }: { lang: 'en' | 'cs' }) {
           </div>
         </div>
       </div>
+      {/* small screen */}
+      <div className="flex md:hidden flex-col mt-24 mb-12 gap-y-8">
+        <h1 className="text-4xl font-bold">{data.title}</h1>
+        <div className="flex flex-col gap-y-36 items-center">
+          {data.locations.map((location, index) => (
+            <div key={index} className="flex flex-col gap-y-8 items-center">
+              <Image src={location.image} alt={location.name} width={170} height={170} className="rounded-4xl" />
+              <div className="flex flex-col gap-y-4">
+                <p className="text-xl font-bold">{location.name}</p>
+                <p className="text-base">{location.description}</p>
+                <div className="flex items-center">
+                  <Image src="/icons/place.png" alt="place icon" width={30} height={30} className="h-10 w-10 mr-4" />
+                  <div className="flex flex-col">
+                    <p>
+                      {location.address}{" "}
+                      <Link href={location.mapLink || "/"} target="blank">
+                        <span className="text-blue-5 font-bold">{location.address ?? "/"}</span>
+                      </Link>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>        
+          ))}
+        </div>
+      </div>
+      <div className="w-[calc(100vw-15px)] flex md:hidden justify-center bg-gray-1 mt-12">
+        <div className="flex flex-col justify-between gap-y-12 w-5/6 lg:w-2/3 xl:w-1/2 max-w-[1280px] py-18">
+          <div className="flex flex-col items-center">
+            <div className="flex mb-4 gap-x-2 items-center">
+              <Building2 className="h-8 text-gray-3 font-bold" />
+              <p className="text-lg font-bold">{data.contactDetails.officialAddress.title}</p>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              {data.contactDetails.officialAddress.lines.map((line, index) => (
+                <p key={index}>{line}</p>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="flex mb-4 gap-x-2 items-center">
+              <Phone className="h-8 text-gray-3 font-bold" />
+              <p className="text-lg font-bold">{data.contactDetails.phone.title}</p>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <p>{data.contactDetails.phone.name}</p>
+              <p className="text-blue-5 font-semibold">{data.contactDetails.phone.number}</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="flex mb-4 gap-x-2 items-center">
+              <Mail className="h-8 text-gray-3 font-bold" />
+              <p className="text-lg font-bold">{data.contactDetails.email.title}</p>
+            </div>
+            <Link href={`mailto:${data.contactDetails.email.address ?? "/"}`} target="blank">
+              <p className="text-blue-5 font-semibold">{data.contactDetails.email.address}</p>
+            </Link>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-col py-16">
         <h2 className="text-[32px] font-bold">{data.form.title}</h2>
         <form className="flex flex-col gap-y-10 mt-12 mb-6" onSubmit={handleSubmit}>
