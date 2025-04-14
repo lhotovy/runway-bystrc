@@ -9,11 +9,12 @@ import { useState } from "react";
 export const RegistrationPageClient = ({ data, lang }: { data: any, lang: string }) => {
   const [formData, setFormData] = useState({});
   const router = useRouter();
+  const activityLink = lang === "en" ? `/en/potvrzeni?activity=${data.slug}` : `/potvrzeni?activity=${data.slug}`;
 
   const handleSubmit = async (e: any) => {
     const payload = { ...formData, title: data.name, time: new Date() };
     await sendRegistrationEmail(e, payload);
-    router.push(`/${lang}/potvrzeni?activity=${data.slug}`);
+    router.push(activityLink);
   };
 
   const elements = generateFormElements(data.elements, formData, setFormData);  

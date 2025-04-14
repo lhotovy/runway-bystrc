@@ -10,6 +10,8 @@ export const ConfirmClient = ({ lang }: { lang: string }) => {
   const registrationActivity = searchParams.get("activity");
   const router = useRouter();
   const data = potvrzeniData.translations[lang as keyof typeof potvrzeniData.translations];
+  const activityLink = lang === "en" ? `/en/${registrationActivity}` : `/${registrationActivity}`;
+  const registrationLink = lang === "en" ? `/en/prihlaska/${registrationActivity}` : `/prihlaska/${registrationActivity}`;
 
   return (
     <div className="flex flex-col items-center justify-center gap-y-16 min-h-[calc(100vh-306px)] text-gray-9">
@@ -19,10 +21,10 @@ export const ConfirmClient = ({ lang }: { lang: string }) => {
         <Button
           variant="blue"
           text={data.backButton}
-          onClick={() => router.push(`/${lang}/${registrationActivity}`)}
+          onClick={() => router.push(activityLink)}
         />
         <Link
-          href={`/${lang}/prihlaska/${registrationActivity}`}
+          href={registrationLink}
           className="text-blue-5 font-bold"
         >
           {data.registerAnother}

@@ -5,6 +5,7 @@ export const registrations = [
       cs: {
         name: "Přihláška na Runway jede na hory",
         description: "Přihlas se na náš pobyt na horách v termínu...",
+        slug: "hory",
         elements: [
           { type: "input", name: "userName", text: "Jméno a příjmení *", width: "300", required: true },
           { type: "input", name: "age", text: "Věk *", width: "300", required: true },
@@ -24,6 +25,7 @@ export const registrations = [
       en: {
         name: "Registration for Runway Goes to the Mountains",
         description: "Sign up for our mountain trip on the specified date...",
+        slug: "hory",
         elements: [
           { type: "input", name: "userName", text: "Full Name *", width: "300", required: true },
           { type: "input", name: "age", text: "Age *", width: "300", required: true },
@@ -49,6 +51,7 @@ export const registrations = [
         name: "Přihláška na Challenge Camp 2025",
         description: `Děkujeme za Váš zájem o náš příměstský tábor. Vezměte, prosíme, na vědomí, že přihláška je platná teprve po zaplacení zálohy ve výši 1.000,- Kč na účet uvedený v potvrzovacím e-mailu. 
                       Odesláním přihlášky souhlasíte se zpracováním osobních údajů. Údaje v nezbytném rozsahu uchováváme i po skončení tábora mj. za účelem zasílání informací o našich budoucích akcích. Ze zasílání informací je možné se kdykoli odhlásit.`,
+        slug: "challenge-camp",
         elements: [
           { type: "input", name: "userName", text: "Jméno a příjmení dítěte *", width: "300", required: true },
           { type: "input", name: "age", text: "Věk *", width: "300", required: true },
@@ -69,6 +72,7 @@ export const registrations = [
         name: "Registration for Challenge Camp 2025",
         description: `Thank you for your interest in our summer camp. Please note that the application is valid only after paying a deposit of 1,000 CZK to the account specified in the confirmation email.
                       By submitting the application, you agree to the processing of personal data. We keep the data in the necessary scope even after the end of the camp, among other things for the purpose of sending information about our future events. You can unsubscribe from receiving information at any time.`,
+        slug: "challenge-camp",
         elements: [
           { type: "input", name: "userName", text: "Child's Full Name *", width: "300", required: true },
           { type: "input", name: "age", text: "Age *", width: "300", required: true },
