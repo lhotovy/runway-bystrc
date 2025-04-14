@@ -67,7 +67,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         >
                             {data.newsletter}
                         </Link>
-                        <Image src="/logo.webp" alt="Logo" width={400} height={200} className="flex mb-2" />
+                        <Image src="/logo.webp" alt="Logo" width={400} height={200} className="flex mb-2 w-1/2" />
                     </div>
                     <div 
                         id="column2"
