@@ -42,6 +42,7 @@ export const kontaktData = {
           message: "Message",
         },
         submitButton: "Send",
+        successMessage: "Your message has been sent successfully!"
       },
     },
     cs: {
@@ -86,6 +87,7 @@ export const kontaktData = {
           message: "Zpráva",
         },
         submitButton: "Odeslat",
+        successMessage: "Vaše zpráva byla úspěšně odeslána!"
       },
     },
   },

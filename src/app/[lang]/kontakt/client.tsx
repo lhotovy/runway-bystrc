@@ -2,7 +2,7 @@
 
 import { sendKontaktEmail } from "@/components/actions/sendEmail";
 import { Button } from "@/components/ui/button";
-import { Building2, Mail, Phone } from "lucide-react";
+import { Building2, Mail, Phone, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -11,10 +11,17 @@ import placeholderImage from "@/public/placeholder.webp";
 
 export default function KontaktClient({ lang }: { lang: 'en' | 'cs' }) {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [success, setSuccess] = useState(false);
   const data = kontaktData.translations[lang];
 
   const handleSubmit = async (e: any) => {
-    await sendKontaktEmail(e, formData);
+    try {
+      await sendKontaktEmail(e, formData);
+      setSuccess(true);
+    } catch (error) {
+      console.error("Failed to send email", error);
+    }
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -151,6 +158,12 @@ export default function KontaktClient({ lang }: { lang: 'en' | 'cs' }) {
       </div>
       <div className="flex flex-col py-16">
         <h2 className="text-[32px] font-bold">{data.form.title}</h2>
+        {success && (
+          <div className="flex items-center text-green-700 mt-4">
+            <CheckCircle className="h-6 w-6 mr-2" />
+            <p>{data.form.successMessage}</p>
+          </div>
+        )}
         <form className="flex flex-col gap-y-10 mt-12 mb-6" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-y-1">
             <label htmlFor="name" className="text-base font-bold">
