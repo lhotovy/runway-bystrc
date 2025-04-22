@@ -121,7 +121,7 @@ export const ChallengeCampClient = ({ lang }: { lang: string }) => {
             alt={`Image ${index + 1}`}
             width={300}
             height={200}
-            className="object-cover"
+            className="object-cover p-2 rounded-3xl"
           />
         ))}
       </div>

@@ -26,7 +26,20 @@ export const challengeCampData = {
       ],
       registrationDeadline: "Přihlašování do 30. 4. 2025",
       registrationButton: "Přihlaš se",
-      imageGallery: Array(24).fill("/placeholder.webp"), // Replace with actual image URLs if available
+      imageGallery: [
+        "/challengeCamp/camp1.webp",
+        "/challengeCamp/camp2.webp",
+        "/challengeCamp/camp3.webp",
+        "/challengeCamp/camp4.webp",
+        "/challengeCamp/camp5.webp",
+        "/challengeCamp/camp6.webp",
+        "/challengeCamp/camp7.webp",
+        "/challengeCamp/camp8.webp",
+        "/challengeCamp/camp9.webp",
+        "/challengeCamp/camp10.webp",
+        "/challengeCamp/camp11.webp",
+        "/challengeCamp/camp12.webp",
+      ],
       highlights: [
         "Spousta zábavy",
         "angličtina s rodilými mluvčími",
