@@ -24,7 +24,8 @@ export const Activities = (
               return (
                 <ActivityCard
                     key={index} 
-                    activity={activity.translations[lang as keyof typeof activity.translations]}                     
+                    activity={activity.translations[lang as keyof typeof activity.translations]} 
+                    lang={lang}
                 />
               )
             })

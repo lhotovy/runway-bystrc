@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { activities, specialActivitiesCard } from "@/data/activities";
 import { Button } from "@/components/ui/button";
 import { challengeCampData } from "@/data/staticPages/challengeCamp";
+import placeholderImage from "@/public/placeholder.webp";
 
 export const ChallengeCampClient = ({ lang }: { lang: string }) => {
   const router = useRouter();
@@ -117,7 +118,7 @@ export const ChallengeCampClient = ({ lang }: { lang: string }) => {
         {campData.imageGallery.map((image, index) => (
           <Image
             key={index}
-            src={image}
+            src={image || placeholderImage}
             alt={`Image ${index + 1}`}
             width={300}
             height={200}

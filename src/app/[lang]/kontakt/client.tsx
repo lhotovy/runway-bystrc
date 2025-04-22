@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { kontaktData } from "@/data/staticPages/kontakt";
+import placeholderImage from "@/public/placeholder.webp";
 
 export default function KontaktClient({ lang }: { lang: 'en' | 'cs' }) {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -23,7 +24,13 @@ export default function KontaktClient({ lang }: { lang: 'en' | 'cs' }) {
         <h1 className="text-4xl font-bold">{data.title}</h1>
         {data.locations.map((location, index) => (
           <div key={index} className="flex gap-x-8 items-center">
-            <Image src={location.image} alt={location.name} width={170} height={170} className="rounded-4xl" />
+            <Image 
+              src={location.image || placeholderImage} 
+              alt={location.name} 
+              width={170} 
+              height={170} 
+              className="rounded-4xl" 
+            />
             <div className="flex flex-col gap-y-4">
               <p className="text-xl font-bold">{location.name}</p>
               <p className="text-base">{location.description}</p>
@@ -82,7 +89,13 @@ export default function KontaktClient({ lang }: { lang: 'en' | 'cs' }) {
         <div className="flex flex-col gap-y-36 items-center">
           {data.locations.map((location, index) => (
             <div key={index} className="flex flex-col gap-y-8 items-center">
-              <Image src={location.image} alt={location.name} width={170} height={170} className="rounded-4xl" />
+              <Image 
+                src={location.image || placeholderImage} 
+                alt={location.name} 
+                width={170} 
+                height={170} 
+                className="rounded-4xl" 
+              />
               <div className="flex flex-col gap-y-4">
                 <p className="text-xl font-bold">{location.name}</p>
                 <p className="text-base">{location.description}</p>

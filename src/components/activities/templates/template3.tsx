@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AnotherActivities } from "../anotherActivities";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import placeholderImage from "@/public/placeholder.webp";
 
 // Template pro akci s přihlašováním
 export const ActivityTemplate3 = ({
@@ -63,7 +64,7 @@ export const ActivityTemplate3 = ({
           </div>          
         </div>
         <div className="w-1/3 flex justify-center">
-          <Image src={`/${image}`} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl" />
+          <Image src={`/${image}` || placeholderImage} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl" />
         </div>
       </div>
       {/* mobile screen view */}
@@ -71,7 +72,7 @@ export const ActivityTemplate3 = ({
         <div className="w-full flex flex-col justify-center item-center gap-y-10">
           <h1 className="text-4xl text-gray-9 font-bold">{name}</h1>
           <div className="flex justify-center">
-            <Image src={`/${image}`} alt={name} width={300} height={300} className="w-2/3 aspect-square rounded-4xl" />
+            <Image src={`/${image}` || placeholderImage} alt={name} width={300} height={300} className="w-2/3 aspect-square rounded-4xl" />
           </div>
           <div className="flex flex-col gap-y-8 text-blue-5 uppercase text-sm font-semibold">
             {

@@ -6,7 +6,7 @@ export function SpecialEventCard({
     type,
     lang
 }: any) {    
-    const data = activity.translations[lang as keyof typeof activity.translations];
+    const data = activity.translations[lang as keyof typeof activity.translations];    
     
     return (
         <Link

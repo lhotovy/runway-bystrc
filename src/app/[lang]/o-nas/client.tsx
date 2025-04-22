@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { oNasData } from "@/data/staticPages/oNas";
+import placeholderImage from "@/public/placeholder.webp";
 
 export const ONasClient = ({ lang }: { lang: 'cs' | 'en' }) => {
   const data = oNasData.translations[lang];
@@ -27,7 +28,7 @@ export const ONasClient = ({ lang }: { lang: 'cs' | 'en' }) => {
         <div className="flex gap-x-12 py-12">
           {data.values.map((value: any, index: number) => (
             <div key={index} className="flex flex-col gap-y-4 w-1/3 items-center">
-              <Image src={value.source} alt={value.imageAlt} width={150} height={150} className="bg-gray-1 p-12 rounded-full" />
+              <Image src={value.source || placeholderImage} alt={value.imageAlt} width={150} height={150} className="bg-gray-1 p-12 rounded-full" />
               <p className="font-bold text-lg text-gray-9">{value.title}</p>
               <p className="text-base text-gray-9 text-center">{value.description}</p>
             </div>
@@ -51,7 +52,7 @@ export const ONasClient = ({ lang }: { lang: 'cs' | 'en' }) => {
         <div className="flex flex-col gap-y-24 py-12">
           {data.values.map((value: any, index: number) => (
             <div key={index} className="flex flex-col gap-y-4 items-center">
-              <Image src={value.source} alt={value.imageAlt} width={150} height={150} className="bg-gray-1 p-12 rounded-full" />
+              <Image src={value.source || placeholderImage} alt={value.imageAlt} width={150} height={150} className="bg-gray-1 p-12 rounded-full" />
               <p className="font-bold text-lg text-gray-9">{value.title}</p>
               <p className="text-base text-gray-9 text-center">{value.description}</p>
             </div>

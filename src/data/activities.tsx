@@ -24,7 +24,7 @@ export const activities = [
             },
             en: {
                 name: "Sunday Services",
-                slug: "en/nedele",
+                slug: "nedele",
                 cardDescription: "Every 1st and 3rd Sunday of the month",
                 cardIcon: "/icons/book.png",
                 description: ["Want to learn more about what we believe, have questions, or are looking for a community in Bystrc? Then we invite you to our Sunday Services.", "You can look forward to worship, sermon, and, last but not least, fellowship with people who know God or are searching for Him."],
@@ -62,7 +62,7 @@ export const activities = [
             },
             en: {
                 name: "Sport Challenge",
-                slug: "en/sport-challenge",
+                slug: "sport-challenge",
                 cardDescription: "Club for kids aged 9 - 13",
                 cardIcon: "/icons/ball.png",
                 description: ["Come and try sports for the joy of the game and push your limits with new friends. A new challenge, movement, friends. For all kids aged 8 to 12."],
@@ -100,7 +100,7 @@ export const activities = [
             },
             en: {
                 name: "Runway Youth",
-                slug: "en/runway_youth",
+                slug: "runway_youth",
                 cardDescription: "Club for youth aged 13 - 18",
                 cardIcon: "/icons/person.png",
                 description: ["We are a club for everyone aged 13-20. We meet every Wednesday from 6-8 PM. We play games together, enjoy refreshments, and have fun. We look forward to seeing you!"],
@@ -138,7 +138,7 @@ export const activities = [
             },
             en: {
                 name: "Club for Moms with Kids",
-                slug: "en/klub-pro-maminky-s-detmi",
+                slug: "klub-pro-maminky-s-detmi",
                 cardDescription: "Opportunity to make friends",
                 cardIcon: "/icons/stroller.png",
                 description: ["Are you a mom with a child and want to take a break and spend a pleasant morning with other moms? Then join us for the English club for moms! You can look forward to sitting over tea or coffee, conversations, or crafting.", "If there are more older children, the program can be oriented towards their English practice."],
@@ -176,7 +176,7 @@ export const activities = [
             },
             en: {
                 name: "English Evenings",
-                slug: "en/english",
+                slug: "english",
                 cardDescription: "Evenings with a native speaker",
                 cardIcon: "/icons/flag.png",
                 description: ["Come and chat with a native speaker and improve your conversational skills in a pleasant atmosphere. Conversations take place in a small group."],
@@ -192,7 +192,7 @@ export const activities = [
             }
         }
     },
-    {
+    /* {
         template: "template1",
         type: "regular",
         translations: {
@@ -229,7 +229,7 @@ export const activities = [
                 contactLink: ""
             }
         }
-    },
+    }, */
     {
         template: "template1",
         type: "regular",
@@ -252,7 +252,7 @@ export const activities = [
             },
             en: {
                 name: "Camps",
-                slug: "en/tabory",
+                slug: "tabory",
                 cardDescription: "Summer camps for kids",
                 cardIcon: "/icons/sun.png",
                 description: ["Summer camps for kids"],

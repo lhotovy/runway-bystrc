@@ -4,6 +4,7 @@ import Link from "next/link";
 import { AnotherActivities } from "../anotherActivities";
 import { Activity } from "@/types";
 import { JSX } from "react";
+import placeholderImage from "@/public/placeholder.webp";
 
 // Základní template pro aktivity
 export const ActivityTemplate1 = ({
@@ -66,7 +67,7 @@ export const ActivityTemplate1 = ({
           </div>          
         </div>
         <div className="w-1/3 flex justify-center">
-          <Image src={`/${image}`} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl object-cover" />
+          <Image src={`/${image}` || placeholderImage} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl object-cover" />
         </div>
       </div>
       {/* mobile screen view */}
@@ -74,7 +75,7 @@ export const ActivityTemplate1 = ({
         <div className="w-full flex flex-col justify-center item-center gap-y-10">
           <h1 className="text-4xl text-gray-9 font-bold">{name}</h1>
           <div className="flex justify-center">
-            <Image src={`/${image}`} alt={name} width={300} height={300} className="w-full aspect-square rounded-4xl" />
+            <Image src={`/${image}` || placeholderImage} alt={name} width={300} height={300} className="w-full aspect-square rounded-4xl" />
           </div>
           <div className="flex flex-col gap-y-8 text-blue-5 uppercase text-sm">
             { 

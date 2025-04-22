@@ -13,7 +13,8 @@ export const AnotherActivities = ({activities, lang}: {activities: Activity[], l
                   return (
                     <ActivityCard
                         key={index} 
-                        activity={activity}                     
+                        activity={activity}
+                        lang={lang}
                     />
                   )
                 })

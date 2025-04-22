@@ -7,6 +7,7 @@ import { AnotherActivities } from "../anotherActivities";
 import { useRouter } from "next/navigation";
 import { JSX } from "react";
 import { template2Data } from "@/data/templates/template2Data";
+import placeholderImage from "@/public/placeholder.webp";
 
 // Template pro Neděle na Runwayi s odkazy na jiné sbory
 export const ActivityTemplate2 = ({
@@ -70,7 +71,7 @@ export const ActivityTemplate2 = ({
           </div>          
         </div>
         <div className="w-1/3 flex justify-center">
-          <Image src={`/${image}`} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl" />
+          <Image src={`/${image}` || placeholderImage} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl" />
         </div>
       </div>
 
@@ -79,7 +80,7 @@ export const ActivityTemplate2 = ({
         <div className="w-full flex flex-col justify-center item-center gap-y-10">
           <h1 className="text-4xl text-gray-9 font-bold">{name}</h1>
           <div className="flex justify-center">
-            <Image src={`/${image}`} alt={name} width={300} height={300} className="w-full aspect-square rounded-4xl" />
+            <Image src={`/${image}` || placeholderImage} alt={name} width={300} height={300} className="w-full aspect-square rounded-4xl" />
           </div>
           <div className="flex flex-col gap-y-8 text-blue-5 uppercase text-sm">
             { 
