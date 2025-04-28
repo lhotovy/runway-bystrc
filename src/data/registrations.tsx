@@ -54,7 +54,7 @@ export const registrations = [
         slug: "challenge-camp",
         elements: [
           { type: "input", name: "userName", text: "Jméno a příjmení dítěte *", width: "300", required: true },
-          { type: "input", name: "age", text: "Věk *", width: "300", required: true },
+          { type: "input", name: "dateOfBirth", text: "Datum narození *", width: "300", required: true },
           { type: "input", name: "address", text: "Adresa *", width: "600", required: true },    
           { type: "input", name: "representativeName", text: "Jméno a příjmení zákonného zástupce (pokud je ti míň než 18 let) *", width: "600", required: true },
           { type: "input", name: "representativeEmail", text: "Email zákonného zástupce *", width: "300", required: true },
@@ -75,7 +75,7 @@ export const registrations = [
         slug: "challenge-camp",
         elements: [
           { type: "input", name: "userName", text: "Child's Full Name *", width: "300", required: true },
-          { type: "input", name: "age", text: "Age *", width: "300", required: true },
+          { type: "input", name: "dateOfBirth", text: "Date of Birth *", width: "300", required: true },
           { type: "input", name: "address", text: "Address *", width: "600", required: true },    
           { type: "input", name: "representativeName", text: "Full Name of Legal Guardian (if under 18) *", width: "600", required: true },
           { type: "input", name: "representativeEmail", text: "Legal Guardian's Email *", width: "300", required: true },
@@ -85,8 +85,8 @@ export const registrations = [
           { type: "input", name: "shirtSize", text: "T-shirt Size *", width: "600", required: true },
           { type: "input", name: "recommendation", text: `Name of the friend you recommended the camp to (if they come, you are entitled to a discount)`, width: "600", required: false },
           { type: "input", name: "limitations", text: `Health or Other Limitations`, width: "600", required: false },
-          { type: "select", name:"referal" ,text:"How did you find out about the camp?", width:"600", required:false},
-          { type:"input" ,name:"note" ,text:"Note" ,width:"600" ,required:false},
+          { type: "select", name:"referal", text:"How did you find out about the camp?", width:"600", required:false},
+          { type:"input", name:"note", text:"Note", width:"600", required:false},
 
         ]
         
