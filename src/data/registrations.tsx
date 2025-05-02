@@ -93,4 +93,50 @@ export const registrations = [
       },
     },
   },
+  {
+    slug: "dovolena",
+    translations: {
+      cs: {
+        name: "Přihláška na Dovolenou s Runwayií 2025",
+        description: [
+          "Dovolená s Runwayí 6. - 10. 8. 2025",
+          "Pojeďte s námi do Beskyd! Čeká nás společná dovolená na chatě v Ostré na Ostravici kousek od Lysé hory (www.chata-ostra.cz). Akce je určena jednotlivcům i celým rodinám. Program bude volný - dle situace a nálady budeme na místě chodit na výlety apod. Budeme si také společně vařit.",
+          "Předběžné informace: Vařit budeme společně. Cena za ubytování: 350 Kč / noc / osoba (+ nad 18 let 20 Kč rekreační poplatek), platí dospělí a děti od 2 let. Cenu za jídlo rozpočítáme až zpětně po pobytu, předpokládaná cena je: děti 0-2 roky zdarma, předškoláci 80 Kč/den, 6-15 let 130 Kč/den, 15 let a výše 160 Kč/den.",
+"Bližší informace ohledně pobytu a platby zašleme mailem."
+        ],
+        slug: "dovolena",
+        elements: [
+          { type: "input", name: "userName", text: "Jméno a příjmení *", width: "300", required: true },
+          { type: "input", name: "dateOfBirth", text: "Datum narození *", width: "300", required: true },
+          { type: "input", name: "address", text: "Adresa *", width: "600", required: true },     
+          { type: "input", name: "email", text: "Email *", width: "300", required: true },
+          { type: "input", name: "phone", text: "Telefon", width: "300", required: false },
+          { type: "input", name: "lift", text: "Potřebuji odvoz / míst v autě", width: "600", required: false },
+          { type: "input", name: "limitations", text: "Zdravotní nebo jiná omezení", width: "600", required: false },
+          { type: "input", name: "note", text: "Poznámka", width: "600", required: false },
+        ],
+      },
+      en: {
+        name: "Registration for Vacation with Runway 2025",
+        description: [
+          "Vacation with Runway 6. - 10. 8. 2025",
+          "Join us on a trip to the Beskyds! We're looking forward to a joint vacation at a cottage in Ostrava on the outskirts of Lysá Hora (www.chata-ostra.cz). The event is intended for individuals and entire families. The program will be free - depending on the situation and mood, we will go on excursions and other activities. We will also cook together.",
+          "Preliminary information: We will cook together. The cost for accommodation: 350 CZK / night / person (+ over 18 years 20 CZK recreational fee), applies to adults and children from 2 years. The cost for food will be calculated later after the stay, the estimated price is: children 0-2 years free, preschoolers 80 CZK/day, 6-15 years 130 CZK/day, 15 years and older 160 CZK/day.",
+          "Further information about the stay and payment will be sent by email."
+        ],
+        slug: "dovolena",
+        elements: [
+          { type: "input", name: "userName", text: "Full Name *", width: "300", required: true },
+          { type: "input", name: "dateOfBirth", text: "Date of Birth *", width: "300", required: true },
+          { type: "input", name: "address", text: "Address *", width: "600", required: true },    
+          { type: "input", name: "email", text: "Email *", width: "300", required: true },
+          { type: "input", name: "phone", text: "Phone", width: "300", required: false },
+          { type: "input", name: "lift", text: "Need a Ride / Offering Seats in a Car", width: "600", required: false },
+          { type: "input", name: "limitations", text: "Health or Other Limitations", width: "600", required: false },
+          { type: "input", name: "note", text: "Note", width: "600", required: false },
+        ]
+        
+      },
+    },
+  },
 ];

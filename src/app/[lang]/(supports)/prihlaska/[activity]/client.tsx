@@ -23,7 +23,15 @@ export const RegistrationPageClient = ({ data, lang }: { data: any, lang: string
     <div className="flex flex-col gap-y-8 items-start py-20">
       <div className="flex flex-col gap-y-8">
         <h1 className="font-bold text-[40px]">{data.name}</h1>
-        <p>{data.description}</p>
+        {Array.isArray(data.description) ? (
+          <div className="flex flex-col gap-y-4">
+            {data.description.map((desc: string, index: number) => (
+              <p key={index}>{desc}</p>
+            ))}
+          </div>
+        ) : (
+          <p>{data.description}</p>
+        )}
       </div>
       <form
         className="flex flex-wrap gap-x-6 gap-y-4 w-full lg:w-2/3"
