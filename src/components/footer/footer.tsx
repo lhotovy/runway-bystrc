@@ -2,6 +2,7 @@ import { footerData } from "@/data/staticPages/footer";
 import Image from "next/image";
 import { SocialIcons } from "../landingPage/socialIcons";
 import Link from "next/link";
+import { Link2 } from "lucide-react";
 
 export const Footer = ({ lang }: { lang: string | null }) => {
     const data = footerData.translations[lang as keyof typeof footerData.translations];
@@ -15,7 +16,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         id="column1"
                         className="flex flex-col"
                     >
-                        <Image src="/logo.webp" alt="Logo" width={200} height={100} className="hidden lg:flex mb-2 w-32" />
+                        <Image src="/logo_no_bg.png" alt="Logo" width={400} height={200} className="hidden lg:flex mb-2 w-32" />
                         <div className="flex flex-col gap-y-1.5 text-gray-8">
                             <p>{data.address.name}</p>
                             <p>{data.address.street}</p>
@@ -33,7 +34,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         >
                             {data.newsletter}
                         </Link>
-                        <Image src="/logo.webp" alt="Logo" width={400} height={200} className="flex lg:hidden mb-2" />
+                        <Image src="/logo_no_bg.png" alt="Logo" width={400} height={200} className="flex lg:hidden mb-2" />
                     </div>
                     <div
                         id="column3"
@@ -67,7 +68,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         >
                             {data.newsletter}
                         </Link>
-                        <Image src="/logo.webp" alt="Logo" width={400} height={200} className="flex mb-2 w-1/2" />
+                        <Image src="/logo_no_bg.png" alt="Logo" width={400} height={200} className="flex mb-2 w-1/2" />
                     </div>
                     <div 
                         id="column2"
@@ -103,7 +104,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                     <p className="text-gray-5 text-2xl mx-4 hidden lg:flex">•</p>
                     <p>{data.poweredBy}</p>
                     <p className="text-gray-5 text-2xl mx-4 hidden lg:flex">•</p>
-                    <p>{data.privacyPolicy}</p>
+                    <Link href={lang === "cs" ? "/gdpr" : "/en/gdpr"}>{data.privacyPolicy}</Link>
                 </div>
             </div>
         </div>

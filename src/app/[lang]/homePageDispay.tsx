@@ -10,7 +10,7 @@ import React from "react";
 export default function HomePageDisplay({ lang }: { lang: string }) {
   const data = landingData.translations[lang as keyof typeof landingData.translations];
   return (  
-    <div className="flex flex-col items-center justify-center gap-y-24 pb-32 min-h-screen">
+    <div className="flex flex-col items-center justify-center gap-y-18 pb-32 min-h-screen">
       <Welcome data={data} />
       <Activities 
         title={data?.activitiesText} 
