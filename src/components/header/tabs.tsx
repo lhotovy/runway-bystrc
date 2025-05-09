@@ -25,7 +25,7 @@ export const HeaderTabs = ({ lang }: { lang: string | null }) => {
     <NavigationMenu>
       <NavigationMenuList>
       <NavigationMenuItem>
-          <Link href={isDefaultLocale ? '/o-nas' : `/${lang}/o-nas`} legacyBehavior passHref>
+          <Link href={isDefaultLocale ? '/o-nas' : `/${lang}/o-nas`} passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               {data.aboutUs}
             </NavigationMenuLink>
@@ -46,14 +46,14 @@ export const HeaderTabs = ({ lang }: { lang: string | null }) => {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href={isDefaultLocale ? '/specialni-akce' : `/${lang}/specialni-akce`} legacyBehavior passHref>
+          <Link href={isDefaultLocale ? '/specialni-akce' : `/${lang}/specialni-akce`} passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               {data.specialEvents}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href={isDefaultLocale ? '/kontakt' : `/${lang}/kontakt`} legacyBehavior passHref>
+          <Link href={isDefaultLocale ? '/kontakt' : `/${lang}/kontakt`} passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               {data.contact}
             </NavigationMenuLink>
