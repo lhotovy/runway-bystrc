@@ -27,7 +27,7 @@ export const kontaktData = {
         phone: {
           title: "Phone",
           name: "Marek Žitný",
-          number: "732 238 116",
+          number: "608 601 029",
         },
         email: {
           title: "Email",
@@ -72,7 +72,7 @@ export const kontaktData = {
         phone: {
           title: "Telefon",
           name: "Marek Žitný",
-          number: "732 238 116",
+          number: "608 601 029",
         },
         email: {
           title: "Email",

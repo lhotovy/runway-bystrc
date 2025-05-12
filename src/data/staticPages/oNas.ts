@@ -4,8 +4,9 @@ export const oNasData = {
       title: "O nás",
       description: "Runway Bystrc | Otevřená a moderní církev v Bystrci",
       about: [
-        "Runway Bystrc je skupina lidí, kteří rádi dělají něco přínosného pro své okolí. Většina z nás žije nebo žila v Bystrci a proto nám tato velká a pěkná městská část není lhostejná. Jsme součástí křesťanské církve Bratrské jednoty baptistů, která v Brně působí již více než 120 let, a chtěli bychom být přínosem i v Bystrci v různých oblastech společenského i duchovního života. Důležité jsou pro nás naše vzájemné vztahy i vztah s Bohem, které chceme společně rozvíjet.",
-        "A proč Runway? Runway je pro nás symbolem nového startu i očekávání něčeho nového a dobrodružného. Runway je pro nás obrazem svobody, kterou nám dal Bůh. Má ji každý člověk, ale záleží na něm, jak ji využije. Chceme být bezpečným místem pro starty do života v různých oblastech a chceme pomoci předejít nebezpečím, která číhají především na mladou generaci v podobě různých závislostí, gangů a s tím související kriminalitou. Přidáte se k nám na palubu?",
+        "Runway Bystrc je tvořena lidmi, kteří chtějí být přínosem pro své okolí. Většina z nás v Bystrci žije nebo zde vyrůstala, a proto nám tato městská část není lhostejná. Runway je iniciativa, která funguje pod záštitou protestantské křesťanské církve Bratrské jednoty baptistů působící v Brně již více než 120 let.",
+        "Na Runwayi pořádáme jak pravidelné bohoslužby, tak různé volnočasové i vzdělávací aktivity. Chceme vytvářet prostředí, kde mohou lidé navazovat vztahy, učit se nové věci a společně hledat smysl života.",
+        "Proč Runway? Runway symbolizuje nový začátek, svobodu a očekávání něčeho nového a dobrodružného. Každý člověk má možnost vzlétnout a vydat se na cestu. Chceme být bezpečným místem, kde mohou lidé získat podporu a inspiraci pro své životní starty. Přidáte se k nám na palubu?",
       ],
       valuesTitle: "Naše hodnoty",
       values: [
@@ -34,8 +35,9 @@ export const oNasData = {
       title: "About Us",
       description: "Runway Bystrc | Open and Modern Church in Bystrc Bystrci",
       about: [
-        "Runway Bystrc is a group of people who enjoy doing something beneficial for their community. Most of us live or have lived in Bystrc, and therefore, this large and beautiful district is close to our hearts. We are part of the Christian church Bratrská jednota baptistů, which has been active in Brno for over 120 years, and we aim to contribute to Bystrc in various areas of social and spiritual life. Our mutual relationships and our relationship with God are important to us, and we want to develop them together.",
-        "Why Runway? Runway symbolizes a new start and the anticipation of something new and adventurous. For us, it represents the freedom given to us by God. Everyone has it, but it depends on how they use it. We want to be a safe place for life takeoffs in various areas and help prevent dangers, especially for the younger generation, such as addictions, gangs, and related criminality. Will you join us on board?",
+        "Runway Bystrc is made up of people who want to be a blessing to their surroundings. Most of us live in or grew up in Bystrc, so we care about this part of the city. Runway is an initiative that operates under the auspices of the Protestant Christian Church of the Brethren Baptist Union, which has been active in Brno for over 120 years.",
+        "At Runway, we organize both regular services and various leisure and educational activities. We want to create an environment where people can build relationships, learn new things, and search for meaning in life together.",
+        "Why Runway? Runway symbolizes a new beginning, freedom, and the expectation of something new and adventurous. Everyone has the opportunity to take off and embark on a journey. We want to be a safe place where people can gain support and inspiration for their life starts. Will you join us on board?"        
       ],
       valuesTitle: "Our Values",
       values: [
