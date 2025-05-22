@@ -12,7 +12,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/menu";
-import { useRouter } from "next/navigation";
 import CompleteLanguageSwitcher from "../langSwitcher";
 import { defaultLocale } from "@/middleware";
 import { menuTexts } from "@/data/staticPages/menu";
@@ -25,10 +24,12 @@ export const HeaderTabs = ({ lang }: { lang: string | null }) => {
     <NavigationMenu>
       <NavigationMenuList>
       <NavigationMenuItem>
-          <Link href={isDefaultLocale ? '/o-nas' : `/${lang}/o-nas`} passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <Link 
+            href={isDefaultLocale ? '/o-nas' : `/${lang}/o-nas`} 
+            className={navigationMenuTriggerStyle()} 
+            passHref
+          >
               {data.aboutUs}
-            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
@@ -46,17 +47,21 @@ export const HeaderTabs = ({ lang }: { lang: string | null }) => {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href={isDefaultLocale ? '/specialni-akce' : `/${lang}/specialni-akce`} passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <Link 
+            href={isDefaultLocale ? '/specialni-akce' : `/${lang}/specialni-akce`} 
+            className={navigationMenuTriggerStyle()} 
+            passHref
+          >
               {data.specialEvents}
-            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href={isDefaultLocale ? '/kontakt' : `/${lang}/kontakt`} passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <Link 
+            href={isDefaultLocale ? '/kontakt' : `/${lang}/kontakt`} 
+            className={navigationMenuTriggerStyle()} 
+            passHref
+          >
               {data.contact}
-            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>

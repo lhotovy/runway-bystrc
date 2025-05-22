@@ -24,7 +24,7 @@ export const challengeCampData = {
         { time: "15:00 - 16:25", activity: "hry" },
         { time: "16:25 - 16:45", activity: "rozloučení a předání rodičům" },
       ],
-      registrationDeadline: "Přihlašování do 30. 4. 2025",
+      registrationDeadline: "",
       registrationButton: "Přihlaš se",
       imageGallery: [
         "/challengeCamp/camp1.webp",
@@ -79,7 +79,7 @@ export const challengeCampData = {
             { time: "15:00 - 16:25", activity: "games" },
             { time: "16:25 - 16:45", activity: "farewell and handover to parents" },
           ],
-          registrationDeadline: "Registration until April 30, 2025",
+          registrationDeadline: "",
           registrationButton: "Register",
           imageGallery: Array(24).fill("/placeholder.webp"), 
           highlights: [

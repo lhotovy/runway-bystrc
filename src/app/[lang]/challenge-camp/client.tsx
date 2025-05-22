@@ -75,7 +75,7 @@ export const ChallengeCampClient = ({ lang }: { lang: string }) => {
             </Link>
           </div>
           <div className="flex flex-col items-center gap-y-4">
-            <p className="text-xl text-gray-9 font-bold">{campData.registrationDeadline}</p>
+            {campData.registrationDeadline && <p className="text-xl text-gray-9 font-bold">{campData.registrationDeadline}</p>}
             <Button
               variant="blue"
               text={campData.registrationButton}
