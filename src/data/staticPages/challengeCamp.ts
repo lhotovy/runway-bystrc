@@ -25,7 +25,7 @@ export const challengeCampData = {
         { time: "16:25 - 16:45", activity: "rozloučení a předání rodičům" },
       ],
       registrationDeadline: "",
-      registrationButton: "Přihlaš se",
+      registrationButton: "Přihlas se",
       imageGallery: [
         "/challengeCamp/camp1.webp",
         "/challengeCamp/camp2.webp",
