@@ -23,10 +23,20 @@ export default function CompleteLanguageSwitcher({
             : getSimpleLocalizedPath(currentLang, targetLocale, pathname);
     };
 
+    const handleSwitch = () => {
+        const targetLocale = locales.find((locale) => locale !== currentLang);
+        if (!targetLocale) return;
+        // Store user preference in localStorage
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('preferredLang', targetLocale);
+        }
+        router.replace(getSwitchPath());
+    };
+
     return (
         <div>
             <button 
-                onClick={() => router.push(getSwitchPath())}
+                onClick={handleSwitch}
                 className="ml-1 cursor-pointer"
             >
                 CS/EN
