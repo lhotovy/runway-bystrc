@@ -21,6 +21,10 @@ export const SpecialEvents = ({
                     {
                         activities
                         .filter((activity) => activity.type === 'special')
+                        .filter((activity) => {
+                            const filterDate = activity.translations[lang as keyof typeof activity.translations]?.filterDate;
+                            return filterDate && new Date(filterDate) >= new Date();
+                        })
                         .map((activity, index) => {
                             return (
                             <SpecialEventCard 
