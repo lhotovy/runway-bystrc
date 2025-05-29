@@ -31,7 +31,7 @@ export default function RootLayoutClient({
     }
     // If user prefers Czech but is on /en, redirect to Czech route
     if (preferredLang === 'cs' && pathname.startsWith('/en')) {
-      router.replace(pathname.replace(/^\/en/, '') || '/');
+      router.replace(pathname.replace(/^\/en(\/|$)/, '/') || '/');
     }
   }, [pathname, router, lang]);
 
