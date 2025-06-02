@@ -84,7 +84,7 @@ export const challengeCampData = {
           imageGallery: Array(24).fill("/placeholder.webp"), 
           highlights: [
             "Lots of fun",
-            "engllish with native speakers",
+            "english with native speakers",
             "accessible from entire Brno",
           ],
           pricing: [
