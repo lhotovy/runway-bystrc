@@ -1,5 +1,6 @@
 import { locales, defaultLocale } from '@/middleware';
 import RootLayoutClient from './layoutClient';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default async function RootLayout({
   children,
