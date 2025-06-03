@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { Footer } from '@/components/footer/footer';
 import { Analytics } from "@vercel/analytics/react"
 import { usePathname, useRouter } from 'next/navigation';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const openSans = Open_Sans({ subsets: ['latin'] });
 
@@ -49,6 +50,7 @@ export default function RootLayoutClient({
         <main className="max-w-[1280px] mx-auto px-6 xl:px-0">
           {children}
           <Analytics />
+          <SpeedInsights />
         </main> 
         <Footer lang={lang} />
       </body>
