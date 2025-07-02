@@ -3,6 +3,8 @@
 import { usePathname, useRouter } from 'next/navigation'
 import { locales } from '@/middleware'
 import { getLocalizedPath, getSimpleLocalizedPath } from '@/lib/languageUtils'
+import EN from "country-flag-icons/react/3x2/GB"
+import CZ from "country-flag-icons/react/3x2/CZ"
 
 export default function CompleteLanguageSwitcher({ 
     currentLang,
@@ -13,6 +15,8 @@ export default function CompleteLanguageSwitcher({
 }) {
     const pathname = usePathname()
     const router = useRouter();
+    let currentIcon = null;
+    currentIcon = currentLang === 'en' ? <CZ className='w-4 h-4' /> : <EN className='w-4 h-4' />;
   
     const getSwitchPath = () => {
         const targetLocale = locales.find((locale) => locale !== currentLang);
@@ -37,9 +41,9 @@ export default function CompleteLanguageSwitcher({
         <div>
             <button 
                 onClick={handleSwitch}
-                className="ml-1 cursor-pointer"
+                className="ml-2 mt-1 cursor-pointer text-white"
             >
-                CS/EN
+                {currentIcon}
             </button>
         </div>
     );  

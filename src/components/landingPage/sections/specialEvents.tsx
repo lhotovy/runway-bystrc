@@ -1,8 +1,8 @@
 import { SpecialEventCard } from '../specialEventCard';
 import React from "react";
 import { SectionTitle } from "../common/sectionTitle";
-import Link from 'next/link';
 import { activities } from '@/data/activities';
+import { LinkButton } from '@/components/ui/linkButton';
 
 export const SpecialEvents = ({
     lang, 
@@ -13,9 +13,10 @@ export const SpecialEvents = ({
 }) => {    
     
   return ( 
-    <div className="w-[calc(100vw-15px)] flex flex-col justify-center bg-gray-1 py-10 mt-10">
-        <div className="flex flex-col w-full max-w-[1280px] mx-auto gap-y-8 px-3 md:px-0">
-            <SectionTitle title={data?.specialEventsText} />
+    <div className="relative w-[calc(100vw-15px)] h-92 flex flex-col justify-center py-10 mt-10 bg-[url('/den_deti.jpg')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-black/50 z-0" />
+        <div className="relative z-10 flex flex-col w-full max-w-[1280px] mx-auto gap-y-8 px-3 md:px-0 rounded-xl">
+            <SectionTitle title={data?.specialEventsText} className='text-white' />
             <div className="flex items-center w-full">
                 <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-5'>
                     {
@@ -39,12 +40,10 @@ export const SpecialEvents = ({
                     <div 
                         className="flex justify-center items-center text-blue-5 py-4 px-6 font-semibold text-base"
                     >
-                        <Link 
-                            href={lang === 'en' ? "/en/specialni-akce" : "/specialni-akce"} 
-                            className="flex justify-center items-center w-36 h-14 bg-white hover:bg-blue-2 cursor-pointer rounded-xl"
-                        >
-                            {data?.allEventsText}
-                        </Link>                    
+                      <LinkButton   
+                        lang={lang} 
+                        text={data?.allEventsText}  
+                    />  
                     </div>
                 </div>           
             </div>

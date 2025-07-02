@@ -54,6 +54,9 @@
   --color-gray-2: rgba(207, 210, 213, 1);
   --color-gray-1: rgba(241, 243, 245, 1);
 
+  --color-dark-blue: rgba(7, 20, 34, 1);
+  --color-yellow: rgba(241, 209, 141, 1);
+
   --color-teal-accent: rgba(221, 238, 241, 1);
 }
 
@@ -137,6 +140,8 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     --gray-9: rgba(57, 59, 61, 1);
+    --dark-blue: rgba(7, 20, 34, 1);
+    --yellow: rgba(241, 209, 141, 1);
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -164,6 +169,8 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
     --gray-9: rgba(57, 59, 61, 1);
+    --dark-blue: rgba(7, 20, 34, 1);
+    --yellow: rgba(241, 209, 141, 1);
   }
 }
 
