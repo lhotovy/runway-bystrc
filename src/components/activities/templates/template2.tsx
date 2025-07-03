@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { JSX } from "react";
 import { template2Data } from "@/data/templates/template2Data";
 import placeholderImage from "@/public/placeholder.webp";
+import { ClockIcon, MapPinIcon } from "@heroicons/react/24/solid";
 
 // Template pro Neděle na Runwayi s odkazy na jiné sbory
 export const ActivityTemplate2 = ({
@@ -40,74 +41,81 @@ export const ActivityTemplate2 = ({
     const router = useRouter();
     const staticData = template2Data.translations[lang as keyof typeof template2Data.translations];
   return (
-    <div className="flex flex-col items-center w-full my-10 lg:mt-12 min-h-screen">
-      {/* big screen view */}
-      <div className="hidden sm:flex items-center w-full">
-        <div className="w-2/3 flex flex-col justify-start gap-y-10">
-          <h1 className="text-5xl text-gray-9 font-semibold">{name}</h1>
-          <div className="flex gap-x-10 text-blue-5 uppercase text-sm">     
+    <div className="flex flex-col items-center w-full min-h-screen mb-24">
+    {/* big screen view */}
+    <div className="hidden sm:flex relative w-[calc(100vw-15px)] h-[60vh] min-h-[500px]">
+      <Image 
+        src={`/${image}` || placeholderImage} 
+        alt={name} 
+        fill
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+        <div className="max-w-4xl flex flex-col gap-y-10">
+          <h1 className="text-5xl text-white font-bold">{name}</h1>
+          <div className="flex justify-center gap-x-10 text-black font-semibold uppercase text-sm">
             {
-              time?.map((timeItem, index) => {
+              time?.map((time, index) => {
                 return (
-                  <p className="flex items-center gap-x-2" key={index}>
-                    <Clock4 size={24} />
-                    {timeItem}
+                  <p key={index} className="flex items-center gap-x-2 bg-yellow py-1.5 px-3 rounded-xl">
+                    <ClockIcon className="w-6 h-6 text-black" />
+                    {time}
                   </p>
-                )}     
-            )}      
-            <p className="flex items-center gap-x-2">
-              <MapPin size={24} />
-              {place}
-            </p>
-          </div>
-          <div className="text-gray-9 text-base flex flex-col items-start gap-y-8">
-            {
-              description.map((paragraph, index) => {
-                return (
-                  <p key={index}>{paragraph}</p>
                 )
               })
             }
-          </div>          
-        </div>
-        <div className="w-1/3 flex justify-center">
-          <Image src={`/${image}` || placeholderImage} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl" />
+            <p className="flex items-center gap-x-2 bg-yellow py-1.5 px-3 rounded-xl">
+              <MapPinIcon className="w-6 h-6 text-black" />
+              {place}
+            </p>
+          </div>           
         </div>
       </div>
-
-      {/* small screen view */}
-      <div className="flex sm:hidden items-center w-full">
-        <div className="w-full flex flex-col justify-center item-center gap-y-10">
-          <h1 className="text-4xl text-gray-9 font-bold">{name}</h1>
-          <div className="flex justify-center">
-            <Image src={`/${image}` || placeholderImage} alt={name} width={300} height={300} className="w-full aspect-square rounded-4xl" />
-          </div>
-          <div className="flex flex-col gap-y-8 text-blue-5 uppercase text-sm">
-            { 
-            time?.map((time, index) => {
+    </div>
+    {/* mobile screen view */}
+    <div className="flex sm:hidden items-center w-full">
+      <div className="w-full flex flex-col justify-center item-center gap-y-10">
+        <h1 className="text-4xl text-gray-9 font-bold">{name}</h1>
+        <div className="flex justify-center">
+          <Image src={`/${image}` || placeholderImage} alt={name} width={300} height={300} className="w-full aspect-square rounded-4xl" />
+        </div>
+        <div className="flex flex-col gap-y-8 text-blue-5 uppercase text-sm">
+          { 
+          time?.map((time, index) => {
+            return (
+              <p key={index} className="flex items-center gap-x-2 bg-yellow py-1.5 px-3 rounded-xl">
+                <ClockIcon className="w-6 h-6 text-black" />
+                {time}
+              </p>
+          )}
+          )}           
+          <p className="flex items-center gap-x-2 bg-yellow py-1.5 px-3 rounded-xl">
+            <MapPinIcon className="w-6 h-6 text-black" />
+            {place}
+          </p>
+        </div>
+        <div className="text-gray-9 text-base flex flex-col items-start gap-y-8">
+          {
+            description.map((paragraph, index) => {
               return (
-                <p key={index} className="flex items-center gap-x-2">
-                  <Clock4 size={24} />
-                  {time}
-                </p>
-            )}
-            )}           
-            <p className="flex items-center gap-x-2">
-              <MapPin size={24} />
-              {place}
-            </p>
-          </div>
-          <div className="text-gray-9 text-base flex flex-col items-start gap-y-8">
-            {
-              description.map((paragraph, index) => {
-                return (
-                  <p key={index}>{paragraph}</p>
-                )
-              })
-            }
-          </div>          
-        </div>
+                <p key={index}>{paragraph}</p>
+              )
+            })
+          }
+        </div>          
       </div>
+      
+    </div>
+    <div className="text-gray-9 text-base flex flex-col items-center gap-y-8 w-1/2 my-24">
+      {
+        description.map((paragraph, index) => {
+          return (
+            <p key={index}>{paragraph}</p>
+          )
+        })
+      }
+    </div>
 
       <div className="flex flex-col justify-center items-center w-[calc(100vw-15px)] bg-gray-1 py-7.5 mt-10 gap-y-8">
         <p className="text-xl text-gray-9 font-bold">{contactTitle}</p>

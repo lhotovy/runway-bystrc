@@ -6,6 +6,7 @@ import { Social } from '@/components/landingPage/sections/social';
 import { SpecialEvents } from '@/components/landingPage/sections/specialEvents';
 import { Sundays } from '@/components/landingPage/sections/sundays';
 import { Welcome } from '@/components/landingPage/sections/welcome';
+import { Map } from '@/components/landingPage/sections/map';
 import { landingData } from '@/data/staticPages/landingPage';
 import React from "react";
 
@@ -29,8 +30,9 @@ export default function HomePageDisplay({ lang }: { lang: string }) {
       <Coffeeshop 
         data={data} 
         lang={lang} 
-      />
+      />   
       <Social data={data} />
+      <Map />
     </div>
   )
 }

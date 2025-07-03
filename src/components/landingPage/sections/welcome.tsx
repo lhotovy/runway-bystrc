@@ -20,9 +20,9 @@ export const Welcome = ({ data }: { data: any }) => {
                 priority
             />
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/60 z-10" />
+            <div className="absolute inset-0 bg-black/60 z-2" />
             {/* Centered Content */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-20 px-4">
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-3 px-4">
                 <h1 className="md:text-5xl text-3xl font-bold text-white mb-4 drop-shadow-lg">
                     {data?.title}
                 </h1>
