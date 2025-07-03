@@ -3,6 +3,7 @@ import React from "react";
 import { SectionTitle } from "../common/sectionTitle";
 import { activities } from '@/data/activities';
 import { LinkButton } from '@/components/ui/linkButton';
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
 
 export const SpecialEvents = ({
     lang, 
@@ -41,8 +42,9 @@ export const SpecialEvents = ({
                         className="flex justify-center items-center text-blue-5 py-4 px-6 font-semibold text-base"
                     >
                       <LinkButton   
-                        lang={lang} 
-                        text={data?.allEventsText}  
+                        text={data?.allEventsText}
+                        href={lang === 'en' ? "/en/specialni-akce" : "/specialni-akce"}
+                        icon={<ChevronRightIcon className="w-4 h-4" />}
                     />  
                     </div>
                 </div>           

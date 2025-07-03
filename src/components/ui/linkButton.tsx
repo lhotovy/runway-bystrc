@@ -1,15 +1,22 @@
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import React from "react";
 
-export const LinkButton = ({lang, text}: {lang: string, text: string}) => {
+export const LinkButton = ({   
+  text,
+  href,
+  icon
+}: {
+  text: string, 
+  href: string,
+  icon: React.ReactNode
+}) => {
   return (
     <Link 
-      href={lang === 'en' ? "/en/specialni-akce" : "/specialni-akce"}  
-      className="flex justify-center items-center gap-4 w-42 h-12 bg-yellow font-bold text-black cursor-pointer rounded-xl"
+      href={href}  
+      className="flex justify-center items-center gap-4 px-6 py-3 bg-yellow font-bold text-black cursor-pointer rounded-xl"
     >
-        {text}
-        <ChevronRightIcon className="w-4 h-4" />
+      {text}
+      {icon}
     </Link>
   );
 }

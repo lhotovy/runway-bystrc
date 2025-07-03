@@ -15,7 +15,7 @@ export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggl
     <>
       <header
         id="header"
-        className="flex justify-center items-center w-full border-b border-neutral bg-dark-blue text-primary-content shadow-xs p-4 max-h-[64px]"
+        className="flex justify-center items-center w-full bg-dark-blue text-primary-content p-4 max-h-[64px]"
       >
         <div className="flex max-w-[1280px] w-full xl:min-w-[1280px] items-center justify-between max-h-[64px]">
           <Link
