@@ -1,6 +1,5 @@
 "use client";
 
-import { Clock4, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnotherActivities } from "../anotherActivities";
@@ -9,6 +8,11 @@ import { JSX } from "react";
 import { template2Data } from "@/data/templates/template2Data";
 import placeholderImage from "@/public/placeholder.webp";
 import { ClockIcon, MapPinIcon } from "@heroicons/react/24/solid";
+import { LinkButton } from "@/components/ui/linkButton";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import { SundaysDescription } from "@/data/staticPages/sundaysDescription";
+
+type Lang = "cs" | "en";
 
 // Template pro Neděle na Runwayi s odkazy na jiné sbory
 export const ActivityTemplate2 = ({
@@ -40,6 +44,7 @@ export const ActivityTemplate2 = ({
 }) => {
     const router = useRouter();
     const staticData = template2Data.translations[lang as keyof typeof template2Data.translations];
+    const SundaysDescriptionComponent = SundaysDescription[lang as Lang];
   return (
     <div className="flex flex-col items-center w-full min-h-screen mb-24">
     {/* big screen view */}
@@ -108,26 +113,20 @@ export const ActivityTemplate2 = ({
       
     </div>
     <div className="text-gray-9 text-base flex flex-col items-center gap-y-8 w-1/2 my-24">
-      {
-        description.map((paragraph, index) => {
-          return (
-            <p key={index}>{paragraph}</p>
-          )
-        })
-      }
+      {SundaysDescriptionComponent()}
     </div>
-
-      <div className="flex flex-col justify-center items-center w-[calc(100vw-15px)] bg-gray-1 py-7.5 mt-10 gap-y-8">
-        <p className="text-xl text-gray-9 font-bold">{contactTitle}</p>
-        <div className="flex flex-col sm:flex-row items-center sm:gap-x-12 gap-y-8">
+      {/* contact section */}
+      <div className="flex flex-col justify-center items-center w-[calc(100vw-15px)] bg-dark-blue py-7.5 mt-10 gap-y-8">
+        <p className="text-xl text-white font-bold">{contactTitle}</p>
+        <div className="flex flex-col items-center gap-y-8">
             <div className="flex flex-col items-center gap-y-4 w-full max-w-screen-xl px-4">           
                 {contactIcon && contactIcon}
-                <p className="text-gray-8 text-base font-bold">{contactPerson}</p>
-                <Link className="text-blue-5 font-semibold text-base" target="blank" href={contactLink ?? "/"}>{contactLinkText}</Link>
+                <p className="text-white text-base font-bold">{contactPerson}</p>
+                <Link className="text-blue-3 font-semibold text-base" target="blank" href={contactLink ?? "/"}>{contactLinkText}</Link>
                 </div>
             <div className="w-92 text-center">
               <button 
-                  className="w-1/2 sm:w-full p-4 text-blue-5 bg-white rounded-xl font-bold text-base cursor-pointer"
+                  className="p-4 text-dark-blue bg-yellow rounded-xl font-bold text-base cursor-pointer"
                   onClick={()=> router.push(staticData.anotherContacts.href)}
               >
                   {staticData.anotherContacts.text}
@@ -135,21 +134,27 @@ export const ActivityTemplate2 = ({
             </div>
         </div>      
       </div>
-      <div className="flex flex-col items-center w-full">
-        <h2 className="text-gray-9 font-bold text-[32px] py-24">{staticData.anotherServices}</h2>
-        <div className="flex flex-col sm:flex-row gap-y-16 sm:gap-x-48 items-end">            
-            <Link href="https://www.baptistebrno.cz/" target="blank" className="flex flex-col items-center">
-              <Image src="/smetanka.png" alt="BJB Smetanova" width={150} height={90} className="mb-6" />
-              <p>Bratská jednota baptistů</p>
-              <p>Smetanova 20</p>
-            </Link>
-  
-            <Link href="https://www.k12medlanky.cz/" target="blank" className="flex flex-col items-center">
-              <Image src="/kytnerova.png" alt="BJB Medlánky" width={90} height={50} className="mb-6" />
-              <p>Společenství K12</p>
-              <p>Kytnerova 12, Medlánky</p>
-            </Link>          
+
+      {/* current topic section */}
+      <div className="grid grid-cols-2 items-center w-full max-w-screen-xl mx-auto gap-x-8 py-24">
+        <div className="w-2/3 h-[400px]">
+          <img src="/placeholder.webp" alt="Services" className="w-full h-full object-cover rounded-lg" />
         </div>
+        <div className="flex flex-col gap-y-6">
+          <h2 className="text-gray-9 font-bold text-[32px]">{staticData.currentTopicTitle}</h2>
+          <p className="text-gray-9 text-lg">{staticData.currentTopicText}</p>
+        </div>
+      </div>
+
+      {/* another placed link section */}
+      <div className="flex flex-col gap-y-8 items-center w-[calc(100vw-15px)] bg-jasmin py-24">
+        <h2 className="text-gray-9 font-bold text-[32px]">{staticData.anotherServicesTitle}</h2>
+        <p className="text-gray-9 text-base w-1/5 text-center">{staticData.anotherServicesText}</p>
+        <LinkButton 
+          href={lang === "cs" ? "/o-nas" : "/en/o-nas"} 
+          text={staticData.anotherServicesLink}
+          icon={<ChevronRightIcon className="w-6 h-6" />}
+          />
       </div>
       <AnotherActivities 
         activities={anotherActivities} 
