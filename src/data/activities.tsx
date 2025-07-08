@@ -287,7 +287,7 @@ export const activities = [
                     děti do 3 let bez nároku na lůžko a stravu: zdarma
                     členové Challenge a Runway Youth: 1240,- Kč`
                 ],
-                time: ["21. - 23. 2. 2025", "začínáme v 19:00"],
+                time: ["21. - 23. 2. 2025 od 19:00"],
                 filterDate: "2025-02-23",
                 cardDate: "21. - 23. února",
                 cardTime: null,
@@ -315,7 +315,7 @@ export const activities = [
                     children under 3 years without entitlement to bed and food: free
                     members of Challenge and Runway Youth: 1240,- CZK`
                 ],
-                time: ["February 21st - 23rd, 2025", "starting at 7:00 PM"],
+                time: ["February 21st - 23rd, 2025 from 7:00 PM"],
                 cardDate: "February 21st - 23rd",
                 filterDate: "2025-02-23",
                 cardTime: null,

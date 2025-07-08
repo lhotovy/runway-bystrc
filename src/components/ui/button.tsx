@@ -9,7 +9,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         blue: "bg-blue-5 text-white font-bold text-base rounded-2xl px-6 py-4 cursor-pointer",  
-        white: "bg-white text-blue-5 font-bold text-base rounded-2xl px-6 py-4 cursor-pointer",   
+        white: "bg-white text-blue-5 font-bold text-base rounded-2xl px-6 py-4 cursor-pointer",
+        yellow: "bg-yellow text-content-blue font-bold text-base rounded-2xl px-6 py-4 cursor-pointer",
         badge: "bg-gray-1 py-[10px] px-[20px] rounded-full text-base font-bold active:text-blue-5 cursor-pointer border border-2",
         default: "text-primary underline-offset-4 hover:underline",
       },
@@ -38,6 +39,7 @@ export interface ButtonProps
     | "default"
     | "blue"  
     | "white"
+    | "yellow"
     | "badge";
 }
 
@@ -61,6 +63,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     switch (variant) {
       case "blue":   
       case "white": 
+      case "yellow":
       case "badge":
         displayText = text || "Action";
         break;       
