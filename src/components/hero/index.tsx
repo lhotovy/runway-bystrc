@@ -13,7 +13,7 @@ export const Hero = ({
   image: string
 }) => {
   return (  
-      <div className="flex relative w-screen h-[60vh] min-h-[500px]">
+      <div className="flex relative w-[calc(100vw-15px)] h-[60vh] min-h-[500px]">
         <HeroImage image={image} name={name}>
           <div className="max-w-4xl flex flex-col gap-y-10">
             <h1 className="text-5xl text-white font-bold">{name}</h1>
