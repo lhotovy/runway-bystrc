@@ -8,8 +8,8 @@ export const Hero = ({
   image
 }: {
   name: string,
-  time: string[] | null,
-  place: string,
+  time?: string[] | null,
+  place?: string,
   image: string
 }) => {
   return (  

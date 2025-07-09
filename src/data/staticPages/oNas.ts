@@ -29,7 +29,34 @@ export const oNasData = {
           source: "/cross.png",
         },
       ],
-      contactButton: "Kontaktuje nás",
+      contactTitle: "Kontakt a více informací",
+      contactText: "runway.bystrc",
+      contactIconText: "Instagram",
+      contactLinkText: "Kontaktujte nás",
+      contactLink: "/kontakt",
+      anotherPlacesTitle: "Nemůžete přijít k nám?",
+      anotherPlacesSubtitle: "Podívejte se, kam jinam v brně můžete zajít",
+      anotherPlacesText: "Jsme součástí Baptistů v Brně a naše akce se konají i na dalších místech.",
+      anotherPlaces: [
+        {
+          title: "Sbor BJB Smetanova",
+          text: "Smetanova 20",
+          link: "https://www.bjb.cz/sbor/smetanova-20/",
+          image: "/bjbSmetanova.png",
+        },
+        {
+          title: "Mládež BJB Brno",
+          text: "Smetanova 20",
+          link: "https://www.bjb.cz/sbor/hlasnice-10/",
+          image: "/bjbHlásnice.png",
+        },
+        {
+          title: "Společenství K12",
+          text: "Kytnerova 12, Medlánky",
+          link: "https://www.bjb.cz/sbor/hlasnice-10/",
+          image: "/bjbHlásnice.png",
+        }
+      ],
     },
     en: {
       title: "About Us",
@@ -60,7 +87,34 @@ export const oNasData = {
           source: "/cross.png",
         },
       ],
-      contactButton: "Contact Us",
+      contactTitle: "Contact and more information",
+      contactText: "runway.bystrc",
+      contactIconText: "Instagram",
+      contactLinkText: "Contact Us",
+      contactLink: "/en/kontakt",
+      anotherPlacesTitle: "Can't come to us?",
+      anotherPlacesSubtitle: "Look at other places you can visit in Brno",
+      anotherPlacesText: "We are part of Baptist Church in Brno and our activities are also held at other places.",
+      anotherPlaces: [
+        {
+          title: "BJB Smetanova",
+          text: "Smetanova 20",
+          link: "https://www.bjb.cz/sbor/smetanova-20/",
+          image: "/bjbSmetanova.png",
+        },
+        {
+          title: "Youth BJB Brno",
+          text: "Smetanova 20",
+          link: "https://www.bjb.cz/sbor/hlasnice-10/",
+          image: "/bjbHlásnice.png",
+        },
+        {
+          title: "Community K12",
+          text: "Kytnerova 12, Medlánky",
+          link: "https://www.bjb.cz/sbor/hlasnice-10/",
+          image: "/bjbHlásnice.png",
+        }
+      ],
     },
   },
 };

@@ -8,7 +8,7 @@ export const LinkButton = ({
 }: {
   text: string, 
   href: string,
-  icon: React.ReactNode
+  icon?: React.ReactNode
 }) => {
   return (
     <Link 
@@ -16,7 +16,7 @@ export const LinkButton = ({
       className="flex justify-center items-center gap-4 px-6 py-3 bg-yellow font-bold text-black cursor-pointer rounded-xl"
     >
       {text}
-      {icon}
+      {icon && icon}
     </Link>
   );
 }
