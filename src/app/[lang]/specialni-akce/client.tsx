@@ -6,10 +6,19 @@ import { Button } from "@/components/ui/button";
 import { activities } from "@/data/activities";
 import { useState } from "react";
 import { specialniAkce } from "@/data/staticPages/specialniAkce";
+import Image from "next/image";
+import { LinkButton } from "@/components/ui/linkButton";
 
 export const SpecialEventsClient = ({lang}: {lang: string}) => { 
     const texts = specialniAkce.translations[lang as keyof typeof specialniAkce.translations];    
     const [selectedBadge, setSelectedBadge] = useState(texts.upcoming);
+    const kontaktLink = lang === "cs" ? "/kontakt" : "/en/kontakt";
+    const filteredActivities = activities.filter((activity) => {
+        const translation = activity.translations[lang as keyof typeof activity.translations];
+        return activity.type === 'special' && (selectedBadge === texts.upcoming
+            ? translation.filterDate && new Date(translation.filterDate) >= new Date() 
+            : translation.filterDate && new Date(translation.filterDate) < new Date());
+    });
 
     return (
         <div className="flex flex-col py-18">
@@ -31,26 +40,39 @@ export const SpecialEventsClient = ({lang}: {lang: string}) => {
                     />
                 </div>
             </div>            
-            <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4 mb-24'>                
+            <div>                
                 {
-                    activities
-                    .filter((activity) => {
-                        const translation = activity.translations[lang as keyof typeof activity.translations];
-                        
-                        return activity.type === 'special' && (selectedBadge === texts.upcoming
-                            ? translation.filterDate && new Date(translation.filterDate) >= new Date() 
-                            : translation.filterDate && new Date(translation.filterDate) < new Date());
-                    })
-                    .map((event, index) => {
-                        return (
-                            <SpecialEventCard 
-                                key={index} 
-                                activity={event} 
-                                lang={lang} 
-                            />
-                        )
-                    })
+                    filteredActivities.length === 0 
+                    ? (
+                        <div className="flex items-center justify-center h-full my-12">                         
+                            <p className="text-gray-7">{texts.fallback}</p>
+                        </div>
+                    ) : (
+                        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4 mb-12">
+                            {
+                                filteredActivities
+                                .map((event, index) => {
+                                    return (
+                                        <SpecialEventCard 
+                                            key={index} 
+                                            activity={event} 
+                                            lang={lang} 
+                                        />
+                                    )
+                                })
+                            }
+                        </div>                    
+                    )
                 }
+            </div>
+            <div className="relative w-[calc(100vw-8px)] -mx-[calc((100vw-100%)/2)]">
+                <Image className="w-full h-[300px] object-cover" src="/bystrc.png" alt="Bystrc" width={2000} height={2000} />       
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <LinkButton
+                        text="Kontaktuj nás"
+                        href={kontaktLink}
+                    />
+                </div>
             </div>
             <Activities 
                 title={texts.otherActivities}  
