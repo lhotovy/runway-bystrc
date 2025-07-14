@@ -53,16 +53,16 @@ export const ONasClient = ({ lang }: { lang: 'cs' | 'en' }) => {
             <p className="text-gray-9 text-xl font-bold">{data.anotherPlacesSubtitle}</p>
             <p className="text-gray-9 text-base w-full sm:w-2/3">{data.anotherPlacesText}</p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-y-12 sm:gap-x-8 w-full max-w-screen-xl px-4">
+          <div className="flex flex-col sm:flex-row gap-y-12 sm:gap-x-8 w-full md:w-4/5 max-w-screen-xl px-4">
             {data.anotherPlaces.map((place: any, index: number) => (
               <div key={index} className="w-full sm:w-1/3 items-center bg-white rounded-2xl p-6">
                 <Link href={place.link} target="_blank" className="flex flex-col gap-y-4 items-center">
                   <Image 
-                    src={place.source || placeholderImage} 
-                    alt={place.imageAlt} 
-                    width={150}
-                    height={150}
-                    className="object-cover rounded-t-lg"
+                    src={place.image || placeholderImage} 
+                    alt={place.title} 
+                    width={200}
+                    height={200}
+                    className="object-contain rounded-t-lg w-full h-[150px]"
                   />
                   <h3 className="font-bold text-lg text-gray-9">{place.title}</h3>
                   <p className="text-base text-gray-9 text-center">{place.text}</p>
