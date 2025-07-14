@@ -29,10 +29,12 @@ export default async function GDPR({ params }: PageProps) {
   const data = gdprData.translations[lang];
 
   return (
-    <div className="fle flex-col text-gray-9 py-16">
-      <h1 className="font-bold text-[40px]">{data.heading}</h1>
-      <div className="text-base w-full lg:w-2/3 flex flex-col gap-y-8">
-        <p className="mt-4">{data.sections.processing.content[0]}</p>
+    <div className="flex flex-col gap-y-8 items-start">
+      <div className="relative w-[calc(100vw-8px)] -mx-[calc((100vw-100%)/2)] bg-middle-blue text-white text-center py-8">
+        <h1 className="font-bold text-[24px] md:text-[40px]">{data.sections.processing.title}</h1>
+      </div>
+      <div className="text-base w-full lg:w-2/3 flex flex-col mx-auto my-12 gap-y-8">
+        <p>{data.sections.processing.content[0]}</p>
         <p>{data.sections.processing.content[1]}</p>
         <ul className="list-disc pl-12 flex flex-col gap-y-2">
           {data.sections.processing.list.map((item: any, index: number) => (

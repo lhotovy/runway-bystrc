@@ -30,7 +30,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         <SocialIcons />
                         <Link 
                             href={lang === "cs" ? "/newsletter" : "/en/newsletter"}
-                            className="cursor-pointer text-middle-blue font-semibold bg-yellow py-4 px-6 rounded-xl"
+                            className="cursor-pointer text-middle-blue font-bold bg-yellow py-4 px-6 rounded-xl"
                         >
                             {data.newsletter}
                         </Link>

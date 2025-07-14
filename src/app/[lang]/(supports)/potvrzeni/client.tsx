@@ -19,13 +19,13 @@ export const ConfirmClient = ({ lang }: { lang: string }) => {
       <p>{data.message}</p>
       <div className="flex flex-col sm:flex-row items-center gap-y-8 sm:gap-x-8">
         <Button
-          variant="blue"
+          variant="yellow"
           text={data.backButton}
           onClick={() => router.push(activityLink)}
         />
         <Link
           href={registrationLink}
-          className="text-blue-5 font-bold"
+          className="text-middle-blue font-bold"
         >
           {data.registerAnother}
         </Link>
