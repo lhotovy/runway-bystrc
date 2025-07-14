@@ -12,7 +12,7 @@ export const menuTexts = {
             { name: "Tábory", url: "/tabory" },
         ],
         specialEvents: "Speciální akce",
-        contact: "Kontakty",
+        contact: "Kontakt",
     },
     en: {
         aboutUs: "About us",

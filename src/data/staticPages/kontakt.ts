@@ -2,6 +2,7 @@ export const kontaktData = {
   translations: {
     en: {
       title: "Contact",
+      subtitle: "Where to find us?",
       description: "Contact us",
       locations: [
         {
@@ -21,7 +22,7 @@ export const kontaktData = {
       ],
       contactDetails: {
         officialAddress: {
-          title: "Official Headquarters of Runway",
+          title: "Official Headquarters",
           lines: ["Runway Bystrc", "Smetanova 20", "602 000 Brno"],
         },
         phone: {
@@ -35,7 +36,7 @@ export const kontaktData = {
         },
       },
       form: {
-        title: "You can also contact us here",
+        title: "Contact us",
         fields: {
           name: "Full Name",
           email: "Email",
@@ -47,6 +48,7 @@ export const kontaktData = {
     },
     cs: {
       title: "Kontakt",
+      subtitle: "Kde nás najdete?",
       description: "Kontaktujte nás",
       locations: [
         {
@@ -66,7 +68,7 @@ export const kontaktData = {
       ],
       contactDetails: {
         officialAddress: {
-          title: "Oficiální sídlo Runwaye",
+          title: "Oficiální sídlo",
           lines: ["Runway Bystrc", "Smetanova 20", "602 000 Brno"],
         },
         phone: {
@@ -80,7 +82,7 @@ export const kontaktData = {
         },
       },
       form: {
-        title: "Kontaktovat nás můžete i zde",
+        title: "Kontakujte nás",
         fields: {
           name: "Jméno a příjmení",
           email: "Email",
