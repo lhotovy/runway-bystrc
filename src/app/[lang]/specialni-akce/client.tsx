@@ -66,7 +66,7 @@ export const SpecialEventsClient = ({lang}: {lang: string}) => {
                 }
             </div>
             <div className="relative w-[calc(100vw-8px)] -mx-[calc((100vw-100%)/2)]">
-                <Image className="w-full h-[300px] object-cover" src="/bystrc.png" alt="Bystrc" width={2000} height={2000} />       
+                <Image className="w-full h-[300px] object-cover" src="/bystrc.webp" alt="Bystrc" width={2000} height={2000} />       
                 <div className="absolute inset-0 flex items-center justify-center">
                     <LinkButton
                         text="Kontaktuj nás"

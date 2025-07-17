@@ -27,7 +27,7 @@ export default function KontaktClient({ lang }: { lang: 'en' | 'cs' }) {
 
   return (
     <div className="flex flex-col items-center">
-      <Hero name={data.title} image="hero.jpg" />
+      <Hero name={data.title} image="hero.webp" />
       <h1 className="text-[32px] font-bold self-start mt-18 mb-12">{data.subtitle}</h1>
       <div className="flex flex-col md:flex-row mb-12 gap-y-8">     
         <div className="max-w-[1280px] w-full flex flex-col md:flex-row gap-y-36 items-center">

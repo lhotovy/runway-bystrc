@@ -12,7 +12,7 @@ export const Welcome = ({ data }: { data: any }) => {
         >
             {/* Background Image */}
             <Image
-                src="/hero.jpg"
+                src="/hero.webp"
                 alt="Welcome Background"
                 fill
                 style={{ objectFit: "cover" }}

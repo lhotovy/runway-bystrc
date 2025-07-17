@@ -42,7 +42,7 @@ export const oNasData = {
           title: "Sbor BJB Smetanova",
           text: "Smetanova 20",
           link: "https://www.bjb.cz/sbor/smetanova-20/",
-          image: "/smetanka.png",
+          image: "/smetanka.webp",
         },
         {
           title: "Mládež BJB Brno",
@@ -54,7 +54,7 @@ export const oNasData = {
           title: "Společenství K12",
           text: "Kytnerova 12, Medlánky",
           link: "https://www.bjb.cz/sbor/hlasnice-10/",
-          image: "/kytnerova.png",
+          image: "/kytnerova.webp",
         }
       ],
     },
@@ -100,7 +100,7 @@ export const oNasData = {
           title: "BJB Smetanova",
           text: "Smetanova 20",
           link: "https://www.bjb.cz/sbor/smetanova-20/",
-          image: "/smetanka.png",
+          image: "/smetanka.webp",
         },
         {
           title: "Youth BJB Brno",
@@ -112,7 +112,7 @@ export const oNasData = {
           title: "Community K12",
           text: "Kytnerova 12, Medlánky",
           link: "https://www.bjb.cz/sbor/hlasnice-10/",
-          image: "/kytnerova.png",
+          image: "/kytnerova.webp",
         }
       ],
     },

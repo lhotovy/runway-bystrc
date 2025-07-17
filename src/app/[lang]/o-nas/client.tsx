@@ -13,7 +13,7 @@ export const ONasClient = ({ lang }: { lang: 'cs' | 'en' }) => {
 
   return (
     <div className="flex flex-col items-center">    
-      <Hero name={data.title} image="hero.jpg" />
+      <Hero name={data.title} image="hero.webp" />
       <div className="flex flex-col gap-y-8 items-center mt-24 w-5/6 sm:w-1/2 text-base">
         {
           data.about.map((paragraph: string, index: number) => (
