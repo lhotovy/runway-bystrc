@@ -7,6 +7,7 @@ import { useState } from "react";
 import { HeaderTabs } from "./tabs";
 import { MobileMenu } from "./mobilemenu";
 import Link from "next/link";
+import { MenuIcon } from "lucide-react";
 
 export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggle: () => void, lang: string | null }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -15,22 +16,20 @@ export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggl
     <>
       <header
         id="header"
-        className="flex justify-center items-center w-full bg-dark-blue text-primary-content p-4 max-h-[64px]"
+        className="flex justify-center items-center w-full bg-dark-blue text-primary-content py-2 pr-2 pl-0 md:p-4 max-h-[64px]"
       >
         <div className="flex max-w-[1280px] w-full xl:min-w-[1280px] items-center justify-between max-h-[64px]">
           <Link
             href={lang === "en" ? "/en" : "/"}
             id="logo"
-            className="flex h-full max-h-[64px] w-[300px] min-w-[3rem] items-center justify-start overflow-hidden"
-            style={{ maxHeight: '64px' }}
+            className="flex h-12 md:h-16 items-center justify-start overflow-hidden"
           >
             <Image
-              src="/logo_white.png"
+              src="/logo_white_cropped.png"
               alt="Runway Logo"
               className="w-full h-full object-contain"
               height={64}
-              width={300}
-              style={{ maxHeight: '120px', height: '100%', width: '100%', objectFit: 'contain' }}
+              width={120}
             />
           </Link>
           <div className="hidden sm:flex h-full w-full items-center justify-end">       
@@ -42,8 +41,8 @@ export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggl
               className="px-4 text-base-100 focus:outline-hidden sm:hidden"
               onClick={() => setSidebarOpen(!sidebarOpen)}
             >
-              <Bars3BottomLeftIcon
-                className="h-6 w-6 text-primary-content"
+              <MenuIcon
+                className="h-6 w-6 text-white"
                 aria-hidden="true"
               />
             </button>

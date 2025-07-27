@@ -34,13 +34,13 @@ export function MobileMenu({ sidebarOpen, setSidebarOpen, lang }: MobileMenuProp
         <div className="flex h-full flex-col items-center">
           {/* Header */}
           <div className="flex w-full flex-row items-center justify-start bg-white shadow-xs">
-            <a
+            <Link
               href={lang === "en" ? "/en" : "/"}
               id="logo"
-              className="flex h-12 w-[65px] min-w-[3rem] items-center justify-center ml-4"
+              className="flex h-12 items-center justify-center"
             >
-              <Image src="/logo.webp" alt="Runway Logo" height={100} width={200} className="w-16" />
-            </a>
+              <Image src="/logo_white_cropped.png" alt="Runway Logo" height={64} width={150} className="h-12" />
+            </Link>
           </div>
 
           {/* Navigation */}

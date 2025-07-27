@@ -11,12 +11,12 @@ export const Footer = ({ lang }: { lang: string | null }) => {
         <div className="flex flex-col items-center bg-middle-blue text-base w-full h-fit">
             {/* lg view */}
             <div className="hidden lg:flex items-center w-full max-w-[1280px] mx-auto">
-                <div className="flex flex-col lg:flex-row justify-between items-center w-full h-5/6">
+                <div className="flex flex-col lg:flex-row justify-between items-start w-full h-5/6">
                     <div 
                         id="column1"
-                        className="flex flex-col"
+                        className="flex flex-col mt-8"
                     >
-                        <Image src="/logo_white.png" alt="Logo" width={400} height={200} className="hidden lg:flex w-32" />
+                        <Image src="/logo_white_cropped.png" alt="Logo" width={400} height={200} className="hidden lg:flex w-32 mb-6" />
                         <div className="flex flex-col gap-y-1.5 text-gray-2">
                             <p>{data.address.name}</p>
                             <p>{data.address.street}</p>
@@ -25,7 +25,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                     </div>
                     <div
                         id="column2" 
-                        className="flex flex-col items-center gap-y-6 mb-8"
+                        className="flex flex-col items-center gap-y-12 mt-4"
                     >
                         <SocialIcons />
                         <Link 
@@ -38,7 +38,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                     </div>
                     <div
                         id="column3"
-                        className="flex flex-col items-end text-gray-2"
+                        className="flex flex-col items-end text-gray-2 my-16"
                     >
                         <p className="uppercase text-base font-semibold mb-2">{data.linksTitle}</p>
                         <div className="flex flex-col items-end gap-y-1.5">
@@ -68,7 +68,7 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         >
                             {data.newsletter}
                         </Link>
-                        <Image src="/logo_white.png" alt="Logo" width={400} height={200} className="flex w-1/2" />
+                        <Image src="/logo_white_cropped.png" alt="Logo" width={400} height={200} className="flex w-1/2" />
                     </div>
                     <div 
                         id="column2"
