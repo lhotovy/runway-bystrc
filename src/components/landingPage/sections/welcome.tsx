@@ -7,8 +7,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 export const Welcome = ({ data }: { data: any }) => {
     return (
         <div
-            className="relative w-[calc(100vw-15px)] h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden mb-10"
-            //style={{ maxWidth: "100vw" }}
+            className="relative w-full h-[70vh] lg:h-[80vh]  flex items-center justify-center overflow-hidden mb-2 md:mb-10"
         >
             {/* Background Image */}
             <Image

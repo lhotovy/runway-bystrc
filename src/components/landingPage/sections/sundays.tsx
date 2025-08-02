@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export const Sundays = ({ data, lang }: { data: any, lang: string }) => {
   return (
-    <section className="py-16 bg-white">
+    <section className="max-w-[1280px] px-4 md:px-0 py-2 md:py-16 bg-white">
       <div className="mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Picture */}
