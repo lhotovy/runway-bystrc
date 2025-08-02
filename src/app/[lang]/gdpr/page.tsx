@@ -30,7 +30,7 @@ export default async function GDPR({ params }: PageProps) {
 
   return (
     <div className="flex flex-col gap-y-8 items-start">
-      <div className="relative w-[calc(100vw-8px)] -mx-[calc((100vw-100%)/2)] bg-middle-blue text-white text-center py-8">
+      <div className="relative w-full bg-middle-blue text-white text-center py-8">
         <h1 className="font-bold text-[24px] md:text-[40px]">{data.sections.processing.title}</h1>
       </div>
       <div className="text-base w-full lg:w-2/3 flex flex-col mx-auto my-12 gap-y-8">

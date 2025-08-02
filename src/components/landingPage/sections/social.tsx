@@ -14,7 +14,7 @@ export const Social = ({data}: {data: any}) => {
                     socialEmbed.map((embed, index) => {
                         return (
                             <Link key={index} href={embed.href} className="cursor-pointer">
-                                <Image src={embed.image || placeholderImage} alt={embed.alt} width={400} height={400} className="rounded-2xl"  />              
+                                <Image src={embed.image || placeholderImage} alt={embed.alt} width={700} height={700} className="rounded-2xl object-cover aspect-square w-full h-full" />              
                             </Link>
                         )
                     })

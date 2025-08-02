@@ -28,7 +28,7 @@ export const Coffeeshop = ({ data, lang }: { data: any, lang: string }) => {
           <div className="order-2">
             <div className="relative">
               <Image
-                src="/placeholder.webp"
+                src="/coffeeshop.webp"
                 alt="Our coffeeshop"
                 className="w-full h-64 lg:h-96 object-cover rounded-none lg:rounded-lg"
                 width={500}
