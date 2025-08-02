@@ -28,8 +28,11 @@ export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggl
               src="/logo_white_cropped.png"
               alt="Runway Logo"
               className="w-full h-full object-contain"
-              height={64}
-              width={120}
+              height={179}
+              width={500}
+              priority
+              quality={100}
+              sizes="(max-width: 768px) 120px, 200px"
             />
           </Link>
           <div className="hidden sm:flex h-full w-full items-center justify-end">       

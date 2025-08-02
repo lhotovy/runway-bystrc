@@ -16,7 +16,16 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         id="column1"
                         className="flex flex-col mt-8"
                     >
-                        <Image src="/logo_white_cropped.png" alt="Logo" width={400} height={200} className="hidden lg:flex w-32 mb-6" />
+                        <Image
+                            src="/logo_white_cropped.png"
+                            alt="Runway Logo"
+                            className="hidden lg:flex w-32 mb-6"
+                            height={179}
+                            width={500}
+                            priority
+                            quality={100}
+                            sizes="(max-width: 768px) 120px, 200px"
+                        />
                         <div className="flex flex-col gap-y-1.5 text-gray-2">
                             <p>{data.address.name}</p>
                             <p>{data.address.street}</p>
@@ -68,7 +77,16 @@ export const Footer = ({ lang }: { lang: string | null }) => {
                         >
                             {data.newsletter}
                         </Link>
-                        <Image src="/logo_white_cropped.png" alt="Logo" width={400} height={200} className="flex w-1/2" />
+                        <Image
+                            src="/logo_white_cropped.png"
+                            alt="Runway Logo"
+                            className="flex w-3/5"
+                            height={179}
+                            width={400}
+                            priority
+                            quality={100}
+                            sizes="(max-width: 768px) 120px, 200px"
+                        />
                     </div>
                     <div 
                         id="column2"
