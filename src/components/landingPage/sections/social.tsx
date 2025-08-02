@@ -4,6 +4,7 @@ import Link from "next/link";
 import { socialEmbed } from "@/data/socialEmbed";
 import Image from "next/image";
 import placeholderImage from "@/public/placeholder.webp";
+
 export const Social = ({data}: {data: any}) => {
   return ( 
     <div className='max-w-[1280px] px-4 md:px-0 py-2 md:py-8 w-full flex flex-col justify-center gap-y-10'>
