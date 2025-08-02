@@ -21,51 +21,53 @@ export const SpecialEventsClient = ({lang}: {lang: string}) => {
     });
 
     return (
-        <div className="flex flex-col py-18">
-          <div className="flex flex-col gap-y-12">
-            <h1 className="text-4xl font-bold">{texts.title}</h1>
-            <div className="">              
-                <div className="flex gap-x-6 mt-6">
-                    <Button 
-                        variant="badge" 
-                        text={texts.upcoming} 
-                        className={`${selectedBadge === texts.upcoming ? "text-blue-5 border-blue-5" : "text-gray-7 border-transparent"}`}  
-                        onClick={() => setSelectedBadge(texts.upcoming)}
-                    />                
-                    <Button 
-                        variant="badge" 
-                        text={texts.past} 
-                        className={`${selectedBadge === texts.past ? "text-blue-5 border-blue-5" : "text-gray-7 border-transparent"}`}  
-                        onClick={() => setSelectedBadge(texts.past)}
-                    />
+        <div className="flex flex-col w-full items-center py-18">
+          <div className="flex flex-col items-center gap-y-12 w-full">
+            <div className="max-w-[1280px] w-full">
+                <h1 className="text-4xl font-bold px-4 md:px-0">{texts.title}</h1>
+                <div className="px-4 md:px-0">              
+                    <div className="flex gap-x-6 mt-6 px-4 md:px-0">
+                        <Button 
+                            variant="badge" 
+                            text={texts.upcoming} 
+                            className={`${selectedBadge === texts.upcoming ? "text-blue-5 border-blue-5" : "text-gray-7 border-transparent"}`}  
+                            onClick={() => setSelectedBadge(texts.upcoming)}
+                        />                
+                        <Button 
+                            variant="badge" 
+                            text={texts.past} 
+                            className={`${selectedBadge === texts.past ? "text-blue-5 border-blue-5" : "text-gray-7 border-transparent"}`}  
+                            onClick={() => setSelectedBadge(texts.past)}
+                        />
+                    </div>
+                </div>            
+                <div>                
+                    {
+                        filteredActivities.length === 0 
+                        ? (
+                            <div className="flex items-center justify-center h-full my-12 px-4 md:px-0">                         
+                                <p className="text-gray-7">{texts.fallback}</p>
+                            </div>
+                        ) : (
+                            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4 mb-12 px-4 md:px-0">
+                                {
+                                    filteredActivities
+                                    .map((event, index) => {
+                                        return (
+                                            <SpecialEventCard 
+                                                key={index} 
+                                                activity={event} 
+                                                lang={lang} 
+                                            />
+                                        )
+                                    })
+                                }
+                            </div>                    
+                        )
+                    }
                 </div>
-            </div>            
-            <div>                
-                {
-                    filteredActivities.length === 0 
-                    ? (
-                        <div className="flex items-center justify-center h-full my-12">                         
-                            <p className="text-gray-7">{texts.fallback}</p>
-                        </div>
-                    ) : (
-                        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4 mb-12">
-                            {
-                                filteredActivities
-                                .map((event, index) => {
-                                    return (
-                                        <SpecialEventCard 
-                                            key={index} 
-                                            activity={event} 
-                                            lang={lang} 
-                                        />
-                                    )
-                                })
-                            }
-                        </div>                    
-                    )
-                }
             </div>
-            <div className="relative w-[calc(100vw-8px)] -mx-[calc((100vw-100%)/2)]">
+            <div className="relative w-full">
                 <Image className="w-full h-[300px] object-cover" src="/bystrc.webp" alt="Bystrc" width={2000} height={2000} />       
                 <div className="absolute inset-0 flex items-center justify-center">
                     <LinkButton

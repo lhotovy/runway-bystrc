@@ -1,13 +1,13 @@
 import DropdownSelect from "@/components/ui/select";
 import { JSX } from "react";
 
-export const generateFormElements = (definitions: { type: string, name: string, text: string, width: number, required: boolean }[], formData: any, setFormData: any) => {
-  type ElementFunction = (name: string, text: string, required: boolean, width: number) => JSX.Element;
+export const generateFormElements = (definitions: { type: string, name: string, text: string, shareLine?: boolean, required: boolean }[], formData: any, setFormData: any) => {
+  type ElementFunction = (name: string, text: string, required: boolean, widthClass: string) => JSX.Element;
 
   const elementsLibrary: { [key: string]: ElementFunction } = {
     //inputs
-    userName: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    userName: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -22,8 +22,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    age: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    age: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -38,8 +38,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    dateOfBirth: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    dateOfBirth: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -54,8 +54,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    address: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    address: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -70,8 +70,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    email: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    email: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -86,8 +86,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    phone: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    phone: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -102,8 +102,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    representativeName: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    representativeName: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -118,8 +118,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    representativeEmail: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    representativeEmail: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -134,8 +134,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    representativePhone: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    representativePhone: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -150,8 +150,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    preferedActivitySaturday: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    preferedActivitySaturday: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -166,8 +166,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    preferedActivitySunday: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    preferedActivitySunday: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -182,8 +182,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    lift: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    lift: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -198,8 +198,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    limitations: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    limitations: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -214,8 +214,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    note: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    note: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -230,8 +230,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    preferedActivity: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    preferedActivity: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -249,8 +249,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         </select>
       </div>
     ),
-    shirtSize: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    shirtSize: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -265,8 +265,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    referal: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    referal: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -287,8 +287,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         </select>
       </div>
     ),
-    recommendation: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    recommendation: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
           {text}
         </label>
@@ -303,8 +303,8 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
-    englishLevel: (name: string, text: string, required: boolean, width: number) => (
-      <div key={name} className={`flex flex-col mb-4`} style={{ width: `${width}px` }}>
+    englishLevel: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
       <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
         {text}
       </label>
@@ -327,11 +327,33 @@ export const generateFormElements = (definitions: { type: string, name: string, 
     // Add more form element types to the library as needed
   };
 
-  return definitions.map((definition) => {
-    const element = elementsLibrary[definition.name];
-    if (element) {
-      return element(definition.name, definition.text, definition.required, definition.width);
+  // Group elements into pairs and determine their width
+  const elements = [];
+  for (let i = 0; i < definitions.length; i += 2) {
+    const current = definitions[i];
+    const next = definitions[i + 1];
+    
+    // Check if both elements should share a line (only on larger screens)
+    const shouldShareLine = current.shareLine && next && next.shareLine;
+    
+    // Calculate widths - responsive approach
+    const currentWidth = shouldShareLine ? "w-full lg:w-[calc(50%-12px)]" : "w-full";
+    const nextWidth = next ? (shouldShareLine ? "w-full lg:w-[calc(50%-12px)]" : "w-full") : null;
+    
+    // Add current element
+    const currentElement = elementsLibrary[current.name];
+    if (currentElement) {
+      elements.push(currentElement(current.name, current.text, current.required, currentWidth));
     }
-    return null;
-  });
+    
+    // Add next element if it exists
+    if (next) {
+      const nextElement = elementsLibrary[next.name];
+      if (nextElement) {
+        elements.push(nextElement(next.name, next.text, next.required, nextWidth!));
+      }
+    }
+  }
+
+  return elements;
 };

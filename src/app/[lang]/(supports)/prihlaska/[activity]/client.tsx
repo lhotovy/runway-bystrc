@@ -21,10 +21,10 @@ export const RegistrationPageClient = ({ data, lang }: { data: any, lang: string
 
   return (
     <div className="flex flex-col gap-y-8 items-start">
-      <div className="relative w-[calc(100vw-8px)] -mx-[calc((100vw-100%)/2)] bg-middle-blue text-white text-center py-8">
+      <div className="relative w-full bg-middle-blue text-white text-center py-8">
          <h1 className="font-bold text-[24px] md:text-[40px]">{data.name}</h1>
       </div>
-      <div className="flex flex-col gap-y-8 max-w-[800px] mx-auto">       
+      <div className="flex flex-col gap-y-8 max-w-[800px] w-full mx-auto px-4 md:px-0">       
         {Array.isArray(data.description) ? (
           <div className="flex flex-col gap-y-4">
             {data.description.map((desc: string, index: number) => (
@@ -36,11 +36,11 @@ export const RegistrationPageClient = ({ data, lang }: { data: any, lang: string
         )}
       </div>
       <form
-        className="flex mx-auto lg:pl-36 flex-wrap gap-x-6 gap-y-4 w-full lg:w-2/3 my-12"
+        className="flex mx-auto flex-wrap gap-x-6 gap-y-4 w-full max-w-[800px] my-12 px-4 md:px-0"
         onSubmit={handleSubmit}
       >
         {elements}
-        <div className="flex justify-center w-full lg:w-[600px]">
+        <div className="flex justify-center w-full">
           <Button
             variant="yellow"
             text={lang === "en" ? "Submit" : "Odeslat přihlášku"}

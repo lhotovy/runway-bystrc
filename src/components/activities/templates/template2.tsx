@@ -13,7 +13,7 @@ import { Hero } from "@/components/hero";
 
 type Lang = "cs" | "en";
 
-// Template pro Neděle na Runwayi s odkazy na jiné sbory
+// Template pro Neděle na Runwayi
 export const ActivityTemplate2 = ({
   name,
   time,
@@ -50,12 +50,12 @@ export const ActivityTemplate2 = ({
         place={place} 
         image={image} 
       />
-      <div className="text-gray-9 text-base flex flex-col items-center gap-y-8 w-5/6 sm:w-1/2 my-24">
+      <div className="text-gray-9 text-base flex flex-col items-center gap-y-8 w-5/6 sm:w-1/2 my-8 md:my-24">
         {SundaysDescriptionComponent()}
       </div>
 
       {/* contact section */}
-      <div className="flex flex-col justify-center items-center w-[calc(100vw-15px)] bg-content-blue py-7.5 mt-10 gap-y-8">
+      <div className="flex flex-col justify-center items-center w-full bg-content-blue py-7.5 mt-10 gap-y-8">
         <p className="text-xl text-white font-bold">{contactTitle}</p>
         <div className="flex flex-col items-center gap-y-8">
             <div className="flex flex-col items-center gap-y-4 w-full max-w-screen-xl px-4">           
@@ -75,20 +75,20 @@ export const ActivityTemplate2 = ({
       </div>
 
       {/* current topic section */}
-      <div className="grid grid-cols-2 items-center w-full max-w-screen-xl mx-auto gap-x-8 py-24">
-        <div className="relative w-2/3 h-[400px]">
-          <Image src="/placeholder.webp" alt="Services" className="w-full h-full object-cover rounded-lg" fill />
+      <div className="max-w-[900px] grid grid-cols-1 md:grid-cols-2 items-center w-full mx-auto gap-x-8 px-4 md:px-0 py-8 md:py-24">
+        <div className="relative w-full md:w-2/3 h-64 md:h-[300px] order-2 md:order-1">
+          <Image src="/placeholder.webp" alt="Services" className="w-64 h-64 object-cover rounded-lg" fill />
         </div>
-        <div className="flex flex-col gap-y-6">
+        <div className="flex flex-col gap-y-6 order-1 md:order-2">
           <h2 className="text-gray-9 font-bold text-[32px]">{staticData.currentTopicTitle}</h2>
           <p className="text-gray-9 text-lg">{staticData.currentTopicText}</p>
         </div>
       </div>
 
       {/* another placed link section */}
-      <div className="flex flex-col gap-y-8 items-center w-[calc(100vw-15px)] bg-jasmin py-24">
+      <div className="flex flex-col gap-y-8 items-center w-full bg-jasmin py-8 md:py-24 px-4 md:px-0">
         <h2 className="text-gray-9 font-bold text-[32px]">{staticData.anotherServicesTitle}</h2>
-        <p className="text-gray-9 text-base w-1/5 text-center">{staticData.anotherServicesText}</p>
+        <p className="text-gray-9 text-base w-full md:w-1/5 text-left md:text-center">{staticData.anotherServicesText}</p>
         <LinkButton 
           href={lang === "cs" ? "/o-nas" : "/en/o-nas"} 
           text={staticData.anotherServicesLink}

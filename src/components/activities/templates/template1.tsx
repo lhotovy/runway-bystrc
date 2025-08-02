@@ -48,7 +48,7 @@ export const ActivityTemplate1 = ({
           })
         }
       </div>
-      <div className="w-[calc(100vw-15px)] flex justify-center bg-gray-1 py-7.5">
+      <div className="w-full flex justify-center bg-gray-1 py-7.5">
         <div className="flex flex-col items-center gap-y-4 w-full max-w-screen-xl px-4">
           <p className="text-xl text-gray-9 font-bold">{contactTitle}</p>
           {contactIcon && contactIcon}
