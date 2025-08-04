@@ -6,7 +6,7 @@ export const menuTexts = {
             { name: "Neděle na Runwayi", url: "/nedele" },
             { name: "Sport Challenge", url: "/sport-challenge" },
             { name: "Runway Youth", url: "/runway_youth" },
-            { name: "Klub pro maminky s dětmi", url: "/klub-pro-maminky-s-detmi" },
+            // { name: "Klub pro maminky s dětmi", url: "/klub-pro-maminky-s-detmi" },
             { name: "English Evenings", url: "/english" },
             // { name: "Manželské večery", url: "/manzelske-vecery" },
             { name: "Tábory", url: "/tabory" },

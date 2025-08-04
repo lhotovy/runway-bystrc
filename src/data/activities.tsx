@@ -116,44 +116,44 @@ export const activities = [
             }
         }
     },
-    {
-        template: "template1",
-        type: "regular",
-        translations: {
-            cs: {
-                name: "Klub pro maminky s dětmi",
-                slug: "klub-pro-maminky-s-detmi",
-                cardDescription: "Možnost navázat přátelství",
-                cardIcon: "/icons/stroller.png",
-                description: ["Jsi maminka s dítětem a chceš si na chvíli oddechnout a strávit příjemné dopoledne s dalšími maminkami? Tak se připoj k nám na anglický klub pro maminky! Čeká Tě posezení u čaje nebo kávy, rozhovory či tvoření.", "V případě většího počtu starších dětí lze program orientovat na jejich procvičování angličtiny."],
-                time: ["každý čtvrtek od 9:30"],
-                cardTime: null,
-                place: "centrum runway bystrc",
-                image: "maminky.webp",
-                contactTitle: "Kontakt a více informací",
-                contactIcon: <SiFacebook className="h-10 w-10 text-gray-3" />,
-                contactPerson: "Facebook",
-                contactLinkText: "Maminky Runway Bystrc",
-                contactLink: "https://www.facebook.com/profile.php?id=100076218601052"
-            },
-            en: {
-                name: "Club for Moms with Kids",
-                slug: "klub-pro-maminky-s-detmi",
-                cardDescription: "Opportunity to make friends",
-                cardIcon: "/icons/stroller.png",
-                description: ["Are you a mom with a child and want to take a break and spend a pleasant morning with other moms? Then join us for the English club for moms! You can look forward to sitting over tea or coffee, conversations, or crafting.", "If there are more older children, the program can be oriented towards their English practice."],
-                time: ["every Thursday at 9:30 AM"],
-                cardTime: null,
-                place: "Runway Bystrc Center",
-                image: "maminky.webp",
-                contactTitle: "Contact and more information",
-                contactIcon: <SiFacebook className="h-10 w-10 text-gray-3" />,
-                contactPerson: "Facebook",
-                contactLinkText: "Maminky Runway Bystrc",
-                contactLink: "https://www.facebook.com/profile.php?id=100076218601052"
-            }
-        }
-    },
+    // {
+    //     template: "template1",
+    //     type: "regular",
+    //     translations: {
+    //         cs: {
+    //             name: "Klub pro maminky s dětmi",
+    //             slug: "klub-pro-maminky-s-detmi",
+    //             cardDescription: "Možnost navázat přátelství",
+    //             cardIcon: "/icons/stroller.png",
+    //             description: ["Jsi maminka s dítětem a chceš si na chvíli oddechnout a strávit příjemné dopoledne s dalšími maminkami? Tak se připoj k nám na anglický klub pro maminky! Čeká Tě posezení u čaje nebo kávy, rozhovory či tvoření.", "V případě většího počtu starších dětí lze program orientovat na jejich procvičování angličtiny."],
+    //             time: ["každý čtvrtek od 9:30"],
+    //             cardTime: null,
+    //             place: "centrum runway bystrc",
+    //             image: "maminky.webp",
+    //             contactTitle: "Kontakt a více informací",
+    //             contactIcon: <SiFacebook className="h-10 w-10 text-gray-3" />,
+    //             contactPerson: "Facebook",
+    //             contactLinkText: "Maminky Runway Bystrc",
+    //             contactLink: "https://www.facebook.com/profile.php?id=100076218601052"
+    //         },
+    //         en: {
+    //             name: "Club for Moms with Kids",
+    //             slug: "klub-pro-maminky-s-detmi",
+    //             cardDescription: "Opportunity to make friends",
+    //             cardIcon: "/icons/stroller.png",
+    //             description: ["Are you a mom with a child and want to take a break and spend a pleasant morning with other moms? Then join us for the English club for moms! You can look forward to sitting over tea or coffee, conversations, or crafting.", "If there are more older children, the program can be oriented towards their English practice."],
+    //             time: ["every Thursday at 9:30 AM"],
+    //             cardTime: null,
+    //             place: "Runway Bystrc Center",
+    //             image: "maminky.webp",
+    //             contactTitle: "Contact and more information",
+    //             contactIcon: <SiFacebook className="h-10 w-10 text-gray-3" />,
+    //             contactPerson: "Facebook",
+    //             contactLinkText: "Maminky Runway Bystrc",
+    //             contactLink: "https://www.facebook.com/profile.php?id=100076218601052"
+    //         }
+    //     }
+    // },
     {
         template: "template1",
         type: "regular",
