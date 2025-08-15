@@ -84,7 +84,6 @@ export default async function ActivityPage({ params }: {params: Promise<{ lang: 
             currentActivity?.template === "template2" && 
             <ActivityTemplate2 
                 name={activityData?.name || ""}
-                description={activityData?.description || []}
                 time={activityData?.time || []}
                 place={activityData?.place || ""}
                 image={activityData?.image || ""}
