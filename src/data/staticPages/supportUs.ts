@@ -7,8 +7,8 @@ export const supportUsData = {
         topSection: {
           title: "Runway Hub",
           progressQuestion: "How much do we have and how much is still missing?",
-          currentAmount: "8,000,000 CZK",
-          targetAmount: "13,000,000 CZK",
+          currentAmount: "380,000 USD",
+          targetAmount: "615,000 USD",
           thankYouMessage: "Thank you to everyone who has already joined! Every gift brings us closer to our goal.",
           donateButton: "Donate"
         },

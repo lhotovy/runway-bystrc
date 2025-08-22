@@ -28,12 +28,12 @@ export const Sundays = ({ data, lang }: { data: any, lang: string }) => {
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
               {data?.sundaysDescription}
             </p> 
-            <div className="mt-8 w-42">
-                <LinkButton
+            <div className="mt-8 w-fit">
+              <LinkButton
                 href={lang === 'en' ? "/en/nedele" : "/nedele"}
                 text={data?.sundaysLearnMoreText}
                 icon={<ChevronRightIcon className="w-4 h-4" />}
-                />
+              />
             </div>
           </div>
         </div>

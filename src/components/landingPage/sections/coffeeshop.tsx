@@ -15,7 +15,7 @@ export const Coffeeshop = ({ data, lang }: { data: any, lang: string }) => {
             <p className="text-lg text-white mb-6 leading-relaxed">
               {data?.coffeeshopDescription}
             </p>
-            <div className="mt-8 w-42">
+            <div className="mt-8 w-fit">
             <LinkButton
                 href={lang === 'en' ? "/en/kavarna" : "/kavarna"}
                 text={data?.coffeeshopLearnMoreText}

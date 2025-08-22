@@ -186,3 +186,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom map positioning for mobile devices */
+@layer components {
+  .map-mobile-left {
+    object-position: left center !important;
+  }
+  
+  .map-desktop-center {
+    object-position: center center !important;
+  }
+  
+  @media (min-width: 768px) {
+    .map-mobile-left {
+      object-position: center center !important;
+    }
+  }
+}
