@@ -25,7 +25,7 @@ export const ContentsSection = ({ lang }: { lang: "cs" | "en" }) => {
             >{tab.text}</button>
           ))}
         </section>
-        <section className="flex max-w-[800px]">
+        <section className="flex max-w-[800px] px-4">
           {activeTab === "vision" && <VisionTab lang={lang} />}
           {activeTab === "whySupport" && <WhySupportTab lang={lang} />}
           {activeTab === "howSupport" && <HowSupportTab lang={lang} />}

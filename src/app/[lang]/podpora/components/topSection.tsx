@@ -13,9 +13,9 @@ export const TopSection = ({ lang }: { lang: "cs" | "en" }) => {
     const data = supportUsData.translations[lang].topSection;
 
     return (
-        <section className="flex flex-row w-full justify-center items-center gap-x-48">
-            <section>
-                <Carousel className="w-[380px] md:w-[380px]" opts={{ align: "start", loop: false }}>
+        <section className="flex flex-col lg:flex-row w-full justify-center items-center gap-8 lg:gap-x-48">
+            <section className="w-full max-w-[380px] lg:max-w-none top-section-carousel">
+                <Carousel className="w-full max-w-[380px] lg:w-[380px]" opts={{ align: "start", loop: false }}>
                     <CarouselContent>
                         <CarouselItem>
                             <Image src="/hub/1.webp" alt="Runway Hub" width={900} height={900} className="w-full h-full object-cover" priority />         
@@ -34,9 +34,9 @@ export const TopSection = ({ lang }: { lang: "cs" | "en" }) => {
                     <CarouselNext className="rounded-full" />
                 </Carousel>
             </section>
-            <section className="flex flex-col gap-8">
-                <h1 className="text-4xl font-bold">{data.title}</h1>
-                <p>
+            <section className="flex flex-col gap-8 w-full max-w-[500px] lg:max-w-none  px-4 lg:px-0">
+                <h1 className="text-3xl lg:text-4xl font-bold text-center lg:text-left">{data.title}</h1>
+                <p className="text-center lg:text-left">
                     {data.progressQuestion}
                 </p>
                 <div className="flex flex-col gap-2">
@@ -46,8 +46,8 @@ export const TopSection = ({ lang }: { lang: "cs" | "en" }) => {
                         <p>{data.targetAmount}</p>
                     </div>
                 </div>
-                <p className="max-w-[500px]">{data.thankYouMessage}</p>
-                <Button variant="yellow" text={data.donateButton} className="w-fit" onClick={() => {
+                <p className="max-w-[500px] text-center lg:text-left">{data.thankYouMessage}</p>
+                <Button variant="yellow" text={data.donateButton} className="w-fit mx-auto lg:mx-0" onClick={() => {
                     window.scrollTo({
                         top: document.documentElement.scrollHeight,
                         behavior: 'smooth'
