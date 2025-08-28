@@ -1,24 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { supportUsData } from "@/data/staticPages/supportUs";
 import { Button } from "@/components/ui/button";
 
 export const LastSectionEn = () => {
-    const [selectedAmount, setSelectedAmount] = useState<string | null>(null);
-    const [showQR, setShowQR] = useState(false);
     const lang = "en";
     const data = supportUsData.translations[lang].lastSection;
-
-    const handleAmountClick = (amount: string) => {
-        setSelectedAmount(amount);
-        setShowQR(true);
-    };
-
-    const closeQR = () => {
-        setShowQR(false);
-        setSelectedAmount(null);
-    };
 
     return (
         <section className="flex flex-col items-center max-w-[800px] mx-auto space-y-8">
@@ -33,9 +20,7 @@ export const LastSectionEn = () => {
                     <p>80 132</p>
                 </section>
                 <Button text="Donate" variant="yellow" onClick={() => window.open("https://crm.4dministries.org/4dcrm/contribute/transact/?reset=1&id=57&fbclid=IwY2xjawMc00hleHRuA2FlbQIxMABicmlkETF3S3RTRnZ0ejQ1UlBIZlM0AR4jfJe5fpLFztrYnPADLP86guebFdSN6O-j_OAxEcNWvfIx0MhBrQPk_RM__g_aem_7gIz7XpLQIjIZVNAsL3pqw", "_blank")} />
-            </div>
-
-           
+            </div>          
         </section>
     );
 };
