@@ -6,9 +6,10 @@ import { supportUsData } from "@/data/staticPages/supportUs";
 import { Button } from "@/components/ui/button";
 import { QrCodeModal } from "./lastSection/qrCodeModal";
 
-export const LastSection = ({ lang }: { lang: "cs" | "en" }) => {
+export const LastSection = () => {
     const [selectedAmount, setSelectedAmount] = useState<string | null>(null);
     const [showQR, setShowQR] = useState(false);
+    const lang = "cs";
     const data = supportUsData.translations[lang].lastSection;
 
     const handleAmountClick = (amount: string) => {

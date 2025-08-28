@@ -18,7 +18,7 @@ export const TopSection = ({ lang }: { lang: "cs" | "en" }) => {
                 <Carousel className="w-fit">
                     <CarouselContent>
                         <CarouselItem>
-                            <Image src="/placeholder.webp" alt="Runway Hub" width={380} height={380} />
+                            <Image src="/coffeeshop.webp" alt="Runway Hub" width={380} height={380} />
                         </CarouselItem>
                     </CarouselContent>
                     <CarouselPrevious className="rounded-full" variant="white" />
