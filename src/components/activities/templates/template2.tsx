@@ -75,9 +75,9 @@ export const ActivityTemplate2 = ({
       </div>
 
       {/* current topic section */}
-      <div className="max-w-[900px] grid grid-cols-1 md:grid-cols-2 items-center w-full mx-auto gap-x-8 px-4 md:px-0 py-8 md:py-24">
-        <div className="relative w-full md:w-2/3 h-64 md:h-[300px] order-2 md:order-1">
-          <Image src="/placeholder.webp" alt="Services" className="w-64 h-64 object-cover rounded-lg" fill />
+      <div className="max-w-[900px] grid grid-cols-1 md:grid-cols-2 md:gap-x-24 items-center w-full mx-auto gap-x-8 px-4 md:px-0 py-8 md:py-24">
+        <div className="relative w-full md:h-[400px] order-2 md:order-1">
+          <Image src="/series.webp" alt="Services" className="w-full h-full object-cover rounded-lg mt-4 lg:mt-0" width={500} height={500} />
         </div>
         <div className="flex flex-col gap-y-6 order-1 md:order-2">
           <h2 className="text-gray-9 font-bold text-[32px]">{staticData.currentTopicTitle}</h2>

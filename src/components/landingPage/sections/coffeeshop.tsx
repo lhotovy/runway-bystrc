@@ -5,7 +5,7 @@ import Image from "next/image"
 export const Coffeeshop = ({ data, lang }: { data: any, lang: string }) => {
   return (  
     <section className="py-16 bg-dark-blue w-full px-4 md:px-0">
-      <div className="mx-auto lg:px-[28vw]">
+      <div className="mx-auto px-4 max-w-[1280px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Column - Text Content */}
           <div className="order-1">
@@ -30,7 +30,7 @@ export const Coffeeshop = ({ data, lang }: { data: any, lang: string }) => {
               <Image
                 src="/coffeeshop.webp"
                 alt="Our coffeeshop"
-                className="w-full h-64 lg:h-96 object-cover rounded-none lg:rounded-lg"
+                className="aspect-square w-full lg:h-92 lg:w-fit object-cover rounded-none lg:rounded-lg"
                 width={500}
                 height={500}
               />             

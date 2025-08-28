@@ -11,9 +11,9 @@ export const Sundays = ({ data, lang }: { data: any, lang: string }) => {
           <div className="order-2 lg:order-1">
             <div className="relative">
               <Image
-                src="/placeholder.webp"
+                src="/series.webp"
                 alt="Sundays at our church"
-                className="w-full h-96 object-cover rounded-lg"
+                className="w-full h-2/3 object-cover rounded-lg"
                 width={500}
                 height={500}
               />
