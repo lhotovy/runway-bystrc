@@ -1,5 +1,15 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
+import Image from "next/image";
+
+const qrCodeMap: Record<string, string> = {
+    "100": "/qrs/100.png",
+    "200": "/qrs/200.png",
+    "500": "/qrs/500.png",
+    "1000": "/qrs/1000.png",
+    "5000": "/qrs/5000.png",
+    "Vyberu sám": "/qrs/bez.png"
+};
 
 export const QrCodeModal = (
     {
@@ -12,6 +22,7 @@ export const QrCodeModal = (
         data: any
 
     }) => {
+    const qrCode = qrCodeMap[selectedAmount || "Vyberu sám"];
 
     const amount = selectedAmount === "Choose myself" || selectedAmount === "Vyberu sám"
         ? data.subtitle
@@ -23,11 +34,8 @@ export const QrCodeModal = (
                 <h3 className="text-xl font-semibold mb-4">
                     {amount}
                 </h3>
-
-                {
-                    /* Placeholder for QR Code */
-                }
                 <div className="w-48 h-48 bg-gray-200 mx-auto mb-4 flex items-center justify-center">
+                    <Image src={qrCode} alt="QR Code" width={192} height={192} />
                 </div>
                 <Button text={data.qrCodeCloseButton} onClick={closeQR} variant="white" className="w-1/2 border border-gray-300" />
             </div>

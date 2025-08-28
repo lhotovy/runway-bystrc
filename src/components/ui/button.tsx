@@ -78,6 +78,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {displayText} 
+        {iconDisplay && customIcon}
       </Comp>
     );
   },

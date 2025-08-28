@@ -1,4 +1,4 @@
-import { LinkButton } from "@/components/ui/linkButton"
+import { Button } from "@/components/ui/button"
 import { ChevronRightIcon } from "@heroicons/react/24/outline"
 import Image from "next/image"
 
@@ -16,11 +16,14 @@ export const Coffeeshop = ({ data, lang }: { data: any, lang: string }) => {
               {data?.coffeeshopDescription}
             </p>
             <div className="mt-8 w-fit">
-            <LinkButton
-                href={lang === 'en' ? "/en/kavarna" : "/kavarna"}
-                text={data?.coffeeshopLearnMoreText}
-                icon={<ChevronRightIcon className="w-4 h-4" />}
-                />
+              <Button
+                onClick={() => window.open("https://runwayhub.cz/", "_blank")}
+                variant="yellow"
+                className="py-3"
+                text={data?.coffeeshopLearnMoreText} 
+                iconDisplay={true}
+                customIcon={<ChevronRightIcon className="w-4 h-4 ml-3" />}
+              />
             </div>
           </div>
       

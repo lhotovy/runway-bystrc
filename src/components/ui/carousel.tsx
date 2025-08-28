@@ -143,7 +143,7 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
     >
       <div
         className={cn(
-          "flex w-fit",
+          "flex w-full",
           orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
           className
         )}
@@ -162,8 +162,8 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
       aria-roledescription="slide"
       data-slot="carousel-item"
       className={cn(
-        "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
+        "min-w-0 shrink-0 grow-0 carousel-item",
+        orientation === "horizontal" ? "pl-4 flex-[0_0_100%]" : "pt-4 basis-full",
         className
       )}
       {...props}
@@ -180,13 +180,13 @@ function CarouselPrevious({
   return (
     <button
       data-slot="carousel-previous"
-      className={cn(
-        "absolute  rounded-full border p-1.5 cursor-pointer",
-        orientation === "horizontal"
-          ? "top-1/2 -left-12 -translate-y-1/2"
-          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
-        className
-      )}
+              className={cn(
+          "absolute  rounded-full border p-1.5 cursor-pointer",
+          orientation === "horizontal"
+            ? "top-1/2 -left-8 md:-left-12 -translate-y-1/2"
+            : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+          className
+        )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
@@ -206,13 +206,13 @@ function CarouselNext({
   return (
     <button
       data-slot="carousel-next"
-      className={cn(
-        "absolute rounded-full cursor-pointer border p-1.5",
-        orientation === "horizontal"
-          ? "top-1/2 -right-12 -translate-y-1/2"
-          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
-        className
-      )}
+              className={cn(
+          "absolute rounded-full cursor-pointer border p-1.5",
+          orientation === "horizontal"
+            ? "top-1/2 -right-8 md:-right-12 -translate-y-1/2"
+            : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+          className
+        )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}

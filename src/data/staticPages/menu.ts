@@ -1,6 +1,11 @@
 export const menuTexts = {
     cs: {
         aboutUs: "O nás",
+        aboutUsDropdown: [
+            { name: "Kdo jsme", url: "/o-nas" },
+            { name: "Čemu věříme", url: "/cemu-verime" },
+            { name: "Podpořte nás", url: "/podpora" },
+        ],
         activities: "Co děláme",
         activitiesDropdown: [
             { name: "Neděle na Runwayi", url: "/nedele" },
@@ -16,6 +21,11 @@ export const menuTexts = {
     },
     en: {
         aboutUs: "About us",
+        aboutUsDropdown: [
+            { name: "Who we are", url: "/en/o-nas" },
+            { name: "What we believe", url: "/en/cemu-verime" },
+            { name: "Support us", url: "/en/podpora" },
+        ],
         activities: "Activities",
         activitiesDropdown: [
             { name: "Sunday Services", url: "/en/nedele" },

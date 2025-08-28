@@ -32,7 +32,7 @@ export const supportUsData = {
           prayer: "Through Prayer",
           prayerDescription: "We believe that God is working and calling people who can help.",
           financialSupport: "Financial Support",
-          financialDescription: "We are grateful for one-time gifts and regular support. If you want to support us, you can send your gift to account 2502996898/2010, note: GIFT."
+          financialDescription: "We are grateful for one-time gifts and regular support."
         },
         lastSection: {
           title: "Support Us",

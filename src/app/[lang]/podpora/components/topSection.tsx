@@ -15,14 +15,23 @@ export const TopSection = ({ lang }: { lang: "cs" | "en" }) => {
     return (
         <section className="flex flex-row w-full justify-center items-center gap-x-48">
             <section>
-                <Carousel className="w-fit">
+                <Carousel className="w-[380px] md:w-[380px]" opts={{ align: "start", loop: false }}>
                     <CarouselContent>
                         <CarouselItem>
-                            <Image src="/coffeeshop.webp" alt="Runway Hub" width={380} height={380} />
+                            <Image src="/hub/1.webp" alt="Runway Hub" width={900} height={900} className="w-full h-full object-cover" priority />         
+                        </CarouselItem>
+                        <CarouselItem>
+                            <Image src="/hub/2.webp" alt="Runway Hub" width={900} height={900} className="w-full h-full object-cover" />        
+                        </CarouselItem>
+                        <CarouselItem>
+                            <Image src="/hub/3.webp" alt="Runway Hub" width={900} height={900} className="w-full h-full object-cover" />
+                        </CarouselItem>
+                        <CarouselItem>
+                            <Image src="/hub/4.webp" alt="Runway Hub" width={900} height={900} className="w-full h-full object-cover" />
                         </CarouselItem>
                     </CarouselContent>
-                    <CarouselPrevious className="rounded-full" variant="white" />
-                    <CarouselNext className="rounded-full" variant="white" />
+                    <CarouselPrevious className="rounded-full" />
+                    <CarouselNext className="rounded-full" />
                 </Carousel>
             </section>
             <section className="flex flex-col gap-8">
