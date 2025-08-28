@@ -377,51 +377,63 @@ export const activities = [
                 contactLink: ""
             }
         }
-    },
-//     {
-//         template: "template4",
-//         type: "special",
-//         translations: {
-//             cs: {
-//                 name: "Jarní swap oblečení",
-//                 slug: "swap",
-//                 cardDescription: "Přijďte předat své kousky dál a vybrat si jiné (dámské, dětské)",
-//                 cardIcon: "",
-//                 description: ["Přijďte předat své kousky dál a vybrat si jiné (dámské, dětské)"],
-//                 time: ["12. 4. 2025", "13:00 - 17:00"],
-//                 cardDate: "12. dubna",
-//                 cardTime: "13:00 - 17:00",
-//                 filterDate: "1. 6. 2025",
-//                 place: "centrum runway bystrc",
-//                 image: "swap.webp",
-//                 registrationText: "", 
-//                 registrationLink: "",     
-//                 contactIcon: null, 
-//                 contactPerson: "",
-//                 contactLinkText: "",
-//                 contactLink: ""
-//             },
-//             en: {
-//                 name: "Spring Clothing Swap",
-//                 slug: "swap",
-//                 cardDescription: "Come and pass on your pieces and pick others (women's, children's)",
-//                 cardIcon: "",
-//                 description: ["Come and pass on your pieces and pick others (women's, children's)"],
-//                 time: ["April 12th, 2025", "1:00 PM - 5:00 PM"],
-//                 cardDate: "April 12th",
-//                 cardTime: "1 PM - 5 PM",
-//                 filterDate: "1. 6. 2025",
-//                 place: "Runway Bystrc Center",
-//                 image: "swap.webp",
-//                 registrationText: "", 
-//                 registrationLink: "",     
-//                 contactIcon: null, 
-//                 contactPerson: "",
-//                 contactLinkText: "",
-//                 contactLink: ""
-//             }
-//         }
-//     }   
+    }, 
+    {
+        template: "template3",
+        type: "special",
+        translations: {
+            cs: {
+                name: "Léto na Teyschlovce: Turnaj ve stolním fotbálku 2025",
+                slug: "leto-na-teyschlovce",
+                cardDescription: "Přijďte předat své kousky dál a vybrat si jiné (dámské, dětské)",
+                cardIcon: "",
+                description: ["Na začátku září Vám opět nabídneme letní osvěžení ve Street Baru v rámci Léta na Teyschlovce, které pořádáme u našeho centra.",
+                    "Ve středu 3. 9. se také můžete zúčastnit již čtvrtého ročníku TURNAJE VE STOLNÍM FOTBÁLKU. Na turnaj se registrujte v 17:00 - 17:45 na místě nebo kliknutím na tlačítko níže.",
+                    "KDY: Street Bar - 3. 9. 17:00 - 20:00, Turnaj ve stolním fotbálku - 3. 9. 18:00",
+                    "KDE: Centrum Runway Bystrc (vedle Teyschlovy 20)",
+                    "Účastnit se mohou jak jednotlivci tak dvojice (počítejte ale s tím, že turnaj není rozdělen do dvou kategorií - tedy např. dvojice může hrát proti jednotlivci).",
+                    "* Startovné: dobrovolné (na místě)"
+                ],
+                time: ["3. 9. 2025", "17:00 - 20:00"],
+                cardDate: "3. září",
+                cardTime: "17:00 - 20:00",
+                filterDate: "2025-09-03",
+                place: "centrum runway bystrc",
+                image: "turnaj.webp",
+                registrationText: "", 
+                registrationLink: "https://forms.gle/KqRqKdKSBBa38SDf9",     
+                contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            },
+            en: {
+                name: "Summer on Teyschlovka: Table football tournament 2025",
+                slug: "leto-na-teyschlovce",
+                cardDescription: "Come and play table football with us!",
+                cardIcon: "",
+                description: ["At the beginning of September, we will again offer you a refreshing break in the Street Bar as part of Léto na Teyschlovce, which we organize at our center.",
+                    "On Wednesday, September 3rd, you can also participate in the fourth annual TOURNAMENT IN TABLE FOOTBALL. Register for the tournament from 5:00 PM to 5:45 PM at the location or here: https://forms.gle/KqRqKdKSBBa38SDf9",
+                    "WHEN: Street Bar - 3. 9. 17:00 - 20:00, Tournament in table football - 3. 9. 18:00",
+                    "WHERE: Runway Bystrc Center (next to Teyschlovy 20)",
+                    "Participants can be individuals or pairs (please note that the tournament is not divided into two categories - for example, a pair can play against an individual).",
+                    "* Entry fee: voluntary (on site)"
+                ],
+                time: ["September 3rd, 2025", "17:00 - 20:00"],
+                cardDate: "September 3rd",
+                cardTime: "17:00 - 20:00",
+                filterDate: "2025-09-03",
+                place: "Runway Bystrc Center",
+                image: "turnaj.webp",
+                registrationText: "", 
+                registrationLink: "https://forms.gle/KqRqKdKSBBa38SDf9",     
+                contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            }
+        }
+    }   
  ];
 
 export const specialActivitiesCard = {
