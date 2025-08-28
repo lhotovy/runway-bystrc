@@ -385,7 +385,7 @@ export const activities = [
             cs: {
                 name: "Léto na Teyschlovce: Turnaj ve stolním fotbálku 2025",
                 slug: "leto-na-teyschlovce",
-                cardDescription: "Přijďte předat své kousky dál a vybrat si jiné (dámské, dětské)",
+                cardDescription: "Přijďte si zahrát stolní fotbálek nebo se jen tak zastavit!",
                 cardIcon: "",
                 description: ["Na začátku září Vám opět nabídneme letní osvěžení ve Street Baru v rámci Léta na Teyschlovce, které pořádáme u našeho centra.",
                     "Ve středu 3. 9. se také můžete zúčastnit již čtvrtého ročníku TURNAJE VE STOLNÍM FOTBÁLKU. Na turnaj se registrujte v 17:00 - 17:45 na místě nebo kliknutím na tlačítko níže.",
@@ -410,7 +410,7 @@ export const activities = [
             en: {
                 name: "Summer on Teyschlovka: Table football tournament 2025",
                 slug: "leto-na-teyschlovce",
-                cardDescription: "Come and play table football with us!",
+                cardDescription: "Come and play table football or just stop by!",
                 cardIcon: "",
                 description: ["At the beginning of September, we will again offer you a refreshing break in the Street Bar as part of Léto na Teyschlovce, which we organize at our center.",
                     "On Wednesday, September 3rd, you can also participate in the fourth annual TOURNAMENT IN TABLE FOOTBALL. Register for the tournament from 5:00 PM to 5:45 PM at the location or here: https://forms.gle/KqRqKdKSBBa38SDf9",
@@ -433,7 +433,59 @@ export const activities = [
                 contactLink: ""
             }
         }
-    }   
+    },
+    {
+        template: "template4",
+        type: "special",
+        translations: {
+            cs: {
+                name: "Otevření Runway Hubu",
+                slug: "otevreni-hubu",
+                cardDescription: "Již brzy otevíráme náš nový prostor!",
+                cardIcon: "",
+                description: ["Runway Bystrc otevírá novou budovu!",
+                    "Přijďte s námi oslavit otevření našich nových prostor s kavárnou a místem pro komunitní akce v Bystrci. Slavnostní otevření bude probíhat od 14:30 do 16:00.",
+                    "Těšit se můžete na voňavou kávu, točenou limonádu, hudbu a doprovodný program pro děti i dospělé.",
+                    "V 16:00 zde následně proběhne první bohoslužba v Runway Hub na téma Nebuďme jen sousedé. Přijďte oslavit nový začátek s námi!"
+                ],
+                time: ["7. 9. 2025", "14:30 - 16:00"],
+                cardDate: "7. září",
+                cardTime: "14:30 - 16:00",
+                filterDate: "2025-09-07",
+                place: "Runway Hub, Nad Přehradou 9a, Bystrc",
+                image: "hub.webp",
+                registrationText: "", 
+                registrationLink: "",     
+                contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            },
+            en: {
+                name: "Opening of Runway Hub",
+                slug: "otevreni-hubu",
+                cardDescription: "We are opening our new space soon!",
+                cardIcon: "",
+                description: ["Runway Bystrc is opening a new building!",
+                    "Come and celebrate the opening of our new space with us, with a coffee shop and a place for community events in Bystrc. The official opening will take place from 2:30 PM to 4:00 PM.",
+                    "You can look forward to the smell of coffee, freshly squeezed lemonade, music, and a program for both children and adults.",
+                    "At 4:00 PM, the first service in Runway Hub will take place on the topic: Be not just neighbors. Come and celebrate the new beginning with us!"
+                ],
+                time: ["September 7th, 2025", "14:30 - 16:00"],
+                cardDate: "September 7th",
+                cardTime: "14:30 - 16:00",
+                filterDate: "2025-09-07",
+                place: "Runway Hub, Nad Přehradou 9a, Bystrc",
+                image: "hub.webp",
+                registrationText: "", 
+                registrationLink: "",     
+                contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            }
+        }
+    }      
  ];
 
 export const specialActivitiesCard = {
