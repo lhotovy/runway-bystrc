@@ -294,7 +294,7 @@ export const activities = [
                 place: "hotel na trojce",
                 image: "placeholder.webp",
                 registrationText: "Přihlašování do 12. 2.", 
-                registrationLink: "prihlaska/hory",      
+                registrationLink: "/prihlaska/hory",      
                 contactIcon: null,
                 contactPerson: "",
                 contactLinkText: "",

@@ -4,17 +4,13 @@ export const SundaysDescription = {
     cs: function SundaysDescriptionCz() {
         return (
             <div className="flex flex-col gap-y-8">
-                <p>Neděle na Runwayi probíhají každou <b>1. a 3. neděli v měsíci</b> v Centru Runway Bystrc (hned vedle Teyschlovy 20).
-                    Od 16:15 je otevřená kavárnička, kde si můžete dát kávu, čaj nebo něco dobrého k zakousnutí. Je to příležitost si
-                    v klidu popovídat nebo jen tak přijít a rozhlédnout se.</p>
-
-                <p><b>Samotná bohoslužba začíná v 17:00</b> a trvá zhruba hodinu. Během ní probíhá také samostatný program
-                    pro děti – formou her, příběhů a tvoření se děti seznamují s křesťanskými hodnotami přiměřeně svému věku.</p>
+                <p>Neděle na Runwayi probíhají každou <b>1. a 3. neděli v měsíci</b> v Runway Hubu (Nad Přehradou 1466/9a, Brno-Bystrc).
+                Samotná <b>bohoslužba</b> začíná od <b>16:00 hodin</b> a trvá zhruba hodinu. Během ní probíhá také samostatný program pro děti – formou her, příběhů 
+                a tvoření se děti seznamují s křesťanskými hodnotami přiměřeně svému věku. <b>Po bohoslužbě</b> je možné dát si <b>kávu nebo něco 
+                dobrého k zakousnutí.</b> Je to příležitost si v klidu popovídat nebo ještě v klidu chvíli posedět.</p>
 
                 <h2 className="text-gray-9 font-bold text-lg text-left mt-12">Co očekávat?</h2>
-                <p>Naše bohoslužby jsou <b>otevřené veřejnosti.</b> Přicházejí k nám jak lidé, kteří jsou součástí církve, tak i ti,
-                    kteří víru teprve objevují, hledají nebo se jen chtějí dozvědět víc. Vítán je <b>každý – bez ohledu na zkušenosti
-                        s vírou, věk nebo životní příběh.</b> Oblečení může být klidně úplně neformální – přijď tak, jak je ti to pohodlné.
+                <p>Naše bohoslužby jsou <b>otevřené veřejnosti.</b> Přicházejí k nám jak lidé, kteří jsou součástí církve, tak i ti, kteří víru teprve objevují, hledají nebo se jen chtějí dozvědět víc. Vítán je <b>každý – bez ohledu na zkušenosti s vírou, věk nebo životní příběh.</b> Oblečení může být klidně úplně neformální – přijď tak, jak je ti to pohodlné.
                 </p>
 
                 <p>Program bohoslužby obvykle zahrnuje <b>několik písní,</b> které zpíváme společně s kapelou (texty jsou promítané,
@@ -34,15 +30,11 @@ export const SundaysDescription = {
         return (
             <div className="flex flex-col gap-y-8">
                 <p>
-                    Sundays at Runway take place every <b>1st and 3rd Sunday of the month</b> at the Runway Bystrc Center (right next to Teyschlova 20).
-                    From 16:15, the café is open, where you can enjoy coffee, tea, or a snack. It&apos;s an opportunity to have a relaxed chat or just come and look around.
+                    Sundays at Runway take place every <b>1st and 3rd Sunday of the month</b> at the Runway Hub (Nad Přehradou 1466/9a, Brno-Bystrc).
+                    The main <b>service</b> starts at <b>16:00</b> and lasts about an hour. During this time, there is also a separate program for children – through games, stories, 
+                    and crafts, children learn about Christian values in an age-appropriate way. <b>After the service</b>, you can enjoy <b>coffee or a snack.</b> It&apos;s an opportunity to have a relaxed chat or just come and look around.
                 </p>
-
-                <p>
-                    <b>The main service starts at 17:00</b> and lasts about an hour. During this time, there is also a separate program for children – through games, stories, 
-                    and crafts, children learn about Christian values in an age-appropriate way.
-                </p>
-
+                
                 <h2 className="text-gray-9 font-bold text-lg text-left mt-12">What to expect?</h2>
 
                 <p>

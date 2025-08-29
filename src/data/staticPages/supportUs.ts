@@ -13,7 +13,7 @@ export const supportUsData = {
           donateButton: "Donate"
         },
         vision: {
-          establishment: "Runway Bystrc was established in 2021 under the auspices of BJB Brno. Since then, it has become a place where people can meet, build relationships, and discover the Christian faith. We organize regular worship services and programs for children, youth, and adults – clubs, English conversations, day camps, and other events.",
+          establishment: "Runway Bystrc was established in 2021 under the auspices of Brno Baptist Church. Since then, it has become a place where people can meet, build relationships, and discover the Christian faith. We organize regular worship services and programs for children, youth, and adults – clubs, English conversations, day camps, and other events.",
           mission: "Our vision is to be an open and loving community where people of all generations can know Jesus Christ and engage in His mission.",
           personalStory: "Personal Story",
           quote: "Runway and the people I met there showed me not only the way out of a bad mood but also the way to God. Runway has become a place I always love to return to.",

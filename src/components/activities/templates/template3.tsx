@@ -48,8 +48,14 @@ export const ActivityTemplate3 = ({
       </div>    
       <div className="w-full flex justify-center bg-content-blue py-7.5">
         <div className="flex flex-col items-center w-full max-w-screen-xl px-4">
-          <p className="text-xl text-white font-bold">{registrationText}</p>         
-            <Button variant="yellow" text="Přihlásit se" onClick={() => {router.push(`/${registrationLink}`)}} />     
+          {registrationText && <p className="text-xl text-white font-bold mb-4">{registrationText}</p>}         
+          {registrationLink && 
+            <Button 
+              variant="yellow" 
+              text="Přihlásit se" 
+              onClick={() => {registrationLink.includes("http") ? window.open(registrationLink, "_blank") : router.push(`${registrationLink}`)}} 
+              className="py-3"
+            />}     
         </div>
       </div>
       <AnotherActivities 
