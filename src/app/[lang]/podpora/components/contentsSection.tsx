@@ -10,8 +10,8 @@ export const ContentsSection = ({ lang }: { lang: "cs" | "en" }) => {
 
     const contentTabs = [
         { name: "vision", text: lang === "en" ? "Vision" : "Vize" },
-        { name: "whySupport", text: lang === "en" ? "Why Support?" : "Proč podpořit?" },
-        { name: "howSupport", text: lang === "en" ? "How to Contribute?" : "Jak přispět?" }
+        { name: "whySupport", text: lang === "en" ? "Support" : "Proč podpořit?" },
+        { name: "howSupport", text: lang === "en" ? "Contribute" : "Jak přispět?" }
       ];
 
   return (

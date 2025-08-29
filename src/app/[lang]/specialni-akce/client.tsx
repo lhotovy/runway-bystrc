@@ -26,7 +26,7 @@ export const SpecialEventsClient = ({lang}: {lang: string}) => {
             <div className="max-w-[1280px] w-full">
                 <h1 className="text-4xl font-bold px-4 md:px-0">{texts.title}</h1>
                 <div className="px-4 md:px-0">              
-                    <div className="flex gap-x-6 mt-6 px-4 md:px-0">
+                    <div className="flex gap-x-6 mb-6 mt-6 px-4 md:px-0">
                         <Button 
                             variant="badge" 
                             text={texts.upcoming} 

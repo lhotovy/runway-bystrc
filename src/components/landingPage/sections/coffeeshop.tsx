@@ -12,7 +12,7 @@ export const Coffeeshop = ({ data, lang }: { data: any, lang: string }) => {
             <h2 className="text-4xl font-bold text-white mb-6">
               {data?.coffeeshopTitle}
             </h2>
-            <p className="text-lg text-white mb-6 leading-relaxed">
+            <p className="text-base text-white mb-6 leading-relaxed">
               {data?.coffeeshopDescription}
             </p>
             <div className="mt-8 w-fit">

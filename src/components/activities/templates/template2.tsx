@@ -81,7 +81,7 @@ export const ActivityTemplate2 = ({
         </div>
         <div className="flex flex-col gap-y-6 order-1 md:order-2">
           <h2 className="text-gray-9 font-bold text-[32px]">{staticData.currentTopicTitle}</h2>
-          <p className="text-gray-9 text-lg">{staticData.currentTopicText}</p>
+          <p className="text-gray-9 text-base">{staticData.currentTopicText}</p>
         </div>
       </div>
 

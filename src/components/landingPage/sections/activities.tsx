@@ -14,7 +14,7 @@ export const Activities = (
   }) => {    
     
   return ( 
-    <div className='max-w-[1280px] w-full flex flex-col justify-center gap-y-10 px-4 md:px-0'>
+    <div className='max-w-[1280px] w-full flex flex-col justify-center gap-y-10 px-4 md:px-0' id="activities">
         <SectionTitle title={title} />
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6'>
           {

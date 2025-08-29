@@ -20,7 +20,7 @@ export const SpecialEvents = ({
     });    
     
   return ( 
-    <div className="relative w-full h-92 flex flex-col justify-center py-10 px-4 md:px-0 mt-2 md:mt-10 bg-[url('/den_deti.webp')] bg-cover bg-center">
+    <div className="relative w-full h-fit flex flex-col justify-center py-10 px-4 md:px-0 mt-2 md:mt-10 bg-[url('/den_deti.webp')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/50 z-0" />
         <div className="relative z-10 flex flex-col w-full max-w-[1280px] mx-auto gap-y-8 px-3 md:px-0 rounded-xl">
             <SectionTitle title={data?.specialEventsText} className='text-white' />
