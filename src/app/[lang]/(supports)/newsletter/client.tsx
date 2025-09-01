@@ -9,9 +9,11 @@ export const NewsletterClient = ({ lang }: { lang: string }) => {
   const data = newsletterData.translations[lang as keyof typeof newsletterData.translations];
 
   return (
-    <div className="flex flex-col items-center py-20">
-      <h1 className="text-[32px] font-bold">{data.title}</h1>
-      <form className="mt-8 w-full sm:w-2/3 lg:w-1/3 flex flex-col gap-y-8">
+    <div className="flex flex-col gap-y-8 items-start">
+      <div className="relative w-[calc(100vw-8px)] -mx-[calc((100vw-100%)/2)] bg-middle-blue text-white text-center py-8">
+        <h1 className="font-bold text-[24px] md:text-[32px]">{data.title}</h1>
+      </div>
+      <form className="my-12 w-full sm:w-2/3 lg:w-1/3 flex flex-col mx-auto gap-y-8">
         {/* Name */}
         <div className="flex flex-col gap-y-1">
           <label htmlFor="name" className="font-bold text-base">
@@ -64,7 +66,7 @@ export const NewsletterClient = ({ lang }: { lang: string }) => {
         <p className="font-sm text-gray-8">{data.unsubscribeInfo}</p>
         {/* Submit Button */}
         <div className="flex justify-center">
-          <Button variant="blue" type="submit" text={data.submitButton} className="text-center w-2/3 md:w-1/2" />
+          <Button variant="yellow" type="submit" text={data.submitButton} className="text-center w-2/3 md:w-1/2" />
         </div>
       </form>
     </div>

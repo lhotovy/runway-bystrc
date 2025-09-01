@@ -2,6 +2,7 @@ export const kontaktData = {
   translations: {
     en: {
       title: "Contact",
+      subtitle: "Where to find us?",
       description: "Contact us",
       locations: [
         {
@@ -12,16 +13,16 @@ export const kontaktData = {
           image: "/centrumrb.webp",
         },
         {
-          name: "Prayer Room",
+          name: "Runway Hub",
           description: "We are preparing new and larger spaces for our meetings! We look forward to welcoming you soon in our new prayer room, which will be the renovated former Don Papa restaurant.",
           address: "Nad Přehradou 9a, Brno - Bystrc",
           mapLink: "https://maps.app.goo.gl/ZqvRKeMYPwbcTVhBA",
-          image: "/placeholder.webp",
+          image: "/hub.webp",
         },
       ],
       contactDetails: {
         officialAddress: {
-          title: "Official Headquarters of Runway",
+          title: "Official Headquarters",
           lines: ["Runway Bystrc", "Smetanova 20", "602 000 Brno"],
         },
         phone: {
@@ -35,7 +36,7 @@ export const kontaktData = {
         },
       },
       form: {
-        title: "You can also contact us here",
+        title: "Contact us",
         fields: {
           name: "Full Name",
           email: "Email",
@@ -47,6 +48,7 @@ export const kontaktData = {
     },
     cs: {
       title: "Kontakt",
+      subtitle: "Kde nás najdete?",
       description: "Kontaktujte nás",
       locations: [
         {
@@ -57,16 +59,16 @@ export const kontaktData = {
           image: "/centrumrb.webp",
         },
         {
-          name: "Modlitebna",
-          description: "Připravujeme nové a větší prostory pro naše setkávání! Těšíme se, že vás brzy přivítáme v naší nové modlitebně, kterou se stane právě rekonstruovaná bývalá restaurace Don Papa.",
+          name: "Runway Hub",
+          description: "Připravujeme nové a větší prostory pro naše setkávání! Těšíme se, že vás brzy přivítáme v naší nové modlitebně, kterou se stane právě rekonstruovaná bývalá restaurace Don Papa. V novém prostoru najdete také kavárnu. ",
           address: "Nad Přehradou 9a, Brno - Bystrc",
           mapLink: "https://maps.app.goo.gl/ZqvRKeMYPwbcTVhBA",
-          image: "/placeholder.webp",
+          image: "/hub.webp",
         },
       ],
       contactDetails: {
         officialAddress: {
-          title: "Oficiální sídlo Runwaye",
+          title: "Oficiální sídlo",
           lines: ["Runway Bystrc", "Smetanova 20", "602 000 Brno"],
         },
         phone: {
@@ -80,7 +82,7 @@ export const kontaktData = {
         },
       },
       form: {
-        title: "Kontaktovat nás můžete i zde",
+        title: "Kontakujte nás",
         fields: {
           name: "Jméno a příjmení",
           email: "Email",

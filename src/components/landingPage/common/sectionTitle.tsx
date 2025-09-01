@@ -1,10 +1,14 @@
+import { cn } from "@/lib/utils";
+
 export const SectionTitle = (
     {
-        title
+        title,
+        className
     }: {
-        title: string
+        title: string,
+        className?: string
     }) => {
     return (
-        <h2 className="text-[32px] font-bold text-gray-9">{title}</h2>
+        <h2 className={cn("text-[32px] font-bold text-gray-9", className)}>{title}</h2>
     );
 };  

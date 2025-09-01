@@ -29,7 +29,7 @@ export const ChallengeCampClient = ({ lang }: { lang: string }) => {
   return (
     <div className="flex flex-col items-center w-full my-10 lg:mt-24 min-h-screen">
       <div className="flex flex-col items-center w-full">
-        <div className="flex flex-col justify-center items-center gap-y-10">
+        <div className="flex flex-col justify-center items-center gap-y-10 px-4 md:px-0">
           <h1 className="text-5xl text-gray-9 font-semibold">{campData.name}</h1>
           <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-x-10 text-blue-5 uppercase text-sm">
             {campData.time.map((timeItem, index) => (
@@ -50,14 +50,14 @@ export const ChallengeCampClient = ({ lang }: { lang: string }) => {
             <p className="text-gray-5 text-2xl mx-4 hidden lg:flex">•</p>
             <p>{campData.highlights[2]}</p>
           </div>
-          <div className="text-gray-9 text-base flex flex-col items-start gap-y-8 max-w-[850px]">
+          <div className="text-gray-9 text-base flex flex-col items-start gap-y-8 max-w-[850px] px-4 md:px-0">
             {campData.description.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
           </div>
         </div>
       </div>
-      <div className="w-[calc(100vw-15px)] bg-gray-1 flex flex-col items-center mt-10 py-6">
+      <div className="w-full bg-gray-1 flex flex-col items-center mt-10 py-6 px-4 md:px-0">
         <div className="max-w-[1280px] flex flex-col justify-start items-start px-4 lg:px-0 py-7.5 gap-y-8">
           {campData.pricing.map((priceDetail, index) => (
             <p key={index}>{priceDetail}</p>
@@ -86,7 +86,7 @@ export const ChallengeCampClient = ({ lang }: { lang: string }) => {
           </div>
         </div>
       </div>
-      <div className="w-[calc(100vw-15px)] bg-blue-5 py-16 text-sm lg:text-base">
+      <div className="w-full bg-blue-5 py-16 text-sm lg:text-base px-4 md:px-0">
         <div className="max-w-[1000px] mx-auto">
           <p className="text-xl font-bold text-white mb-8 px-4 lg:px-0">Program dne</p>
           <div className="grid grid-cols-2 lg:grid-cols-6 mx-auto text-white px-4 lg:px-0">

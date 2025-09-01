@@ -47,7 +47,7 @@ export default function RootLayoutClient({
     </head> */}
       <body className={`${openSans.className} text-gray-9 w-full`}>       
         <Header onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)} lang={lang} />
-        <main className="max-w-[1280px] mx-auto px-6 xl:px-0">
+        <main className="mx-auto">
           {children}
           <Analytics />
           <SpeedInsights />

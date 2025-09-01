@@ -6,7 +6,7 @@ export const gdprData = {
       heading: "Informace o zpracování osobních údajů",
       sections: {
         processing: {
-          title: "Zpracování osobních údajů",
+          title: "Informace o zpracování osobních údajů",
           content: [
             "Runway Bystrc jako součást Sboru Bratrské jednoty baptistů v Brně, se sídlem Smetanova 20, 602 00 Brno, IČ: 00487597 (dále také jen „správce“), tímto prohlašuje, že ve smyslu nařízení Evropského parlamentu a Rady (EU) 2016/679 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a volném pohybu těchto údajů a o zrušení směrnice 95/46/ES (toto nařízení bude dále označováno jen jako „GDPR“) zpracovává osobní údaje subjektů údajů pro svou činnost, a je tedy správcem osobních údajů (tj. osobou, která určuje způsoby a účely zpracování osobních údajů).",
             "Správce zpracovává osobní údaje zejména v následujících oblastech:",

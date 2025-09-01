@@ -10,7 +10,7 @@ export async function generateMetadata(
     const data = oNasData.translations[lang];   
 
     return {
-        title: data.title,
+        title: `${data.title} | Runway Bystrc`,
         description: data.description
     };
 };

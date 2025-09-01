@@ -1,18 +1,21 @@
 "use client";
 
-import { Clock4, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnotherActivities } from "../anotherActivities";
 import { useRouter } from "next/navigation";
 import { JSX } from "react";
 import { template2Data } from "@/data/templates/template2Data";
-import placeholderImage from "@/public/placeholder.webp";
+import { LinkButton } from "@/components/ui/linkButton";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import { SundaysDescription } from "@/data/staticPages/sundaysDescription";
+import { Hero } from "@/components/hero";
 
-// Template pro Neděle na Runwayi s odkazy na jiné sbory
+type Lang = "cs" | "en";
+
+// Template pro Neděle na Runwayi
 export const ActivityTemplate2 = ({
   name,
-  description,
   time,
   place,
   image,
@@ -25,7 +28,6 @@ export const ActivityTemplate2 = ({
   lang
 }: {
   name: string,
-  description: string[],
   time: string[] | null,
   place: string,
   image: string,
@@ -39,87 +41,31 @@ export const ActivityTemplate2 = ({
 }) => {
     const router = useRouter();
     const staticData = template2Data.translations[lang as keyof typeof template2Data.translations];
+    const SundaysDescriptionComponent = SundaysDescription[lang as Lang];
   return (
-    <div className="flex flex-col items-center w-full my-10 lg:mt-12 min-h-screen">
-      {/* big screen view */}
-      <div className="hidden sm:flex items-center w-full">
-        <div className="w-2/3 flex flex-col justify-start gap-y-10">
-          <h1 className="text-5xl text-gray-9 font-semibold">{name}</h1>
-          <div className="flex gap-x-10 text-blue-5 uppercase text-sm">     
-            {
-              time?.map((timeItem, index) => {
-                return (
-                  <p className="flex items-center gap-x-2" key={index}>
-                    <Clock4 size={24} />
-                    {timeItem}
-                  </p>
-                )}     
-            )}      
-            <p className="flex items-center gap-x-2">
-              <MapPin size={24} />
-              {place}
-            </p>
-          </div>
-          <div className="text-gray-9 text-base flex flex-col items-start gap-y-8">
-            {
-              description.map((paragraph, index) => {
-                return (
-                  <p key={index}>{paragraph}</p>
-                )
-              })
-            }
-          </div>          
-        </div>
-        <div className="w-1/3 flex justify-center">
-          <Image src={`/${image}` || placeholderImage} alt={name} width={300} height={300} className="w-60 h-60 rounded-2xl" />
-        </div>
+    <div className="flex flex-col items-center w-full min-h-screen mb-24">
+      <Hero 
+        name={name} 
+        time={time} 
+        place={place} 
+        image={image} 
+      />
+      <div className="text-gray-9 text-base flex flex-col items-center gap-y-8 w-5/6 sm:w-1/2 my-8 md:my-24">
+        {SundaysDescriptionComponent()}
       </div>
 
-      {/* small screen view */}
-      <div className="flex sm:hidden items-center w-full">
-        <div className="w-full flex flex-col justify-center item-center gap-y-10">
-          <h1 className="text-4xl text-gray-9 font-bold">{name}</h1>
-          <div className="flex justify-center">
-            <Image src={`/${image}` || placeholderImage} alt={name} width={300} height={300} className="w-full aspect-square rounded-4xl" />
-          </div>
-          <div className="flex flex-col gap-y-8 text-blue-5 uppercase text-sm">
-            { 
-            time?.map((time, index) => {
-              return (
-                <p key={index} className="flex items-center gap-x-2">
-                  <Clock4 size={24} />
-                  {time}
-                </p>
-            )}
-            )}           
-            <p className="flex items-center gap-x-2">
-              <MapPin size={24} />
-              {place}
-            </p>
-          </div>
-          <div className="text-gray-9 text-base flex flex-col items-start gap-y-8">
-            {
-              description.map((paragraph, index) => {
-                return (
-                  <p key={index}>{paragraph}</p>
-                )
-              })
-            }
-          </div>          
-        </div>
-      </div>
-
-      <div className="flex flex-col justify-center items-center w-[calc(100vw-15px)] bg-gray-1 py-7.5 mt-10 gap-y-8">
-        <p className="text-xl text-gray-9 font-bold">{contactTitle}</p>
-        <div className="flex flex-col sm:flex-row items-center sm:gap-x-12 gap-y-8">
+      {/* contact section */}
+      <div className="flex flex-col justify-center items-center w-full bg-content-blue py-7.5 mt-10 gap-y-8">
+        <p className="text-xl text-white font-bold">{contactTitle}</p>
+        <div className="flex flex-col items-center gap-y-8">
             <div className="flex flex-col items-center gap-y-4 w-full max-w-screen-xl px-4">           
                 {contactIcon && contactIcon}
-                <p className="text-gray-8 text-base font-bold">{contactPerson}</p>
-                <Link className="text-blue-5 font-semibold text-base" target="blank" href={contactLink ?? "/"}>{contactLinkText}</Link>
+                <p className="text-white text-base font-bold">{contactPerson}</p>
+                <Link className="text-blue-3 font-semibold text-base" target="blank" href={contactLink ?? "/"}>{contactLinkText}</Link>
                 </div>
             <div className="w-92 text-center">
               <button 
-                  className="w-1/2 sm:w-full p-4 text-blue-5 bg-white rounded-xl font-bold text-base cursor-pointer"
+                  className="p-4 text-dark-blue bg-yellow rounded-xl font-bold text-base cursor-pointer"
                   onClick={()=> router.push(staticData.anotherContacts.href)}
               >
                   {staticData.anotherContacts.text}
@@ -127,21 +73,27 @@ export const ActivityTemplate2 = ({
             </div>
         </div>      
       </div>
-      <div className="flex flex-col items-center w-full">
-        <h2 className="text-gray-9 font-bold text-[32px] py-24">{staticData.anotherServices}</h2>
-        <div className="flex flex-col sm:flex-row gap-y-16 sm:gap-x-48 items-end">            
-            <Link href="https://www.baptistebrno.cz/" target="blank" className="flex flex-col items-center">
-              <Image src="/smetanka.png" alt="BJB Smetanova" width={150} height={90} className="mb-6" />
-              <p>Bratská jednota baptistů</p>
-              <p>Smetanova 20</p>
-            </Link>
-  
-            <Link href="https://www.k12medlanky.cz/" target="blank" className="flex flex-col items-center">
-              <Image src="/kytnerova.png" alt="BJB Medlánky" width={90} height={50} className="mb-6" />
-              <p>Společenství K12</p>
-              <p>Kytnerova 12, Medlánky</p>
-            </Link>          
+
+      {/* current topic section */}
+      <div className="max-w-[900px] grid grid-cols-1 md:grid-cols-2 md:gap-x-24 items-center w-full mx-auto gap-x-8 px-4 md:px-0 py-8 md:py-24">
+        <div className="relative w-full md:h-[400px] order-2 md:order-1">
+          <Image src="/series.webp" alt="Services" className="w-full h-full object-cover rounded-lg mt-4 lg:mt-0" width={500} height={500} />
         </div>
+        <div className="flex flex-col gap-y-6 order-1 md:order-2">
+          <h2 className="text-gray-9 font-bold text-[32px]">{staticData.currentTopicTitle}</h2>
+          <p className="text-gray-9 text-base">{staticData.currentTopicText}</p>
+        </div>
+      </div>
+
+      {/* another placed link section */}
+      <div className="flex flex-col gap-y-8 items-center w-full bg-jasmin py-8 md:py-24 px-4 md:px-0">
+        <h2 className="text-gray-9 font-bold text-[32px]">{staticData.anotherServicesTitle}</h2>
+        <p className="text-gray-9 text-base w-full md:w-1/5 text-left md:text-center">{staticData.anotherServicesText}</p>
+        <LinkButton 
+          href={lang === "cs" ? "/o-nas" : "/en/o-nas"} 
+          text={staticData.anotherServicesLink}
+          icon={<ChevronRightIcon className="w-6 h-6" />}
+          />
       </div>
       <AnotherActivities 
         activities={anotherActivities} 

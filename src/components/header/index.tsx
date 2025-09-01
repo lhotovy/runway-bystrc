@@ -7,6 +7,7 @@ import { useState } from "react";
 import { HeaderTabs } from "./tabs";
 import { MobileMenu } from "./mobilemenu";
 import Link from "next/link";
+import { MenuIcon } from "lucide-react";
 
 export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggle: () => void, lang: string | null }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -15,18 +16,23 @@ export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggl
     <>
       <header
         id="header"
-        className="flex justify-center items-center w-full border-b border-neutral bg-white text-primary-content shadow-xs p-4"
+        className="flex justify-center items-center w-full bg-dark-blue text-primary-content py-2 pr-2 pl-0 md:p-4 max-h-[64px]"
       >
-        <div className="flex max-w-[1280px] w-full xl:min-w-[1280px] items-center justify-between">
+        <div className="flex max-w-[1280px] w-full xl:min-w-[1280px] items-center justify-between max-h-[64px]">
           <Link
             href={lang === "en" ? "/en" : "/"}
-            id="logo" className="flex h-full w-[300px] min-w-[3rem] items-center justify-start bg-white ">
+            id="logo"
+            className="flex h-12 md:h-16 items-center justify-start overflow-hidden"
+          >
             <Image
-              src="/logo.webp"
+              src="/logo_white_cropped.png"
               alt="Runway Logo"
-              className="w-24"
-              height={100}
-              width={200}
+              className="w-full h-full object-contain"
+              height={179}
+              width={500}
+              priority
+              quality={100}
+              sizes="(max-width: 768px) 120px, 200px"
             />
           </Link>
           <div className="hidden sm:flex h-full w-full items-center justify-end">       
@@ -38,8 +44,8 @@ export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggl
               className="px-4 text-base-100 focus:outline-hidden sm:hidden"
               onClick={() => setSidebarOpen(!sidebarOpen)}
             >
-              <Bars3BottomLeftIcon
-                className="h-6 w-6 text-primary-content"
+              <MenuIcon
+                className="h-6 w-6 text-white"
                 aria-hidden="true"
               />
             </button>
