@@ -8,6 +8,7 @@ import { Footer } from '@/components/footer/footer';
 import { Analytics } from "@vercel/analytics/react"
 import { usePathname, useRouter } from 'next/navigation';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { LangOptions } from '@/types';
 
 const openSans = Open_Sans({ subsets: ['latin'] });
 
@@ -16,7 +17,7 @@ export default function RootLayoutClient({
   lang
 }: {
   children: React.ReactNode
-  lang: string | null
+  lang: LangOptions | null
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();

@@ -1,8 +1,9 @@
 "use client";
 
 import { beliefsData } from "@/data/staticPages/beliefsData";
+import { LangOptions } from "@/types";
 
-export default function BeliefsClient({ lang }: { lang: 'en' | 'cs' }) {
+export default function BeliefsClient({ lang }: { lang: LangOptions }) {
     const content = beliefsData.translations[lang];
 
   return (

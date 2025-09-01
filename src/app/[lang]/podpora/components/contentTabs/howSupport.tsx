@@ -1,8 +1,9 @@
 "use client";
 
 import { supportUsData } from "@/data/staticPages/supportUs";
+import { LangOptions } from "@/types";
 
-export const HowSupportTab = ({ lang }: { lang: "cs" | "en" }) => {
+export const HowSupportTab = ({ lang }: { lang: LangOptions }) => {
   const data = supportUsData.translations[lang].howSupport;
 
   return (

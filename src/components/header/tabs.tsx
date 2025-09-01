@@ -15,8 +15,9 @@ import {
 import CompleteLanguageSwitcher from "../langSwitcher";
 import { defaultLocale } from "@/middleware";
 import { menuTexts } from "@/data/staticPages/menu";
+import { LangOptions } from "@/types";
 
-export const HeaderTabs = ({ lang }: { lang: string | null }) => {
+export const HeaderTabs = ({ lang }: { lang: LangOptions | null }) => {
   const data = menuTexts[lang as keyof typeof menuTexts];
   const isDefaultLocale = lang === defaultLocale;
 
@@ -70,7 +71,7 @@ export const HeaderTabs = ({ lang }: { lang: string | null }) => {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <CompleteLanguageSwitcher currentLang={lang || ''} />
+          <CompleteLanguageSwitcher currentLang={lang || 'cs'} />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

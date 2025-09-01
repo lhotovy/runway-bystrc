@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { ChevronRightIcon } from "@heroicons/react/24/outline"
 import Image from "next/image"
+import { LangOptions } from "@/types";
 
-export const Coffeeshop = ({ data, lang }: { data: any, lang: string }) => {
+export const Coffeeshop = ({ data, lang }: { data: any, lang: LangOptions }) => {
   return (  
     <section className="py-16 bg-dark-blue w-full px-4 md:px-0">
       <div className="mx-auto px-4 max-w-[1280px]">

@@ -44,4 +44,6 @@ export type Activity = {
     filterDate?: string;
 }
 
+export type LangOptions = "cs" | "en"
+
    

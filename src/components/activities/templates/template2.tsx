@@ -10,8 +10,7 @@ import { LinkButton } from "@/components/ui/linkButton";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { SundaysDescription } from "@/data/staticPages/sundaysDescription";
 import { Hero } from "@/components/hero";
-
-type Lang = "cs" | "en";
+import { LangOptions } from "@/types";
 
 // Template pro Neděle na Runwayi
 export const ActivityTemplate2 = ({
@@ -37,11 +36,11 @@ export const ActivityTemplate2 = ({
   contactLinkText: string,
   contactLink: string,
   anotherActivities: any[]
-  lang: string
+  lang: LangOptions
 }) => {
     const router = useRouter();
     const staticData = template2Data.translations[lang as keyof typeof template2Data.translations];
-    const SundaysDescriptionComponent = SundaysDescription[lang as Lang];
+    const SundaysDescriptionComponent = SundaysDescription[lang as keyof typeof SundaysDescription];
   return (
     <div className="flex flex-col items-center w-full min-h-screen mb-24">
       <Hero 

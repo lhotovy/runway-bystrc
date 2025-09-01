@@ -5,9 +5,10 @@ import { ActivityTemplate2 } from "@/components/activities/templates/template2";
 import { ActivityTemplate3 } from "@/components/activities/templates/template3";
 import { ActivityTemplate4 } from "@/components/activities/templates/template4";
 import { getActivityBySlugAndLang, getAllSlugs, getPageDataBySlug } from "@/lib/slug-mapping";
+import { LangOptions } from "@/types";
 
 type Props = {
-    params: Promise<{ lang: string, activity: string }>   
+    params: Promise<{ lang: LangOptions, activity: string }>   
  };
 
  // Generate metadata for the page
@@ -53,7 +54,7 @@ type Props = {
     }).filter(Boolean)
   }
 
-export default async function ActivityPage({ params }: {params: Promise<{ lang: string, activity: string }>}) {   
+export default async function ActivityPage({ params }: {params: Promise<{ lang: LangOptions, activity: string }>}) {   
     const { lang, activity: activityParam } = await params;
     const currentActivity = getActivityBySlugAndLang(activityParam, lang);
     const activityData = currentActivity?.translations[lang as keyof typeof currentActivity['translations']];

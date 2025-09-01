@@ -4,6 +4,7 @@ import { AnotherActivities } from "../anotherActivities";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { Hero } from "@/components/hero";
+import { LangOptions } from "@/types";
 
 // Template pro akci s přihlašováním
 export const ActivityTemplate3 = ({
@@ -25,7 +26,7 @@ export const ActivityTemplate3 = ({
   registrationText: string | undefined,
   registrationLink: string | undefined,
   anotherActivities: any[]
-  lang: string
+  lang: LangOptions
 }) => {
   const router = useRouter();
 

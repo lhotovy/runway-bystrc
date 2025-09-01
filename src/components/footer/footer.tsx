@@ -2,9 +2,9 @@ import { footerData } from "@/data/staticPages/footer";
 import Image from "next/image";
 import { SocialIcons } from "../landingPage/socialIcons";
 import Link from "next/link";
-import { Link2 } from "lucide-react";
+import { LangOptions } from "@/types";
 
-export const Footer = ({ lang }: { lang: string | null }) => {
+export const Footer = ({ lang }: { lang: LangOptions | null }) => {
     const data = footerData.translations[lang as keyof typeof footerData.translations];
 
     return (

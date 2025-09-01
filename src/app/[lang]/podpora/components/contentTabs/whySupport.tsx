@@ -1,10 +1,7 @@
 import { supportUsData } from "@/data/staticPages/supportUs";
+import { LangOptions } from "@/types";
 
-interface ProcPodporitTabProps {
-  lang: "cs" | "en";
-}
-
-export const WhySupportTab = ({ lang }: ProcPodporitTabProps) => {
+export const WhySupportTab = ({ lang }: { lang: LangOptions }) => {
   const data = supportUsData.translations[lang].whySupport;
 
   return (

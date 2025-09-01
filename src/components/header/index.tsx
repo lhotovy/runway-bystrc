@@ -2,14 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
-import { Bars3BottomLeftIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { HeaderTabs } from "./tabs";
 import { MobileMenu } from "./mobilemenu";
 import Link from "next/link";
 import { MenuIcon } from "lucide-react";
+import { LangOptions } from "@/types";
 
-export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggle: () => void, lang: string | null }) {
+export default function Header({ onMobileMenuToggle, lang }: { onMobileMenuToggle: () => void, lang: LangOptions | null }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (

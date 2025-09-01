@@ -8,8 +8,9 @@ import { useState } from "react";
 import { specialniAkce } from "@/data/staticPages/specialniAkce";
 import Image from "next/image";
 import { LinkButton } from "@/components/ui/linkButton";
+import { LangOptions } from "@/types";
 
-export const SpecialEventsClient = ({lang}: {lang: string}) => { 
+export const SpecialEventsClient = ({lang}: {lang: LangOptions}) => { 
     const texts = specialniAkce.translations[lang as keyof typeof specialniAkce.translations];    
     const [selectedBadge, setSelectedBadge] = useState(texts.upcoming);
     const kontaktLink = lang === "cs" ? "/kontakt" : "/en/kontakt";
@@ -57,7 +58,8 @@ export const SpecialEventsClient = ({lang}: {lang: string}) => {
                                             <SpecialEventCard 
                                                 key={index} 
                                                 activity={event} 
-                                                lang={lang} 
+                                                lang={lang}
+                                                type="special"
                                             />
                                         )
                                     })

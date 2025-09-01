@@ -4,12 +4,13 @@ import { SectionTitle } from "../common/sectionTitle";
 import { activities } from '@/data/activities';
 import { LinkButton } from '@/components/ui/linkButton';
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
+import { LangOptions } from '@/types';
 
 export const SpecialEvents = ({
     lang, 
     data
 }: {
-    lang: string, 
+    lang: LangOptions, 
     data: any
 }) => {    
     const filteredActivities = activities

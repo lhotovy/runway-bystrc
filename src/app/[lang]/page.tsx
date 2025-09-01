@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import HomePageDisplay from "./homePageDispay";
+import { LangOptions } from "@/types";
 
 export async function generateMetadata(
     { params }: { params: Promise<{ lang: string }> }
@@ -21,7 +22,7 @@ export async function generateStaticParams() {
     return [{ lang: "cs" }, { lang: "en" }];
 };
 
-export default async function Home({params}: {params: Promise<{ lang: string }>}) {
+export default async function Home({params}: {params: Promise<{ lang: LangOptions }>}) {
   const { lang } = await params;
   return (  
     <HomePageDisplay lang={lang} />

@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { generateFormElements } from "@/lib/functions";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { LangOptions } from "@/types";
 
-export const RegistrationPageClient = ({ data, lang }: { data: any, lang: string }) => {
+export const RegistrationPageClient = ({ data, lang }: { data: any, lang: LangOptions }) => {
   const [formData, setFormData] = useState({});
   const router = useRouter();
   const activityLink = lang === "en" ? `/en/potvrzeni?activity=${data.slug}` : `/potvrzeni?activity=${data.slug}`;

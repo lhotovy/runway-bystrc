@@ -1,3 +1,4 @@
+import { Activity, LangOptions } from "@/types";
 import Link from "next/link";
 import React from "react";
 
@@ -5,7 +6,9 @@ export function SpecialEventCard({
     activity,
     type,
     lang
-}: any) {    
+}: {
+    activity: any, type: string, lang: LangOptions
+}) {    
     const data = activity.translations[lang as keyof typeof activity.translations];    
     
     return (

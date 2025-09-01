@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import { gdprData } from "@/data/staticPages/gdpr";
+import { LangOptions } from "@/types";
 
 export async function generateMetadata(
-    { params }: { params: Promise<{ lang: keyof typeof gdprData.translations }> }
+    { params }: { params: Promise<{ lang: LangOptions }> }
 ): Promise<Metadata> {
     const { lang } = await params;
 
@@ -20,7 +21,7 @@ export async function generateStaticParams() {
 
 interface PageProps {
   params: Promise<{
-    lang: keyof typeof gdprData.translations;
+    lang: LangOptions;
   }>;
 }
 

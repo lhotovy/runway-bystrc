@@ -5,12 +5,13 @@ import { locales } from '@/middleware'
 import { getLocalizedPath, getSimpleLocalizedPath } from '@/lib/languageUtils'
 import EN from "country-flag-icons/react/3x2/GB"
 import CZ from "country-flag-icons/react/3x2/CZ"
+import { LangOptions } from '@/types';
 
 export default function CompleteLanguageSwitcher({ 
     currentLang,
     currentSlug = null // Optional: for dynamic routes with different slugs in different languages
 }: { 
-    currentLang: string,
+    currentLang: LangOptions,
     currentSlug?: string | null
 }) {
     const pathname = usePathname()

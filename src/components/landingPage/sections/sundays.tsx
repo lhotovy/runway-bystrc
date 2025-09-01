@@ -1,8 +1,9 @@
 import { LinkButton } from "@/components/ui/linkButton"
 import { ChevronRightIcon } from "@heroicons/react/24/outline"
 import Image from "next/image"
+import { LangOptions } from "@/types";
 
-export const Sundays = ({ data, lang }: { data: any, lang: string }) => {
+export const Sundays = ({ data, lang }: { data: any, lang: LangOptions }) => {
   return (
     <section className="max-w-[1280px] px-4 md:px-0 py-2 md:py-16 bg-white">
       <div className="mx-auto px-4">

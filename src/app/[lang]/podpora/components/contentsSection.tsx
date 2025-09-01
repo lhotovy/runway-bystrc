@@ -4,8 +4,9 @@ import React, { useState } from 'react'
 import { VisionTab } from './contentTabs/vision'
 import { WhySupportTab } from './contentTabs/whySupport'
 import { HowSupportTab } from './contentTabs/howSupport'
+import { LangOptions } from '@/types';
 
-export const ContentsSection = ({ lang }: { lang: "cs" | "en" }) => {
+export const ContentsSection = ({ lang }: { lang: LangOptions }) => {
     const [activeTab, setActiveTab] = useState("vision");
 
     const contentTabs = [

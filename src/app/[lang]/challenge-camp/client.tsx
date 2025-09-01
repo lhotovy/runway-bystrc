@@ -6,11 +6,11 @@ import Link from "next/link";
 import { AnotherActivities } from "../../../components/activities/anotherActivities";
 import { useRouter } from "next/navigation";
 import { activities, specialActivitiesCard } from "@/data/activities";
-import { Button } from "@/components/ui/button";
 import { challengeCampData } from "@/data/staticPages/challengeCamp";
 import placeholderImage from "@/public/placeholder.webp";
+import { LangOptions } from "@/types";
 
-export const ChallengeCampClient = ({ lang }: { lang: string }) => {
+export const ChallengeCampClient = ({ lang }: { lang: LangOptions }) => {
   const router = useRouter();
   const campData = challengeCampData.translations[lang as keyof typeof challengeCampData.translations];
 

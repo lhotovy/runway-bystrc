@@ -4,9 +4,10 @@ import { AnotherActivities } from "@/components/activities/anotherActivities";
 import { activities, specialActivitiesCard } from "@/data/activities";
 import { Metadata } from "next";
 import { tabory } from "@/data/staticPages/tabory";
+import { LangOptions } from "@/types";
 
 export async function generateMetadata(
-    { params }: { params: Promise<{ lang: keyof typeof tabory.translations }> }
+    { params }: { params: Promise<{ lang: LangOptions }> }
 ): Promise<Metadata> {
     const { lang } = await params;
 
@@ -22,7 +23,7 @@ export async function generateStaticParams() {
     return [{ lang: "cs" }, { lang: "en" }];
 };
 
-export default async function Camps({ params }: { params: Promise<{ lang: string }> }) {
+export default async function Camps({ params }: { params: Promise<{ lang: LangOptions }> }) {
     const { lang } = await params;
     const texts = tabory.translations[lang as keyof typeof tabory.translations];
     

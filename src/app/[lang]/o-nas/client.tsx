@@ -7,8 +7,9 @@ import { Hero } from "@/components/hero";
 import Link from "next/link";
 import { SiInstagram } from "@icons-pack/react-simple-icons";
 import { LinkButton } from "@/components/ui/linkButton";
+import { LangOptions } from "@/types";
 
-export const ONasClient = ({ lang }: { lang: 'cs' | 'en' }) => {
+export const ONasClient = ({ lang }: { lang: LangOptions }) => {
   const data = oNasData.translations[lang];
 
   return (

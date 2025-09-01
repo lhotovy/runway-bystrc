@@ -3,6 +3,7 @@ import { activities } from '@/data/activities';
 import { Activity } from "@/types";
 import { SectionTitle } from "../common/sectionTitle";
 import { ActivityCard } from "../activityCard";
+import { LangOptions } from "@/types";
 
 export const Activities = (
   {
@@ -10,7 +11,7 @@ export const Activities = (
     lang
   }: {
     title: string
-    lang: string
+    lang: LangOptions
   }) => {    
     
   return ( 

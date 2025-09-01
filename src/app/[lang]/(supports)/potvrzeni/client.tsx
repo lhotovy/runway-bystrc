@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { potvrzeniData } from "@/data/staticPages/potvrzeni";
+import { LangOptions } from "@/types";
 
-export const ConfirmClient = ({ lang }: { lang: string }) => {
+export const ConfirmClient = ({ lang }: { lang: LangOptions }) => {
   const searchParams = useSearchParams();
   const registrationActivity = searchParams.get("activity");
   const router = useRouter();

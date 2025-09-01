@@ -1,9 +1,10 @@
 import { ChallengeCampClient } from "./client";
 import { challengeCampData } from "@/data/staticPages/challengeCamp";
 import { Metadata } from "next";
+import { LangOptions } from "@/types";
 
 export async function generateMetadata(
-    { params }: { params: Promise<{ lang: keyof typeof challengeCampData.translations }> }
+    { params }: { params: Promise<{ lang: LangOptions }> }
 ): Promise<Metadata> {
     const { lang } = await params;
 
@@ -22,7 +23,7 @@ export async function generateStaticParams() {
 export default async function ChallengeCamp({
   params,
 }: {
-  params: Promise<{ lang: string }>
+  params: Promise<{ lang: LangOptions }>
 }) {  
   const { lang } = await params;
   return (

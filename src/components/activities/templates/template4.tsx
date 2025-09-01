@@ -1,5 +1,6 @@
 import { AnotherActivities } from "../anotherActivities";
 import { Hero } from "@/components/hero";
+import { LangOptions } from "@/types";
 
 // Template pro akci bez přihlašování
 export const ActivityTemplate4 = ({
@@ -17,7 +18,7 @@ export const ActivityTemplate4 = ({
   place: string,
   image: string,
   anotherActivities: any[]
-  lang: string
+  lang: LangOptions
 }) => {
 
   return (

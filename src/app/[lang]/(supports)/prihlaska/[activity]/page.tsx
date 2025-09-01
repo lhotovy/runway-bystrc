@@ -1,6 +1,7 @@
 import { registrations } from "@/data/registrations";
 import { RegistrationPageClient } from "./client";
 import { Metadata } from "next";
+import { LangOptions } from "@/types";
 
 // Generate metadata for the page
 export async function generateMetadata(
@@ -37,7 +38,7 @@ export default async function Registration(
     {
     params
 }: {
-    params: Promise<{lang: string, activity: string}>
+    params: Promise<{lang: LangOptions, activity: string}>
 }) {
     const { lang, activity } = await params;
     const registration = registrations.find((reg) => activity === reg.slug);

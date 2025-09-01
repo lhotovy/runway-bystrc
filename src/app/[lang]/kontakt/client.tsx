@@ -9,8 +9,9 @@ import { useState } from "react";
 import { kontaktData } from "@/data/staticPages/kontakt";
 import placeholderImage from "@/public/placeholder.webp";
 import { Hero } from "@/components/hero";
+import { LangOptions } from "@/types";
 
-export default function KontaktClient({ lang }: { lang: 'en' | 'cs' }) {
+export default function KontaktClient({ lang }: { lang: LangOptions }) {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [success, setSuccess] = useState(false);
   const data = kontaktData.translations[lang];

@@ -9,12 +9,13 @@ import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import Link from "next/link";
 import { menuTexts } from "@/data/staticPages/menu";
 import CompleteLanguageSwitcher from "../langSwitcher";
+import { LangOptions } from "@/types";
 
 interface MobileMenuProps {
   sidebarOpen: boolean;
   // eslint-disable-next-line no-unused-vars
   setSidebarOpen: (open: boolean) => void;
-  lang: string | null;
+  lang: LangOptions | null;
 }
 
 export function MobileMenu({ sidebarOpen, setSidebarOpen, lang }: MobileMenuProps) {
@@ -133,7 +134,7 @@ export function MobileMenu({ sidebarOpen, setSidebarOpen, lang }: MobileMenuProp
 
                 {/* Language Switcher */}
                 <li className="w-full text-sm flex justify-center mt-7 opacity-50">
-                <CompleteLanguageSwitcher currentLang={lang || ''} />
+                <CompleteLanguageSwitcher currentLang={lang || 'cs'} />
               </li>
             </ul>
           </div>

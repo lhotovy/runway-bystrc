@@ -6,8 +6,9 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 import { supportUsData } from "@/data/staticPages/supportUs";
+import { LangOptions } from "@/types";
 
-export const TopSection = ({ lang }: { lang: "cs" | "en" }) => {
+export const TopSection = ({ lang }: { lang: LangOptions }) => {
     const target = 13000000;
     const actual = 8000000;
     const data = supportUsData.translations[lang].topSection;

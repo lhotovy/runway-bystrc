@@ -1,10 +1,7 @@
 import { supportUsData } from "@/data/staticPages/supportUs";
+import { LangOptions } from "@/types";
 
-interface VizeTabProps {
-  lang: "cs" | "en";
-}
-
-export const VisionTab = ({ lang }: VizeTabProps) => {
+export const VisionTab = ({ lang }: { lang: LangOptions }) => {
   const data = supportUsData.translations[lang].vision;
 
   return (

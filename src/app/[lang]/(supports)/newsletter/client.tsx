@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
 import { newsletterData } from "@/data/staticPages/newsletter";
+import { LangOptions } from "@/types";
 
-export const NewsletterClient = ({ lang }: { lang: string }) => {
+export const NewsletterClient = ({ lang }: { lang: LangOptions }) => {
   const data = newsletterData.translations[lang as keyof typeof newsletterData.translations];
 
   return (

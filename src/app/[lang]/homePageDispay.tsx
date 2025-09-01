@@ -9,8 +9,9 @@ import { Welcome } from '@/components/landingPage/sections/welcome';
 import { Map } from '@/components/landingPage/sections/map';
 import { landingData } from '@/data/staticPages/landingPage';
 import React from "react";
+import { LangOptions } from '@/types';
 
-export default function HomePageDisplay({ lang }: { lang: string }) {
+export default function HomePageDisplay({ lang }: { lang: LangOptions }) {
   const data = landingData.translations[lang as keyof typeof landingData.translations];
   return (  
     <div className="flex flex-col w-full items-center justify-center gap-y-18 min-h-screen">

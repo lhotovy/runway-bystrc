@@ -1,8 +1,9 @@
 import { Activity } from "@/types"
 import { ActivityCard } from "../landingPage/activityCard"
 import { SectionTitle } from "../landingPage/common/sectionTitle"
+import { LangOptions } from "@/types";
 
-export const AnotherActivities = ({activities, lang}: {activities: Activity[], lang: string}) => {
+export const AnotherActivities = ({activities, lang}: {activities: Activity[], lang: LangOptions}) => {
    
   return (
     <div className='max-w-[1280px] w-full flex flex-col justify-center gap-y-10 my-12 px-4 md:px-0'>

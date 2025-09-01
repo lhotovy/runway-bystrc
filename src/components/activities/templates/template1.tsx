@@ -2,6 +2,7 @@ import Link from "next/link";
 import { AnotherActivities } from "../anotherActivities";
 import { JSX } from "react";
 import { Hero } from "@/components/hero";
+import { LangOptions } from "@/types";
 
 // Základní template pro aktivity
 export const ActivityTemplate1 = ({
@@ -29,7 +30,7 @@ export const ActivityTemplate1 = ({
   contactLinkText: string,
   contactLink: string,
   anotherActivities: any[]
-  lang: string
+  lang: LangOptions
 }) => {
   return (
     <div className="flex flex-col items-center w-full min-h-screen mb-24">
