@@ -7,8 +7,13 @@ export const defaultLocale = 'cs'
  
 // Get the preferred locale from headers, cookies, etc.
 function getLocale(request: NextRequest) {
-  // For simplicity, check Accept-Language header
-  // In production, you might want to check cookies first
+  // First, check if user has explicitly set a language preference via cookie
+  const preferredLangCookie = request.cookies.get('preferredLang')?.value
+  if (preferredLangCookie && locales.includes(preferredLangCookie)) {
+    return preferredLangCookie
+  }
+  
+  // Fallback to Accept-Language header
   const acceptLanguage = request.headers.get('accept-language') || ''
   
   // Check if user explicitly prefers English

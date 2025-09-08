@@ -27,6 +27,10 @@ export default function RootLayoutClient({
     if (typeof window === 'undefined' || !lang) return;
     const preferredLang = localStorage.getItem('preferredLang');
     if (!preferredLang) return;
+    
+    // Ensure cookie is also set for server-side access
+    document.cookie = `preferredLang=${preferredLang}; path=/; max-age=${365 * 24 * 60 * 60}; SameSite=Lax`;
+    
     // If user prefers English but is not on /en, redirect
     if (preferredLang === 'en' && !pathname.startsWith('/en')) {
       router.replace(`/en${pathname === '/' ? '' : pathname}`);
