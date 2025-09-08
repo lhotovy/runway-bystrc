@@ -31,9 +31,11 @@ export default function CompleteLanguageSwitcher({
     const handleSwitch = () => {
         const targetLocale = locales.find((locale) => locale !== currentLang);
         if (!targetLocale) return;
-        // Store user preference in localStorage
+        // Store user preference in both localStorage and cookies
         if (typeof window !== 'undefined') {
             localStorage.setItem('preferredLang', targetLocale);
+            // Set cookie for server-side access (expires in 1 year)
+            document.cookie = `preferredLang=${targetLocale}; path=/; max-age=${365 * 24 * 60 * 60}; SameSite=Lax`;
         }
         router.replace(getSwitchPath());
     };

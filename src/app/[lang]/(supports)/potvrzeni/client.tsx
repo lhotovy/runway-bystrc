@@ -15,8 +15,8 @@ export const ConfirmClient = ({ lang }: { lang: LangOptions }) => {
   const registrationLink = lang === "en" ? `/en/prihlaska/${registrationActivity}` : `/prihlaska/${registrationActivity}`;
 
   return (
-    <div className="flex flex-col items-center justify-center gap-y-16 min-h-[calc(100vh-306px)] text-gray-9">
-      <h1 className="text-[32px] font-bold text-gray-9">{data.title}</h1>
+    <div className="flex flex-col items-center justify-center gap-y-16 min-h-[calc(100vh-306px)] text-gray-9 px-4 lg:px-0">
+      <h1 className="text-[32px] font-bold text-gray-9 text-center md:text-left">{data.title}</h1>
       <p>{data.message}</p>
       <div className="flex flex-col sm:flex-row items-center gap-y-8 sm:gap-x-8">
         <Button

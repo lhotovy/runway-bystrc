@@ -11,10 +11,10 @@ export const NewsletterClient = ({ lang }: { lang: LangOptions }) => {
 
   return (
     <div className="flex flex-col gap-y-8 items-start">
-      <div className="relative w-[calc(100vw-8px)] -mx-[calc((100vw-100%)/2)] bg-middle-blue text-white text-center py-8">
+      <div className="relative w-full bg-middle-blue text-white text-center py-8 px-3 lg:px-0">
         <h1 className="font-bold text-[24px] md:text-[32px]">{data.title}</h1>
       </div>
-      <form className="my-12 w-full sm:w-2/3 lg:w-1/3 flex flex-col mx-auto gap-y-8">
+      <form className="my-12 w-full sm:w-2/3 lg:w-1/3 flex flex-col mx-auto gap-y-8 px-4 lg:px-0">
         {/* Name */}
         <div className="flex flex-col gap-y-1">
           <label htmlFor="name" className="font-bold text-base">

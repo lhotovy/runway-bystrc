@@ -22,7 +22,7 @@ export const RegistrationPageClient = ({ data, lang }: { data: any, lang: LangOp
 
   return (
     <div className="flex flex-col gap-y-8 items-start">
-      <div className="relative w-full bg-middle-blue text-white text-center py-8">
+      <div className="relative w-full bg-middle-blue text-white text-center py-8 px-3 lg:px-0">
          <h1 className="font-bold text-[24px] md:text-[40px]">{data.name}</h1>
       </div>
       <div className="flex flex-col gap-y-8 max-w-[800px] w-full mx-auto px-4 md:px-0">       
