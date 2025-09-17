@@ -1,1 +1,1 @@
-This is a website project for Christian mission group Runway Bystrc. It uses Next.js, Typescript and Tailwindcss.
+Website for Christian mission group Runway Bystrc. It uses Next.js, Typescript and Tailwindcss. Applies static site generation strategy and templating to optimize performance and maintainability.
