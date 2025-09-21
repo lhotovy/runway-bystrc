@@ -10,7 +10,7 @@ import { LangOptions } from "@/types";
 
 export const TopSection = ({ lang }: { lang: LangOptions }) => {
     const target = 13000000;
-    const actual = 8000000;
+    const actual = 6000000;
     const data = supportUsData.translations[lang].topSection;
 
     return (
