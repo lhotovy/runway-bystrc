@@ -485,7 +485,99 @@ export const activities = [
                 contactLink: ""
             }
         }
-    }      
+    },
+    {
+        template: "template3",
+        type: "special",
+        translations: {
+            cs: {
+                name: "Kurz umělé inteligence I. termín",
+                slug: "kurz-ai-I",
+                cardDescription: "Kurz umělé inteligence",
+                cardIcon: "",
+                description: [`Srozumitelný kurz využití umělé inteligence v každodenním životě. Naučte se využít nástroje jako Chat GPT
+                  NotebookLM, Leonardo, Suno, Vapi, Genspark a další pro usnadnění vašeho života.`],
+                time: ["9. - 11. 12. 2025", "8:00 - 16:00"],
+                cardDate: "9. - 11. 12. 2025",
+                cardTime: null,
+                filterDate: "2025-12-11",
+                place: "centrum runway bystrc",
+                image: "kurz-ai.webp",
+                registrationText: "Registrace na kurz", 
+                registrationLink: "https://naucse.eu/ai/",     
+                contactIcon: null, 
+                contactPerson: "Jiří Folta",
+                contactLinkText: "jirka.folta@gmail.com",
+                contactLink: "mailto:jirka.folta@gmail.com"
+            },
+            en: {
+                name: "AI Course I. run",
+                slug: "kurz-ai-I",
+                cardDescription: "AI Course I. run",
+                cardIcon: "",
+                description: [`A comprehensible course on the use of artificial intelligence in everyday life. Learn to use tools like Chat GPT
+                  NotebookLM, Leonardo, Suno, Vapi, Genspark and others to make your life easier.`],
+                time: ["9. - 11. 12. 2025", "8:00 - 16:00"],
+                cardDate: "9. - 11. 12. 2025",
+                cardTime: "8:00 - 16:00",
+                filterDate: "2025-12-11",
+                place: "Runway Bystrc Center",
+                image: "kurz-ai.webp",
+                registrationText: "Registration for the course", 
+                registrationLink: "https://naucse.eu/ai/",     
+                contactIcon: null, 
+                contactPerson: "Jiří Folta",
+                contactLinkText: "jirka.folta@gmail.com",
+                contactLink: "mailto:jirka.folta@gmail.com"
+            }
+        }
+    },
+    {
+        template: "template3",
+        type: "special",
+        translations: {
+            cs: {
+                name: "Kurz umělé inteligence II. termín",
+                slug: "kurz-ai-II",
+                cardDescription: "Kurz umělé inteligence",
+                cardIcon: "",
+                description: [`Srozumitelný kurz využití umělé inteligence v každodenním životě. Naučte se využít nástroje jako Chat GPT
+                  NotebookLM, Leonardo, Suno, Vapi, Genspark a další pro usnadnění vašeho života.`],
+                time: ["12. - 14. 12. 2025", "8:00 - 16:00"],
+                cardDate: "12. - 14. 12. 2025",
+                cardTime: null,
+                filterDate: "2025-12-14",
+                place: "centrum runway bystrc",
+                image: "kurz-ai.webp",
+                registrationText: "Registrace na kurz", 
+                registrationLink: "https://naucse.eu/ai/",     
+                contactIcon: null, 
+                contactPerson: "Jiří Folta",
+                contactLinkText: "jirka.folta@gmail.com",
+                contactLink: "mailto:jirka.folta@gmail.com"
+            },
+            en: {
+                name: "AI Course II. run",
+                slug: "kurz-ai-II",
+                cardDescription: "AI Course I. run",
+                cardIcon: "",
+                description: [`A comprehensible course on the use of artificial intelligence in everyday life. Learn to use tools like Chat GPT
+                  NotebookLM, Leonardo, Suno, Vapi, Genspark and others to make your life easier.`],
+                time: ["12. - 14. 12. 2025", "8:00 - 16:00"],
+                cardDate: "12. - 14. 12. 2025",
+                cardTime: "8:00 - 16:00",
+                filterDate: "2025-12-14",
+                place: "Runway Bystrc Center",
+                image: "kurz-ai.webp",
+                registrationText: "Registration for the course", 
+                registrationLink: "https://naucse.eu/ai/",     
+                contactIcon: null, 
+                contactPerson: "Jiří Folta",
+                contactLinkText: "jirka.folta@gmail.com",
+                contactLink: "mailto:jirka.folta@gmail.com"
+            }
+        }
+    }         
  ];
 
 export const specialActivitiesCard = {
