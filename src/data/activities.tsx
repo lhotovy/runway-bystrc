@@ -499,7 +499,7 @@ export const activities = [
                   NotebookLM, Leonardo, Suno, Vapi, Genspark a další pro usnadnění vašeho života.`],
                 time: ["9. - 11. 12. 2025", "8:00 - 16:00"],
                 cardDate: "9. - 11. 12. 2025",
-                cardTime: null,
+                cardTime: "8:00 - 16:00",
                 filterDate: "2025-12-11",
                 place: "centrum runway bystrc",
                 image: "kurz-ai.webp",
@@ -545,7 +545,7 @@ export const activities = [
                   NotebookLM, Leonardo, Suno, Vapi, Genspark a další pro usnadnění vašeho života.`],
                 time: ["12. - 14. 12. 2025", "8:00 - 16:00"],
                 cardDate: "12. - 14. 12. 2025",
-                cardTime: null,
+                cardTime: "8:00 - 16:00",
                 filterDate: "2025-12-14",
                 place: "centrum runway bystrc",
                 image: "kurz-ai.webp",
@@ -577,7 +577,53 @@ export const activities = [
                 contactLink: "mailto:jirka.folta@gmail.com"
             }
         }
-    }         
+    },
+    {
+        template: "template4",
+        type: "special",
+        translations: {
+            cs: {
+                name: "Swap oblečení",
+                slug: "swap",
+                cardDescription: "Podzimní swap dětské a dámské oblečení a hraček",
+                cardIcon: "",
+                description: [`Zavítejte k nám na podzimní swap, tentokrát zaměřený na dětské a dámské oblečení a hračky.
+                    Swap se koná v prostorech kavárny Runway Hub v Bystrci. Kavárna bude v průběhu akce otevřená, takže si můžete objednat kávu nebo něco dobrého k zakousnutí.`],
+                time: ["1. 11. 2025", "11:00 - 18:00"],
+                cardDate: "1. 11. 2025",
+                cardTime: "11:00 - 18:00",
+                filterDate: "2025-11-01",
+                place: "Runway Hub",
+                image: "swap.webp",
+                registrationText: "", 
+                registrationLink: "",     
+                contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            },
+            en: {
+                name: "Clothes Swap",
+                slug: "swap",
+                cardDescription: "Clothes Swap",
+                cardIcon: "",
+                description: [`Come and join us for a fall clothes swap, focusing on children's and women's clothing and toys.
+                    The swap will take place in the Runway Hub cafe in Bystrc. The cafe will be open during the event, so you can order a coffee or something good to eat.`],
+                time: ["1. 11. 2025", "11:00 - 18:00"],
+                cardDate: "1. 11. 2025",
+                cardTime: "11:00 - 18:00",
+                filterDate: "2025-11-01",
+                place: "Runway Hub",
+                image: "swap.webp",
+                registrationText: "", 
+                registrationLink: "",     
+                contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            }
+        }
+    },         
  ];
 
 export const specialActivitiesCard = {

@@ -29,7 +29,8 @@ export const SpecialEvents = ({
                 <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-5'>
                     {
                         filteredActivities.length > 0 ?
-                        filteredActivities                       
+                        filteredActivities 
+                        .sort((a, b) => new Date(a.translations[lang as keyof typeof a.translations].filterDate || '').getTime() - new Date(b.translations[lang as keyof typeof b.translations].filterDate || '').getTime())                      
                         .map((activity, index) => {
                             return (
                             <SpecialEventCard 

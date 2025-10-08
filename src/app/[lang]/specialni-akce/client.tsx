@@ -53,6 +53,7 @@ export const SpecialEventsClient = ({lang}: {lang: LangOptions}) => {
                             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4 mb-12 px-4 md:px-0">
                                 {
                                     filteredActivities
+                                    .sort((a, b) => new Date(a.translations[lang as keyof typeof a.translations].filterDate || '').getTime() - new Date(b.translations[lang as keyof typeof b.translations].filterDate || '').getTime())
                                     .map((event, index) => {
                                         return (
                                             <SpecialEventCard 
