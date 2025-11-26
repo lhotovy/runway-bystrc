@@ -30,7 +30,7 @@ export const Sundays = ({ data, lang }: { data: any, lang: LangOptions }) => {
             <div className="mt-8 w-fit">
               <LinkButton
                 href={lang === 'en' ? "/en/nedele" : "/nedele"}
-                text={data?.sundaysLearnMoreText}
+                text={data?.sundaysLearnMoreText || (lang === 'en' ? "Learn more" : "Zjisti víc")}
                 icon={<ChevronRightIcon className="w-4 h-4" />}
               />
             </div>
