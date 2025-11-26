@@ -7,18 +7,16 @@ export const Sundays = ({ data, lang }: { data: any, lang: LangOptions }) => {
   return (
     <section className="max-w-[1280px] px-4 md:px-0 py-2 md:py-16 bg-white">
       <div className="mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[900px] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mx-auto">
           {/* Left Column - Picture */}
-          <div className="order-2 lg:order-1">
-            <div className="relative">
-              <Image
-                src="/series.webp"
-                alt="Sundays at our church"
-                className="w-full h-2/3 object-cover rounded-lg"
-                width={500}
-                height={500}
-              />
-            </div>
+          <div className="relative w-full order-2 lg:order-1">
+            <Image
+              src="/series.webp"
+              alt="Sundays at our church"
+              className="w-full max-w-full object-cover rounded-lg"
+              width={1000}
+              height={1000}
+            />
           </div>
 
           {/* Right Column - Text Content */}
