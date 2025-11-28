@@ -623,7 +623,101 @@ export const activities = [
                 contactLink: ""
             }
         }
-    },         
+    },
+    {
+        template: "template3",
+        type: "special",
+        translations: {
+            cs: {
+                name: "Vánoční “mug quiz”",
+                slug: "mug-quiz",
+                cardDescription: "Vánoční “mug quiz”  - kavárenský pub quiz",
+                cardIcon: "",
+                description: [`Zveme Vás na náš první Mug Quiz – kavárenskou verzi oblíbeného pub quizu. Přijďte si užít předvánoční atmosféru s hrnkem kávy v ruce.
+                            Přihlásit se mohou týmy i jednotlivci (max. 5 osob v týmu). Pokud se přihlásíte sami, přiřadíme Vás do týmu k dalším účastníkům. Vstup je zdarma. 
+                            Pro vítězný tým máme připravenou malou výhru.`],
+                time: ["13. 12. 2025", "17:00"],
+                cardDate: "13. 12. 2025",
+                cardTime: "17:00",
+                filterDate: "2025-12-13",
+                place: "Runway Hub",
+                image: "mugQuiz.webp",
+                registrationText: "Přihlásit se na mug quiz", 
+                registrationLink: "https://forms.gle/fatddNn132wNMfN69",     
+                contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            },
+            en: {
+                name: "Christmas “mug quiz”",
+                slug: "mug-quiz",   
+                cardDescription: "Christmas “mug quiz” - cafe quiz",
+                cardIcon: "",
+                description: [`We invite you to our first Mug Quiz – a kavárenská verze oblíbeného pub quizu. Come and enjoy the pre-Christmas atmosphere with a cup of coffee in your hand.
+                            Teams and individuals can register (max. 5 people per team). If you register alone, we will assign you to a team with other participants. The entrance is free. 
+                            For the winning team, we have prepared a small prize.`],
+                time: ["13. 12. 2025", "17:00"],
+                cardDate: "13. 12. 2025",
+                cardTime: "17:00",
+                filterDate: "2025-12-13",
+                place: "Runway Hub",
+                image: "mugQuiz.webp",
+                registrationText: "Register for the mug quiz", 
+                registrationLink: "https://forms.gle/fatddNn132wNMfN69",     
+                contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            }
+        }
+    },
+    {
+        template: "template4",
+        type: "special",
+        translations: {
+            cs: {
+                name: "Benefiční vánoční koncert pro Chovánek",
+                slug: "vanocni-koncert",
+                cardDescription: "Benefiční vánoční koncert pro Chovánek",
+                cardIcon: "",
+                description: [`Rádi byste si trochu oddychli a k tomu podpořili dobrou věc? I letos Vás zveme na benefiční vánoční koncert skupiny GraceToYou. 
+                    Můžete se těšit na vánoční písně v moderním podání. Výtěžek koncertu bude věnován dětskému centru Chovánek.`, "VSTUPNÉ DOBROVOLNÉ"],
+                time: ["19. 12. 2025", "18:00"],
+                cardDate: "19. 12. 2025",
+                cardTime: "18:00",
+                filterDate: "2025-12-19",
+                place: "Společenské centrum Bystrc, Odbojářská 2",
+                image: "christmasConcert.webp",
+                registrationText: "", 
+                registrationLink: "",     
+                contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            },
+            en: {
+                name: "Fund-raiser Christmas concert for Chovánek",
+                slug: "vanocni-koncert",   
+                cardDescription: "Fund-raiser Christmas concert for Chovánek",
+                cardIcon: "",
+                description: [`We would like to take a little break and at the same time support a good cause? This year we invite you to a fund-raiser Christmas concert by the group GraceToYou. 
+                    You can look forward to Christmas songs in a modern interpretation. The gain of the concert will be donated to the children's center Chovánek.`, "FREE ENTRY"],
+                time: ["19. 12. 2025", "18:00"],
+                cardDate: "19. 12. 2025",
+                cardTime: "18:00",
+                filterDate: "2025-12-19",
+                place: "Společenské centrum Bystrc, Odbojářská 2",
+                image: "christmasConcert.webp",
+                registrationText: "", 
+                registrationLink: "",     
+                contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            }
+        }
+    },        
  ];
 
 export const specialActivitiesCard = {
@@ -660,7 +754,8 @@ export const specialActivitiesCard = {
             contactLinkText: "",
             contactLink: ""
         }
-    }
+    },
+    
 };
 
 export const challengeCamp = {   

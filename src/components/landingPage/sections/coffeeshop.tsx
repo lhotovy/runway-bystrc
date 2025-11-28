@@ -35,8 +35,8 @@ export const Coffeeshop = ({ data, lang }: { data: any, lang: LangOptions }) => 
                 src="/coffeeshop.webp"
                 alt="Our coffeeshop"
                 className="aspect-square w-full lg:h-92 lg:w-fit object-cover rounded-none lg:rounded-lg"
-                width={500}
-                height={500}
+                width={800}
+                height={1000}
               />             
             </div>
           </div>
