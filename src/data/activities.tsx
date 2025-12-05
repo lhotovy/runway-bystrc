@@ -278,22 +278,21 @@ export const activities = [
                 cardDescription: "Tradiční zimní pobyt na horách, tentokrát v srdci Jeseníků",
                 cardIcon: "",
                 description: [
-                    "Pojeď s námi na zimní pobyt v Jeseníkách v termínu 21. - 23. 2 2025. Společný čas, zábava, lyžování, procházky…", 
-                    "Letos již potřetí vyrazíme s Runway na hory, tentokrát do Hotelu na Trojce v Jeseníkách. Na místo se dopravíme auty, kdo bude mít zájem o spolujízdu s někým, prosím napište to do přihlášky a budete k někomu do auta přiděleni. Program začne v pátek večeří v 19:00. O víkendu bude možné lyžovat nebo jít na organizovaný výlet (permanentka na lyžování není v ceně pobytu). Co se týče jídla, v ceně je zahrnuta páteční večeře, sobotní snídaně a večeře a dále nedělní snídaně. Bližší informace k dopravě i programu budou zaslány na mail v průběhu února. Informace k platbě Vám budou zaslány v mailu do 24 hodin po vyplnění registračního formuláře. Přihláška se stává závaznou ve chvíli jejího zaplacení.",
-                    `Ubytování: Hotel na Trojce, Jindřichov, Jeseníky
-                    Cena za víkend (ubytování + polopenze):
-                    osoby od 10 let: 1540,- Kč
-                    děti do 10 let: 1240,- Kč
-                    děti do 3 let bez nároku na lůžko a stravu: zdarma
-                    členové Challenge a Runway Youth: 1240,- Kč`
+                    "Pojeďme společně na hory. Společný čas, zábava, lyžování, procházky, termální lázně, koupání..", 
+                    "Letos již tradičně vyrazíme s Runway na hory, konkrétně do penzionu Švihák ve Velkých Losinách. Na místo se dopravíme auty, kdo bude mít zájem o spolujízdu s někým, prosím napište to do daného místa v přihlášce a budete k někomu do auta přiděleni. Program začne v pátek večeří v 19:00. O víkendu bude možno lyžovat, jít na organizovaný výlet nebo do blízkého wellness (vstupné za wellness ani permanentka na lyžování není v ceně pobytu). Co se týče jídla, v ceně je zahrnuta páteční večeře, sobotní snídaně, svačinový balíček a večeře a dále nedělní snídaně a opět balíček. Bližší informace k dopravě i programu budou zaslány na mail na začátku ledna. Informace k platbě Vám budou zaslány v mailu po vyplnění registračního formuláře. Přihláška se stává závaznou ve chvíli jejího zaplacení.",
+                    "Ubytování: Penzion Švihák Lázeňský, Rudé armády 37, Velké Losiny",
+                    "Cena za víkend (ubytování + polopenze):",
+                    "- osoby od 12 let - 1700 Kč (1260 Kč ubytování + 300 Kč snídaně + 140 večeře a svačiny)",                    
+                    "- děti do 11 let včetně - 900 Kč (600 Kč ubytování + 180 Kč snídaně + 120 Kč večeře a svačiny)",                    
+                    "- děti do 2 let bez nároku na lůžko a stravu - zdarma"
                 ],
-                time: ["21. - 23. 2. 2025 od 19:00"],
-                filterDate: "2025-02-23",
-                cardDate: "21. - 23. února",
+                time: ["16. - 18. 1. 2026"],
+                filterDate: "2026-01-16",
+                cardDate: "16. - 18. ledna",
                 cardTime: null,
-                place: "hotel na trojce",
-                image: "placeholder.webp",
-                registrationText: "Přihlašování do 12. 2.", 
+                place: "Penzion Švihák Lázeňský",
+                image: "hory.webp",
+                registrationText: "Přihlašování do 12. 1.", 
                 registrationLink: "/prihlaska/hory",      
                 contactIcon: null,
                 contactPerson: "",
@@ -320,7 +319,7 @@ export const activities = [
                 filterDate: "2025-02-23",
                 cardTime: null,
                 place: "Hotel na Trojce",
-                image: "placeholder.webp",
+                image: "hory.webp",
                 registrationText: "Registration until February 12th", 
                 registrationLink: "registration/mountains",      
                 contactIcon: null,
