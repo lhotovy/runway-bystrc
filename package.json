@@ -33,7 +33,7 @@
     "eslint-config-next": "15.2.1",
     "lucide-react": "^0.483.0",
     "mui-nested-menu": "^3.2.2",
-    "next": "15.5.7",
+    "next": "15.1.9",
     "postcss": "8.4.47",
     "react": "19.1.2",
     "react-dom": "19.1.2",
