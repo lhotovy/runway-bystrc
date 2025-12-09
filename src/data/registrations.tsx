@@ -8,7 +8,7 @@ export const registrations = [
         slug: "hory",
         elements: [
           { type: "input", name: "userName", text: "Jméno a příjmení *", shareLine: true, required: true },
-          { type: "input", name: "birthDate", text: "Datum narození *", shareLine: true, required: true },
+          { type: "input", name: "dateOfBirth", text: "Datum narození *", shareLine: true, required: true },
           { type: "input", name: "address", text: "Adresa *", shareLine: false, required: true },
           { type: "input", name: "email", text: "Email *", shareLine: true, required: true },
           { type: "input", name: "phone", text: "Telefon *", shareLine: true, required: true },
@@ -28,7 +28,7 @@ export const registrations = [
         slug: "hory",
         elements: [
           { type: "input", name: "userName", text: "Full Name *", shareLine: true, required: true },
-          { type: "input", name: "birthDate", text: "Date of Birth *", shareLine: true, required: true },
+          { type: "input", name: "dateOfBirth", text: "Date of Birth *", shareLine: true, required: true },
           { type: "input", name: "address", text: "Address *", shareLine: false, required: true },
           { type: "input", name: "email", text: "Email *", shareLine: true, required: true },
           { type: "input", name: "phone", text: "Phone *", shareLine: true, required: true },
