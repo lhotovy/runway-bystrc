@@ -7,7 +7,7 @@ export const Coffeeshop = ({ data, lang }: { data: any, lang: LangOptions }) => 
   return (  
     <section className="py-16 bg-dark-blue w-full px-4 md:px-0">
       <div className="mx-auto px-4 max-w-[1280px]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center place-items-center">
         {/* Left Column - Text Content */}
           <div className="order-1">
             <h2 className="text-4xl font-bold text-white mb-6">
