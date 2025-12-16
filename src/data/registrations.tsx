@@ -48,7 +48,7 @@ export const registrations = [
     slug: "challenge-camp",
     translations: {
       cs: {
-        name: "Přihláška na Challenge Camp 2025",
+        name: "Přihláška na Challenge Camp 2026",
         description: `Děkujeme za Váš zájem o náš příměstský tábor. Vezměte, prosíme, na vědomí, že přihláška je platná teprve po zaplacení zálohy ve výši 1.000,- Kč na účet uvedený v potvrzovacím e-mailu. 
                       Odesláním přihlášky souhlasíte se zpracováním osobních údajů. Údaje v nezbytném rozsahu uchováváme i po skončení tábora mj. za účelem zasílání informací o našich budoucích akcích. Ze zasílání informací je možné se kdykoli odhlásit.`,
         slug: "challenge-camp",
@@ -59,7 +59,7 @@ export const registrations = [
           { type: "input", name: "representativeName", text: "Jméno a příjmení zákonného zástupce (pokud je ti míň než 18 let) *", shareLine: false, required: true },
           { type: "input", name: "representativeEmail", text: "Email zákonného zástupce *", shareLine: true, required: true },
           { type: "input", name: "representativePhone", text: "Telefon zákonného zástupce *", shareLine: true, required: true },
-          { type: "select", name: "preferedActivity", text: "Preferovaná aktivita *", shareLine: true, required: true },
+          //{ type: "select", name: "preferedActivity", text: "Preferovaná aktivita *", shareLine: true, required: true },
           { type: "select", name: "englishLevel", text: "Úroveň angličtiny *", shareLine: true, required: true },
           { type: "input", name: "shirtSize", text: "Velikost trička *", shareLine: false, required: true },
           { type: "input", name: "recommendation", text: "Jméno a příjmení kamaráda, kterému jsi tábor doporučil a který u nás ještě nebyl (pokud přijede, máš nárok na slevu)", shareLine: false, required: false },
@@ -69,7 +69,7 @@ export const registrations = [
         ],
       },
       en: {
-        name: "Registration for Challenge Camp 2025",
+        name: "Registration for Challenge Camp 2026",
         description: `Thank you for your interest in our summer camp. Please note that the application is valid only after paying a deposit of 1,000 CZK to the account specified in the confirmation email.
                       By submitting the application, you agree to the processing of personal data. We keep the data in the necessary scope even after the end of the camp, among other things for the purpose of sending information about our future events. You can unsubscribe from receiving information at any time.`,
         slug: "challenge-camp",
@@ -80,7 +80,7 @@ export const registrations = [
           { type: "input", name: "representativeName", text: "Full Name of Legal Guardian (if under 18) *", shareLine: false, required: true },
           { type: "input", name: "representativeEmail", text: "Legal Guardian's Email *", shareLine: true, required: true },
           { type: "input", name: "representativePhone", text: "Legal Guardian's Phone *", shareLine: true, required: true },
-          { type: "select", name: "preferedActivity", text: "Preferred Activity *", shareLine: true, required: true },
+          //{ type: "select", name: "preferedActivity", text: "Preferred Activity *", shareLine: true, required: true },
           { type: "select", name: "englishLevel", text: "English Level *", shareLine: true, required: true },
           { type: "input", name: "shirtSize", text: "T-shirt Size *", shareLine: false, required: true },
           { type: "input", name: "recommendation", text: `Name of the friend you recommended the camp to (if they come, you are entitled to a discount)`, shareLine: false, required: false },

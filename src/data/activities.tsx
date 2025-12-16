@@ -236,7 +236,7 @@ export const activities = [
         translations: {
             cs: {
                 name: "Tábory",
-                slug: "tabory",
+                slug: "challenge-camp",
                 cardDescription: "Letní tábory pro dětí",
                 cardIcon: "/icons/sun.png",
                 description: ["Letní tábory pro dětí"],
@@ -252,7 +252,7 @@ export const activities = [
             },
             en: {
                 name: "Camps",
-                slug: "tabory",
+                slug: "challenge-camp",
                 cardDescription: "Summer camps for kids",
                 cardIcon: "/icons/sun.png",
                 description: ["Summer camps for kids"],
@@ -762,12 +762,12 @@ export const challengeCamp = {
     type: "regular",
     translations: {
         cs: {
-            name: "Challenge Camp 2025",
+            name: "Challenge Camp 2026",
             slug: "challenge-camp",
             cardDescription: "Čas pro váš vztah",
             cardIcon: "/icons/heart.png",
-            description: ["Hledáte příměstský tábor v Bystrci s angličtinou? Pak je Challenge camp právě pro Vás. Letos pořádáme již sedmý ročník kempu plného angličtiny a spousty zábavy. Na táboře budou přítomni rodilí mluvčí z USA, se kterými budou účastníci mít příležitost každý den konverzovat a prohlubovat své znalosti angličtiny - ať už během připravených lekcí nebo přirozeně v průběhu tábora."],
-            time: ["21. - 25. 7. 2025"],
+            description: ["Hledáte příměstský tábor v Bystrci s angličtinou? Pak je Challenge camp právě pro Vás. Letos pořádáme již osmý ročník kempu plného angličtiny a spousty zábavy. Na táboře budou přítomni rodilí mluvčí z USA, se kterými budou účastníci mít příležitost každý den konverzovat a prohlubovat své znalosti angličtiny - ať už během připravených lekcí nebo přirozeně v průběhu tábora."],
+            time: ["20. - 24. 7. 2026"],
             cardTime: null,
             place: "centrum runway bystrc a přilehlá sportoviště",
             image: "",
@@ -778,12 +778,12 @@ export const challengeCamp = {
             contactLink: "mailto:info@runway-bystrc.cz"
         },
         en: {
-            name: "Challenge Camp 2025",
-            slug: "challenge-camp",
+            name: "Challenge Camp 2026",
+            slug: "challenge-camp", 
             cardDescription: "Time for your relationship",
             cardIcon: "/icons/heart.png",
-            description: ["Looking for a day camp in Bystrc with English? Then Challenge camp is just for you. This year we are organizing the seventh annual camp full of English and lots of fun. Native speakers from the USA will be present at the camp, with whom participants will have the opportunity to converse every day and deepen their knowledge of English - whether during prepared lessons or naturally during the camp."],
-            time: ["July 21st - 25th, 2025"],
+            description: ["Looking for a day camp in Bystrc with English? Then Challenge camp is just for you. This year we are organizing the eighth annual camp full of English and lots of fun. Native speakers from the USA will be present at the camp, with whom participants will have the opportunity to converse every day and deepen their knowledge of English - whether during prepared lessons or naturally during the camp."],
+            time: ["July 20th - 24th, 2026"],
             cardTime: null,
             place: "Runway Bystrc Center and nearby sports grounds",
             image: "",

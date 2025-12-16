@@ -9,6 +9,7 @@ import { activities, specialActivitiesCard } from "@/data/activities";
 import { challengeCampData } from "@/data/staticPages/challengeCamp";
 import placeholderImage from "@/public/placeholder.webp";
 import { LangOptions } from "@/types";
+import { Button } from "@/components/ui/button";
 
 export const ChallengeCampClient = ({ lang }: { lang: LangOptions }) => {
   const router = useRouter();
@@ -76,13 +77,13 @@ export const ChallengeCampClient = ({ lang }: { lang: LangOptions }) => {
           </div>
           <div className="flex flex-col items-center gap-y-4">
             {campData.registrationDeadline && <p className="text-xl text-gray-9 font-bold">{campData.registrationDeadline}</p>}
-            {/* <Button
+            <Button
               variant="blue"
               text={campData.registrationButton}
               className="w-48"
               onClick={() => router.push(lang === "cs" ? "/prihlaska/challenge-camp" : "/en/prihlaska/challenge-camp")}
-            /> */}
-            <p className="text-xl text-gray-9 font-bold">Přihlašování uzavřeno</p>
+            />
+            {/* <p className="text-xl text-gray-9 font-bold">Přihlašování uzavřeno</p> */}
           </div>
         </div>
       </div>
