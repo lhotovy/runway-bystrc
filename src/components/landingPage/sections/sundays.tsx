@@ -11,7 +11,7 @@ export const Sundays = ({ data, lang }: { data: any, lang: LangOptions }) => {
           {/* Left Column - Picture */}
           <div className="relative w-full order-2 lg:order-1">
             <Image
-              src="/series.webp"
+              src="/sundaysjan.webp"
               alt="Sundays at our church"
               className="w-full max-w-full object-cover rounded-lg"
               width={1000}

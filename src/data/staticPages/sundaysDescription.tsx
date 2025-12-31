@@ -4,13 +4,21 @@ export const SundaysDescription = {
     cs: function SundaysDescriptionCz() {
         return (
             <div className="flex flex-col gap-y-8">
-                <p>Neděle na Runwayi probíhají každou <b>1. a 3. neděli v měsíci</b> v Runway Hubu (Nad Přehradou 1466/9a, Brno-Bystrc).
-                Samotná <b>bohoslužba</b> začíná od <b>16:00 hodin</b> a trvá zhruba hodinu. Během ní probíhá také samostatný program pro děti – formou her, příběhů 
-                a tvoření se děti seznamují s křesťanskými hodnotami přiměřeně svému věku. <b>Po bohoslužbě</b> je možné dát si <b>kávu nebo něco 
-                dobrého k zakousnutí.</b> Je to příležitost si v klidu popovídat nebo ještě v klidu chvíli posedět.</p>
+                <p>Neděle na Runwayi se konají <b>každou neděli od 16:00 v Runway Hubu</b> (Nad Přehradou 1466/9a, Brno-Bystrc). 
+                    Klasická <b>bohoslužba</b> je 1. a 3. neděli v měsíci, zbývající neděle pořádáme 
+                    tzv. <b>Chosen club</b> - promítání seriálu Chosen s následnou diskuzí. 
+                </p>
 
-                <h2 className="text-gray-9 font-bold text-lg text-left mt-12">Co očekávat?</h2>
-                <p>Naše bohoslužby jsou <b>otevřené veřejnosti.</b> Přicházejí k nám jak lidé, kteří jsou součástí církve, tak i ti, kteří víru teprve objevují, hledají nebo se jen chtějí dozvědět víc. Vítán je <b>každý – bez ohledu na zkušenosti s vírou, věk nebo životní příběh.</b> Oblečení může být klidně úplně neformální – přijď tak, jak je ti to pohodlné.
+                <h2 className="text-gray-9 font-bold text-lg text-left mt-12">Co očekávat na bohoslužbě?</h2>
+                <p>Samotná <b>bohoslužba</b> začíná od <b>16:00 hodin</b> a trvá zhruba hodinu. Během ní probíhá také samostatný program pro děti – 
+                    formou her, příběhů a tvoření se děti seznamují s křesťanskými hodnotami přiměřeně svému věku. 
+                    <b> Po bohoslužbě</b> je možné dát si <b>kávu nebo něco dobrého k zakousnutí.</b> Je to příležitost si v klidu popovídat nebo ještě v klidu chvíli posedět.
+                </p>
+
+                <p>
+                    Naše bohoslužby jsou <b>otevřené veřejnosti.</b> Přicházejí k nám jak lidé, kteří jsou součástí církve, tak i ti, kteří víru teprve objevují, 
+                    hledají nebo se jen chtějí dozvědět víc. Vítán je <b>každý – bez ohledu na zkušenosti s vírou, věk nebo životní příběh. </b> 
+                    Oblečení může být klidně úplně neformální – přijď tak, jak je ti to pohodlné.
                 </p>
 
                 <p>Program bohoslužby obvykle zahrnuje <b>několik písní,</b> které zpíváme společně s kapelou (texty jsou promítané,
@@ -29,13 +37,16 @@ export const SundaysDescription = {
     en: function SundaysDescriptionEn() {
         return (
             <div className="flex flex-col gap-y-8">
-                <p>
-                    Sundays at Runway take place every <b>1st and 3rd Sunday of the month</b> at the Runway Hub (Nad Přehradou 1466/9a, Brno-Bystrc).
-                    The main <b>service</b> starts at <b>16:00</b> and lasts about an hour. During this time, there is also a separate program for children – through games, stories, 
-                    and crafts, children learn about Christian values in an age-appropriate way. <b>After the service</b>, you can enjoy <b>coffee or a snack.</b> It&apos;s an opportunity to have a relaxed chat or just come and look around.
+                 <p>Sundays at Runway take place <b>every Sunday at 4:00 PM in Runway Hub</b> (Nad Přehradou 1466/9a, Brno-Bystrc). 
+                    Regular <b>service</b> is every <b>1st and 3rd Sunday of the month</b>, the remaining Sundays we organize 
+                    the <b>Chosen club</b> - watching of the Chosen series with a discussion afterwards. 
                 </p>
                 
-                <h2 className="text-gray-9 font-bold text-lg text-left mt-12">What to expect?</h2>
+                <h2 className="text-gray-9 font-bold text-lg text-left mt-12">What to expect on the service?</h2>
+                <p>The <b>service</b> starts at <b>4:00 PM</b> and lasts about an hour. During this time, there is also a separate program for children – 
+                    through games, stories, and crafts, children learn about Christian values in an age-appropriate way. 
+                    <b> After the service</b>, you can enjoy <b>coffee or a snack.</b> It&apos;s an opportunity to have a relaxed chat or just come and look around.
+                </p>
 
                 <p>
                     Our services are <b>open to the public.</b> We welcome both people who are part of the church and those who are just discovering faith, searching, 
