@@ -1,4 +1,4 @@
-import { SiFacebook, SiInstagram } from "@icons-pack/react-simple-icons";
+import { SiInstagram } from "@icons-pack/react-simple-icons";
 import { Mail, Phone } from "lucide-react";
 
 export const activities = [
@@ -9,10 +9,10 @@ export const activities = [
             cs: {
                 name: "Neděle na Runwayi",
                 slug: "nedele",
-                cardDescription: "Každou 1. a 3. neděli v měsíci",
+                cardDescription: "Klasická bohoslužba nebo Chosen klub",
                 cardIcon: "/icons/book.png",
-                description: ["Chceš se dozvědět více o tom, čemu věříme, máš otázky nebo v Bystrci hledáš křesťanské společenství? Pak Tě zveme na naše Neděle na Runwayi.", "Těšit se můžeš na písně, zamyšlení a v neposlední řadě na společenství s lidmi, kteří znají Boha nebo jej hledají. Neděle na Runwayi se konají každou první a třetí neděli v měsíci. Začínáme kavárničkou v 16:16, po které následuje v 17:00 bohoslužba."],
-                time: ["každou 1. a 3. neděli v měsíci v 16:00"],
+                description: ["Přijď k nám na bohoslužbu nebo na Chosen klub, které se pravidelně střídají. V každém případě zažiješ společenství, které usiluje o Boží blízkost a kde jsi vítán!"],
+                time: ["každou neděli od 16:00"],
                 cardTime: null,
                 place: "Runway Hub",
                 image: "nedele.webp",
@@ -25,10 +25,10 @@ export const activities = [
             en: {
                 name: "Sunday Services",
                 slug: "nedele",
-                cardDescription: "Every 1st and 3rd Sunday of the month",
+                cardDescription: "Regular service or Chosen club",
                 cardIcon: "/icons/book.png",
-                description: ["Do you want to learn more about what we believe, have questions, or are you looking for a Christian community in Bystrc? Then we invite you to our Sunday Services.", "You can look forward to songs, reflections, and last but not least, fellowship with people who know God or are seeking Him. Sunday Services take place every first and third Sunday of the month. We start with a coffee shop at 4:16 PM, followed by a service at 5:00 PM."],
-                time: ["every 1st and 3rd Sunday of the month at 4:00 PM"],
+                description: ["Come to our regular service or Chosen club, which alternates regularly. In either case, you will experience fellowship that strives for God's closeness and where you are welcome!"],
+                time: ["every Sunday at 4:00 PM"],
                 cardTime: null,
                 place: "Runway Hub",
                 image: "nedele.webp",
