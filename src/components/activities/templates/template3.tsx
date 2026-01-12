@@ -29,7 +29,7 @@ export const ActivityTemplate3 = ({
   lang: LangOptions
 }) => {
   const router = useRouter();
-
+console.log(registrationLink);
   return (
     <div className="flex flex-col items-center w-full min-h-screen">
       <Hero
@@ -53,7 +53,8 @@ export const ActivityTemplate3 = ({
           {registrationLink && 
             <Button 
               variant="yellow" 
-              text="Přihlásit se" 
+              text="Přihlásit se"
+              disabled={registrationLink === "/"} 
               onClick={() => {registrationLink.includes("http") ? window.open(registrationLink, "_blank") : router.push(`${registrationLink}`)}} 
               className="py-3"
             />}     
