@@ -8,8 +8,8 @@ export const template2Data = {
             anotherServicesTitle: "Nemůžete přijít k nám?",
             anotherServicesText: "Jsme součástí Baptistů v Brně a naše akce se konají i na dalších místech.",
             anotherServicesLink: "Kam jinam v Brně zajít",
-            currentTopicTitle: "A je tu leden",
-            currentTopicText: "A je tu leden. A s ním i novinky na Nedělích na Runwayi. Nově můžete přijít každý týden! První a třetí neděli v měsíci na klasickou bohoslužbu a ty zbývající na Chosen club - promítání seriálu Chosen s následnou diskuzí. Těšíme se na Vás i v lednu!"
+            currentTopicTitle: "Únor",
+            currentTopicText: 'I v únoru budeme prokládat klasické bohoslužby Chosen cluby. V rámci bohoslužeb se ponoříme do krátké série s názvem "Setkání s Ježíšem". První neděli v únoru budeme mluvit na téma "Setkání, které změnilo svět" a 15. 2. potom o tom "Jak můžu poznat Ježíše osobně?".'
         },
         en: {
             anotherContacts: {
@@ -19,8 +19,8 @@ export const template2Data = {
             anotherServicesTitle: "Can't come to us?",
             anotherServicesText: "We are part of Baptist in Brno and our events are also held at other places.",
             anotherServicesLink: "Where to go in Brno",
-            currentTopicTitle: "January is here",
-            currentTopicText: "January is here. And with it new updates on Sundays at Runway. You can now come every week! On the first and third Sundays of the month to the classic worship service and the remaining ones to the Chosen club - watching the Chosen series with a follow-up discussion. We look forward to seeing you in January!"
+            currentTopicTitle: "February",
+            currentTopicText: 'In February, we will continue with regular services and Chosen clubs. During the services, we will dive into a short series called "Encounter with Jesus". The first Sunday in February will be about "The Meeting that Changed the World" and 15th February will be about "How Can I Know Jesus Personally?".'
         },
     }
 }
