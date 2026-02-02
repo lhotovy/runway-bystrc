@@ -102,7 +102,7 @@ export default async function ActivityPage({ params }: {params: Promise<{ lang: 
             <ActivityTemplate3
                 name={activityData?.name || ""}
                 description={activityData?.description || []}
-                details={activityData?.details}
+                details={activityData?.details as Record<string, string> | undefined}
                 time={activityData?.time || []}
                 place={activityData?.place || ""}
                 image={activityData?.image || ""}
@@ -117,7 +117,7 @@ export default async function ActivityPage({ params }: {params: Promise<{ lang: 
             <ActivityTemplate4
                 name={activityData?.name || ""}
                 description={activityData?.description || []}
-                details={activityData?.details}
+                details={activityData?.details as Record<string, string> | undefined}
                 time={activityData?.time || []}
                 place={activityData?.place || ""}
                 image={activityData?.image || ""}             

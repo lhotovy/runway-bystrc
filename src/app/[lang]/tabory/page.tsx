@@ -4,7 +4,7 @@ import { AnotherActivities } from "@/components/activities/anotherActivities";
 import { activities, specialActivitiesCard } from "@/data/activities";
 import { Metadata } from "next";
 import { tabory } from "@/data/staticPages/tabory";
-import { LangOptions } from "@/types";
+import { Activity, LangOptions } from "@/types";
 
 export async function generateMetadata(
     { params }: { params: Promise<{ lang: LangOptions }> }
@@ -31,12 +31,15 @@ export default async function Camps({ params }: { params: Promise<{ lang: LangOp
         .filter((activity) => activity.type === "regular"), specialActivitiesCard]
         .map((activity) => {
             const translatedActivity = activity.translations[lang as keyof typeof activity.translations];
+            const t = translatedActivity as typeof translatedActivity & { registrationText?: string | null; registrationLink?: string | null };
             return {
                 ...translatedActivity,
                 template: activity.template || undefined,
                 type: activity.type || "unknown",
+                registrationText: t.registrationText ?? undefined,
+                registrationLink: t.registrationLink ?? undefined,
             };
-        });        
+        }) as Activity[];        
 
     return (
         <div className="flex flex-col items-center w-full my-10 lg:mt-12 min-h-screen">

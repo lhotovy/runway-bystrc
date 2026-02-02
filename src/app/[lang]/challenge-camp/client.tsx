@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { activities, specialActivitiesCard } from "@/data/activities";
 import { challengeCampData } from "@/data/staticPages/challengeCamp";
 import placeholderImage from "@/public/placeholder.webp";
-import { LangOptions } from "@/types";
+import { Activity, LangOptions } from "@/types";
 import { Button } from "@/components/ui/button";
 
 export const ChallengeCampClient = ({ lang }: { lang: LangOptions }) => {
@@ -20,12 +20,15 @@ export const ChallengeCampClient = ({ lang }: { lang: LangOptions }) => {
     specialActivitiesCard,
   ].map((activity) => {
     const translatedActivity = activity.translations[lang as keyof typeof activity.translations];
+    const t = translatedActivity as typeof translatedActivity & { registrationText?: string | null; registrationLink?: string | null };
     return {
       ...translatedActivity,
       template: activity.template || undefined,
       type: activity.type || "unknown",
+      registrationText: t.registrationText ?? undefined,
+      registrationLink: t.registrationLink ?? undefined,
     };
-  });
+  }) as Activity[];
 
   return (
     <div className="flex flex-col items-center w-full my-10 lg:mt-24 min-h-screen">
