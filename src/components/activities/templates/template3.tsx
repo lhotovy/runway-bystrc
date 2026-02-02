@@ -10,6 +10,7 @@ import { LangOptions } from "@/types";
 export const ActivityTemplate3 = ({
   name,
   description,
+  details,
   time,
   place,
   image,
@@ -20,6 +21,7 @@ export const ActivityTemplate3 = ({
 }: {
   name: string,
   description: string[],
+  details?: Record<string, string>,
   time: string[] | null,
   place: string,
   image: string,
@@ -29,7 +31,8 @@ export const ActivityTemplate3 = ({
   lang: LangOptions
 }) => {
   const router = useRouter();
-console.log(registrationLink);
+  const hasDetails = details && Object.keys(details).length > 0;
+
   return (
     <div className="flex flex-col items-center w-full min-h-screen">
       <Hero
@@ -46,6 +49,15 @@ console.log(registrationLink);
             )
           })
         }
+        {hasDetails && (
+          <ul className="list-none list-inside space-y-2 w-full">
+            {Object.entries(details!).map(([key, value]) => (
+              <li key={key}>
+                <strong>{key}:</strong> {value}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>    
       <div className="w-full flex justify-center bg-content-blue py-7.5">
         <div className="flex flex-col items-center w-full max-w-screen-xl px-4">

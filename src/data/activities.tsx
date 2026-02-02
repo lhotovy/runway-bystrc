@@ -279,13 +279,13 @@ export const activities = [
                 cardIcon: "",
                 description: [
                     "Pojeďme společně na hory. Společný čas, zábava, lyžování, procházky, termální lázně, koupání..", 
-                    "Letos již tradičně vyrazíme s Runway na hory, konkrétně do penzionu Švihák ve Velkých Losinách. Na místo se dopravíme auty, kdo bude mít zájem o spolujízdu s někým, prosím napište to do daného místa v přihlášce a budete k někomu do auta přiděleni. Program začne v pátek večeří v 19:00. O víkendu bude možno lyžovat, jít na organizovaný výlet nebo do blízkého wellness (vstupné za wellness ani permanentka na lyžování není v ceně pobytu). Co se týče jídla, v ceně je zahrnuta páteční večeře, sobotní snídaně, svačinový balíček a večeře a dále nedělní snídaně a opět balíček. Bližší informace k dopravě i programu budou zaslány na mail na začátku ledna. Informace k platbě Vám budou zaslány v mailu po vyplnění registračního formuláře. Přihláška se stává závaznou ve chvíli jejího zaplacení.",
-                    "Ubytování: Penzion Švihák Lázeňský, Rudé armády 37, Velké Losiny",
-                    "Cena za víkend (ubytování + polopenze):",
-                    "- osoby od 12 let - 1700 Kč (1260 Kč ubytování + 300 Kč snídaně + 140 večeře a svačiny)",                    
-                    "- děti do 11 let včetně - 900 Kč (600 Kč ubytování + 180 Kč snídaně + 120 Kč večeře a svačiny)",                    
-                    "- děti do 2 let bez nároku na lůžko a stravu - zdarma"
+                    "Letos již tradičně vyrazíme s Runway na hory, konkrétně do penzionu Švihák ve Velkých Losinách. Na místo se dopravíme auty, kdo bude mít zájem o spolujízdu s někým, prosím napište to do daného místa v přihlášce a budete k někomu do auta přiděleni. Program začne v pátek večeří v 19:00. O víkendu bude možno lyžovat, jít na organizovaný výlet nebo do blízkého wellness (vstupné za wellness ani permanentka na lyžování není v ceně pobytu). Co se týče jídla, v ceně je zahrnuta páteční večeře, sobotní snídaně, svačinový balíček a večeře a dále nedělní snídaně a opět balíček. Bližší informace k dopravě i programu budou zaslány na mail na začátku ledna. Informace k platbě Vám budou zaslány v mailu po vyplnění registračního formuláře. Přihláška se stává závaznou ve chvíli jejího zaplacení."
                 ],
+                details: {
+                    "Místo": "Penzion Švihák Lázeňský, Rudé armády 37, Velké Losiny",
+                    "Termín": "16. – 18. 1. 2026",
+                    "Cena": "osoby od 12 let 1 700 Kč, děti do 11 let 900 Kč, děti do 2 let zdarma (ubytování + polopenze)"
+                },
                 time: ["16. - 18. 1. 2026"],
                 filterDate: "2026-01-16",
                 cardDate: "16. - 18. ledna",
@@ -306,14 +306,13 @@ export const activities = [
                 cardIcon: "",
                 description: [
                     "Join us for a winter stay in Jeseníky from February 21st to 23rd, 2025. Shared time, fun, skiing, walks…", 
-                    "This year, for the third time, we will go to the mountains with Runway, this time to Hotel na Trojce in Jeseníky. We will travel to the location by car; if you are interested in carpooling with someone, please write it in the application, and you will be assigned to someone's car. The program will start on Friday with dinner at 7:00 PM. Over the weekend, it will be possible to ski or go on an organized trip (ski pass is not included in the price of the stay). Regarding food, the price includes Friday dinner, Saturday breakfast and dinner, and Sunday breakfast. More information about transportation and the program will be sent by email during February. Payment information will be sent by email within 24 hours after filling out the registration form. The application becomes binding upon payment.",
-                    `Accommodation: Hotel na Trojce, Jindřichov, Jeseníky
-                    Price for the weekend (accommodation + half board):
-                    persons aged 10 and over: 1540,- CZK
-                    children under 10 years: 1240,- CZK
-                    children under 3 years without entitlement to bed and food: free
-                    members of Challenge and Runway Youth: 1240,- CZK`
+                    "This year, for the third time, we will go to the mountains with Runway, this time to Hotel na Trojce in Jeseníky. We will travel to the location by car; if you are interested in carpooling with someone, please write it in the application, and you will be assigned to someone's car. The program will start on Friday with dinner at 7:00 PM. Over the weekend, it will be possible to ski or go on an organized trip (ski pass is not included in the price of the stay). Regarding food, the price includes Friday dinner, Saturday breakfast and dinner, and Sunday breakfast. More information about transportation and the program will be sent by email during February. Payment information will be sent by email within 24 hours after filling out the registration form. The application becomes binding upon payment."
                 ],
+                details: {
+                    "Place": "Hotel na Trojce, Jindřichov, Jeseníky",
+                    "Date": "16. – 18. 1. 2026",
+                    "Price": "persons 10+ 1 540 CZK, children under 10 1 240 CZK, under 3 free (accommodation + half board)"
+                },
                 time: ["February 21st - 23rd, 2025 from 7:00 PM"],
                 cardDate: "February 21st - 23rd",
                 filterDate: "2026-01-16",
@@ -341,6 +340,11 @@ export const activities = [
                 description: [
                     "V neděli 1. června se již tradičně můžete těšit na Den dětí plný zábavy a nejrůznějších aktivit. Přijďte se svými dětmi na louku u dětského hřiště Kamechy. Program bude probíhat od 14:30 do 18:00."
                 ],
+                details: {
+                    "Místo": "Hřiště Kamechy za centrem Runway Bystrc",
+                    "Datum": "1. června",
+                    "Čas": "14:30 – 18:00"
+                },
                 time: ["1. června od 14:30"],
                 cardDate: "1. června",
                 filterDate: "2025-06-01",
@@ -362,6 +366,11 @@ export const activities = [
                 description: [
                     "On Sunday, June 1st, you can traditionally look forward to Children's Day full of fun and various activities. Come with your children to the meadow near the children's playground Kamechy. The program will run from 2:30 PM to 6:00 PM."
                 ],
+                details: {
+                    "Place": "Kamechy playground behind Runway Bystrc Center",
+                    "Date": "June 1st",
+                    "Time": "2:30 PM – 6:00 PM"
+                },
                 time: ["June 1st from 2:30 PM"],
                 cardDate: "June 1st",
                 filterDate: "2025-06-01",
@@ -387,20 +396,22 @@ export const activities = [
                 cardDescription: "Přijďte si zahrát stolní fotbálek nebo se jen tak zastavit!",
                 cardIcon: "",
                 description: ["Na začátku září Vám opět nabídneme letní osvěžení ve Street Baru v rámci Léta na Teyschlovce, které pořádáme u našeho centra.",
-                    "Ve středu 3. 9. se také můžete zúčastnit již čtvrtého ročníku TURNAJE VE STOLNÍM FOTBÁLKU. Na turnaj se registrujte v 17:00 - 17:45 na místě nebo kliknutím na tlačítko níže.",
-                    "KDY: Street Bar - 3. 9. 17:00 - 20:00, Turnaj ve stolním fotbálku - 3. 9. 18:00",
-                    "KDE: Centrum Runway Bystrc (vedle Teyschlovy 20)",
-                    "Účastnit se mohou jak jednotlivci tak dvojice (počítejte ale s tím, že turnaj není rozdělen do dvou kategorií - tedy např. dvojice může hrát proti jednotlivci).",
-                    "* Startovné: dobrovolné (na místě)"
+                    "Ve středu 3. 9. se také můžete zúčastnit již čtvrtého ročníku TURNAJE VE STOLNÍM FOTBÁLKU. Na turnaj se registrujte v 17:00 - 17:45 na místě nebo kliknutím na tlačítko níže. Účastnit se mohou jak jednotlivci tak dvojice (počítejte ale s tím, že turnaj není rozdělen do dvou kategorií - tedy např. dvojice může hrát proti jednotlivci)."
                 ],
+                details: {
+                    "Místo": "Centrum Runway Bystrc (vedle Teyschlovy 20)",
+                    "Datum": "3. 9. 2025",
+                    "Čas": "Street Bar 17:00 – 20:00, turnaj od 18:00",
+                    "Startovné": "dobrovolné (na místě)"
+                },
                 time: ["3. 9. 2025", "17:00 - 20:00"],
                 cardDate: "3. září",
                 cardTime: "17:00 - 20:00",
                 filterDate: "2025-09-03",
                 place: "centrum runway bystrc",
                 image: "turnaj.webp",
-                registrationText: "", 
-                registrationLink: "https://forms.gle/KqRqKdKSBBa38SDf9",     
+                registrationText: "",
+                registrationLink: "https://forms.gle/KqRqKdKSBBa38SDf9",
                 contactIcon: null, 
                 contactPerson: "",
                 contactLinkText: "",
@@ -412,20 +423,22 @@ export const activities = [
                 cardDescription: "Come and play table football or just stop by!",
                 cardIcon: "",
                 description: ["At the beginning of September, we will again offer you a refreshing break in the Street Bar as part of Léto na Teyschlovce, which we organize at our center.",
-                    "On Wednesday, September 3rd, you can also participate in the fourth annual TOURNAMENT IN TABLE FOOTBALL. Register for the tournament from 5:00 PM to 5:45 PM at the location or here: https://forms.gle/KqRqKdKSBBa38SDf9",
-                    "WHEN: Street Bar - 3. 9. 17:00 - 20:00, Tournament in table football - 3. 9. 18:00",
-                    "WHERE: Runway Bystrc Center (next to Teyschlovy 20)",
-                    "Participants can be individuals or pairs (please note that the tournament is not divided into two categories - for example, a pair can play against an individual).",
-                    "* Entry fee: voluntary (on site)"
+                    "On Wednesday, September 3rd, you can also participate in the fourth annual TOURNAMENT IN TABLE FOOTBALL. Register for the tournament from 5:00 PM to 5:45 PM at the location or via the button below. Participants can be individuals or pairs (please note that the tournament is not divided into two categories)."
                 ],
+                details: {
+                    "Place": "Runway Bystrc Center (next to Teyschlovy 20)",
+                    "Date": "September 3rd, 2025",
+                    "Time": "Street Bar 5:00 – 8:00 PM, tournament from 6:00 PM",
+                    "Entry fee": "voluntary (on site)"
+                },
                 time: ["September 3rd, 2025", "17:00 - 20:00"],
                 cardDate: "September 3rd",
                 cardTime: "17:00 - 20:00",
                 filterDate: "2025-09-03",
                 place: "Runway Bystrc Center",
                 image: "turnaj.webp",
-                registrationText: "", 
-                registrationLink: "https://forms.gle/KqRqKdKSBBa38SDf9",     
+                registrationText: "",
+                registrationLink: "https://forms.gle/KqRqKdKSBBa38SDf9",
                 contactIcon: null, 
                 contactPerson: "",
                 contactLinkText: "",
@@ -447,6 +460,11 @@ export const activities = [
                     "Těšit se můžete na voňavou kávu, točenou limonádu, hudbu a doprovodný program pro děti i dospělé.",
                     "V 16:00 zde následně proběhne první bohoslužba v Runway Hub na téma Nebuďme jen sousedé. Přijďte oslavit nový začátek s námi!"
                 ],
+                details: {
+                    "Místo": "Runway Hub, Nad Přehradou 9a, Bystrc",
+                    "Datum": "7. 9. 2025",
+                    "Čas": "14:30 – 16:00"
+                },
                 time: ["7. 9. 2025", "14:30 - 16:00"],
                 cardDate: "7. září",
                 cardTime: "14:30 - 16:00",
@@ -470,14 +488,19 @@ export const activities = [
                     "You can look forward to the smell of coffee, freshly squeezed lemonade, music, and a program for both children and adults.",
                     "At 4:00 PM, the first service in Runway Hub will take place on the topic: Be not just neighbors. Come and celebrate the new beginning with us!"
                 ],
+                details: {
+                    "Place": "Runway Hub, Nad Přehradou 9a, Bystrc",
+                    "Date": "September 7th, 2025",
+                    "Time": "2:30 PM – 4:00 PM"
+                },
                 time: ["September 7th, 2025", "14:30 - 16:00"],
                 cardDate: "September 7th",
                 cardTime: "14:30 - 16:00",
                 filterDate: "2025-09-07",
                 place: "Runway Hub, Nad Přehradou 9a, Bystrc",
                 image: "hub.webp",
-                registrationText: "", 
-                registrationLink: "",     
+                registrationText: "",
+                registrationLink: "",
                 contactIcon: null, 
                 contactPerson: "",
                 contactLinkText: "",
@@ -496,6 +519,12 @@ export const activities = [
                 cardIcon: "",
                 description: [`Srozumitelný kurz využití umělé inteligence v každodenním životě. Naučte se využít nástroje jako Chat GPT
                   NotebookLM, Leonardo, Suno, Vapi, Genspark a další pro usnadnění vašeho života.`],
+                details: {
+                    "Místo": "Centrum Runway Bystrc",
+                    "Termín": "9. – 11. 12. 2025",
+                    "Čas": "8:00 – 16:00",
+                    "Kontakt": "Jiří Folta, jirka.folta@gmail.com"
+                },
                 time: ["9. - 11. 12. 2025", "8:00 - 16:00"],
                 cardDate: "9. - 11. 12. 2025",
                 cardTime: "8:00 - 16:00",
@@ -516,6 +545,12 @@ export const activities = [
                 cardIcon: "",
                 description: [`A comprehensible course on the use of artificial intelligence in everyday life. Learn to use tools like Chat GPT
                   NotebookLM, Leonardo, Suno, Vapi, Genspark and others to make your life easier.`],
+                details: {
+                    "Place": "Runway Bystrc Center",
+                    "Date": "9. – 11. 12. 2025",
+                    "Time": "8:00 AM – 4:00 PM",
+                    "Contact": "Jiří Folta, jirka.folta@gmail.com"
+                },
                 time: ["9. - 11. 12. 2025", "8:00 - 16:00"],
                 cardDate: "9. - 11. 12. 2025",
                 cardTime: "8:00 - 16:00",
@@ -542,6 +577,12 @@ export const activities = [
                 cardIcon: "",
                 description: [`Srozumitelný kurz využití umělé inteligence v každodenním životě. Naučte se využít nástroje jako Chat GPT
                   NotebookLM, Leonardo, Suno, Vapi, Genspark a další pro usnadnění vašeho života.`],
+                details: {
+                    "Místo": "Centrum Runway Bystrc",
+                    "Termín": "12. – 14. 12. 2025",
+                    "Čas": "8:00 – 16:00",
+                    "Kontakt": "Jiří Folta, jirka.folta@gmail.com"
+                },
                 time: ["12. - 14. 12. 2025", "8:00 - 16:00"],
                 cardDate: "12. - 14. 12. 2025",
                 cardTime: "8:00 - 16:00",
@@ -562,6 +603,12 @@ export const activities = [
                 cardIcon: "",
                 description: [`A comprehensible course on the use of artificial intelligence in everyday life. Learn to use tools like Chat GPT
                   NotebookLM, Leonardo, Suno, Vapi, Genspark and others to make your life easier.`],
+                details: {
+                    "Place": "Runway Bystrc Center",
+                    "Date": "12. – 14. 12. 2025",
+                    "Time": "8:00 AM – 4:00 PM",
+                    "Contact": "Jiří Folta, jirka.folta@gmail.com"
+                },
                 time: ["12. - 14. 12. 2025", "8:00 - 16:00"],
                 cardDate: "12. - 14. 12. 2025",
                 cardTime: "8:00 - 16:00",
@@ -588,6 +635,11 @@ export const activities = [
                 cardIcon: "",
                 description: [`Zavítejte k nám na podzimní swap, tentokrát zaměřený na dětské a dámské oblečení a hračky.
                     Swap se koná v prostorech kavárny Runway Hub v Bystrci. Kavárna bude v průběhu akce otevřená, takže si můžete objednat kávu nebo něco dobrého k zakousnutí.`],
+                details: {
+                    "Místo": "Runway Hub, Bystrc",
+                    "Datum": "1. 11. 2025",
+                    "Čas": "11:00 – 18:00"
+                },
                 time: ["1. 11. 2025", "11:00 - 18:00"],
                 cardDate: "1. 11. 2025",
                 cardTime: "11:00 - 18:00",
@@ -608,6 +660,11 @@ export const activities = [
                 cardIcon: "",
                 description: [`Come and join us for a fall clothes swap, focusing on children's and women's clothing and toys.
                     The swap will take place in the Runway Hub cafe in Bystrc. The cafe will be open during the event, so you can order a coffee or something good to eat.`],
+                details: {
+                    "Place": "Runway Hub, Bystrc",
+                    "Date": "1. 11. 2025",
+                    "Time": "11:00 AM – 6:00 PM"
+                },
                 time: ["1. 11. 2025", "11:00 - 18:00"],
                 cardDate: "1. 11. 2025",
                 cardTime: "11:00 - 18:00",
@@ -633,8 +690,13 @@ export const activities = [
                 cardDescription: "Vánoční “mug quiz”  - kavárenský pub quiz",
                 cardIcon: "",
                 description: [`Zveme Vás na náš první Mug Quiz – kavárenskou verzi oblíbeného pub quizu. Přijďte si užít předvánoční atmosféru s hrnkem kávy v ruce.
-                            Přihlásit se mohou týmy i jednotlivci (max. 5 osob v týmu). Pokud se přihlásíte sami, přiřadíme Vás do týmu k dalším účastníkům. Vstup je zdarma. 
-                            Pro vítězný tým máme připravenou malou výhru.`],
+                            Přihlásit se mohou týmy i jednotlivci (max. 5 osob v týmu). Pokud se přihlásíte sami, přiřadíme Vás do týmu k dalším účastníkům. Pro vítězný tým máme připravenou malou výhru.`],
+                details: {
+                    "Místo": "Runway Hub",
+                    "Datum": "13. 12. 2025",
+                    "Čas": "17:00",
+                    "Vstup": "zdarma"
+                },
                 time: ["13. 12. 2025", "17:00"],
                 cardDate: "13. 12. 2025",
                 cardTime: "17:00",
@@ -653,9 +715,14 @@ export const activities = [
                 slug: "mug-quiz",   
                 cardDescription: "Christmas “mug quiz” - cafe quiz",
                 cardIcon: "",
-                description: [`We invite you to our first Mug Quiz – a kavárenská verze oblíbeného pub quizu. Come and enjoy the pre-Christmas atmosphere with a cup of coffee in your hand.
-                            Teams and individuals can register (max. 5 people per team). If you register alone, we will assign you to a team with other participants. The entrance is free. 
-                            For the winning team, we have prepared a small prize.`],
+                description: [`We invite you to our first Mug Quiz – a café version of the popular pub quiz. Come and enjoy the pre-Christmas atmosphere with a cup of coffee in your hand.
+                            Teams and individuals can register (max. 5 people per team). If you register alone, we will assign you to a team with other participants. For the winning team, we have prepared a small prize.`],
+                details: {
+                    "Place": "Runway Hub",
+                    "Date": "13. 12. 2025",
+                    "Time": "5:00 PM",
+                    "Entrance": "free"
+                },
                 time: ["13. 12. 2025", "17:00"],
                 cardDate: "13. 12. 2025",
                 cardTime: "17:00",
@@ -672,6 +739,76 @@ export const activities = [
         }
     },
     {
+        template: "template3",
+        type: "special",
+        translations: {
+            cs: {
+                name: "Kurz Manželské večery",
+                slug: "manzelske-vecery",
+                cardDescription: "",
+                cardIcon: "",
+                description: [
+                    "Manželské večery jsou časem, který si partneři vědomě vyhradí jeden pro druhého. Každý večer začíná večeří při svíčkách u stolků pro dva – v prostředí připomínajícím rande. Tlumená hudba, květiny, káva a zákusek vytvářejí prostor, kde je snadné zpomalit a být spolu.",
+                    "Součástí programu jsou praktická témata o vztazích, která formou videí otevírají zkušení světoví odborníci. Zaznívají skutečné příběhy párů i situace ze života, často s lehkostí a humorem. Obsah je srozumitelný, praktický a vede k zamyšlení.",
+                    "Jádrem každého večera je rozhovor pouze v páru. U stolku pro dva, v naprostém soukromí, si partneři povídají nad otázkami v zápisnících. O svém vztahu se nemluví před skupinou ani s nikým dalším – jen spolu.",
+                    "Manželské večery jsou určené pro partnery (nejen manžele), pro každého bez ohledu na víru či životní filozofii. Jsou vhodné jak pro vztahy, které fungují dobře, tak pro ty, které procházejí náročnějším obdobím. Každý vztah má totiž prostor k růstu.",
+                    "Témata jednotlivých večerů: 1. Vybudovat pevné základy – společně strávený čas, pochopení potřeb toho druhého. 2. Umění komunikace – naslouchání a sdílení vnitřních pocitů. 3. Řešení konfliktů – přijímání odlišností, šest kroků k řešení konfliktu. 4. Síla odpuštění – přiznání zranění, jak odpustit i těžké věci, jak začít znovu. 5. Rodiče a rodiče partnera – vliv rodiny původu a vztahy s rodiči v dospělosti. 6. Dobrý sex – jak znovu zažehnout jiskru, šest rad pro dobré milence. 7. Láska v akci – pět jazyků lásky prakticky. 8. Závěrečná párty Manželských večerů – co tvoří hezké a zdravé manželství.",
+                    "Více informací: www.manzelskevecery.cz/content/view/manzelskevecery"
+                ],
+                details: {
+                    "Místo": "Runway Hub, Nad Přehradou 1466/9a, Bystrc",
+                    "Termín": "8 úterků, vždy od 18:30",
+                    "Začátek": "10. března 2026",
+                    "Cena": "3 800 Kč za pár (včetně večeře)"
+                },
+                time: ["8 úterků, vždy od 18:30", "Začátek: 10. března 2026"],
+                cardDate: "10. 3. 2026",
+                cardTime: "18:30",
+                filterDate: "2026-03-10",
+                place: "Runway Hub",
+                image: "manzelske_vecery.webp",
+                registrationText: null, 
+                registrationLink: "/prihlaska/manzelske-vecery",     
+                contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: "https://manzelskevecery.cz/content/view/manzelskevecery"
+            },
+            en: {
+                name: "Marriage Evenings Courses",
+                slug: "manzelske-vecery",   
+                cardDescription: "Time for your relationship – 8 evenings over dinner and in private",
+                cardIcon: "",
+                description: [
+                    "Marriage Evenings are time that partners deliberately set aside for each other. Each evening begins with a candlelit dinner at tables for two – in an atmosphere reminiscent of a date. Soft music, flowers, coffee and dessert create a space where it is easy to slow down and be together.",
+                    "The program includes practical topics on relationships, opened by experienced international experts in video form. Real stories of couples and everyday situations are shared, often with lightness and humor. The content is clear, practical and gives food for thought.",
+                    "The core of each evening is a conversation only as a couple. At a table for two, in complete privacy, partners talk through questions in workbooks. The relationship is not discussed in front of the group or with anyone else – only together.",
+                    "Marriage Evenings are for partners (not only married couples), for everyone regardless of faith or life philosophy. They are suitable both for relationships that are going well and for those going through a tougher period. Every relationship has room to grow.",
+                    "Topics of the evenings: 1. Building solid foundations – time together, understanding each other's needs. 2. The art of communication – listening and sharing inner feelings. 3. Resolving conflict – accepting differences, six steps to resolving conflict. 4. The power of forgiveness – acknowledging hurt, how to forgive even hard things, how to start again. 5. Parents and in-laws – influence of family of origin and relationships with parents in adulthood. 6. Good sex – how to rekindle the spark, six tips for good lovers. 7. Love in action – five love languages in practice. 8. Marriage Evenings closing party – what makes a good and healthy marriage.",
+                    "More information: www.manzelskevecery.cz/content/view/manzelskevecery"
+                ],
+                details: {
+                    "Place": "Runway Hub, Nad Přehradou 1466/9a, Bystrc",
+                    "Schedule": "8 Tuesdays, always from 6:30 PM",
+                    "Start": "10 March 2026",
+                    "Price": "3,800 CZK per couple (including dinner)"
+                },
+                time: ["8 Tuesdays, from 6:30 PM", "Start: 10 March 2026"],
+                cardDate: "10. 3. 2026",
+                cardTime: "18:30",
+                filterDate: "2026-03-10",
+                place: "Runway Hub",
+                image: "manzelske_vecery.webp",
+                registrationText: null, 
+                registrationLink: "/prihlaska/manzelske-vecery",     
+                contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: "https://manzelskevecery.cz/content/view/manzelskevecery"
+            }
+        }
+    },
+    {
         template: "template4",
         type: "special",
         translations: {
@@ -682,15 +819,21 @@ export const activities = [
                 cardIcon: "",
                 description: [`Rádi byste si trochu oddychli a k tomu podpořili dobrou věc? I letos Vás zveme na benefiční vánoční koncert skupiny GraceToYou. 
                     Můžete se těšit na vánoční písně v moderním podání. Výtěžek koncertu bude věnován dětskému centru Chovánek.`, "VSTUPNÉ DOBROVOLNÉ"],
+                details: {
+                    "Místo": "Společenské centrum Bystrc, Odbojářská 2",
+                    "Datum": "19. 12. 2025",
+                    "Čas": "18:00",
+                    "Vstupné": "dobrovolné"
+                },
                 time: ["19. 12. 2025", "18:00"],
                 cardDate: "19. 12. 2025",
                 cardTime: "18:00",
                 filterDate: "2025-12-19",
                 place: "Společenské centrum Bystrc, Odbojářská 2",
                 image: "christmasConcert.webp",
-                registrationText: "", 
-                registrationLink: "",     
-                contactIcon: null, 
+                registrationText: "",
+                registrationLink: "",
+                contactIcon: null,
                 contactPerson: "",
                 contactLinkText: "",
                 contactLink: ""
@@ -702,15 +845,21 @@ export const activities = [
                 cardIcon: "",
                 description: [`We would like to take a little break and at the same time support a good cause? This year we invite you to a fund-raiser Christmas concert by the group GraceToYou. 
                     You can look forward to Christmas songs in a modern interpretation. The gain of the concert will be donated to the children's center Chovánek.`, "FREE ENTRY"],
+                details: {
+                    "Place": "Společenské centrum Bystrc, Odbojářská 2",
+                    "Date": "19. 12. 2025",
+                    "Time": "6:00 PM",
+                    "Entrance": "voluntary"
+                },
                 time: ["19. 12. 2025", "18:00"],
                 cardDate: "19. 12. 2025",
                 cardTime: "18:00",
                 filterDate: "2025-12-19",
                 place: "Společenské centrum Bystrc, Odbojářská 2",
                 image: "christmasConcert.webp",
-                registrationText: "", 
-                registrationLink: "",     
-                contactIcon: null, 
+                registrationText: "",
+                registrationLink: "",
+                contactIcon: null,
                 contactPerson: "",
                 contactLinkText: "",
                 contactLink: ""

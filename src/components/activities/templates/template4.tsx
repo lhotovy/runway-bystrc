@@ -6,6 +6,7 @@ import { LangOptions } from "@/types";
 export const ActivityTemplate4 = ({
   name,
   description,
+  details,
   time,
   place,
   image,
@@ -14,12 +15,14 @@ export const ActivityTemplate4 = ({
 }: {
   name: string,
   description: string[],
+  details?: Record<string, string>,
   time: string[] | null,
   place: string,
   image: string,
   anotherActivities: any[]
   lang: LangOptions
 }) => {
+  const hasDetails = details && Object.keys(details).length > 0;
 
   return (
     <div className="flex flex-col items-center w-full min-h-screen">
@@ -37,6 +40,15 @@ export const ActivityTemplate4 = ({
           )
         })
       }
+      {hasDetails && (
+        <ul className="list-none list-inside space-y-2 w-full">
+          {Object.entries(details!).map(([key, value]) => (
+            <li key={key}>
+              <strong>{key}:</strong> {value}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>  
     <div className="mb-16"> 
       <AnotherActivities 
