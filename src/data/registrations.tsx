@@ -173,8 +173,50 @@ export const registrations = [
           { type: "input", name: "lift", text: "Need a Ride / Offering Seats in a Car", shareLine: false, required: false },
           { type: "input", name: "limitations", text: "Health or Other Limitations", shareLine: false, required: false },
           { type: "input", name: "note", text: "Note", shareLine: false, required: false },
-        ]
-        
+        ]        
+      },
+    },
+  },
+  {
+    slug: "vikend-s-anglictinou",
+    translations: {
+      cs: {
+        name: "Přihláška na Víkend s angličtinou",
+        description: "Přihlas se na náš víkend s angličtinou v termínu 17. - 19. 4. 2026",
+        slug: "vikend-s-anglictinou",
+        elements: [
+          { type: "input", name: "userName", text: "Jméno a příjmení *", shareLine: true, required: true },
+          { type: "input", name: "dateOfBirth", text: "Datum narození *", shareLine: true, required: true },
+          { type: "input", name: "address", text: "Adresa *", shareLine: false, required: true },
+          { type: "input", name: "email", text: "Email *", shareLine: true, required: true },
+          { type: "input", name: "phone", text: "Telefon *", shareLine: true, required: true },
+          { type: "input", name: "representativeName", text: "Jméno a příjmení zákonného zástupce (pokud je ti míň než 18 let)", shareLine: false, required: false },
+          { type: "input", name: "representativeEmail", text: "Email zákonného zástupce", shareLine: true, required: false },
+          { type: "input", name: "representativePhone", text: "Telefon zákonného zástupce", shareLine: true, required: false },
+          { type: "select", name: "englishLevel", text: "Úroveň angličtiny *", shareLine: true, required: true },
+          { type: "input", name: "lift", text: "Potřebuji odvoz / nabízím místa v autě (počet)", shareLine: true, required: false },
+          { type: "input", name: "limitations", text: "Zdravotní nebo jiná omezení", shareLine: false, required: false },
+          { type: "input", name: "note", text: "Poznámka", shareLine: false, required: false },
+        ],
+      },
+      en: {
+        name: "Registration for Weekend with English",
+        description: "Sign up for our weekend with English on the specified date 17. - 19. 4. 2026",
+        slug: "vikend-s-anglictinou",
+        elements: [
+          { type: "input", name: "userName", text: "Full Name *", shareLine: true, required: true },
+          { type: "input", name: "dateOfBirth", text: "Date of Birth *", shareLine: true, required: true },
+          { type: "input", name: "address", text: "Address *", shareLine: false, required: true },
+          { type: "input", name: "email", text: "Email *", shareLine: true, required: true },
+          { type: "input", name: "phone", text: "Phone *", shareLine: true, required: true },
+          { type: "input", name: "representativeName", text: "Full Name of Legal Guardian (if under 18)", shareLine: false, required: false },
+          { type: "input", name: "representativeEmail", text: "Legal Guardian's Email", shareLine: true, required: false },
+          { type: "input", name: "representativePhone", text: "Legal Guardian's Phone", shareLine: true, required: false },
+          { type: "select", name: "englishLevel", text: "English Level *", shareLine: true, required: true },
+          { type: "input", name: "lift", text: "Need a Ride / Offering Seats in a Car (number)", shareLine: true, required: false },
+          { type: "input", name: "limitations", text: "Health or Other Limitations", shareLine: false, required: false },
+          { type: "input", name: "note", text: "Note", shareLine: false, required: false },
+        ],
       },
     },
   },
