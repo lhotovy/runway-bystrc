@@ -22,18 +22,16 @@ export const Welcome = ({ data }: { data: any }) => {
             <div className="absolute inset-0 bg-black/60 z-2" />
             {/* Centered Content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-3 px-4">
-                <h1 className="md:text-5xl text-3xl font-bold text-white mb-4 drop-shadow-lg">
+                <h1 className="md:text-[64px] text-3xl font-bold text-white mb-4 drop-shadow-lg">
                     {data?.title}
                 </h1>
-                <p className="text-white mb-4 max-w-2xl drop-shadow-md">{data?.description}</p>
+                <p className="text-white max-w-2xl drop-shadow-md text-lg">{data?.description}</p>
                 <SocialIcons />
-                <div className="mt-24">
-                    <LinkButton 
-                        href="#activities"
-                        text="Víc o nás"
-                        icon={<ChevronDownIcon className="w-4 h-4" />}
-                    />
-                </div>
+                <LinkButton 
+                    href="#activities"
+                    text="Víc o nás"
+                    icon={<ChevronDownIcon className="w-4 h-4" />}
+                />               
             </div>
         </div>
     );
