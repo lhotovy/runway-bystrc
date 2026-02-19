@@ -808,66 +808,66 @@ export const activities = [
             }
         }
     },
-    {
-        template: "template3",
-        type: "special",
-        translations: {
-            cs: {
-                name: "Víkend s angličtinou",
-                slug: "vikend-s-anglictinou",
-                cardDescription: "Víkend s angličtinou pro každého",
-                cardIcon: "",
-                description: [
-                    "Letos pro vás máme novinku! Kromě letního příměstského tábora chystáme víkendový pobyt s angličtinou, který je otevřený jednotlivcům, párům i celým rodinám s dětmi. Čeká vás příjemně strávený víkend plný angličtiny, zábavy a společného času – a to vše s rodilými mluvčími z USA.",
-                    "Program je připraven tak, aby si na své přišel opravdu každý. Dospělí se mohou těšit na praktické konverzační lekce angličtiny v přátelské atmosféře, pro děti bude zajištěna výuka angličtiny hravou formou a také hlídání menších dětí během lekcí. Součástí víkendu bude i bohatý doprovodný program – sportovní aktivity, výlet, workshopy a večerní programy.",
-                    "Nemusíte se bát jazykové bariéry – víkend je vhodný pro všechny úrovně angličtiny, od začátečníků po pokročilé."
-                ],
-                details: {
-                    "Místo": "Centrum Word of Life, Černá Hora 493, 679 21, web: https://www.wordoflife.cz/areal/ ",                 
-                    "Cena": "osoby od 12 let 1 700 Kč, děti do 11 let 900 Kč, děti do 2 let zdarma (ubytování + plná penze + program)"
-                },
-                time: ["17. - 19. dubna 2026"],
-                cardDate: "17. - 19. 4. 2026",
-                cardTime: "",
-                filterDate: "2026-04-19",
-                place: "Centrum Word of Life, Černá Hora 493, 679 21",
-                image: "eng_weekend.webp",
-                registrationText: null, 
-                registrationLink: "/prihlaska/vikend-s-anglictinou",     
-                contactIcon: null, 
-                contactPerson: "",
-                contactLinkText: "",
-                contactLink: ""
-            },
-            en: {
-                name: "Weekend with English",
-                slug: "vikend-s-anglictinou",   
-                cardDescription: "Weekend with English for everyone",
-                cardIcon: "",
-                description: [
-                    "This year we have a new surprise for you! In addition to the summer day camp, we are organizing a weekend stay with English, which is open to individuals, couples and entire families with children. You will enjoy a weekend full of English, entertainment and shared time – all with native speakers from the USA.",
-                    "The program is prepared so that everyone can come with something for themselves. Adults can look forward to practical English conversation lessons in a friendly atmosphere, for children a fun English lesson will be provided and also supervision of smaller children during the lessons. The weekend will also include a rich accompanying program – sports activities, a trip, workshops and evening programs.",
-                    "You don't have to worry about language barriers – the weekend is suitable for all levels of English, from beginners to advanced."
-                ],
-                details: {
-                    "Place": "Centrum Word of Life, Černá Hora 493, 679 21, web: https://www.wordoflife.cz/areal/ ",                 
-                    "Price": "1,700 CZK for adults, 900 CZK for children under 11, free for children under 2 (accommodation + full meal + program)"
-                },
-                time: ["17. - 19. April 2026"],
-                cardDate: "17. - 19. 4. 2026",
-                cardTime: "",
-                filterDate: "2026-04-19",
-                place: "Centrum Word of Life, Černá Hora 493, 679 21",
-                image: "eng_weekend.webp",
-                registrationText: null, 
-                registrationLink: "/prihlaska/vikend-s-anglictinou",     
-                contactIcon: null, 
-                contactPerson: "",
-                contactLinkText: "",
-                contactLink: ""
-            }
-        }
-    },
+    // {
+    //     template: "template3",
+    //     type: "special",
+    //     translations: {
+    //         cs: {
+    //             name: "Víkend s angličtinou",
+    //             slug: "vikend-s-anglictinou",
+    //             cardDescription: "Víkend s angličtinou pro každého",
+    //             cardIcon: "",
+    //             description: [
+    //                 "Letos pro vás máme novinku! Kromě letního příměstského tábora chystáme víkendový pobyt s angličtinou, který je otevřený jednotlivcům, párům i celým rodinám s dětmi. Čeká vás příjemně strávený víkend plný angličtiny, zábavy a společného času – a to vše s rodilými mluvčími z USA.",
+    //                 "Program je připraven tak, aby si na své přišel opravdu každý. Dospělí se mohou těšit na praktické konverzační lekce angličtiny v přátelské atmosféře, pro děti bude zajištěna výuka angličtiny hravou formou a také hlídání menších dětí během lekcí. Součástí víkendu bude i bohatý doprovodný program – sportovní aktivity, výlet, workshopy a večerní programy.",
+    //                 "Nemusíte se bát jazykové bariéry – víkend je vhodný pro všechny úrovně angličtiny, od začátečníků po pokročilé."
+    //             ],
+    //             details: {
+    //                 "Místo": "Centrum Word of Life, Černá Hora 493, 679 21, web: https://www.wordoflife.cz/areal/ ",                 
+    //                 "Cena": "osoby od 12 let 1 700 Kč, děti do 11 let 900 Kč, děti do 2 let zdarma (ubytování + plná penze + program)"
+    //             },
+    //             time: ["17. - 19. dubna 2026"],
+    //             cardDate: "17. - 19. 4. 2026",
+    //             cardTime: "",
+    //             filterDate: "2026-04-19",
+    //             place: "Centrum Word of Life, Černá Hora 493, 679 21",
+    //             image: "eng_weekend.webp",
+    //             registrationText: null, 
+    //             registrationLink: "/prihlaska/vikend-s-anglictinou",     
+    //             contactIcon: null, 
+    //             contactPerson: "",
+    //             contactLinkText: "",
+    //             contactLink: ""
+    //         },
+    //         en: {
+    //             name: "Weekend with English",
+    //             slug: "vikend-s-anglictinou",   
+    //             cardDescription: "Weekend with English for everyone",
+    //             cardIcon: "",
+    //             description: [
+    //                 "This year we have a new surprise for you! In addition to the summer day camp, we are organizing a weekend stay with English, which is open to individuals, couples and entire families with children. You will enjoy a weekend full of English, entertainment and shared time – all with native speakers from the USA.",
+    //                 "The program is prepared so that everyone can come with something for themselves. Adults can look forward to practical English conversation lessons in a friendly atmosphere, for children a fun English lesson will be provided and also supervision of smaller children during the lessons. The weekend will also include a rich accompanying program – sports activities, a trip, workshops and evening programs.",
+    //                 "You don't have to worry about language barriers – the weekend is suitable for all levels of English, from beginners to advanced."
+    //             ],
+    //             details: {
+    //                 "Place": "Centrum Word of Life, Černá Hora 493, 679 21, web: https://www.wordoflife.cz/areal/ ",                 
+    //                 "Price": "1,700 CZK for adults, 900 CZK for children under 11, free for children under 2 (accommodation + full meal + program)"
+    //             },
+    //             time: ["17. - 19. April 2026"],
+    //             cardDate: "17. - 19. 4. 2026",
+    //             cardTime: "",
+    //             filterDate: "2026-04-19",
+    //             place: "Centrum Word of Life, Černá Hora 493, 679 21",
+    //             image: "eng_weekend.webp",
+    //             registrationText: null, 
+    //             registrationLink: "/prihlaska/vikend-s-anglictinou",     
+    //             contactIcon: null, 
+    //             contactPerson: "",
+    //             contactLinkText: "",
+    //             contactLink: ""
+    //         }
+    //     }
+    // },
     {
         template: "template4",
         type: "special",
