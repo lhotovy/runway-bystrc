@@ -808,6 +808,72 @@ export const activities = [
             }
         }
     },
+    {
+        template: "template3",
+        type: "special",
+        translations: {
+            cs: {
+                name: "Víkendovka Runway Youth",
+                slug: "vikendovka-runway-youth",
+                cardDescription: "Jarní víkendovka Runway Youth v Prosetíně",
+                cardIcon: "",
+                description: [
+                    "Zveme Tě na společný víkend klubu Runway Youth. Pojeď s námi na naši jarní víkendovku kousek za Brno do Prosetína. Víkend se koná od 13 do 15 března 2026.",
+                ],
+                details: {
+                    "Místo": "Chalupa Prosetín (https://www.chalupaprosetin.cz/pages/home)",
+                    "Termín": "13. – 15. 3. 2026",
+                    "Cena": "950 Kč",
+                    "Kontakt": "Mgr. Barbora Jelisejev, tel.: 777 304 718, email: bjelisejev@gmail.com",
+                    "Číslo účtu": "366538139/0300",
+                    "Variabilní symbol": "2602",
+                    "Do poznámky k platbě": "jméno a příjmení"
+                },
+                time: ["13. - 15. 3. 2026"],
+                filterDate: "2026-03-13",
+                cardDate: "13. - 15. března",
+                cardTime: null,
+                place: "Chalupa Prosetín",
+                image: "youth.webp",
+                registrationText: null,
+                registrationLink: "/prihlaska/vikendovka-runway-youth",
+                contactIcon: "",
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: "",
+            },
+            en: {
+                name: "Runway Youth Weekend",
+                slug: "vikendovka-runway-youth",
+                cardDescription: "Spring weekend stay of Runway Youth in Prosetín",
+                cardIcon: "",
+                description: [
+                    "We invite you to a joint weekend of the Runway Youth club. Join us for our spring weekend stay near Brno in Prosetín. The weekend will take place from 13 to 15 March 2026.",
+                ],
+                details: {
+                    "Place": "Chalupa Prosetín (https://www.chalupaprosetin.cz/pages/home)",
+                    "Date": "13 – 15 March 2026",
+                    "Price": "950 CZK",
+                    "Contact": "Mgr. Barbora Jelisejev, tel.: 777 304 718, email: bjelisejev@gmail.com",
+                    "Account number": "366538139/0300",
+                    "Variable symbol": "2602",
+                    "Payment note": "full name"
+                },
+                time: ["13 – 15 March 2026"],
+                filterDate: "2026-03-13",
+                cardDate: "13 – 15 March",
+                cardTime: null,
+                place: "Chalupa Prosetín",
+                image: "youth.webp",
+                registrationText: null,
+                registrationLink: "/prihlaska/vikendovka-runway-youth",
+                contactIcon: "",
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: "",
+            }
+        }
+    },
     // {
     //     template: "template3",
     //     type: "special",

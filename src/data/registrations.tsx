@@ -139,6 +139,35 @@ export const registrations = [
     },
   },
   {
+    slug: "vikendovka-runway-youth",
+    translations: {
+      cs: {
+        name: "Přihláška na Víkendovku Runway Youth",
+        description: ["Přihlas se na jarní víkendovku Runway Youth v termínu 13. - 15. 3. 2026 v Prosetíně. Cena 950 Kč. Po odeslání přihlášky obdržíte platební údaje e-mailem."],
+        slug: "vikendovka-runway-youth",
+        elements: [
+          { type: "input", name: "userName", text: "Jméno a příjmení *", shareLine: true, required: true },
+          { type: "input", name: "dateOfBirth", text: "Datum narození *", shareLine: true, required: true },
+          { type: "input", name: "representativeName", text: "Jméno a příjmení zákonného zástupce *", shareLine: false, required: true },
+          { type: "input", name: "representativeEmail", text: "Email zákonného zástupce *", shareLine: true, required: true },
+          { type: "input", name: "representativePhone", text: "Telefon zákonného zástupce *", shareLine: true, required: true },
+        ],
+      },
+      en: {
+        name: "Registration for Runway Youth Weekend",
+        description: ["Sign up for the Runway Youth spring weekend on 13 – 15 March 2026 in Prosetín. Price 950 CZK. You will receive payment details by email after submitting the registration."],
+        slug: "vikendovka-runway-youth",
+        elements: [
+          { type: "input", name: "userName", text: "Full Name *", shareLine: true, required: true },
+          { type: "input", name: "dateOfBirth", text: "Date of Birth *", shareLine: true, required: true },
+          { type: "input", name: "representativeName", text: "Legal Guardian's Full Name *", shareLine: false, required: true },
+          { type: "input", name: "representativeEmail", text: "Legal Guardian's Email *", shareLine: true, required: true },
+          { type: "input", name: "representativePhone", text: "Legal Guardian's Phone *", shareLine: true, required: true },
+        ],
+      },
+    },
+  },
+  {
     slug: "manzelske-vecery",
     translations: {
       cs: {
