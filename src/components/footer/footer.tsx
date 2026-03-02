@@ -34,7 +34,7 @@ export const Footer = ({ lang }: { lang: LangOptions | null }) => {
                     </div>
                     <div
                         id="column2" 
-                        className="flex flex-col items-center gap-y-12 mt-4"
+                        className="flex flex-col items-center gap-y-4"
                     >
                         <SocialIcons />
                         <Link 

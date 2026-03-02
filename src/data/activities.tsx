@@ -739,6 +739,70 @@ export const activities = [
         }
     },
     {
+        template: "template4",
+        type: "special",
+        translations: {
+            cs: {
+                name: "Přednáška: Bezpečnost dětí na internetu",
+                slug: "bezpecnost-deti-na-internetu",
+                cardDescription: "Praktická přednáška o tom, jak chránit děti v online světě.",
+                cardIcon: "",
+                description: [
+                    "Internet je přirozenou součástí každodenního života dětí a dospívajících. Přináší možnosti učení, zábavy i kontaktu s přáteli, ale zároveň otevírá prostor pro rizika, která často nejsou na první pohled vidět.",
+                    "Přednáška nabízí srozumitelný a praktický pohled na to, jak děti v České republice digitální technologie skutečně používají, s jakými situacemi se mohou setkat a jak mohou dospělí včas rozpoznat varovné signály.",
+                    "Budeme se věnovat zejména aktuálním trendům v používání internetu dětmi, způsobům, jakými predátoři navazují kontakt a získávají důvěru, varovným signálům manipulace či nevhodné komunikace, tomu, jak s dětmi mluvit o rizicích, i tomu, co dělat, pokud se něco stane.",
+                    "Přednáška je určena rodičům, prarodičům, pedagogům i všem, kterým záleží na bezpečí dětí v digitálním prostředí. Přijďte získat konkrétní informace a větší jistotu v tom, jak děti v online světě chránit."
+                ],
+                details: {
+                    "Místo": "Runway Hub, Nad Přehradou 9a, Bystrc",
+                    "Datum": "7. 3. 2026",
+                    "Čas": "17:00"
+                },
+                time: ["7. 3. 2026", "17:00"],
+                cardDate: "7. 3. 2026",
+                cardTime: "17:00",
+                filterDate: "2026-03-07",
+                place: "Runway Hub",
+                image: "kidsOnlineSafety.webp",
+                registrationText: "",
+                registrationLink: "",
+                contactIcon: null,
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            },
+            en: {
+                name: "Talk: Children's online safety",
+                slug: "bezpecnost-deti-na-internetu",
+                cardDescription: "Practical talk on how to keep children safer online.",
+                cardIcon: "",
+                description: [
+                    "The internet is a natural part of everyday life for children and teenagers. It offers opportunities for learning, fun and staying in touch with friends, but it also opens the door to risks that are not always visible at first glance.",
+                    "This talk offers a clear and practical look at how children in the Czech Republic really use digital technologies, what situations they may encounter and how adults can notice warning signs in time.",
+                    "We will focus especially on current trends in children's internet use, the ways predators build contact and trust, warning signs of manipulation or inappropriate communication, how to talk with children about risks, and what to do if something happens.",
+                    "The talk is intended for parents, grandparents, teachers and anyone who cares about the safety of children in the digital world. Come and gain concrete information and more confidence in how to protect children in the online world."
+                ],
+                details: {
+                    "Place": "Runway Hub, Nad Přehradou 9a, Bystrc",
+                    "Date": "March 7th, 2026",
+                    "Time": "5:00 PM"
+                },
+                time: ["March 7th, 2026", "5:00 PM"],
+                cardDate: "March 7th, 2026",
+                cardTime: "5:00 PM",
+                filterDate: "2026-03-07",
+                place: "Runway Hub",
+                image: "kidsOnlineSafety.webp",
+                registrationText: "",
+                registrationLink: "",
+                contactIcon: null,
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            }
+        }
+    },
+    {
         template: "template3",
         type: "special",
         translations: {
