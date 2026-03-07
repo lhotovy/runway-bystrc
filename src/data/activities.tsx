@@ -809,7 +809,7 @@ export const activities = [
             cs: {
                 name: "Kurz Manželské večery",
                 slug: "manzelske-vecery",
-                cardDescription: "",
+                cardDescription: "Čas pro vaše manželství – 8 večerů s vyučováním a večeří",
                 cardIcon: "",
                 description: [
                     "Manželské večery jsou časem, který si partneři vědomě vyhradí jeden pro druhého. Každý večer začíná večeří při svíčkách u stolků pro dva – v prostředí připomínajícím rande. Tlumená hudba, květiny, káva a zákusek vytvářejí prostor, kde je snadné zpomalit a být spolu.",
@@ -841,7 +841,7 @@ export const activities = [
             en: {
                 name: "Marriage Evenings Courses",
                 slug: "manzelske-vecery",   
-                cardDescription: "Time for your relationship – 8 evenings over dinner and in private",
+                cardDescription: "Time for your relationship – 8 evenings with teaching and dinner",
                 cardIcon: "",
                 description: [
                     "Marriage Evenings are time that partners deliberately set aside for each other. Each evening begins with a candlelit dinner at tables for two – in an atmosphere reminiscent of a date. Soft music, flowers, coffee and dessert create a space where it is easy to slow down and be together.",
