@@ -168,6 +168,47 @@ export const registrations = [
     },
   },
   {
+    slug: "dovolena-2026",
+    translations: {
+      cs: {
+        name: "Přihláška na Dovolenou s Runwayí 2026",
+        description: [
+          "Pojeď s námi na dovolenou s Runwayí! Letos vyrážíme znovu do Beskyd.",
+          "Termín: 8.–12. 7.",
+          "Místo: Chata Ostra (www.chata-ostra.cz)",
+          "Cena za ubytování: 1600 Kč za dospělého, 700 Kč za dítě od 3 let.",
+          "Platební údaje: účet 366538139/0300, variabilní symbol 2604, do poznámky uveďte jméno.",
+          "Nákup jídla budeme řešit společně na místě, stejně tak vyúčtování případného nedoplatku nebo přeplatku za ubytování. Bližší informace pošleme mailem v průběhu léta.",
+        ],
+        slug: "dovolena-2026",
+        elements: [
+          { type: "input", name: "userName", text: "Jméno a příjmení *", shareLine: true, required: true },
+          { type: "input", name: "age", text: "Věk dětí", shareLine: true, required: false },
+          { type: "input", name: "lift", text: "Potřebuji odvoz / nabízím místo v autě", shareLine: false, required: false },
+          { type: "input", name: "diet", text: "Dieta", shareLine: false, required: false },
+        ],
+      },
+      en: {
+        name: "Registration for Vacation with Runway 2026",
+        description: [
+          "Join us for a vacation with Runway! This year we are heading to the Beskydy mountains again.",
+          "Date: July 8th–12th.",
+          "Place: Chata Ostra (www.chata-ostra.cz)",
+          "Accommodation price: 1600 CZK per adult, 700 CZK per child from age 3.",
+          "Payment details: account 366538139/0300, variable symbol 2604, include your name in the payment note.",
+          "We will arrange grocery shopping together on site, including settlement of any accommodation overpayment or underpayment. We will send more detailed information by email during the summer.",
+        ],
+        slug: "dovolena-2026",
+        elements: [
+          { type: "input", name: "userName", text: "Full Name *", shareLine: true, required: true },
+          { type: "input", name: "age", text: "Children's Ages", shareLine: true, required: false },
+          { type: "input", name: "lift", text: "Need a Ride / Offering a Seat in a Car", shareLine: false, required: false },
+          { type: "input", name: "diet", text: "Dietary Requirements", shareLine: false, required: false },
+        ],
+      },
+    },
+  },
+  {
     slug: "manzelske-vecery",
     translations: {
       cs: {
