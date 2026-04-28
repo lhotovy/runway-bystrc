@@ -13,7 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/menu";
 import CompleteLanguageSwitcher from "../langSwitcher";
-import { defaultLocale } from "@/middleware";
+import { defaultLocale } from "@/proxy";
 import { menuTexts } from "@/data/staticPages/menu";
 import { LangOptions } from "@/types";
 

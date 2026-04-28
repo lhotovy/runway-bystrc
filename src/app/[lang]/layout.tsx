@@ -1,4 +1,4 @@
-import { locales, defaultLocale } from '@/middleware';
+import { locales, defaultLocale } from '@/proxy';
 import RootLayoutClient from './layoutClient';
 import { LangOptions } from '@/types';
 

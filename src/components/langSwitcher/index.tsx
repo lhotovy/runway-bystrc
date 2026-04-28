@@ -1,7 +1,7 @@
 "use client"
 
 import { usePathname, useRouter } from 'next/navigation'
-import { locales } from '@/middleware'
+import { locales } from '@/proxy'
 import { getLocalizedPath, getSimpleLocalizedPath } from '@/lib/languageUtils'
 import EN from "country-flag-icons/react/3x2/GB"
 import CZ from "country-flag-icons/react/3x2/CZ"

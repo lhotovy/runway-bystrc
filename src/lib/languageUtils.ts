@@ -1,4 +1,4 @@
-import { defaultLocale } from '@/middleware'
+import { defaultLocale } from '@/proxy'
 
 // Map of slugs between languages
 // Key: [language]:[slug], Value: equivalent slug in other language
