@@ -186,6 +186,7 @@ export const registrations = [
           { type: "input", name: "age", text: "Věk dětí", shareLine: true, required: false },
           { type: "input", name: "lift", text: "Potřebuji odvoz / nabízím místo v autě", shareLine: false, required: false },
           { type: "input", name: "diet", text: "Dieta", shareLine: false, required: false },
+          { type: "input", name: "note", text: "Poznámka", shareLine: false, required: false },
         ],
       },
       en: {
