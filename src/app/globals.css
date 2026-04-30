@@ -296,8 +296,8 @@
       bottom: -3rem !important;
       top: auto !important;
       transform: none !important;
-      -translate-y-1/2: none !important;
-      -translate-x-1/2: none !important;
+      -tw-translate-y: 0 !important;
+      -tw-translate-x: 0 !important;
       left: auto !important;
       right: auto !important;
     }

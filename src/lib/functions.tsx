@@ -230,6 +230,22 @@ export const generateFormElements = (definitions: { type: string, name: string, 
         />
       </div>
     ),
+    peopleCount: (name: string, text: string, required: boolean, widthClass: string) => (
+      <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
+        <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>
+          {text}
+        </label>
+        <input
+          type="text"
+          id={name}
+          name={name}
+          required={required}
+          value={formData[name] || ""}
+          onChange={(e) => setFormData({ ...formData, [name]: e.target.value })}
+          className="shadow appearance-none border border-gray-3 rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full"
+        />
+      </div>
+    ),
     note: (name: string, text: string, required: boolean, widthClass: string) => (
       <div key={name} className={`flex flex-col mb-4 ${widthClass}`}>
         <label className="block text-gray-700 text-base font-bold mb-2" htmlFor={name}>

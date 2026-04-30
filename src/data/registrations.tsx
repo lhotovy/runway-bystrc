@@ -178,15 +178,17 @@ export const registrations = [
           "Místo: Chata Ostra (www.chata-ostra.cz)",
           "Cena za ubytování: 1600 Kč za dospělého, 700 Kč za dítě od 3 let.",
           "Platební údaje: účet 366538139/0300, variabilní symbol 2604, do poznámky uveďte jméno.",
+          "Pokud se nezúčastníte celého pobytu, je třeba zaplatit poměrnou část podle počtu nocí strávených na chatě.",
           "Nákup jídla budeme řešit společně na místě, stejně tak vyúčtování případného nedoplatku nebo přeplatku za ubytování. Bližší informace pošleme mailem v průběhu léta.",
         ],
         slug: "dovolena-2026",
         elements: [
           { type: "input", name: "userName", text: "Jméno a příjmení *", shareLine: true, required: true },
+          { type: "input", name: "peopleCount", text: "Počet dospělých a dětí", shareLine: true, required: false },
           { type: "input", name: "age", text: "Věk dětí", shareLine: true, required: false },
           { type: "input", name: "lift", text: "Potřebuji odvoz / nabízím místo v autě", shareLine: false, required: false },
           { type: "input", name: "diet", text: "Dieta", shareLine: false, required: false },
-          { type: "input", name: "note", text: "Poznámka", shareLine: false, required: false },
+          { type: "input", name: "note", text: "Poznámka (včetně délky vašeho pobytu, pokud se nezúčastníte po celou dobu)", shareLine: false, required: false },
         ],
       },
       en: {
@@ -202,6 +204,7 @@ export const registrations = [
         slug: "dovolena-2026",
         elements: [
           { type: "input", name: "userName", text: "Full Name *", shareLine: true, required: true },
+          { type: "input", name: "peopleCount", text: "Number of Adults and Children", shareLine: true, required: false },
           { type: "input", name: "age", text: "Children's Ages", shareLine: true, required: false },
           { type: "input", name: "lift", text: "Need a Ride / Offering a Seat in a Car", shareLine: false, required: false },
           { type: "input", name: "diet", text: "Dietary Requirements", shareLine: false, required: false },
