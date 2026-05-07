@@ -335,22 +335,21 @@ export const activities = [
             cs: {
                 name: "Den dětí",
                 slug: "den-deti",
-                cardDescription: "Jako každý rok se bude za klubovnou konat den plný zábavy!",
+                cardDescription: "Tradiční Den dětí v Bystrci plný zábavy a aktivit.",
                 cardIcon: "",
                 description: [
-                    "V neděli 1. června se již tradičně můžete těšit na Den dětí plný zábavy a nejrůznějších aktivit. Přijďte se svými dětmi na louku u dětského hřiště Kamechy. Program bude probíhat od 14:30 do 18:00."
+                    "V sobotu 6. června se již tradičně můžete těšit na Den dětí v Bystrci plný zábavy a nejrůznějších aktivit."
                 ],
                 details: {
-                    "Místo": "Hřiště Kamechy za centrem Runway Bystrc",
-                    "Datum": "1. června",
-                    "Čas": "14:30 – 18:00"
+                    "Kde": "louka u dětského hřiště Kamechy",
+                    "Kdy": "14:00 až 17:00"
                 },
-                time: ["1. června od 14:30"],
-                cardDate: "1. června",
-                filterDate: "2025-06-01",
-                cardTime: "od 14:30",
-                place: "hřiště kamechy za centrem runway bystrc",
-                image: "kidsDay.webp",
+                time: ["6. června, 14:00-17:00"],
+                cardDate: "6. června",
+                filterDate: "2026-06-06",
+                cardTime: "14:00-17:00",
+                place: "louka u dětského hřiště Kamechy",
+                image: "den_deti.webp",
                 registrationText: "", 
                 registrationLink: "",   
                 contactIcon: null,
@@ -361,21 +360,20 @@ export const activities = [
             en: {
                 name: "Children's Day",
                 slug: "den-deti",
-                cardDescription: "As every year, a day full of fun will take place behind the clubhouse!",
+                cardDescription: "Traditional Children's Day in Bystrc full of fun and activities.",
                 cardIcon: "",
                 description: [
-                    "On Sunday, June 1st, you can traditionally look forward to Children's Day full of fun and various activities. Come with your children to the meadow near the children's playground Kamechy. The program will run from 2:30 PM to 6:00 PM."
+                    "On Saturday, June 6th, you can once again look forward to Children's Day in Bystrc full of fun and various activities."
                 ],
                 details: {
-                    "Place": "Kamechy playground behind Runway Bystrc Center",
-                    "Date": "June 1st",
-                    "Time": "2:30 PM – 6:00 PM"
+                    "Where": "meadow near the Kamechy children's playground",
+                    "When": "2:00 PM to 5:00 PM"
                 },
-                time: ["June 1st from 2:30 PM"],
-                cardDate: "June 1st",
-                filterDate: "2025-06-01",
-                cardTime: "from 2:30 PM",
-                place: "Kamechy playground behind Runway Bystrc Center",
+                time: ["June 6th, 2:00 PM-5:00 PM"],
+                cardDate: "June 6th",
+                filterDate: "2026-06-06",
+                cardTime: "2:00 PM-5:00 PM",
+                place: "meadow near the Kamechy children's playground",
                 image: "kidsDay.webp",
                 registrationText: "", 
                 registrationLink: "",   
@@ -502,6 +500,62 @@ export const activities = [
                 registrationText: "",
                 registrationLink: "",
                 contactIcon: null, 
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            }
+        }
+    },
+    {
+        template: "template4",
+        type: "special",
+        translations: {
+            cs: {
+                name: "Noc kostelů",
+                slug: "noc-kostelu",
+                cardDescription: "Navštivte nás během Noci kostelů v Runway Hubu.",
+                cardIcon: "",
+                description: [
+                    "Navštivte na nás během Noci kostelů. Po celou dobu bude otevřena kavárna, k dispozici bude kreativní malování na malá plátna, drobné aktivity pro děti a promítání fotek ze života církve."
+                ],
+                details: {
+                    "Program": "16:00-21:30 Postav si svůj LEGO svět (k dispozici 60 kg LEGA)\n17:00-18:00 živá hudba k posezení\n19:00-20:00 cestovatelská přednáška: Offroad napříč kontinenty\n22:00-23:00 promítání seriálu Chosen",
+                    "Informace k přednášce": "Cestovatelská přednáška o výpravách po nezpevněných cestách. Od Bajkalu přes Blízký východ až do subsaharské Afriky. O své bohaté zkušenosti z cest napříč kontinenty se s vámi podělí Pavel Smilek a Jan Exner."
+                },
+                time: ["29. 5. 16:00-0:00"],
+                cardDate: "29. 5. 2026",
+                cardTime: "16:00-0:00",
+                filterDate: "2026-05-29",
+                place: "Runway Hub",
+                image: "nockostelu.webp",
+                registrationText: "",
+                registrationLink: "",
+                contactIcon: null,
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            },
+            en: {
+                name: "Night of Churches",
+                slug: "noc-kostelu",
+                cardDescription: "Visit us during the Night of Churches at Runway Hub.",
+                cardIcon: "",
+                description: [
+                    "Visit us during the Night of Churches. The cafe will be open throughout the event, creative painting on small canvases will be available, there will be small activities for children, and photos from church life will be shown."
+                ],
+                details: {
+                    "Program": "4:00 PM-9:30 PM Build Your LEGO World (60 kg of LEGO available)\n5:00 PM-6:00 PM live music to relax with\n7:00 PM-8:00 PM travel talk: Off-road Across Continents\n10:00 PM-11:00 PM screening of The Chosen",
+                    "Talk information": "A travel lecture about expeditions on unpaved roads. From Lake Baikal through the Middle East to Sub-Saharan Africa. Pavel Smilek and Jan Exner will share their rich travel experience across continents with you."
+                },
+                time: ["May 29th, 4:00 PM-12:00 AM"],
+                cardDate: "May 29th, 2026",
+                cardTime: "4:00 PM-12:00 AM",
+                filterDate: "2026-05-29",
+                place: "Runway Hub",
+                image: "nockostelu.webp",
+                registrationText: "",
+                registrationLink: "",
+                contactIcon: null,
                 contactPerson: "",
                 contactLinkText: "",
                 contactLink: ""
