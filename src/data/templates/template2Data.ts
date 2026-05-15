@@ -8,8 +8,8 @@ export const template2Data = {
             anotherServicesTitle: "Nemůžete přijít k nám?",
             anotherServicesText: "Jsme součástí Baptistů v Brně a naše akce se konají i na dalších místech.",
             anotherServicesLink: "Kam jinam v Brně zajít",
-            currentTopicTitle: "Březen",
-            currentTopicText: 'I v březnu budeme prokládat klasické bohoslužby Chosen cluby. V rámci bohoslužeb se ponoříme do série s názvem "Nové začátky". První neděli v březnu budeme mluvit o povolání Abrama.'
+            currentTopicTitle: "Květen",
+            currentTopicText: "V květnu otevíráme sérii s názvem Být v Boží blízkosti. Dále pokračujeme také v Chosen clubech, které se s bohoslužbami střídají. Těšíme se na Vás vždy v neděli v 16:00 v Runway Hub."
         },
         en: {
             anotherContacts: {
@@ -19,8 +19,8 @@ export const template2Data = {
             anotherServicesTitle: "Can't come to us?",
             anotherServicesText: "We are part of Baptist in Brno and our events are also held at other places.",
             anotherServicesLink: "Where to go in Brno",
-            currentTopicTitle: "March",
-            currentTopicText: 'In March, we will continue with regular services and Chosen clubs. During the services, we will dive into a series called "New Beginnings". The first Sunday in March will be about the calling of Abraham.'
+            currentTopicTitle: "May",
+            currentTopicText: "In May, we're starting a series called Being in God's Presence. We'll also continue with Chosen clubs, which alternate with our services. We look forward to seeing you every Sunday at 4:00 PM at Runway Hub."
         },
     }
 }
