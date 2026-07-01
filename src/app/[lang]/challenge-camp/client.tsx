@@ -4,15 +4,15 @@ import { Clock4, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnotherActivities } from "../../../components/activities/anotherActivities";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { activities, specialActivitiesCard } from "@/data/activities";
 import { challengeCampData } from "@/data/staticPages/challengeCamp";
 import placeholderImage from "@/public/placeholder.webp";
 import { Activity, LangOptions } from "@/types";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 
 export const ChallengeCampClient = ({ lang }: { lang: LangOptions }) => {
-  const router = useRouter();
+  // const router = useRouter();
   const campData = challengeCampData.translations[lang as keyof typeof challengeCampData.translations];
 
   const anotherActivities = [
@@ -79,14 +79,14 @@ export const ChallengeCampClient = ({ lang }: { lang: LangOptions }) => {
             </Link>
           </div>
           <div className="flex flex-col items-center gap-y-4">
-            {campData.registrationDeadline && <p className="text-xl text-gray-9 font-bold">{campData.registrationDeadline}</p>}
+            {/* {campData.registrationDeadline && <p className="text-xl text-gray-9 font-bold">{campData.registrationDeadline}</p>}
             <Button
               variant="blue"
               text={campData.registrationButton}
               className="w-48"
               onClick={() => router.push(lang === "cs" ? "/prihlaska/challenge-camp" : "/en/prihlaska/challenge-camp")}
-            />
-            {/* <p className="text-xl text-gray-9 font-bold">Přihlašování uzavřeno</p> */}
+            /> */}
+            <p className="text-xl text-gray-9 font-bold">Přihlašování uzavřeno</p>
           </div>
         </div>
       </div>
