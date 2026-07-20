@@ -71,12 +71,17 @@ export default async function ActivityPage({ params }: {params: Promise<{ lang: 
                 description={activityData?.description || []}
                 time={activityData?.time || []}
                 place={activityData?.place || ""}                    
-                image={activityData?.image || ""}                    
+                image={activityData?.image || ""}
+                imagePosition={(activityData as { imagePosition?: string })?.imagePosition}
                 contactTitle={activityData?.contactTitle || ""}
                 contactIcon={activityData?.contactIcon || null}
                 contactPerson={activityData?.contactPerson || ""}
                 contactLinkText={activityData?.contactLinkText || ""}
                 contactLink={activityData?.contactLink || "/"}
+                contactPhoneText={(activityData as { contactPhoneText?: string })?.contactPhoneText}
+                contactPhoneLink={(activityData as { contactPhoneLink?: string })?.contactPhoneLink}
+                registrationText={activityData?.registrationText}
+                registrationLink={activityData?.registrationLink}
                 anotherActivities={anotherActivities}
                 lang={lang}
             />

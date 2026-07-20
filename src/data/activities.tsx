@@ -192,6 +192,62 @@ export const activities = [
             }
         }
     },
+    {
+        template: "template1",
+        type: "regular",
+        translations: {
+            cs: {
+                name: "Dramatický klub",
+                slug: "dramaticky-klub",
+                cardDescription: "Klub pro děti 7 - 15 let",
+                cardIcon: "/icons/person.png",
+                description: [
+                    "Pro děti ve věku 7–15 let.",
+                    "Vystup. Vyjádři se. Záři.",
+                    "Objev svůj talent, rozvíjej fantazii a sebevědomí. Hrajeme, improvizujeme, tvoříme a hlavně nás to baví! Přidej se k nám a staň se součástí příběhu!"
+                ],
+                time: ["každou středu od 18:00"],
+                cardTime: null,
+                place: "Runway Hub, Nad přehradou 1466/9a",
+                image: "drama.webp",
+                imagePosition: "center 18%",
+                registrationText: null,
+                registrationLink: "/prihlaska/dramaticky-klub",
+                contactTitle: "Kontakt",
+                contactIcon: <Mail className="h-10 w-10 text-gray-3" />,
+                contactPerson: "Judita Remešová",
+                contactLinkText: "info@runway-bystrc.cz",
+                contactLink: "mailto:info@runway-bystrc.cz",
+                contactPhoneText: "736 618 727",
+                contactPhoneLink: "tel:+420736618727"
+            },
+            en: {
+                name: "Drama Club",
+                slug: "dramaticky-klub",
+                cardDescription: "Club for kids aged 7 - 15",
+                cardIcon: "/icons/person.png",
+                description: [
+                    "For children aged 7–15.",
+                    "Step up. Express yourself. Shine.",
+                    "Discover your talent, develop your imagination and self-confidence. We play, improvise, create, and above all, we enjoy it! Join us and become part of the story!"
+                ],
+                time: ["every Wednesday at 6:00 PM"],
+                cardTime: null,
+                place: "Runway Hub, Nad přehradou 1466/9a",
+                image: "drama.webp",
+                imagePosition: "center 18%",
+                registrationText: null,
+                registrationLink: "/en/prihlaska/dramaticky-klub",
+                contactTitle: "Contact",
+                contactIcon: <Mail className="h-10 w-10 text-gray-3" />,
+                contactPerson: "Judita Remešová",
+                contactLinkText: "info@runway-bystrc.cz",
+                contactLink: "mailto:info@runway-bystrc.cz",
+                contactPhoneText: "736 618 727",
+                contactPhoneLink: "tel:+420736618727"
+            }
+        }
+    },
     /* {
         template: "template1",
         type: "regular",

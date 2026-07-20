@@ -251,6 +251,37 @@ export const registrations = [
       },
     },
   },
+  {
+    slug: "dramaticky-klub",
+    translations: {
+      cs: {
+        name: "Přihláška do Dramatického klubu",
+        description: [
+          "Přihlas se do Dramatického klubu pro děti 7–15 let. Potkáváme se každou středu od 18:00 v Runway Hub.",
+          "V případě dotazů napište na info@runway-bystrc.cz nebo volejte 736 618 727."
+        ],
+        slug: "dramaticky-klub",
+        elements: [
+          { type: "input", name: "userName", text: "Jméno a příjmení *", shareLine: true, required: true },
+          { type: "input", name: "age", text: "Věk *", shareLine: true, required: true },
+          { type: "input", name: "email", text: "Email *", shareLine: false, required: true },
+        ],
+      },
+      en: {
+        name: "Registration for Drama Club",
+        description: [
+          "Sign up for the Drama Club for kids aged 7–15. We meet every Wednesday at 6:00 PM at Runway Hub.",
+          "If you have any questions, write to info@runway-bystrc.cz or call 736 618 727."
+        ],
+        slug: "dramaticky-klub",
+        elements: [
+          { type: "input", name: "userName", text: "Full Name *", shareLine: true, required: true },
+          { type: "input", name: "age", text: "Age *", shareLine: true, required: true },
+          { type: "input", name: "email", text: "Email *", shareLine: false, required: true },
+        ],
+      },
+    },
+  },
   // {
   //   slug: "vikend-s-anglictinou",
   //   translations: {

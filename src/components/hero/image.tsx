@@ -4,10 +4,12 @@ import placeholderImage from "@/public/placeholder.webp"
 export const HeroImage = ({
     image,
     name,
+    imagePosition,
     children
 }: {
     image: string,
     name: string,
+    imagePosition?: string,
     children: React.ReactNode
 }) => {
   return (
@@ -17,6 +19,7 @@ export const HeroImage = ({
             alt={name} 
             fill
             className="object-cover"
+            style={imagePosition ? { objectPosition: imagePosition } : undefined}
             priority
         />
         <div className="absolute inset-0 bg-black/60" />

@@ -18,6 +18,7 @@ export const newsletterData = {
         "Klub pro maminky s dětmi",
         "Manželské večery",
         "English Evenings",
+        "Dramatický klub",
         "Tábory",
       ],
       consent: {
@@ -47,6 +48,7 @@ export const newsletterData = {
         "Mothers and Kids Club",
         "Marriage Evenings",
         "English Evenings",
+        "Drama Club",
         "Camps",
       ],
       consent: {

@@ -5,16 +5,18 @@ export const Hero = ({
   name,
   time,
   place,
-  image
+  image,
+  imagePosition
 }: {
   name: string,
   time?: string[] | null,
   place?: string,
-  image: string
+  image: string,
+  imagePosition?: string
 }) => {
   return (  
       <div className="flex relative h-[60vh] min-h-[500px] w-full">
-        <HeroImage image={image} name={name}>
+        <HeroImage image={image} name={name} imagePosition={imagePosition}>
           <div className="max-w-4xl flex flex-col gap-y-10">
             <h1 className="text-5xl text-white font-bold">{name}</h1>
             <div className="flex flex-col lg:flex-row items-center justify-center gap-y-4 lg:gap-x-10 text-black font-semibold uppercase text-sm">
