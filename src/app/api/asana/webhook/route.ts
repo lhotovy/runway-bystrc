@@ -442,14 +442,11 @@ export async function POST(request: NextRequest) {
         }
 
         if (triggerAccepted) {
-          markTriggered(taskGid);
-          const agentLaunch = await launchCursorAgent(summary);
           console.log("[asana-webhook] Trigger accepted", {
             taskGid,
             taskName: task?.name ?? null,
             permalinkUrl: task?.permalink_url ?? null,
             attachmentCount: normalizedAttachments.length,
-            agentLaunch,
           });
           console.log("[asana-webhook] Trigger payload", {
             taskGid,
@@ -457,6 +454,17 @@ export async function POST(request: NextRequest) {
             taskNotes: task?.notes ?? null,
             attachments: normalizedAttachments,
           });
+
+          const agentLaunch = await launchCursorAgent(summary);
+
+          if (agentLaunch.status === "started") {
+            markTriggered(taskGid);
+            console.log("[asana-webhook] Agent launched", agentLaunch);
+          } else if (agentLaunch.status === "disabled") {
+            console.warn("[asana-webhook] Agent launch skipped", agentLaunch);
+          } else {
+            console.error("[asana-webhook] Agent launch failed", agentLaunch);
+          }
 
           return {
             ...summary,
