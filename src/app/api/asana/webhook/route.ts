@@ -1,8 +1,11 @@
 import crypto from "node:crypto";
+import { Agent } from "@cursor/sdk";
 import { NextRequest, NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 const RECENT_TRIGGER_TTL_MS = 15 * 60 * 1000;
+const DEFAULT_REPO_URL = "https://github.com/lhotovy/runway-bystrc.git";
+const DEFAULT_BASE_BRANCH = "master";
 
 type AsanaWebhookEvent = {
   action?: string;
@@ -50,6 +53,48 @@ type AsanaAttachmentResponse = {
     host?: string | null;
   }>;
 };
+
+type PreparedTaskSummary = {
+  taskGid: string;
+  taskName: string | null;
+  taskNotes: string | null;
+  taskHtmlNotes: string | null;
+  permalinkUrl: string | null;
+  memberships: Array<{
+    projectGid: string | null;
+    projectName: string | null;
+    sectionGid: string | null;
+    sectionName: string | null;
+  }>;
+  attachmentCount: number;
+  attachments: Array<{
+    gid: string | null;
+    name: string | null;
+    resourceSubtype: string | null;
+    downloadUrl: string | null;
+    permanentUrl: string | null;
+    viewUrl: string | null;
+    host: string | null;
+  }>;
+  matchesTriggerSection: boolean;
+  triggerAccepted: boolean;
+  recentlyTriggered: boolean;
+};
+
+type AgentLaunchResult =
+  | {
+      status: "disabled";
+      reason: string;
+    }
+  | {
+      status: "started";
+      agentId: string;
+      runId: string;
+    }
+  | {
+      status: "error";
+      error: string;
+    };
 
 declare global {
   var asanaRecentTriggers: Map<string, number> | undefined;
@@ -100,6 +145,114 @@ function isRecentlyTriggered(taskGid: string) {
 
 function markTriggered(taskGid: string) {
   getRecentTriggerStore().set(taskGid, Date.now());
+}
+
+function buildAgentPrompt(task: PreparedTaskSummary) {
+  const attachmentLines =
+    task.attachments.length > 0
+      ? task.attachments
+          .map((attachment, index) => {
+            const usableUrl = attachment.downloadUrl ?? attachment.viewUrl ?? attachment.permanentUrl;
+
+            return [
+              `${index + 1}. ${attachment.name ?? "Unnamed attachment"}`,
+              `   - type: ${attachment.resourceSubtype ?? "unknown"}`,
+              `   - url: ${usableUrl ?? "unavailable"}`,
+            ].join("\n");
+          })
+          .join("\n")
+      : "None";
+
+  return `You are updating the Runway Bystrc website repository from an Asana content request.
+
+Repository guidance:
+- This is a bilingual Czech/English website.
+- If the task only provides Czech copy, create English translations that match the existing tone and structure.
+- Prefer updating existing content data files such as src/data/activities.tsx and src/data/staticPages/*.
+- Place or update image assets under public/.
+- If you use an attached image, download it from the provided URL and convert it to webp before wiring it into the site.
+- Keep changes scoped to the task.
+- If the request is ambiguous, do not guess broadly; make the smallest safe change or stop without unrelated edits.
+
+Required workflow:
+1. Inspect the repository to determine the correct content location.
+2. Apply the requested content change.
+3. Run pnpm lint.
+4. Run pnpm build.
+5. Create a pull request summarizing the change and reference the Asana task URL in the PR body.
+
+Asana task:
+- Task ID: ${task.taskGid}
+- Title: ${task.taskName ?? "Untitled"}
+- URL: ${task.permalinkUrl ?? "Unavailable"}
+
+Task notes:
+${task.taskNotes ?? "(empty)"}
+
+Attachments:
+${attachmentLines}
+`;
+}
+
+async function launchCursorAgent(task: PreparedTaskSummary): Promise<AgentLaunchResult> {
+  const triggerEnabled = process.env.ASANA_ENABLE_AGENT_TRIGGER === "true";
+
+  if (!triggerEnabled) {
+    return {
+      status: "disabled",
+      reason: "ASANA_ENABLE_AGENT_TRIGGER is not set to true",
+    };
+  }
+
+  const apiKey = process.env.CURSOR_API_KEY;
+
+  if (!apiKey) {
+    return {
+      status: "disabled",
+      reason: "CURSOR_API_KEY is not configured",
+    };
+  }
+
+  const repoUrl = process.env.CURSOR_REPO_URL ?? DEFAULT_REPO_URL;
+  const baseBranch = process.env.CURSOR_BASE_BRANCH ?? DEFAULT_BASE_BRANCH;
+  const modelId = process.env.CURSOR_MODEL_ID ?? "composer-2.5";
+  const agent = await Agent.create({
+    apiKey,
+    name: `Asana ${task.taskGid}`,
+    model: { id: modelId },
+    cloud: {
+      repos: [
+        {
+          url: repoUrl,
+          startingRef: baseBranch,
+        },
+      ],
+      autoCreatePR: true,
+      skipReviewerRequest: true,
+    },
+    idempotencyKey: `asana-agent-${task.taskGid}`,
+  });
+
+  try {
+    const run = await agent.send(buildAgentPrompt(task), {
+      idempotencyKey: `asana-run-${task.taskGid}`,
+    });
+
+    return {
+      status: "started",
+      agentId: agent.agentId,
+      runId: run.id,
+    };
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Unknown Cursor launch error";
+
+    return {
+      status: "error",
+      error: message,
+    };
+  } finally {
+    await agent[Symbol.asyncDispose]();
+  }
 }
 
 async function fetchAsanaTask(taskGid: string, token: string) {
@@ -263,7 +416,7 @@ export async function POST(request: NextRequest) {
           host: attachment.host ?? null,
         }));
 
-        const summary = {
+        const summary: PreparedTaskSummary = {
           taskGid,
           taskName: task?.name ?? null,
           taskNotes: task?.notes ?? null,
@@ -290,11 +443,13 @@ export async function POST(request: NextRequest) {
 
         if (triggerAccepted) {
           markTriggered(taskGid);
+          const agentLaunch = await launchCursorAgent(summary);
           console.log("[asana-webhook] Trigger accepted", {
             taskGid,
             taskName: task?.name ?? null,
             permalinkUrl: task?.permalink_url ?? null,
             attachmentCount: normalizedAttachments.length,
+            agentLaunch,
           });
           console.log("[asana-webhook] Trigger payload", {
             taskGid,
@@ -302,6 +457,11 @@ export async function POST(request: NextRequest) {
             taskNotes: task?.notes ?? null,
             attachments: normalizedAttachments,
           });
+
+          return {
+            ...summary,
+            agentLaunch,
+          };
         } else if (Boolean(matchingMembership) && recentlyTriggered) {
           console.log("[asana-webhook] Trigger suppressed as duplicate", {
             taskGid,
@@ -309,7 +469,13 @@ export async function POST(request: NextRequest) {
           });
         }
 
-        return summary;
+        return {
+          ...summary,
+          agentLaunch: {
+            status: "disabled",
+            reason: triggerAccepted ? "Agent launch not attempted" : "Trigger not accepted",
+          } as AgentLaunchResult,
+        };
       } catch (error) {
         const message = error instanceof Error ? error.message : "Unknown task lookup error";
         console.error("[asana-webhook] Task lookup failed", { taskGid, message });
