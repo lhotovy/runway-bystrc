@@ -2,6 +2,7 @@ import crypto from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
 
 export const runtime = "nodejs";
+const RECENT_TRIGGER_TTL_MS = 15 * 60 * 1000;
 
 type AsanaWebhookEvent = {
   action?: string;
@@ -36,6 +37,10 @@ type AsanaTaskResponse = {
   };
 };
 
+declare global {
+  var asanaRecentTriggers: Map<string, number> | undefined;
+}
+
 function verifyAsanaSignature(rawBody: string, signature: string, secret: string) {
   const expectedSignature = crypto
     .createHmac("sha256", secret)
@@ -50,6 +55,37 @@ function verifyAsanaSignature(rawBody: string, signature: string, secret: string
   }
 
   return crypto.timingSafeEqual(provided, expected);
+}
+
+function getRecentTriggerStore() {
+  if (!globalThis.asanaRecentTriggers) {
+    globalThis.asanaRecentTriggers = new Map<string, number>();
+  }
+
+  return globalThis.asanaRecentTriggers;
+}
+
+function isRecentlyTriggered(taskGid: string) {
+  const store = getRecentTriggerStore();
+  const now = Date.now();
+
+  for (const [storedTaskGid, timestamp] of Array.from(store.entries())) {
+    if (now - timestamp > RECENT_TRIGGER_TTL_MS) {
+      store.delete(storedTaskGid);
+    }
+  }
+
+  const previousTimestamp = store.get(taskGid);
+
+  if (!previousTimestamp) {
+    return false;
+  }
+
+  return now - previousTimestamp <= RECENT_TRIGGER_TTL_MS;
+}
+
+function markTriggered(taskGid: string) {
+  getRecentTriggerStore().set(taskGid, Date.now());
 }
 
 async function fetchAsanaTask(taskGid: string, token: string) {
@@ -164,6 +200,8 @@ export async function POST(request: NextRequest) {
         const matchingMembership = triggerSectionGid
           ? memberships.find((membership) => membership.section?.gid === triggerSectionGid)
           : null;
+        const recentlyTriggered = triggerSectionGid ? isRecentlyTriggered(taskGid) : false;
+        const triggerAccepted = Boolean(matchingMembership) && !recentlyTriggered;
 
         const summary = {
           taskGid,
@@ -176,12 +214,28 @@ export async function POST(request: NextRequest) {
             sectionName: membership.section?.name ?? null,
           })),
           matchesTriggerSection: Boolean(matchingMembership),
+          triggerAccepted,
+          recentlyTriggered,
         };
 
         if (triggerSectionGid) {
           console.log("[asana-webhook] Task trigger check", summary);
         } else {
           console.log("[asana-webhook] Task memberships", summary);
+        }
+
+        if (triggerAccepted) {
+          markTriggered(taskGid);
+          console.log("[asana-webhook] Trigger accepted", {
+            taskGid,
+            taskName: task?.name ?? null,
+            permalinkUrl: task?.permalink_url ?? null,
+          });
+        } else if (Boolean(matchingMembership) && recentlyTriggered) {
+          console.log("[asana-webhook] Trigger suppressed as duplicate", {
+            taskGid,
+            taskName: task?.name ?? null,
+          });
         }
 
         return summary;
