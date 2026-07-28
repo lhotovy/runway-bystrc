@@ -325,6 +325,44 @@ export const activities = [
         }
     },
     {
+        template: "template1",
+        type: "regular",
+        translations: {
+            cs: {
+                name: "Test",
+                slug: "test",
+                cardDescription: "Testuji Asanu.",
+                cardIcon: "/icons/book.png",
+                description: ["Testuji Asanu."],
+                time: null,
+                cardTime: null,
+                place: "",
+                image: "test.webp",
+                contactTitle: "",
+                contactIcon: null,
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            },
+            en: {
+                name: "Test",
+                slug: "test",
+                cardDescription: "Testing Asana.",
+                cardIcon: "/icons/book.png",
+                description: ["Testing Asana."],
+                time: null,
+                cardTime: null,
+                place: "",
+                image: "test.webp",
+                contactTitle: "",
+                contactIcon: null,
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            }
+        }
+    },
+    {
         template: "template3",
         type: "special",
         translations: {
