@@ -32,9 +32,23 @@ type AsanaTaskResponse = {
   data?: {
     gid?: string;
     name?: string;
+    notes?: string;
+    html_notes?: string;
     permalink_url?: string;
     memberships?: AsanaTaskMembership[];
   };
+};
+
+type AsanaAttachmentResponse = {
+  data?: Array<{
+    gid?: string;
+    name?: string;
+    resource_subtype?: string;
+    download_url?: string | null;
+    permanent_url?: string | null;
+    view_url?: string | null;
+    host?: string | null;
+  }>;
 };
 
 declare global {
@@ -93,6 +107,8 @@ async function fetchAsanaTask(taskGid: string, token: string) {
     opt_fields: [
       "gid",
       "name",
+      "notes",
+      "html_notes",
       "permalink_url",
       "memberships.project.gid",
       "memberships.project.name",
@@ -114,6 +130,37 @@ async function fetchAsanaTask(taskGid: string, token: string) {
   }
 
   return response.json() as Promise<AsanaTaskResponse>;
+}
+
+async function fetchAsanaAttachments(taskGid: string, token: string) {
+  const params = new URLSearchParams({
+    opt_fields: [
+      "gid",
+      "name",
+      "resource_subtype",
+      "download_url",
+      "permanent_url",
+      "view_url",
+      "host",
+    ].join(","),
+  });
+
+  const response = await fetch(
+    `https://app.asana.com/api/1.0/tasks/${taskGid}/attachments?${params.toString()}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      cache: "no-store",
+    }
+  );
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Failed to fetch attachments for task ${taskGid}: ${response.status} ${errorText}`);
+  }
+
+  return response.json() as Promise<AsanaAttachmentResponse>;
 }
 
 export async function POST(request: NextRequest) {
@@ -202,10 +249,25 @@ export async function POST(request: NextRequest) {
           : null;
         const recentlyTriggered = triggerSectionGid ? isRecentlyTriggered(taskGid) : false;
         const triggerAccepted = Boolean(matchingMembership) && !recentlyTriggered;
+        const attachmentResponse = Boolean(matchingMembership) || !triggerSectionGid
+          ? await fetchAsanaAttachments(taskGid, asanaToken)
+          : null;
+        const attachments = attachmentResponse?.data ?? [];
+        const normalizedAttachments = attachments.map((attachment) => ({
+          gid: attachment.gid ?? null,
+          name: attachment.name ?? null,
+          resourceSubtype: attachment.resource_subtype ?? null,
+          downloadUrl: attachment.download_url ?? null,
+          permanentUrl: attachment.permanent_url ?? null,
+          viewUrl: attachment.view_url ?? null,
+          host: attachment.host ?? null,
+        }));
 
         const summary = {
           taskGid,
           taskName: task?.name ?? null,
+          taskNotes: task?.notes ?? null,
+          taskHtmlNotes: task?.html_notes ?? null,
           permalinkUrl: task?.permalink_url ?? null,
           memberships: memberships.map((membership) => ({
             projectGid: membership.project?.gid ?? null,
@@ -213,6 +275,8 @@ export async function POST(request: NextRequest) {
             sectionGid: membership.section?.gid ?? null,
             sectionName: membership.section?.name ?? null,
           })),
+          attachmentCount: normalizedAttachments.length,
+          attachments: normalizedAttachments,
           matchesTriggerSection: Boolean(matchingMembership),
           triggerAccepted,
           recentlyTriggered,
@@ -230,6 +294,13 @@ export async function POST(request: NextRequest) {
             taskGid,
             taskName: task?.name ?? null,
             permalinkUrl: task?.permalink_url ?? null,
+            attachmentCount: normalizedAttachments.length,
+          });
+          console.log("[asana-webhook] Trigger payload", {
+            taskGid,
+            taskName: task?.name ?? null,
+            taskNotes: task?.notes ?? null,
+            attachments: normalizedAttachments,
           });
         } else if (Boolean(matchingMembership) && recentlyTriggered) {
           console.log("[asana-webhook] Trigger suppressed as duplicate", {
