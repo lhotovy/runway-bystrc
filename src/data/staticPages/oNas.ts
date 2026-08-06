@@ -35,7 +35,7 @@ export const oNasData = {
       contactLinkText: "Kontaktujte nás",
       contactLink: "/kontakt",
       anotherPlacesTitle: "Nemůžete přijít k nám?",
-      anotherPlacesSubtitle: "Podívejte se, kam jinam v brně můžete zajít",
+      anotherPlacesSubtitle: "Podívejte se, kam jinam v Brně můžete zajít.",
       anotherPlacesText: "Jsme součástí Baptistů v Brně a naše akce se konají i na dalších místech.",
       anotherPlaces: [
         {
