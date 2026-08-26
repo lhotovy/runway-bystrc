@@ -8,8 +8,8 @@ export const template2Data = {
             anotherServicesTitle: "Nemůžete přijít k nám?",
             anotherServicesText: "Jsme součástí Baptistů v Brně a naše akce se konají i na dalších místech.",
             anotherServicesLink: "Kam jinam v Brně zajít",
-            currentTopicTitle: "Červen",
-            currentTopicText: "V červnu budeme pokračovat dál v sérii \"Být v Boží blízkosti\" a také v Chosen clubech, které se s bohoslužbami střídají. Těšíme se na Vás vždy v neděli v 16:00 v Runway Hub."
+            currentTopicTitle: "10 Velkých svobod",
+            currentTopicText: "Na podzimní Nedělích na Runwayi otevíráme sérii „10 Velkých svobod“. Budeme prokládat klasické bohoslužby s Chosen cluby. Těšíme se na Vás vždy v neděli v 16:00 v Runway Hub."
         },
         en: {
             anotherContacts: {
@@ -19,8 +19,8 @@ export const template2Data = {
             anotherServicesTitle: "Can't come to us?",
             anotherServicesText: "We are part of Baptist in Brno and our events are also held at other places.",
             anotherServicesLink: "Where to go in Brno",
-            currentTopicTitle: "June",
-            currentTopicText: "In June, we'll continue with the series \"Being in God's Presence\" and also with Chosen clubs, which alternate with our services. We look forward to seeing you every Sunday at 4:00 PM at Runway Hub."
+            currentTopicTitle: "10 Big Freedoms",
+            currentTopicText: "This autumn on Sundays at Runway, we're starting a series called \"10 Big Freedoms\". We'll continue alternating classic church services with Chosen clubs. We look forward to seeing you every Sunday at 4:00 PM at Runway Hub."
         },
     }
 }
