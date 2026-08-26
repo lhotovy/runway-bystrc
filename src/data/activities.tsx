@@ -9,9 +9,9 @@ export const activities = [
             cs: {
                 name: "Neděle na Runwayi",
                 slug: "nedele",
-                cardDescription: "Klasická bohoslužba nebo Chosen klub",
+                cardDescription: "Bohoslužba nebo speciální program",
                 cardIcon: "/icons/book.png",
-                description: ["Přijď k nám na bohoslužbu nebo na Chosen klub, které se pravidelně střídají. V každém případě zažiješ společenství, které usiluje o Boží blízkost a kde jsi vítán!"],
+                description: ["Přijď k nám na bohoslužbu nebo na speciální program. V každém případě zažiješ společenství, které usiluje o Boží blízkost a kde jsi vítán!"],
                 time: ["každou neděli od 16:00"],
                 cardTime: null,
                 place: "Runway Hub",
@@ -25,9 +25,9 @@ export const activities = [
             en: {
                 name: "Sunday Services",
                 slug: "nedele",
-                cardDescription: "Regular service or Chosen club",
+                cardDescription: "Service or special program",
                 cardIcon: "/icons/book.png",
-                description: ["Come to our regular service or Chosen club, which alternates regularly. In either case, you will experience fellowship that strives for God's closeness and where you are welcome!"],
+                description: ["Come to our service or special program. In either case, you will experience fellowship that strives for God's closeness and where you are welcome!"],
                 time: ["every Sunday at 4:00 PM"],
                 cardTime: null,
                 place: "Runway Hub",
