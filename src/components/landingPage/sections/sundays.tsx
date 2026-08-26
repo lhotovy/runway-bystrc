@@ -24,7 +24,7 @@ export const Sundays = ({ data, lang }: { data: any, lang: LangOptions }) => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               {data?.sundaysTitle}
             </h2>
-            <p className="text-base text-gray-600 mb-6 leading-relaxed">
+            <p className="text-base text-gray-600 mb-6 leading-relaxed whitespace-pre-line">
               {data?.sundaysDescription}
             </p> 
             <div className="mt-8 w-fit">

@@ -4,9 +4,9 @@ export const SundaysDescription = {
     cs: function SundaysDescriptionCz() {
         return (
             <div className="flex flex-col gap-y-8">
-                <p>Neděle na Runwayi se konají <b>každou neděli od 16:00 v Runway Hubu</b> (Nad Přehradou 1466/9a, Brno-Bystrc). 
-                    Klasická <b>bohoslužba</b> je 1. a 3. neděli v měsíci, zbývající neděle pořádáme 
-                    tzv. <b>Chosen club</b> - promítání seriálu Chosen s následnou diskuzí. 
+                <p>Neděle na Runwayi se konají <b>každou neděli od 16:00 v Runway Hubu</b> (Nad Přehradou 1466/9a, Brno-Bystrc).
+                    Podzim přináší nový rytmus: každou <b>první, druhou a třetí neděli</b> v měsíci se společně setkáme na <b>bohoslužbě</b>.
+                    Ostatní neděle se můžete těšit na trochu jiný a <b>neformální speciální program</b>.
                 </p>
 
                 <h2 className="text-gray-9 font-bold text-lg text-left mt-12">Co očekávat na bohoslužbě?</h2>
@@ -37,9 +37,9 @@ export const SundaysDescription = {
     en: function SundaysDescriptionEn() {
         return (
             <div className="flex flex-col gap-y-8">
-                 <p>Sundays at Runway take place <b>every Sunday at 4:00 PM in Runway Hub</b> (Nad Přehradou 1466/9a, Brno-Bystrc). 
-                    Regular <b>service</b> is every <b>1st and 3rd Sunday of the month</b>, the remaining Sundays we organize 
-                    the <b>Chosen club</b> - watching of the Chosen series with a discussion afterwards. 
+                 <p>Sundays at Runway take place <b>every Sunday at 4:00 PM in Runway Hub</b> (Nad Přehradou 1466/9a, Brno-Bystrc).
+                    Autumn brings a new rhythm: every <b>first, second, and third Sunday</b> of the month we gather for a <b>service</b>.
+                    On the remaining Sundays you can look forward to a slightly different, more <b>informal special program</b>.
                 </p>
                 
                 <h2 className="text-gray-9 font-bold text-lg text-left mt-12">What to expect on the service?</h2>
