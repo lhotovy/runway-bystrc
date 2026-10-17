@@ -987,6 +987,93 @@ export const activities = [
         type: "special",
         translations: {
             cs: {
+                name: "Kurz výchovy teenagerů",
+                slug: "vychova-teenageru",
+                cardDescription: "Pět úterků o výchově teenagerů",
+                cardIcon: "",
+                description: [
+                    "Kurz pro rodiče, kteří chtějí lépe rozumět svým teenagerům a mít praktické nástroje do každodenního života. Čeká vás občerstvení na úvod, praktické a vtipné přednášky a diskuse u kávy.",
+                    "Během akce mohou být organizátorem pořizovány ilustrační fotografie a videa."
+                ],
+                topics: [
+                    "Nespouštět zrak z cíle",
+                    "Nastav hranice",
+                    "Pomoci dělat správná rozhodnutí",
+                    "Naplňování potřeb",
+                    "Budování emocionálního zdraví"
+                ],
+                details: {
+                    "Místo": "Runway Hub Café, Nad Přehradou 9a",
+                    "Termín": "5 úterků od 3. 11. 2026, vždy v 18:30",
+                    "Cena": "970 Kč za účastníka na celý kurz",
+                    "Přihlášky s platbou": "do 2. 11. 2026",
+                    "Číslo účtu": "366538139/0300",
+                    "Variabilní symbol": "2605",
+                    "Do poznámky k platbě": "své jméno",
+                    "Kontakt": "tel. 777 878 940, www.manzelskevecery.cz"
+                },
+                time: ["5 úterků od 3. 11. 2026", "vždy v 18:30"],
+                cardDate: "od 3. 11. 2026",
+                cardTime: "18:30",
+                filterDate: "2026-11-03",
+                place: "Runway Hub Café",
+                image: "vychova-teenageru.webp",
+                imagePosition: "center top",
+                registrationText: "Přihlášky s platbou do 2. 11. 2026",
+                registrationLink: "/prihlaska/vychova-teenageru",
+                contactIcon: null,
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: "https://www.manzelskevecery.cz"
+            },
+            en: {
+                name: "Parenting Teenagers Course",
+                slug: "vychova-teenageru",
+                cardDescription: "Five Tuesday evenings on parenting teenagers",
+                cardIcon: "",
+                description: [
+                    "A course for parents who want to understand their teenagers better and gain practical tools for everyday life. Each evening starts with refreshments, followed by practical and light-hearted talks and a discussion over coffee.",
+                    "The organizer may take illustrative photos and videos during the event.",
+                    "More information: tel. 777 878 940, www.manzelskevecery.cz"
+                ],
+                topics: [
+                    "Keep your eyes on the goal",
+                    "Set boundaries",
+                    "Help them make good decisions",
+                    "Meeting needs",
+                    "Building emotional health"
+                ],
+                details: {
+                    "Place": "Runway Hub Café, Nad Přehradou 9a",
+                    "Schedule": "5 Tuesdays from 3 November 2026, always at 6:30 PM",
+                    "Price": "970 CZK per participant for the whole course",
+                    "Registration with payment": "by 2 November 2026",
+                    "Account number": "366538139/0300",
+                    "Variable symbol": "2605",
+                    "Payment note": "your name",
+                    "Contact": "tel. 777 878 940, www.manzelskevecery.cz"
+                },
+                time: ["5 Tuesdays from 3 November 2026", "always at 6:30 PM"],
+                cardDate: "from 3 Nov 2026",
+                cardTime: "18:30",
+                filterDate: "2026-11-03",
+                place: "Runway Hub Café",
+                image: "vychova-teenageru.webp",
+                imagePosition: "center top",
+                registrationText: "Registration with payment by 2 November 2026",
+                registrationLink: "/en/prihlaska/vychova-teenageru",
+                contactIcon: null,
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: "https://www.manzelskevecery.cz"
+            }
+        }
+    },
+    {
+        template: "template3",
+        type: "special",
+        translations: {
+            cs: {
                 name: "Víkendovka Runway Youth",
                 slug: "vikendovka-runway-youth",
                 cardDescription: "Jarní víkendovka Runway Youth v Prosetíně",

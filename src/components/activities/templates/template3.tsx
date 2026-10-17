@@ -10,10 +10,12 @@ import { LangOptions } from "@/types";
 export const ActivityTemplate3 = ({
   name,
   description,
+  topics,
   details,
   time,
   place,
   image,
+  imagePosition,
   registrationText,
   registrationLink,
   anotherActivities,
@@ -21,10 +23,12 @@ export const ActivityTemplate3 = ({
 }: {
   name: string,
   description: string[],
+  topics?: string[],
   details?: Record<string, string>,
   time: string[] | null,
   place: string,
   image: string,
+  imagePosition?: string,
   registrationText: string | undefined,
   registrationLink: string | undefined,
   anotherActivities: any[]
@@ -40,6 +44,7 @@ export const ActivityTemplate3 = ({
         time={time}
         place={place}
         image={image}
+        imagePosition={imagePosition}
       />
       <div className="text-gray-9 w-5/6 sm:w-1/2 text-base flex flex-col items-start my-12 gap-y-8">
         {
@@ -49,6 +54,16 @@ export const ActivityTemplate3 = ({
             )
           })
         }
+        {topics && topics.length > 0 && (
+          <div className="flex flex-col gap-y-3">
+            <p className="font-bold">{lang === "en" ? "Topics" : "Témata"}</p>
+            <ul className="list-disc list-inside space-y-1">
+              {topics.map((topic) => (
+                <li key={topic}>{topic}</li>
+              ))}
+            </ul>
+          </div>
+        )}
         {hasDetails && (
           <ul className="list-none list-inside space-y-2 w-full">
             {Object.entries(details!).map(([key, value]) => (

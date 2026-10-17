@@ -1,8 +1,19 @@
 import DropdownSelect from "@/components/ui/select";
 import { JSX } from "react";
 
-export const generateFormElements = (definitions: { type: string, name: string, text: string, shareLine?: boolean, required: boolean }[], formData: any, setFormData: any) => {
-  type ElementFunction = (name: string, text: string, required: boolean, widthClass: string) => JSX.Element;
+type FormElementDefinition = {
+  type: string,
+  name: string,
+  text: string,
+  shareLine?: boolean,
+  required: boolean,
+  description?: string,
+  title?: string,
+  options?: { value: string, label: string }[],
+};
+
+export const generateFormElements = (definitions: FormElementDefinition[], formData: any, setFormData: any) => {
+  type ElementFunction = (name: string, text: string, required: boolean, widthClass: string, definition?: FormElementDefinition) => JSX.Element;
 
   const elementsLibrary: { [key: string]: ElementFunction } = {
     //inputs
@@ -356,6 +367,46 @@ export const generateFormElements = (definitions: { type: string, name: string, 
       </select>
     </div>
     ),
+    personalDataConsent: (name: string, text: string, required: boolean, widthClass: string, definition?: FormElementDefinition) => (
+      <div key={name} className={`flex flex-col gap-y-3 mb-4 ${widthClass}`}>
+        {definition?.title && <p className="text-gray-700 text-base font-bold">{definition.title}</p>}
+        <p className="text-gray-700 text-base whitespace-pre-line">{definition?.description}</p>
+        <label className="flex items-start gap-x-2 text-gray-700 text-base font-bold" htmlFor={name}>
+          <input
+            type="checkbox"
+            id={name}
+            name={name}
+            required={required}
+            checked={Boolean(formData[name])}
+            onChange={(e) => setFormData({ ...formData, [name]: e.target.checked ? text : "" })}
+            className="mt-1 h-4 w-4 shrink-0"
+          />
+          <span>{text}</span>
+        </label>
+      </div>
+    ),
+    eventNewsConsent: (name: string, text: string, required: boolean, widthClass: string, definition?: FormElementDefinition) => (
+      <fieldset key={name} className={`flex flex-col gap-y-3 mb-4 border-0 p-0 ${widthClass}`}>
+        <legend className="text-gray-700 text-base font-bold mb-2">{text}</legend>
+        <p className="text-gray-700 text-base whitespace-pre-line">{definition?.description}</p>
+        <div className="flex flex-col gap-y-2">
+          {definition?.options?.map((option) => (
+            <label key={option.value} className="flex items-center gap-x-2 text-gray-700 text-base">
+              <input
+                type="radio"
+                name={name}
+                value={option.value}
+                required={required}
+                checked={formData[name] === option.value}
+                onChange={(e) => setFormData({ ...formData, [name]: e.target.value })}
+                className="h-4 w-4 shrink-0"
+              />
+              <span>{option.label}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    ),
     // Add more form element types to the library as needed
   };
 
@@ -375,14 +426,14 @@ export const generateFormElements = (definitions: { type: string, name: string, 
     // Add current element
     const currentElement = elementsLibrary[current.name];
     if (currentElement) {
-      elements.push(currentElement(current.name, current.text, current.required, currentWidth));
+      elements.push(currentElement(current.name, current.text, current.required, currentWidth, current));
     }
     
     // Add next element if it exists
     if (next) {
       const nextElement = elementsLibrary[next.name];
       if (nextElement) {
-        elements.push(nextElement(next.name, next.text, next.required, nextWidth!));
+        elements.push(nextElement(next.name, next.text, next.required, nextWidth!, next));
       }
     }
   }
