@@ -992,8 +992,7 @@ export const activities = [
                 cardDescription: "Pět úterků o výchově teenagerů",
                 cardIcon: "",
                 description: [
-                    "Kurz pro rodiče, kteří chtějí lépe rozumět svým teenagerům a mít praktické nástroje do každodenního života. Čeká vás občerstvení na úvod, praktické a vtipné přednášky a diskuse u kávy.",
-                    "Během akce mohou být organizátorem pořizovány ilustrační fotografie a videa."
+                    "Kurz pro rodiče, kteří chtějí lépe rozumět svým teenagerům a mít praktické nástroje do každodenního života. Čeká vás občerstvení na úvod, praktické a vtipné přednášky a diskuse u kávy."
                 ],
                 topics: [
                     "Nespouštět zrak z cíle",
@@ -1033,7 +1032,6 @@ export const activities = [
                 cardIcon: "",
                 description: [
                     "A course for parents who want to understand their teenagers better and gain practical tools for everyday life. Each evening starts with refreshments, followed by practical and light-hearted talks and a discussion over coffee.",
-                    "The organizer may take illustrative photos and videos during the event.",
                     "More information: tel. 777 878 940, www.manzelskevecery.cz"
                 ],
                 topics: [

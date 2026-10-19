@@ -9,7 +9,6 @@ type FormElementDefinition = {
   required: boolean,
   description?: string,
   title?: string,
-  options?: { value: string, label: string }[],
 };
 
 export const generateFormElements = (definitions: FormElementDefinition[], formData: any, setFormData: any) => {
@@ -384,28 +383,6 @@ export const generateFormElements = (definitions: FormElementDefinition[], formD
           <span>{text}</span>
         </label>
       </div>
-    ),
-    eventNewsConsent: (name: string, text: string, required: boolean, widthClass: string, definition?: FormElementDefinition) => (
-      <fieldset key={name} className={`flex flex-col gap-y-3 mb-4 border-0 p-0 ${widthClass}`}>
-        <legend className="text-gray-700 text-base font-bold mb-2">{text}</legend>
-        <p className="text-gray-700 text-base whitespace-pre-line">{definition?.description}</p>
-        <div className="flex flex-col gap-y-2">
-          {definition?.options?.map((option) => (
-            <label key={option.value} className="flex items-center gap-x-2 text-gray-700 text-base">
-              <input
-                type="radio"
-                name={name}
-                value={option.value}
-                required={required}
-                checked={formData[name] === option.value}
-                onChange={(e) => setFormData({ ...formData, [name]: e.target.value })}
-                className="h-4 w-4 shrink-0"
-              />
-              <span>{option.label}</span>
-            </label>
-          ))}
-        </div>
-      </fieldset>
     ),
     // Add more form element types to the library as needed
   };

@@ -259,7 +259,7 @@ export const registrations = [
         description: [
           "Pět úterků od 3. 11. 2026, vždy v 18:30, v Runway Hub Café (Nad Přehradou 9a).",
           "Cena 970 Kč za účastníka na celý kurz. Platbu proveďte na účet 366538139/0300, variabilní symbol 2605, do poznámky pro příjemce uveďte své jméno. Přihlášky s platbou do 2. 11. 2026.",
-          "Bližší informace: tel. 777 878 940, www.manzelskevecery.cz. Během akce mohou být organizátorem pořizovány ilustrační fotografie a videa."
+          "Bližší informace: tel. 777 878 940, www.manzelskevecery.cz."
         ],
         slug: "vychova-teenageru",
         elements: [
@@ -270,22 +270,9 @@ export const registrations = [
             type: "checkbox",
             name: "personalDataConsent",
             text: "Se zpracováním osobních údajů souhlasím *",
-            title: "Souhlas se zpracováním osobních údajů",
             shareLine: false,
             required: true,
-            description: "Abychom vás mohli přihlásit, potřebujeme vaše jméno, e-mail a případně telefon. Tyto údaje použijeme jen k vyřízení přihlášky a k organizaci kurzu.\n\nZpracovávají je společně Odbor pro manželství a rodinu Bratrské jednoty baptistů v ČR, sbor Bratrské jednoty baptistů v Brně, platforma Rádi spolu, společenství Runway Bystrc (součást církve Bratrské jednoty baptistů) a zapsaný spolek Runway Bystrc. Mimo tyto subjekty údaje nepředáme. Nakládáme s nimi podle nařízení EU 2016/679 (GDPR).\n\nV případě dotazů nás kontaktujte na info@radispolu.cz nebo info@runway-bystrc.cz.",
-          },
-          {
-            type: "radio",
-            name: "eventNewsConsent",
-            text: "Souhlas se zasíláním informací o akcích",
-            shareLine: false,
-            required: true,
-            description: "Stejné subjekty pořádají akce pro manželství, rodiny i veřejnost, například víkendy, konference, vztahové kurzy, přednášky, kluby, bohoslužby, tábory nebo program v kavárně Runway Hub Café. Chcete od nich dostávat informace o akcích, které pořádají nebo na kterých spolupracují? Ze zasílání se můžete kdykoli odhlásit. Vyberte jednu možnost. Souhlas není podmínkou přihlášky.",
-            options: [
-              { value: "Souhlasím", label: "Souhlasím" },
-              { value: "Nesouhlasím", label: "Nesouhlasím" },
-            ],
+            description: "Akci pořádá Runway Bystrc z.s. S vašimi osobními údaji z přihlášky nakládáme podle nařízení EU 2016/679 (GDPR). V případě dotazů nás kontaktujte na info@runway-bystrc.cz.",
           },
         ],
       },
@@ -294,7 +281,7 @@ export const registrations = [
         description: [
           "Five Tuesdays from 3 November 2026, always at 6:30 PM, at Runway Hub Café (Nad Přehradou 9a).",
           "Price 970 CZK per participant for the whole course. Please pay to account 366538139/0300, variable symbol 2605, and put your name in the payment note. Registration with payment by 2 November 2026.",
-          "More information: tel. 777 878 940, www.manzelskevecery.cz. The organizer may take illustrative photos and videos during the event."
+          "More information: tel. 777 878 940, www.manzelskevecery.cz."
         ],
         slug: "vychova-teenageru",
         elements: [
@@ -305,22 +292,9 @@ export const registrations = [
             type: "checkbox",
             name: "personalDataConsent",
             text: "I agree to the processing of my personal data *",
-            title: "Consent to personal data processing",
             shareLine: false,
             required: true,
-            description: "To register you, we need your name, email and, if you provide it, your phone number. We will use these details only to process your registration and to organise the course.\n\nThey are processed jointly by the Marriage and Family Department of the Baptist Union in the Czech Republic, the Baptist church in Brno, the Rádi spolu platform, the Runway Bystrc community (part of the Baptist church) and the registered association Runway Bystrc. We will not pass the data to anyone outside these organisations. We handle it in line with EU Regulation 2016/679 (GDPR).\n\nQuestions: info@radispolu.cz or info@runway-bystrc.cz.",
-          },
-          {
-            type: "radio",
-            name: "eventNewsConsent",
-            text: "Consent to receive information about events",
-            shareLine: false,
-            required: true,
-            description: "The same organisations hold events for marriages, families and the public, such as weekends, conferences, relationship courses, talks, clubs, services, camps and the programme at Runway Hub Café. Would you like to receive information about events they organise or take part in? You can unsubscribe at any time. Please choose one option. Agreement is not required to register.",
-            options: [
-              { value: "I agree", label: "I agree" },
-              { value: "I do not agree", label: "I do not agree" },
-            ],
+            description: "The event is organised by Runway Bystrc z.s. We handle the personal data from your registration in line with EU Regulation 2016/679 (GDPR). If you have questions, contact us at info@runway-bystrc.cz.",
           },
         ],
       },

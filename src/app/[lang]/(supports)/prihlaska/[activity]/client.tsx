@@ -16,7 +16,6 @@ export const RegistrationPageClient = ({ data, lang }: { data: any, lang: LangOp
     const values = formData as Record<string, string>;
     const consentLines = [
       values.personalDataConsent ? `Souhlas se zpracováním osobních údajů: ${values.personalDataConsent}` : "",
-      values.eventNewsConsent ? `Souhlas se zasíláním informací o akcích: ${values.eventNewsConsent}` : "",
     ].filter(Boolean);
     const note = [values.note, ...consentLines].filter(Boolean).join("\n");
     const payload = { ...values, title: data.name, time: new Date(), ...(note ? { note } : {}) };
