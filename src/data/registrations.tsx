@@ -259,7 +259,8 @@ export const registrations = [
         description: [
           "Pět úterků od 3. 11. 2026, vždy v 18:30, v Runway Hub Café (Nad Přehradou 9a).",
           "Cena 970 Kč za účastníka na celý kurz. Platbu proveďte na účet 366538139/0300, variabilní symbol 2605, do poznámky pro příjemce uveďte své jméno. Přihlášky s platbou do 2. 11. 2026.",
-          "Bližší informace: tel. 777 878 940, www.manzelskevecery.cz."
+          "Bližší informace: tel. 777 878 940, www.manzelskevecery.cz.",
+          "Během akce mohou být organizátorem pořizovány ilustrační fotografie a videa."
         ],
         slug: "vychova-teenageru",
         elements: [
@@ -281,7 +282,8 @@ export const registrations = [
         description: [
           "Five Tuesdays from 3 November 2026, always at 6:30 PM, at Runway Hub Café (Nad Přehradou 9a).",
           "Price 970 CZK per participant for the whole course. Please pay to account 366538139/0300, variable symbol 2605, and put your name in the payment note. Registration with payment by 2 November 2026.",
-          "More information: tel. 777 878 940, www.manzelskevecery.cz."
+          "More information: tel. 777 878 940, www.manzelskevecery.cz.",
+          "The organizer may take illustrative photos and videos during the event."
         ],
         slug: "vychova-teenageru",
         elements: [
