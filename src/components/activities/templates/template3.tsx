@@ -80,7 +80,7 @@ export const ActivityTemplate3 = ({
           {registrationLink && 
             <Button 
               variant="yellow" 
-              text="Přihlásit se"
+              text={lang === "en" ? "Register" : "Přihlásit se"}
               disabled={registrationLink === "/"} 
               onClick={() => {registrationLink.includes("http") ? window.open(registrationLink, "_blank") : router.push(`${registrationLink}`)}} 
               className="py-3"
