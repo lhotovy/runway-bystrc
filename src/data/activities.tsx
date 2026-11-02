@@ -331,25 +331,30 @@ export const activities = [
             cs: {
                 name: "Runway jede na hory",
                 slug: "hory",
-                cardDescription: "Tradiční zimní pobyt na horách, tentokrát v srdci Jeseníků",
+                cardDescription: "Společný zimní pobyt v Jeseníkách pro celou rodinu",
                 cardIcon: "",
                 description: [
-                    "Pojeďme společně na hory. Společný čas, zábava, lyžování, procházky, termální lázně, koupání..", 
-                    "Letos již tradičně vyrazíme s Runway na hory, konkrétně do penzionu Švihák ve Velkých Losinách. Na místo se dopravíme auty, kdo bude mít zájem o spolujízdu s někým, prosím napište to do daného místa v přihlášce a budete k někomu do auta přiděleni. Program začne v pátek večeří v 19:00. O víkendu bude možno lyžovat, jít na organizovaný výlet nebo do blízkého wellness (vstupné za wellness ani permanentka na lyžování není v ceně pobytu). Co se týče jídla, v ceně je zahrnuta páteční večeře, sobotní snídaně, svačinový balíček a večeře a dále nedělní snídaně a opět balíček. Bližší informace k dopravě i programu budou zaslány na mail na začátku ledna. Informace k platbě Vám budou zaslány v mailu po vyplnění registračního formuláře. Přihláška se stává závaznou ve chvíli jejího zaplacení."
+                    "Přihlas se na Runway jede na hory 15.–17. ledna 2027. Společný čas, zábava, lyžování, procházky, termální lázně, koupání…",
+                    "Ubytování: Penzion Švihák Lázeňský ve Velkých Losinách. V ceně je ubytování na 2 noci a polopenze.",
+                    "Cena: dospělá osoba 1 950 Kč, dítě 3–11 let 1 050 Kč, dítě do 2 let zdarma.",
+                    "Částku za celou rodinu vložte prosím ihned po přihlášení na bankovní účet 366538139/0300. Variabilní symbol: 2701. Do poznámky k platbě uveďte své jméno a příjmení.",
+                    "Do poznámky v přihlášce uveďte, zda nabízíte místo v autě a jste ochotni někoho svést (včetně počtu míst), nebo zda potřebujete odvoz."
                 ],
                 details: {
-                    "Místo": "Penzion Švihák Lázeňský, Rudé armády 37, Velké Losiny",
-                    "Termín": "16. – 18. 1. 2026",
-                    "Cena": "osoby od 12 let 1 700 Kč, děti do 11 let 900 Kč, děti do 2 let zdarma (ubytování + polopenze)"
+                    "Místo": "Penzion Švihák Lázeňský, Velké Losiny",
+                    "Termín": "15. – 17. 1. 2027",
+                    Cena: "dospělá osoba 1 950 Kč, dítě 3–11 let 1 050 Kč, dítě do 2 let zdarma (2 noci + polopenze)"
                 },
-                time: ["16. - 18. 1. 2026"],
-                filterDate: "2026-01-16",
-                cardDate: "16. - 18. ledna",
+                time: [
+                    "15. – 17. 1. 2027"
+                ],
+                filterDate: "2027-01-15",
+                cardDate: "15.–17. ledna 2027",
                 cardTime: null,
                 place: "Penzion Švihák Lázeňský",
-                image: "hory.webp",
-                registrationText: "Kapacita byla naplněna, přihlašování je již uzavřeno", 
-                registrationLink: "",      
+                image: "hory-2027.webp",
+                registrationText: "Přihlaste se s celou rodinou",
+                registrationLink: "/prihlaska/hory",
                 contactIcon: null,
                 contactPerson: "",
                 contactLinkText: "",
@@ -358,25 +363,30 @@ export const activities = [
             en: {
                 name: "Runway Goes to the Mountains",
                 slug: "hory",
-                cardDescription: "Traditional winter stay in the mountains, this time in the heart of Jeseníky",
+                cardDescription: "A winter stay in Jeseníky for the whole family",
                 cardIcon: "",
                 description: [
-                    "Join us for a winter stay in Jeseníky from February 21st to 23rd, 2025. Shared time, fun, skiing, walks…", 
-                    "This year, for the third time, we will go to the mountains with Runway, this time to Hotel na Trojce in Jeseníky. We will travel to the location by car; if you are interested in carpooling with someone, please write it in the application, and you will be assigned to someone's car. The program will start on Friday with dinner at 7:00 PM. Over the weekend, it will be possible to ski or go on an organized trip (ski pass is not included in the price of the stay). Regarding food, the price includes Friday dinner, Saturday breakfast and dinner, and Sunday breakfast. More information about transportation and the program will be sent by email during February. Payment information will be sent by email within 24 hours after filling out the registration form. The application becomes binding upon payment."
+                    "Register for Runway Goes to the Mountains on 15–17 January 2027. Time together, fun, skiing, walks, thermal baths and swimming…",
+                    "Accommodation: Penzion Švihák Lázeňský in Velké Losiny. The price includes 2 nights and half board.",
+                    "Price: adult 1,950 CZK, child aged 3–11 1,050 CZK, child aged 0–2 free.",
+                    "Please pay for your whole family immediately after registering to bank account 366538139/0300. Payment reference (variable symbol): 2701. Include your full name in the payment note.",
+                    "In the registration note, tell us whether you can offer a ride (including the number of seats), or need a ride."
                 ],
                 details: {
-                    "Place": "Hotel na Trojce, Jindřichov, Jeseníky",
-                    "Date": "16. – 18. 1. 2026",
-                    "Price": "persons 10+ 1 540 CZK, children under 10 1 240 CZK, under 3 free (accommodation + half board)"
+                    Place: "Penzion Švihák Lázeňský, Velké Losiny",
+                    Date: "15–17 January 2027",
+                    Price: "adult 1,950 CZK, child aged 3–11 1,050 CZK, child aged 0–2 free (2 nights + half board)"
                 },
-                time: ["February 21st - 23rd, 2025 from 7:00 PM"],
-                cardDate: "February 21st - 23rd",
-                filterDate: "2026-01-16",
+                time: [
+                    "15–17 January 2027"
+                ],
+                filterDate: "2027-01-15",
+                cardDate: "15–17 January 2027",
                 cardTime: null,
-                place: "Hotel na Trojce",
-                image: "hory.webp",
-                registrationText: "Capacity was filled, registration is closed", 
-                registrationLink: "",      
+                place: "Penzion Švihák Lázeňský",
+                image: "hory-2027.webp",
+                registrationText: "Register your whole family",
+                registrationLink: "/en/prihlaska/hory",
                 contactIcon: null,
                 contactPerson: "",
                 contactLinkText: "",

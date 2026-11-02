@@ -3,46 +3,64 @@ export const registrations = [
     slug: "hory",
     translations: {
       cs: {
-        name: "Přihláška na Runway jede na hory",
-        description: "Přihlas se na náš pobyt v Jeseníkách v termínu 16. - 18. 1. 2026",
+        name: "Přihláška na Runway jede na hory 2027",
+        description: [
+          "Přihlas se na Runway jede na hory 15.–17. ledna 2027. Společný čas, zábava, lyžování, procházky, termální lázně, koupání…",
+          "Ubytování: Penzion Švihák Lázeňský ve Velkých Losinách. V ceně je ubytování na 2 noci a polopenze.",
+          "Cena: dospělá osoba 1 950 Kč, dítě 3–11 let 1 050 Kč, dítě do 2 let zdarma.",
+          "Částku za celou rodinu vložte prosím ihned po přihlášení na bankovní účet 366538139/0300. Variabilní symbol: 2701. Do poznámky k platbě uveďte své jméno a příjmení.",
+          "Do poznámky v přihlášce uveďte, zda nabízíte místo v autě a jste ochotni někoho svést (včetně počtu míst), nebo zda potřebujete odvoz."
+        ],
+        accommodationLink: "https://www.ubytovani-losiny.cz/",
+        accommodationName: "Penzion Švihák Lázeňský",
         slug: "hory",
         elements: [
           { type: "input", name: "userName", text: "Jméno a příjmení *", shareLine: true, required: true },
-          { type: "input", name: "dateOfBirth", text: "Datum narození *", shareLine: true, required: true },
-          { type: "input", name: "address", text: "Adresa *", shareLine: false, required: true },
           { type: "input", name: "email", text: "Email *", shareLine: true, required: true },
           { type: "input", name: "phone", text: "Telefon *", shareLine: true, required: true },
-          { type: "input", name: "representativeName", text: "Jméno a příjmení zákonného zástupce (pokud je ti míň než 18 let)", shareLine: false, required: false },
-          { type: "input", name: "representativeEmail", text: "Email zákonného zástupce", shareLine: true, required: false },
-          { type: "input", name: "representativePhone", text: "Telefon zákonného zástupce", shareLine: true, required: false },
-          { type: "input", name: "preferedActivitySaturday", text: "Preferovaná aktivita na sobotu", shareLine: true, required: false },
-          { type: "input", name: "preferedActivitySunday", text: "Preferovaná aktivita na neděli", shareLine: true, required: false },
-          { type: "input", name: "lift", text: "Potřebuji odvoz / nabízím místa v autě (počet)", shareLine: false, required: false },
-          { type: "input", name: "limitations", text: "Zdravotní nebo jiná omezení", shareLine: false, required: false },
-          { type: "input", name: "note", text: "Poznámka", shareLine: false, required: false },
-        ],
+          { type: "input", name: "peopleCount", text: "Počet dospělých osob *", shareLine: true, required: true },
+          { type: "input", name: "age", text: "Počet dětí a jejich věk (pokud nemáte děti, uveďte 0) *", shareLine: false, required: true },
+          { type: "input", name: "note", text: "Poznámka – nabízím místa v autě (počet) / potřebuji odvoz", shareLine: false, required: false },
+          {
+            type: "checkbox",
+            name: "personalDataConsent",
+            text: "Se zpracováním osobních údajů souhlasím *",
+            shareLine: false,
+            required: true,
+            description: "Akci pořádá Runway Bystrc z.s. S vašimi osobními údaji z přihlášky nakládáme podle nařízení EU 2016/679 (GDPR). V případě dotazů nás kontaktujte na info@runway-bystrc.cz."
+          }
+        ]
       },
       en: {
-        name: "Registration for Runway Goes to the Mountains",
-        description: "Sign up for our trip to Jeseníky on the specified date 16. - 18. 1. 2026",
+        name: "Registration for Runway Goes to the Mountains 2027",
+        description: [
+          "Register for Runway Goes to the Mountains on 15–17 January 2027. Time together, fun, skiing, walks, thermal baths and swimming…",
+          "Accommodation: Penzion Švihák Lázeňský in Velké Losiny. The price includes 2 nights and half board.",
+          "Price: adult 1,950 CZK, child aged 3–11 1,050 CZK, child aged 0–2 free.",
+          "Please pay for your whole family immediately after registering to bank account 366538139/0300. Payment reference (variable symbol): 2701. Include your full name in the payment note.",
+          "In the registration note, tell us whether you can offer a ride (including the number of seats), or need a ride."
+        ],
+        accommodationLink: "https://www.ubytovani-losiny.cz/",
+        accommodationName: "Penzion Švihák Lázeňský",
         slug: "hory",
         elements: [
-          { type: "input", name: "userName", text: "Full Name *", shareLine: true, required: true },
-          { type: "input", name: "dateOfBirth", text: "Date of Birth *", shareLine: true, required: true },
-          { type: "input", name: "address", text: "Address *", shareLine: false, required: true },
+          { type: "input", name: "userName", text: "Full name *", shareLine: true, required: true },
           { type: "input", name: "email", text: "Email *", shareLine: true, required: true },
           { type: "input", name: "phone", text: "Phone *", shareLine: true, required: true },
-          { type: "input", name: "representativeName", text: "Full Name of Legal Guardian (if under 18)", shareLine: false, required: false },
-          { type: "input", name: "representativeEmail", text: "Legal Guardian's Email", shareLine: true, required: false },
-          { type: "input", name: "representativePhone", text: "Legal Guardian's Phone", shareLine: true, required: false },
-          { type: "input", name: "preferedActivitySaturday", text: "Preferred Activity for Saturday", shareLine: true, required: false },
-          { type: "input", name: "preferedActivitySunday", text: "Preferred Activity for Sunday", shareLine: true, required: false },
-          { type: "input", name: "lift", text: "Need a Ride / Offering Seats in a Car (number)", shareLine: false, required: false },
-          { type: "input", name: "limitations", text: "Health or Other Limitations", shareLine: false, required: false },
-          { type: "input", name: "note", text: "Note", shareLine: false, required: false },
-        ],
-      },
-    },
+          { type: "input", name: "peopleCount", text: "Number of adults *", shareLine: true, required: true },
+          { type: "input", name: "age", text: "Number of children and their ages (enter 0 if none) *", shareLine: false, required: true },
+          { type: "input", name: "note", text: "Note – offering seats in a car (number) / need a ride", shareLine: false, required: false },
+          {
+            type: "checkbox",
+            name: "personalDataConsent",
+            text: "I agree to the processing of my personal data *",
+            shareLine: false,
+            required: true,
+            description: "The event is organised by Runway Bystrc z.s. We handle the personal data from your registration in line with EU Regulation 2016/679 (GDPR). If you have questions, contact us at info@runway-bystrc.cz."
+          }
+        ]
+      }
+    }
   },
   {
     slug: "challenge-camp",
