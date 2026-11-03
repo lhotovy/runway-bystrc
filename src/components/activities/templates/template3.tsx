@@ -18,6 +18,9 @@ export const ActivityTemplate3 = ({
   imagePosition,
   registrationText,
   registrationLink,
+  contactPerson,
+  contactLinkText,
+  contactLink,
   anotherActivities,
   lang
 }: {
@@ -31,6 +34,9 @@ export const ActivityTemplate3 = ({
   imagePosition?: string,
   registrationText: string | undefined,
   registrationLink: string | undefined,
+  contactPerson?: string,
+  contactLinkText?: string,
+  contactLink?: string,
   anotherActivities: any[]
   lang: LangOptions
 }) => {
@@ -72,6 +78,13 @@ export const ActivityTemplate3 = ({
               </li>
             ))}
           </ul>
+        )}
+        {contactLink && (
+          <div className="flex flex-col gap-y-2">
+            <p className="font-bold">{lang === "en" ? "Contact" : "Kontakt"}</p>
+            {contactPerson && <p>{contactPerson}</p>}
+            <a className="text-blue-5 font-semibold underline" href={contactLink}>{contactLinkText}</a>
+          </div>
         )}
       </div>    
       <div className="w-full flex justify-center bg-content-blue py-7.5">
