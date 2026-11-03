@@ -336,7 +336,6 @@ export const activities = [
                 description: [
                     "Přihlas se na Runway jede na hory 15.–17. ledna 2027. Společný čas, zábava, lyžování, procházky, termální lázně, koupání…",
                     "Ubytování: Penzion Švihák Lázeňský ve Velkých Losinách. V ceně je ubytování na 2 noci a polopenze.",
-                    "Cena: dospělá osoba 1 950 Kč, dítě 3–11 let 1 050 Kč, dítě do 2 let zdarma.",
                     "Částku za celou rodinu vložte prosím ihned po přihlášení na bankovní účet 366538139/0300. Variabilní symbol: 2701. Do poznámky k platbě uveďte své jméno a příjmení.",
                     "Do poznámky v přihlášce uveďte, zda nabízíte místo v autě a jste ochotni někoho svést (včetně počtu míst), nebo zda potřebujete odvoz."
                 ],
@@ -356,9 +355,9 @@ export const activities = [
                 registrationText: "Přihlaste se s celou rodinou",
                 registrationLink: "/prihlaska/hory",
                 contactIcon: null,
-                contactPerson: "",
-                contactLinkText: "",
-                contactLink: ""
+                contactPerson: "Judita Remešová",
+                contactLinkText: "736 618 727",
+                contactLink: "tel:+420736618727"
             },
             en: {
                 name: "Runway Goes to the Mountains",
@@ -368,7 +367,6 @@ export const activities = [
                 description: [
                     "Register for Runway Goes to the Mountains on 15–17 January 2027. Time together, fun, skiing, walks, thermal baths and swimming…",
                     "Accommodation: Penzion Švihák Lázeňský in Velké Losiny. The price includes 2 nights and half board.",
-                    "Price: adult 1,950 CZK, child aged 3–11 1,050 CZK, child aged 0–2 free.",
                     "Please pay for your whole family immediately after registering to bank account 366538139/0300. Payment reference (variable symbol): 2701. Include your full name in the payment note.",
                     "In the registration note, tell us whether you can offer a ride (including the number of seats), or need a ride."
                 ],
@@ -388,9 +386,9 @@ export const activities = [
                 registrationText: "Register your whole family",
                 registrationLink: "/en/prihlaska/hory",
                 contactIcon: null,
-                contactPerson: "",
-                contactLinkText: "",
-                contactLink: ""
+                contactPerson: "Judita Remešová",
+                contactLinkText: "736 618 727",
+                contactLink: "tel:+420736618727"
             }
         }
     },

@@ -105,6 +105,9 @@ export default async function ActivityPage({ params }: {params: Promise<{ lang: 
             {
             currentActivity?.template === "template3" && 
             <ActivityTemplate3
+                contactPerson={activityData?.contactPerson}
+                contactLinkText={activityData?.contactLinkText}
+                contactLink={activityData?.contactLink}
                 name={activityData?.name || ""}
                 description={activityData?.description || []}
                 topics={(activityData as { topics?: string[] })?.topics}
