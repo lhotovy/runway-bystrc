@@ -134,7 +134,7 @@ export const generateFormElements = (definitions: FormElementDefinition[], formD
           {text}
         </label>
         <input
-          type="text"
+          type="email"
           id={name}
           name={name}
           required={required}
