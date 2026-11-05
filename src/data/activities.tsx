@@ -30,8 +30,9 @@ export const activities = [
                 registrationText: "Přihlášky s platbou do 22. 11. 2026",
                 registrationLink: "/prihlaska/vence",
                 contactIcon: null,
-                contactLinkText: "info@runway-bystrc.cz",
-                contactLink: "mailto:info@runway-bystrc.cz"
+                contactPerson: "Šárka Cihlářová",
+                contactLinkText: "730 526 589",
+                contactLink: "tel:+420730526589"
             },
             en: {
                 name: "Advent Wreath Workshop",
@@ -56,8 +57,9 @@ export const activities = [
                 registrationText: "Register and pay by 22 November 2026",
                 registrationLink: "/en/prihlaska/vence",
                 contactIcon: null,
-                contactLinkText: "info@runway-bystrc.cz",
-                contactLink: "mailto:info@runway-bystrc.cz"
+                contactPerson: "Šárka Cihlářová",
+                contactLinkText: "730 526 589",
+                contactLink: "tel:+420730526589"
             }
         }
     },

@@ -80,15 +80,6 @@ export const RegistrationPageClient = ({ data, lang }: { data: any, lang: LangOp
           />
         </div>
       </form>
-      {data.contact && (
-        <div className="flex flex-col gap-y-2 max-w-[800px] w-full mx-auto px-4 md:px-0 mb-12">
-          <h2 className="font-bold">{lang === "en" ? "Contact" : "Kontakt"}</h2>
-          <p>{data.contact.name}</p>
-          <a className="text-middle-blue font-bold underline" href={data.contact.phoneLink}>
-            {lang === "en" ? "Phone" : "Tel."}: {data.contact.phone}
-          </a>
-        </div>
-      )}
     </div>
   );
 };
