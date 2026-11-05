@@ -1,5 +1,54 @@
 export const registrations = [
   {
+    slug: "vence",
+    translations: {
+      cs: {
+        name: "Přihláška na Vyrábění adventních věnců",
+        description: [
+          "Přijďte si vyrobit adventní věnec nebo vánoční ozdoby. Termín a místo konání doplníme.",
+          "Cena: 350 Kč (pokrývá materiál na vyrábění věnců nebo vánočních ozdob).",
+          "Platbu proveďte prosím na číslo účtu 366538139/0300, variabilní symbol 2606. Do poznámky pro příjemce uveďte své jméno.",
+          "Přihlášky s platbou do 22. 11. 2026."
+        ],
+        slug: "vence",
+        elements: [
+          { type: "input", name: "userName", text: "Jméno a příjmení *", shareLine: true, required: true },
+          { type: "input", name: "email", text: "Email *", shareLine: true, required: true },
+          {
+            type: "checkbox",
+            name: "personalDataConsent",
+            text: "Se zpracováním osobních údajů souhlasím *",
+            shareLine: false,
+            required: true,
+            description: "Akci pořádá Runway Bystrc z.s. S vašimi osobními údaji z přihlášky nakládáme podle nařízení EU 2016/679 (GDPR). V případě dotazů nás kontaktujte na info@runway-bystrc.cz.\nBěhem akce mohou být organizátorem pořizovány ilustrační fotografie a videa."
+          }
+        ]
+      },
+      en: {
+        name: "Registration for the Advent Wreath Workshop",
+        description: [
+          "Join us to make an Advent wreath or Christmas decorations. The event date and venue will be added.",
+          "Price: 350 CZK (covers materials for making wreaths or Christmas decorations).",
+          "Please pay to bank account 366538139/0300, payment reference (variable symbol) 2606. Include your name in the payment note.",
+          "Register and pay by 22 November 2026."
+        ],
+        slug: "vence",
+        elements: [
+          { type: "input", name: "userName", text: "Full name *", shareLine: true, required: true },
+          { type: "input", name: "email", text: "Email *", shareLine: true, required: true },
+          {
+            type: "checkbox",
+            name: "personalDataConsent",
+            text: "I agree to the processing of my personal data *",
+            shareLine: false,
+            required: true,
+            description: "The event is organised by Runway Bystrc z.s. We handle the personal data from your registration in line with EU Regulation 2016/679 (GDPR). If you have questions, contact us at info@runway-bystrc.cz.\nThe organizer may take illustrative photos and videos during the event."
+          }
+        ]
+      }
+    }
+  },
+  {
     slug: "hory",
     translations: {
       cs: {
