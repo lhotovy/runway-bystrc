@@ -3,6 +3,65 @@ import { Mail, Phone } from "lucide-react";
 
 export const activities = [
     {
+        template: "template3",
+        type: "special",
+        translations: {
+            cs: {
+                name: "Vyrábění adventních věnců",
+                slug: "vence",
+                cardDescription: "Vyrábění adventních věnců nebo vánočních ozdob. Cena 350 Kč včetně materiálu.",
+                cardIcon: "",
+                description: [
+                    "Přijďte si vyrobit adventní věnec nebo vánoční ozdoby.",
+                    "Termín, místo konání a letáček s dalšími informacemi doplníme."
+                ],
+                details: {
+                    Cena: "350 Kč (pokrývá materiál na vyrábění věnců nebo vánočních ozdob)",
+                    Platba: "Na účet 366538139/0300, variabilní symbol 2606. Do poznámky pro příjemce uveďte své jméno.",
+                    "Přihlášky s platbou": "do 22. 11. 2026"
+                },
+                time: null,
+                // Until the event date is supplied, list the event through the registration deadline.
+                filterDate: "2026-11-22T23:59:59+01:00",
+                cardDate: "Přihlášky do 22. 11. 2026",
+                cardTime: null,
+                place: "",
+                image: "vence.webp",
+                registrationText: "Přihlášky s platbou do 22. 11. 2026",
+                registrationLink: "/prihlaska/vence",
+                contactIcon: null,
+                contactLinkText: "info@runway-bystrc.cz",
+                contactLink: "mailto:info@runway-bystrc.cz"
+            },
+            en: {
+                name: "Advent Wreath Workshop",
+                slug: "vence",
+                cardDescription: "Make an Advent wreath or Christmas decorations. Price: 350 CZK including materials.",
+                cardIcon: "",
+                description: [
+                    "Join us to make an Advent wreath or Christmas decorations.",
+                    "The event date, venue and a flyer with more information will be added."
+                ],
+                details: {
+                    Price: "350 CZK (covers materials for making wreaths or Christmas decorations)",
+                    Payment: "To bank account 366538139/0300, payment reference (variable symbol) 2606. Include your name in the payment note.",
+                    "Registration and payment": "by 22 November 2026"
+                },
+                time: null,
+                filterDate: "2026-11-22T23:59:59+01:00",
+                cardDate: "Register by 22 November 2026",
+                cardTime: null,
+                place: "",
+                image: "vence.webp",
+                registrationText: "Register and pay by 22 November 2026",
+                registrationLink: "/en/prihlaska/vence",
+                contactIcon: null,
+                contactLinkText: "info@runway-bystrc.cz",
+                contactLink: "mailto:info@runway-bystrc.cz"
+            }
+        }
+    },
+    {
         template: "template2",
         type: "regular",
         translations: {
