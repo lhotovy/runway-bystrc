@@ -6,11 +6,14 @@ import { generateFormElements } from "@/lib/functions";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { LangOptions } from "@/types";
+import { getPaymentLines } from "@/data/registration-payments";
+import { getConfirmationParams } from "@/lib/registration-confirmation";
 
 export const RegistrationPageClient = ({ data, lang }: { data: any, lang: LangOptions }) => {
   const [formData, setFormData] = useState({});
   const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
   const router = useRouter();
+  const paymentLines = getPaymentLines(data.slug, lang);
   const activityLink = lang === "en" ? `/en/potvrzeni?activity=${data.slug}` : `/potvrzeni?activity=${data.slug}`;
 
   const handleSubmit = async (e: any) => {
@@ -27,8 +30,14 @@ export const RegistrationPageClient = ({ data, lang }: { data: any, lang: LangOp
       `Počet dětí a jejich věk: ${values.age}`,
     ] : [];
     const note = [values.note, ...familyLines, ...consentLines].filter(Boolean).join("\n");
-    const payload = { ...values, title: data.name, time: new Date(), ...(note ? { note } : {}) };
     try {
+      const payload = {
+        ...values,
+        title: data.name,
+        time: new Date(),
+        ...(note ? { note } : {}),
+        ...getConfirmationParams(data.slug, data.name, lang, values),
+      };
       await sendRegistrationEmail(e, payload);
       router.push(activityLink);
     } catch {
@@ -57,6 +66,12 @@ export const RegistrationPageClient = ({ data, lang }: { data: any, lang: LangOp
           <a className="text-middle-blue font-bold underline" href={data.accommodationLink} target="_blank" rel="noopener noreferrer">
             {lang === "en" ? "Accommodation" : "Ubytování"}: {data.accommodationName}
           </a>
+        )}
+        {paymentLines.length > 0 && (
+          <section className="flex flex-col gap-y-2" aria-label={lang === "en" ? "Payment details" : "Platební údaje"}>
+            <h2 className="font-bold text-xl">{lang === "en" ? "Payment details" : "Platební údaje"}</h2>
+            {paymentLines.map((line) => <p key={line}>{line}</p>)}
+          </section>
         )}
       </div>
       <form

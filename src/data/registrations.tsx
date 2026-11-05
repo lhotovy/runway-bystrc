@@ -6,9 +6,6 @@ export const registrations = [
         name: "Přihláška na Vyrábění adventních věnců",
         description: [
           "Přijďte si vyrobit adventní věnec nebo vánoční ozdoby. Termín a místo konání doplníme.",
-          "Cena: 350 Kč (pokrývá materiál na vyrábění věnců nebo vánočních ozdob).",
-          "Platbu proveďte prosím na číslo účtu 366538139/0300, variabilní symbol 2606. Do poznámky pro příjemce uveďte své jméno.",
-          "Přihlášky s platbou do 22. 11. 2026."
         ],
         slug: "vence",
         elements: [
@@ -28,9 +25,6 @@ export const registrations = [
         name: "Registration for the Advent Wreath Workshop",
         description: [
           "Join us to make an Advent wreath or Christmas decorations. The event date and venue will be added.",
-          "Price: 350 CZK (covers materials for making wreaths or Christmas decorations).",
-          "Please pay to bank account 366538139/0300, payment reference (variable symbol) 2606. Include your name in the payment note.",
-          "Register and pay by 22 November 2026."
         ],
         slug: "vence",
         elements: [
@@ -56,8 +50,6 @@ export const registrations = [
         description: [
           "Přihlas se na Runway jede na hory 15.–17. ledna 2027. Společný čas, zábava, lyžování, procházky, termální lázně, koupání…",
           "Ubytování: Penzion Švihák Lázeňský ve Velkých Losinách. V ceně je ubytování na 2 noci a polopenze.",
-          "Cena: dospělá osoba 1 950 Kč, dítě 3–11 let 1 050 Kč, dítě do 2 let zdarma.",
-          "Částku za celou rodinu vložte prosím ihned po přihlášení na bankovní účet 366538139/0300. Variabilní symbol: 2701. Do poznámky k platbě uveďte své jméno a příjmení.",
           "Do poznámky v přihlášce uveďte, zda nabízíte místo v autě a jste ochotni někoho svést (včetně počtu míst), nebo zda potřebujete odvoz."
         ],
         accommodationLink: "https://www.ubytovani-losiny.cz/",
@@ -85,8 +77,6 @@ export const registrations = [
         description: [
           "Register for Runway Goes to the Mountains on 15–17 January 2027. Time together, fun, skiing, walks, thermal baths and swimming…",
           "Accommodation: Penzion Švihák Lázeňský in Velké Losiny. The price includes 2 nights and half board.",
-          "Price: adult 1,950 CZK, child aged 3–11 1,050 CZK, child aged 0–2 free.",
-          "Please pay for your whole family immediately after registering to bank account 366538139/0300. Payment reference (variable symbol): 2701. Include your full name in the payment note.",
           "In the registration note, tell us whether you can offer a ride (including the number of seats), or need a ride."
         ],
         accommodationLink: "https://www.ubytovani-losiny.cz/",
@@ -243,14 +233,12 @@ export const registrations = [
           "Pojeď s námi na dovolenou s Runwayí! Letos vyrážíme znovu do Beskyd.",
           "Termín: 8.–12. 7.",
           "Místo: Chata Ostra (www.chata-ostra.cz)",
-          "Cena za ubytování: 1600 Kč za dospělého, 700 Kč za dítě od 3 let.",
-          "Platební údaje: účet 366538139/0300, variabilní symbol 2604, do poznámky uveďte jméno.",
-          "Pokud se nezúčastníte celého pobytu, je třeba zaplatit poměrnou část podle počtu nocí strávených na chatě.",
           "Nákup jídla budeme řešit společně na místě, stejně tak vyúčtování případného nedoplatku nebo přeplatku za ubytování. Bližší informace pošleme mailem v průběhu léta.",
         ],
         slug: "dovolena-2026",
         elements: [
           { type: "input", name: "userName", text: "Jméno a příjmení *", shareLine: true, required: true },
+          { type: "input", name: "email", text: "Email *", shareLine: true, required: true },
           { type: "input", name: "peopleCount", text: "Počet dospělých a dětí", shareLine: true, required: false },
           { type: "input", name: "age", text: "Věk dětí", shareLine: true, required: false },
           { type: "input", name: "lift", text: "Potřebuji odvoz / nabízím místo v autě", shareLine: false, required: false },
@@ -264,13 +252,12 @@ export const registrations = [
           "Join us for a vacation with Runway! This year we are heading to the Beskydy mountains again.",
           "Date: July 8th–12th.",
           "Place: Chata Ostra (www.chata-ostra.cz)",
-          "Accommodation price: 1600 CZK per adult, 700 CZK per child from age 3.",
-          "Payment details: account 366538139/0300, variable symbol 2604, include your name in the payment note.",
           "We will arrange grocery shopping together on site, including settlement of any accommodation overpayment or underpayment. We will send more detailed information by email during the summer.",
         ],
         slug: "dovolena-2026",
         elements: [
           { type: "input", name: "userName", text: "Full Name *", shareLine: true, required: true },
+          { type: "input", name: "email", text: "Email *", shareLine: true, required: true },
           { type: "input", name: "peopleCount", text: "Number of Adults and Children", shareLine: true, required: false },
           { type: "input", name: "age", text: "Children's Ages", shareLine: true, required: false },
           { type: "input", name: "lift", text: "Need a Ride / Offering a Seat in a Car", shareLine: false, required: false },
@@ -325,7 +312,6 @@ export const registrations = [
         name: "Přihláška na Kurz výchovy teenagerů",
         description: [
           "Pět úterků od 3. 11. 2026, vždy v 18:30, v Runway Hub Café (Nad Přehradou 9a).",
-          "Cena 970 Kč za účastníka na celý kurz. Platbu proveďte na účet 366538139/0300, variabilní symbol 2605, do poznámky pro příjemce uveďte své jméno. Přihlášky s platbou do 2. 11. 2026.",
           "Bližší informace: tel. 777 878 940, www.manzelskevecery.cz.",
           "Během akce mohou být organizátorem pořizovány ilustrační fotografie a videa."
         ],
@@ -348,7 +334,6 @@ export const registrations = [
         name: "Registration for the Parenting Teenagers Course",
         description: [
           "Five Tuesdays from 3 November 2026, always at 6:30 PM, at Runway Hub Café (Nad Přehradou 9a).",
-          "Price 970 CZK per participant for the whole course. Please pay to account 366538139/0300, variable symbol 2605, and put your name in the payment note. Registration with payment by 2 November 2026.",
           "More information: tel. 777 878 940, www.manzelskevecery.cz.",
           "The organizer may take illustrative photos and videos during the event."
         ],
