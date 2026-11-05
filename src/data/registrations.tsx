@@ -4,6 +4,7 @@ export const registrations = [
     translations: {
       cs: {
         name: "Přihláška na Vyrábění adventních věnců",
+        contact: { name: "Šárka Cihlářová", phone: "730 526 589", phoneLink: "tel:+420730526589" },
         description: [
           "Přijďte si vyrobit adventní věnec nebo vánoční ozdoby. Termín a místo konání doplníme.",
           "Cena: 350 Kč (pokrývá materiál na vyrábění věnců nebo vánočních ozdob).",
@@ -26,6 +27,7 @@ export const registrations = [
       },
       en: {
         name: "Registration for the Advent Wreath Workshop",
+        contact: { name: "Šárka Cihlářová", phone: "730 526 589", phoneLink: "tel:+420730526589" },
         description: [
           "Join us to make an Advent wreath or Christmas decorations. The event date and venue will be added.",
           "Price: 350 CZK (covers materials for making wreaths or Christmas decorations).",
