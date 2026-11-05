@@ -12,10 +12,11 @@ export function getConfirmationParams(
     throw new Error("A valid confirmation email address is required.");
   }
   const paymentLines = getPaymentLines(slug, lang);
+  const eventName = title.replace(lang === "en" ? /^Registration for\s+/i : /^Přihláška (?:na|do)\s+/i, "");
   return {
     email: values.email?.trim() || "",
     representativeEmail: values.representativeEmail?.trim() || "",
-    subject: `${lang === "en" ? "Registration received" : "Potvrzení přijetí přihlášky"}: ${title}`,
+    subject: `${lang === "en" ? "Registration received" : "Potvrzení přijetí přihlášky"}: ${eventName}`,
     confirmation_intro: lang === "en"
       ? "Thank you for registering. We have received your registration for the following event:"
       : "Děkujeme za přihlášení. Přijali jsme vaši přihlášku na následující akci:",

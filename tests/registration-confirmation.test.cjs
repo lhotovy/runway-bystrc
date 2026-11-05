@@ -23,9 +23,10 @@ const { getConfirmationParams } = loadSource("src/lib/registration-confirmation.
 const { registrations } = loadSource("src/data/registrations.tsx");
 
 test("different registrations receive their own payment reference and price", () => {
-  const wreath = getConfirmationParams("vence", "Věnce", "cs", { email: "test@example.com" });
+  const wreath = getConfirmationParams("vence", "Přihláška na Vyrábění adventních věnců", "cs", { email: "test@example.com" });
   const mountains = getConfirmationParams("hory", "Hory", "cs", { email: "test@example.com" });
   assert.match(wreath.confirmation_payment, /2606/);
+  assert.equal(wreath.subject, "Potvrzení přijetí přihlášky: Vyrábění adventních věnců");
   assert.match(wreath.confirmation_payment, /350 Kč/);
   assert.equal(wreath.confirmation_account, "Číslo účtu: 366538139/0300");
   assert.equal(wreath.confirmation_reference, "Variabilní symbol: 2606");
@@ -38,10 +39,10 @@ test("different registrations receive their own payment reference and price", ()
 });
 
 test("English confirmation and guardian-only registrations are supported", () => {
-  const params = getConfirmationParams("hory", "Mountains", "en", { representativeEmail: " guardian@example.com " });
+  const params = getConfirmationParams("hory", "Registration for Runway Goes to the Mountains 2027", "en", { representativeEmail: " guardian@example.com " });
   assert.equal(params.email, "");
   assert.equal(params.representativeEmail, "guardian@example.com");
-  assert.match(params.subject, /Registration received/);
+  assert.equal(params.subject, "Registration received: Runway Goes to the Mountains 2027");
   assert.match(params.confirmation_payment, /Bank account/);
 });
 
