@@ -1,0 +1,19 @@
+<div style="font-family:Arial,sans-serif;font-size:16px;line-height:1.6;color:#26354a;max-width:640px;margin:auto;padding:24px">
+{{#title}}
+<h1 style="font-size:24px;color:#254b80">Runway Bystrc</h1>
+<p>{{#confirmation_intro}}{{confirmation_intro}}{{/confirmation_intro}}{{^confirmation_intro}}Děkujeme za přihlášení. Přijali jsme vaši přihlášku na následující akci:{{/confirmation_intro}}</p>
+<h2 style="font-size:20px">{{title}}</h2>
+{{#confirmation_payment}}<div style="background:#f0f5fb;padding:20px;border-left:4px solid #254b80">
+<h3 style="margin-top:0">{{confirmation_payment_heading}}</h3>
+<p style="margin:0 0 10px">{{confirmation_price}}</p>
+<p style="margin:0 0 10px">{{confirmation_account}}</p>
+<p style="margin:0 0 10px">{{confirmation_reference}}</p>
+<p style="margin:0 0 10px">{{confirmation_note}}</p>
+{{#confirmation_due}}<p style="margin:0 0 10px">{{confirmation_due}}</p>{{/confirmation_due}}
+{{#confirmation_additional}}<p style="margin:0">{{confirmation_additional}}</p>{{/confirmation_additional}}
+</div>{{/confirmation_payment}}
+<p>{{#confirmation_footer}}{{confirmation_footer}}{{/confirmation_footer}}{{^confirmation_footer}}Tento email potvrzuje přijetí přihlášky, nikoli přijetí platby. V případě dotazů odpovězte na tento email.{{/confirmation_footer}}</p>
+<p>Runway Bystrc<br><a href="mailto:info@runway-bystrc.cz">info@runway-bystrc.cz</a></p>
+{{/title}}
+{{^title}}<h2>Zpráva přes kontaktní formulář</h2><p><strong>{{name}}</strong><br>{{time}}</p><p>Email: {{email}}</p><div style="white-space:pre-line">Zpráva: {{message}}</div>{{/title}}
+</div>

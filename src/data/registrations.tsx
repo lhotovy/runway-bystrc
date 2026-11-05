@@ -284,24 +284,16 @@ export const registrations = [
         ],
       },
       en: {
-        name: "Registration for Vacation with Runway 2025",
-        description: [
-          "Vacation with Runway 6. - 10. 8. 2025",
-          "Join us on a trip to the Beskyds! We're looking forward to a joint vacation at a cottage in Ostrava on the outskirts of Lysá Hora (www.chata-ostra.cz). The event is intended for individuals and entire families. The program will be free - depending on the situation and mood, we will go on excursions and other activities. We will also cook together.",
-          "Preliminary information: We will cook together. The cost for accommodation: 350 CZK / night / person (+ over 18 years 20 CZK recreational fee), applies to adults and children from 2 years. The cost for food will be calculated later after the stay, the estimated price is: children 0-2 years free, preschoolers 80 CZK/day, 6-15 years 130 CZK/day, 15 years and older 160 CZK/day.",
-          "Further information about the stay and payment will be sent by email."
-        ],
-        slug: "dovolena",
+        name: "Registration for the Marriage Course",
+        description: ["The Marriage Course takes place at Runway Hub Café in Bystrc. The café will be open during the event, so you can order coffee or a snack."],
+        slug: "manzelske-vecery",
         elements: [
-          { type: "input", name: "userName", text: "Full Name *", shareLine: true, required: true },
-          { type: "input", name: "dateOfBirth", text: "Date of Birth *", shareLine: true, required: true },
-          { type: "input", name: "address", text: "Address *", shareLine: false, required: true },    
+          { type: "input", name: "userName", text: "Spouses' full names *", shareLine: true, required: true },
+          { type: "input", name: "address", text: "Address *", shareLine: true, required: true },
           { type: "input", name: "email", text: "Email *", shareLine: true, required: true },
-          { type: "input", name: "phone", text: "Phone", shareLine: true, required: false },
-          { type: "input", name: "lift", text: "Need a Ride / Offering Seats in a Car", shareLine: false, required: false },
-          { type: "input", name: "limitations", text: "Health or Other Limitations", shareLine: false, required: false },
+          { type: "input", name: "phone", text: "Phone *", shareLine: true, required: true },
           { type: "input", name: "note", text: "Note", shareLine: false, required: false },
-        ]        
+        ],
       },
     },
   },

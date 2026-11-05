@@ -13,7 +13,7 @@ export const RegistrationPageClient = ({ data, lang }: { data: any, lang: LangOp
   const [formData, setFormData] = useState({});
   const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
   const router = useRouter();
-  const paymentLines = getPaymentLines(data.slug, lang);
+  const paymentLines = getPaymentLines(data.slug, lang).filter(Boolean);
   const activityLink = lang === "en" ? `/en/potvrzeni?activity=${data.slug}` : `/potvrzeni?activity=${data.slug}`;
 
   const handleSubmit = async (e: any) => {
