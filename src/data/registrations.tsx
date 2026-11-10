@@ -5,7 +5,7 @@ export const registrations = [
       cs: {
         name: "Přihláška na Vyrábění adventních věnců",
         description: [
-          "Přijďte si vyrobit adventní věnec nebo vánoční ozdoby. Termín a místo konání doplníme.",
+          "Přijďte si vyrobit adventní věnec 29. 11. 2026 od 16:00 v Runway Hubu na adrese Nad Přehradou 9a.",
         ],
         slug: "vence",
         elements: [
@@ -24,7 +24,7 @@ export const registrations = [
       en: {
         name: "Registration for the Advent Wreath Workshop",
         description: [
-          "Join us to make an Advent wreath or Christmas decorations. The event date and venue will be added.",
+          "Join us to make an Advent wreath on 29 November 2026 from 16:00 at Runway Hub, Nad Přehradou 9a.",
         ],
         slug: "vence",
         elements: [
