@@ -9,25 +9,24 @@ export const activities = [
             cs: {
                 name: "Vyrábění adventních věnců",
                 slug: "vence",
-                cardDescription: "Vyrábění adventních věnců nebo vánočních ozdob. Cena 350 Kč včetně materiálu.",
+                cardDescription: "Vyrábění adventních věnců. Cena 350 Kč včetně materiálu.",
                 cardIcon: "",
                 description: [
-                    "Přijďte si vyrobit adventní věnec nebo vánoční ozdoby.",
-                    "Termín, místo konání a letáček s dalšími informacemi doplníme."
+                    "Přijďte si vyrobit adventní věnec.",
+                    "Sejdeme se 29. 11. 2026 od 16:00 v Runway Hubu na adrese Nad Přehradou 9a."
                 ],
                 details: {
-                    Cena: "350 Kč (pokrývá materiál na vyrábění věnců nebo vánočních ozdob)",
+                    Cena: "350 Kč (pokrývá materiál na vyrábění věnce)",
                     Platba: "Na účet 366538139/0300, variabilní symbol 2606. Do poznámky pro příjemce uveďte své jméno.",
-                    "Přihlášky s platbou": "do 22. 11. 2026"
+                    "Přihlášky s platbou": "do 26. 11. 2026"
                 },
-                time: null,
-                // Until the event date is supplied, list the event through the registration deadline.
-                filterDate: "2026-11-22T23:59:59+01:00",
-                cardDate: "Přihlášky do 22. 11. 2026",
-                cardTime: null,
-                place: "",
+                time: ["29. 11. 2026 od 16:00"],
+                filterDate: "2026-11-29T23:59:59+01:00",
+                cardDate: "29. 11. 2026",
+                cardTime: "od 16:00",
+                place: "Runway Hub, Nad Přehradou 9a",
                 image: "vence.webp",
-                registrationText: "Přihlášky s platbou do 22. 11. 2026",
+                registrationText: "Přihlášky s platbou do 26. 11. 2026",
                 registrationLink: "/prihlaska/vence",
                 contactIcon: null,
                 contactPerson: "Šárka Cihlářová",
@@ -37,24 +36,24 @@ export const activities = [
             en: {
                 name: "Advent Wreath Workshop",
                 slug: "vence",
-                cardDescription: "Make an Advent wreath or Christmas decorations. Price: 350 CZK including materials.",
+                cardDescription: "Make an Advent wreath. Price: 350 CZK including materials.",
                 cardIcon: "",
                 description: [
-                    "Join us to make an Advent wreath or Christmas decorations.",
-                    "The event date, venue and a flyer with more information will be added."
+                    "Join us to make an Advent wreath.",
+                    "We will meet on 29 November 2026 from 16:00 at Runway Hub, Nad Přehradou 9a."
                 ],
                 details: {
-                    Price: "350 CZK (covers materials for making wreaths or Christmas decorations)",
+                    Price: "350 CZK (covers materials for making a wreath)",
                     Payment: "To bank account 366538139/0300, payment reference (variable symbol) 2606. Include your name in the payment note.",
-                    "Registration and payment": "by 22 November 2026"
+                    "Registration and payment": "by 26 November 2026"
                 },
-                time: null,
-                filterDate: "2026-11-22T23:59:59+01:00",
-                cardDate: "Register by 22 November 2026",
-                cardTime: null,
-                place: "",
+                time: ["29 November 2026 from 16:00"],
+                filterDate: "2026-11-29T23:59:59+01:00",
+                cardDate: "29 November 2026",
+                cardTime: "from 16:00",
+                place: "Runway Hub, Nad Přehradou 9a",
                 image: "vence.webp",
-                registrationText: "Register and pay by 22 November 2026",
+                registrationText: "Register and pay by 26 November 2026",
                 registrationLink: "/en/prihlaska/vence",
                 contactIcon: null,
                 contactPerson: "Šárka Cihlářová",

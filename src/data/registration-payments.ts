@@ -21,9 +21,9 @@ export const registrationPayments: Record<string, Payment> = {
   vence: {
     account: "366538139/0300",
     reference: "2606",
-    price: { cs: "350 Kč (materiál na věnec nebo vánoční ozdoby).", en: "350 CZK (materials for a wreath or Christmas decorations)." },
+    price: { cs: "350 Kč (materiál na věnec).", en: "350 CZK (materials for a wreath)." },
     note: { cs: "Do poznámky pro příjemce uveďte své jméno.", en: "Include your name in the payment note." },
-    due: { cs: "Přihlášky s platbou do 22. 11. 2026.", en: "Register and pay by 22 November 2026." },
+    due: { cs: "Přihlášky s platbou do 26. 11. 2026.", en: "Register and pay by 26 November 2026." },
   },
   hory: {
     account: "366538139/0300",
