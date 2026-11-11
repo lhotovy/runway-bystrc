@@ -7,6 +7,72 @@ export const activities = [
         type: "special",
         translations: {
             cs: {
+                name: "Advent na Runwayi",
+                slug: "advent-na-runwayi",
+                cardDescription: "Vyrábění adventních věnců, benefiční koncert Pavla Helana, dětské divadlo a vánoční bohoslužba.",
+                cardIcon: "",
+                description: [
+                    "Zveme vás na Advent na Runwayi. Od 29. listopadu do 20. prosince 2026 nás čeká vyrábění adventních věnců, hudba, divadlo i vánoční bohoslužba.",
+                    "Všechny akce se konají v Runway Hubu na adrese Nad Přehradou 9a.",
+                    "Na benefiční koncert a dětské divadelní představení je vstupné dobrovolné. Na vyrábění adventních věnců je potřeba se přihlásit přes stránku vyrábění věnců."
+                ],
+                details: {
+                    "Neděle 29. 11. v 16:00": "Vyrábění adventních věnců – registrace na runway-bystrc.cz/vence.",
+                    "Neděle 6. 12. v 16:00": "Vánoční benefiční koncert Pavla Helana ve prospěch centra Chovánek. Vstupné dobrovolné.",
+                    "Sobota 19. 12. v 17:00": "Dětské divadelní představení Vánoční zázrak. Vstupné dobrovolné.",
+                    "Neděle 20. 12. v 16:00": "Vánoční bohoslužba."
+                },
+                time: ["29. 11. – 20. 12. 2026"],
+                filterDate: "2026-12-20T23:59:59+01:00",
+                cardDate: "29. 11. – 20. 12. 2026",
+                cardTime: null,
+                place: "Runway Hub, Nad Přehradou 9a",
+                image: "advent-na-runwayi.png",
+                imagePosition: "center top",
+                registrationText: "Registrace na vyrábění adventních věnců",
+                registrationLink: "/vence",
+                contactIcon: null,
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            },
+            en: {
+                name: "Advent at Runway",
+                slug: "advent-na-runwayi",
+                cardDescription: "Advent wreath workshop, a charity concert by Pavel Helan, children's theatre and a Christmas service.",
+                cardIcon: "",
+                description: [
+                    "Join us for Advent at Runway. From 29 November to 20 December 2026, enjoy an Advent wreath workshop, music, theatre and a Christmas service.",
+                    "All events take place at Runway Hub, Nad Přehradou 9a.",
+                    "Admission to the charity concert and children's theatre performance is by voluntary donation. Please register for the Advent wreath workshop via the wreath workshop page."
+                ],
+                details: {
+                    "Sunday 29 November at 16:00": "Advent wreath workshop – register at runway-bystrc.cz/vence.",
+                    "Sunday 6 December at 16:00": "Christmas charity concert by Pavel Helan in support of the Chovánek centre. Admission by voluntary donation.",
+                    "Saturday 19 December at 17:00": "Children's theatre performance Vánoční zázrak (Christmas Miracle). Admission by voluntary donation.",
+                    "Sunday 20 December at 16:00": "Christmas service."
+                },
+                time: ["29 November – 20 December 2026"],
+                filterDate: "2026-12-20T23:59:59+01:00",
+                cardDate: "29 Nov – 20 Dec 2026",
+                cardTime: null,
+                place: "Runway Hub, Nad Přehradou 9a",
+                image: "advent-na-runwayi.png",
+                imagePosition: "center top",
+                registrationText: "Registration for the Advent wreath workshop",
+                registrationLink: "/en/vence",
+                contactIcon: null,
+                contactPerson: "",
+                contactLinkText: "",
+                contactLink: ""
+            }
+        }
+    },
+    {
+        template: "template3",
+        type: "special",
+        translations: {
+            cs: {
                 name: "Vyrábění adventních věnců",
                 slug: "vence",
                 cardDescription: "Vyrábění adventních věnců. Cena 350 Kč včetně materiálu.",
