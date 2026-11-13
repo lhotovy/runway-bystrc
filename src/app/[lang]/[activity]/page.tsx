@@ -4,6 +4,7 @@ import { ActivityTemplate1 } from "@/components/activities/templates/template1";
 import { ActivityTemplate2 } from "@/components/activities/templates/template2";
 import { ActivityTemplate3 } from "@/components/activities/templates/template3";
 import { ActivityTemplate4 } from "@/components/activities/templates/template4";
+import { ActivityTemplate5, type EventPoster } from "@/components/activities/templates/template5";
 import { getActivityBySlugAndLang, getAllSlugs, getPageDataBySlug } from "@/lib/slug-mapping";
 import { LangOptions } from "@/types";
 
@@ -60,10 +61,22 @@ export default async function ActivityPage({ params }: {params: Promise<{ lang: 
     const activityData = currentActivity?.translations[lang as keyof typeof currentActivity['translations']];
     const anotherActivities = [...activities
         .filter((activity) => activity.translations[lang as keyof typeof activities[number]['translations']].slug !== activityParam && activity.type === "regular"), specialActivitiesCard]
-        .map((activity) => { return activity.translations[lang as keyof typeof activity.translations] });    
+        .map((activity) => { return activity.translations[lang as keyof typeof activity.translations] });
         
     return (
         <div>
+            {currentActivity?.template === "template5" && (
+              <ActivityTemplate5
+                name={activityData?.name || ""}
+                description={activityData?.description || []}
+                details={activityData?.details as Record<string, string> | undefined}
+                time={activityData?.time || []}
+                place={activityData?.place || ""}
+                poster={(activityData as { poster?: EventPoster })?.poster}
+                anotherActivities={anotherActivities}
+                lang={lang}
+              />
+            )}
             {
             currentActivity?.template === "template1" && 
             <ActivityTemplate1 
