@@ -16,7 +16,7 @@ export const activities = [
                     "Koncert se koná v neděli 6. prosince 2026 od 16:00 v Runway Hubu na adrese Nad Přehradou 9a."
                 ],
                 details: {
-                    "Komu pomáháme": "Koncert se koná ve prospěch centra Chovánek.",
+                    "Komu pomáháme": "Vybrané peníze obdrží dětské centrum Chovánek.",
                     "Vstupné": "Dobrovolné."
                 },
                 time: ["Neděle 6. 12. 2026", "16:00"],
@@ -24,13 +24,13 @@ export const activities = [
                 cardDate: "6. 12. 2026",
                 cardTime: "16:00",
                 place: "Runway Hub, Nad Přehradou 9a",
-                image: "advent-na-runwayi.png",
+                image: "vanocni-koncert-2026.jpg",
                 poster: {
-                    src: "/advent-na-runwayi.png",
-                    width: 1414,
-                    height: 2000,
-                    alt: "Leták Advent na Runwayi: koncert Pavla Helana pro centrum Chovánek 6. 12. v 16:00, vyrábění věnců 29. 11., divadlo 19. 12. a bohoslužba 20. 12. 2026. Nad Přehradou 9a.",
-                    caption: "Koncert je součástí Adventu na Runwayi. Na společném letáku najdete i další adventní akce."
+                    src: "/vanocni-koncert-2026.jpg",
+                    width: 1080,
+                    height: 1440,
+                    alt: "Vánoční benefiční koncert Pavla Helana 6. 12. 2026 od 16:00 v Runway Hub Cafe, Nad Přehradou 9a. Vstupné dobrovolné, vybrané peníze obdrží dětské centrum Chovánek.",
+                    caption: "Vánoční benefiční koncert Pavla Helana ve prospěch dětského centra Chovánek."
                 },
                 registrationText: "",
                 registrationLink: "",
@@ -49,7 +49,7 @@ export const activities = [
                     "The concert takes place on Sunday 6 December 2026 at 16:00 at Runway Hub, Nad Přehradou 9a."
                 ],
                 details: {
-                    "Who we support": "The concert is held in support of the Chovánek centre.",
+                    "Who we support": "The money raised will go to the Chovánek children's centre.",
                     "Admission": "Voluntary donation."
                 },
                 time: ["Sunday 6 December 2026", "16:00"],
@@ -57,13 +57,13 @@ export const activities = [
                 cardDate: "6 December 2026",
                 cardTime: "16:00",
                 place: "Runway Hub, Nad Přehradou 9a",
-                image: "advent-na-runwayi.png",
+                image: "vanocni-koncert-2026.jpg",
                 poster: {
-                    src: "/advent-na-runwayi.png",
-                    width: 1414,
-                    height: 2000,
-                    alt: "Czech Advent at Runway flyer: Pavel Helan charity concert for Chovánek on 6 December at 16:00, wreath workshop on 29 November, theatre on 19 December and service on 20 December 2026. Nad Přehradou 9a.",
-                    caption: "The concert is part of Advent at Runway. The shared flyer also features the other Advent events."
+                    src: "/vanocni-koncert-2026.jpg",
+                    width: 1080,
+                    height: 1440,
+                    alt: "Czech flyer for Pavel Helan's Christmas charity concert on 6 December 2026 at 16:00 at Runway Hub Cafe, Nad Přehradou 9a. Admission by voluntary donation, with the money raised going to the Chovánek children's centre.",
+                    caption: "Christmas charity concert by Pavel Helan in support of the Chovánek children's centre."
                 },
                 registrationText: "",
                 registrationLink: "",
